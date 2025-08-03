@@ -1,0 +1,9 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}Danksagung}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}1}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}title}{3}{subsection.1.1.1}%
+\contentsline {subsubsection}{\nonumberline title}{3}{subsubsection*.3}%
+\contentsline {paragraph}{\nonumberline title}{3}{paragraph*.5}%
+\contentsline {chapter}{\numberline {2}Einleitung}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}theoretishe Grundlagen}{5}{chapter.3}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
