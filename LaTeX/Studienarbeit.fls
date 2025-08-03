@@ -437,15 +437,12 @@ INPUT ./img_py/H2_CH4_CO_CO2_keinCO2.png
 INPUT ./img_py/H2_CH4_CO_CO2_keinCO2.png
 INPUT ./img_py/H2_CH4_CO_CO2_keinCO2.png
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvr.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT ./img_py/H2_CH4_CO_CO2.png
 INPUT ./img_py/H2_CH4_CO_CO2.png
 INPUT ./img_py/H2_CH4_CO_CO2.png
 INPUT ./img_py/H2_CH4_CO_CO2.png
 INPUT ./img_py/H2_CH4_CO_CO2.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvb.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvr-sc.tfm
 INPUT c:/texlive/2025/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
