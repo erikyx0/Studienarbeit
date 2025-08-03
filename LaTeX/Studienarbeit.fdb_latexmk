@@ -1,21 +1,21 @@
 # Fdb version 4
-["bibtex Studienarbeit"] 1754260605.25655 "Studienarbeit.aux" "Studienarbeit.bbl" "Studienarbeit" 1754260614.34138 0
-  "./Studienarbeit-blx.bib" 1754260612 343 bf1f0c75b5bafd473925320ac9611e26 ""
+["bibtex Studienarbeit"] 1754260989.91219 "Studienarbeit.aux" "Studienarbeit.bbl" "Studienarbeit" 1754260998.82524 0
+  "./Studienarbeit-blx.bib" 1754260996 343 bf1f0c75b5bafd473925320ac9611e26 ""
   "./refs.bib" 1754247444 3210 16af6b8825a5badb839c181d7ade9075 ""
-  "Studienarbeit.aux" 1754260612 9132 78a155dfca3fef597e5b742644f976c9 "pdflatex"
+  "Studienarbeit.aux" 1754260996 9070 5b12c16f75056454e1f066efd9674da8 "pdflatex"
   "c:/texlive/2025/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1742766898 65510 b1f696b0241395385f422f67543c37fd ""
   (generated)
   "Studienarbeit.bbl"
   "Studienarbeit.blg"
   (rewritten before read)
-["pdflatex"] 1754260605.8743 "c:/Users/erikd/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex" "Studienarbeit.pdf" "Studienarbeit" 1754260614.3424 0
-  "Studienarbeit.aux" 1754260612 9132 78a155dfca3fef597e5b742644f976c9 "pdflatex"
-  "Studienarbeit.bbl" 1754260605 7209 36ba3b743574a67c28891619d2a4f9c3 "bibtex Studienarbeit"
-  "Studienarbeit.lof" 1754260612 500 d949911ddb868debb3c1e66c284cb584 "pdflatex"
-  "Studienarbeit.out" 1754260609 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Studienarbeit.run.xml" 1754260612 2627 8d8557c119046eab9788a1454b05a532 "pdflatex"
-  "Studienarbeit.tex" 1754260595 9976 4e308eea4995a3f1ff43dbdcde272020 ""
-  "Studienarbeit.toc" 1754260612 1038 4fb94e163a1b2caa5c195cfdfc2b3ad2 "pdflatex"
+["pdflatex"] 1754260990.52848 "c:/Users/erikd/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex" "Studienarbeit.pdf" "Studienarbeit" 1754260998.82639 0
+  "Studienarbeit.aux" 1754260996 9070 5b12c16f75056454e1f066efd9674da8 "pdflatex"
+  "Studienarbeit.bbl" 1754260990 7209 36ba3b743574a67c28891619d2a4f9c3 "bibtex Studienarbeit"
+  "Studienarbeit.lof" 1754260996 500 d949911ddb868debb3c1e66c284cb584 "pdflatex"
+  "Studienarbeit.out" 1754260993 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Studienarbeit.run.xml" 1754260996 2627 8d8557c119046eab9788a1454b05a532 "pdflatex"
+  "Studienarbeit.tex" 1754260980 9974 101b8af96bae1713c5b23c6f32e606b6 ""
+  "Studienarbeit.toc" 1754260996 1038 8ba0031a54ee21d8f95ec01b5f14ca92 "pdflatex"
   "Template/tubaf-color.sty" 1718376947 8363 392e3a26cf3a4fe698a0697bf2755803 ""
   "Template/tubaf-fonts.sty" 1718376947 932 330a5d13fff4ebc7fe966812c6fa9552 ""
   "Template/tubaf-logo.sty" 1718376947 175699 7cadc588595ed79abb3b8fe116c23b3f ""
@@ -24,7 +24,7 @@
   "Template/tubaf-thesis.cls" 1745672814 7681 bb2baf3f265f11800188dbc8d9acd16d ""
   "Template/tubaf-title.sty" 1718376948 11242 6d52c3f38cf7201985fffbc33a7bd008 ""
   "Template/tubaf-trapezoid.sty" 1718376948 2796 c4fff256c2355b03b964815f05789fc2 ""
-  "c:/Users/erikd/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex" 1754260595 9976 4e308eea4995a3f1ff43dbdcde272020 ""
+  "c:/Users/erikd/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex" 1754260980 9974 101b8af96bae1713c5b23c6f32e606b6 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec-sc.enc" 1742773371 2881 8e2aef9e38084b946e7656b60672fedb ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc" 1742773371 2457 aaabbccba4df2a7f7371410ee4e075a3 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1742768989 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -34,9 +34,11 @@
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1742766375 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1742767543 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1742767543 1528 abec98dbc43e172678c11b3b9031252a ""
+  "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1742767543 1524 4414a8315f39513458b80dfc63bff03a ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1742767543 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1742767543 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1742767543 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1742767543 1288 655e228510b4c2a1abe905c368440826 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1742767543 1300 b62933e007d01cfd073f79b963c01526 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1742767543 1292 21c1c5bfeaebccffdb478fd231a0997d ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1742767543 1124 6c73e740cf17375f03eec0ee63599741 ""
