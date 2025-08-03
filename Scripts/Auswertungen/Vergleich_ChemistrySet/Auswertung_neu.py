@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sb  # type: ignore
 
 import os 
+import shutil 
 
 #%% Farben für die Plots definieren
 # Diese Farben können angepasst werden, um die Lesbarkeit zu verbessern
@@ -151,114 +152,105 @@ x_test_pfr_gri_no_co2 = df_no_co2_gri_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_N2_PFRC2_()']
 #%% Plots 
-fig, axs = plt.subplots(1, 4, figsize=(16, 4))
+fig, axs = plt.subplots(2, 2, figsize=(7, 7))
 
 # H2
-axs[0].plot(dist_pfr_aramco_no_co2, x_H2_pfr_aramco_no_co2, label='aramco', color=colors[0])
-axs[0].plot(dist_pfr_gri_no_co2, x_H2_pfr_gri_no_co2, label='gri', color=colors[1])
-axs[0].plot(dist_pfr_atr_no_co2, x_H2_pfr_atr_no_co2, label='atr', color=colors[2])
-axs[0].plot(dist_pfr_nuig_no_co2, x_H2_pfr_nuig_no_co2, label='nuig', color=colors[3])
-axs[0].set_xlabel("Reaktorlänge (m)")
-axs[0].set_ylabel("Massenanteil H₂")
-axs[0].set_title("H₂")
-axs[0].grid()
-axs[0].legend()
+axs[0, 0].plot(dist_pfr_aramco_no_co2, x_H2_pfr_aramco_no_co2, label='aramco', color=colors[0])
+axs[0, 0].plot(dist_pfr_gri_no_co2, x_H2_pfr_gri_no_co2, label='gri', color=colors[1])
+axs[0, 0].plot(dist_pfr_atr_no_co2, x_H2_pfr_atr_no_co2, label='atr', color=colors[2])
+axs[0, 0].plot(dist_pfr_nuig_no_co2, x_H2_pfr_nuig_no_co2, label='nuig', color=colors[3])
+axs[0, 0].set_xlabel("Reaktorlänge (m)")
+axs[0, 0].set_ylabel("Massenanteil H₂")
+axs[0, 0].set_title("H₂")
+axs[0, 0].grid()
+axs[0, 0].legend()
 
 # CH4
-axs[1].plot(dist_pfr_aramco_no_co2, x_CH4_pfr_aramco_no_co2, label='aramco', color=colors[0])
-axs[1].plot(dist_pfr_gri_no_co2, x_CH4_pfr_gri_no_co2, label='gri', color=colors[1])
-axs[1].plot(dist_pfr_atr_no_co2, x_CH4_pfr_atr_no_co2, label='atr', color=colors[2])
-axs[1].plot(dist_pfr_nuig_no_co2, x_CH4_pfr_nuig_no_co2, label='nuig', color=colors[3])
-axs[1].set_xlabel("Reaktorlänge (m)")
-axs[1].set_ylabel("Massenanteil CH₄")
-axs[1].set_title("CH₄")
-axs[1].grid()
-axs[1].legend()
+axs[0, 1].plot(dist_pfr_aramco_no_co2, x_CH4_pfr_aramco_no_co2, label='aramco', color=colors[0])
+axs[0, 1].plot(dist_pfr_gri_no_co2, x_CH4_pfr_gri_no_co2, label='gri', color=colors[1])
+axs[0, 1].plot(dist_pfr_atr_no_co2, x_CH4_pfr_atr_no_co2, label='atr', color=colors[2])
+axs[0, 1].plot(dist_pfr_nuig_no_co2, x_CH4_pfr_nuig_no_co2, label='nuig', color=colors[3])
+axs[0, 1].set_xlabel("Reaktorlänge (m)")
+axs[0, 1].set_ylabel("Massenanteil CH₄")
+axs[0, 1].set_title("CH₄")
+axs[0, 1].grid()
+axs[0, 1].legend()
 
-#plt.tight_layout()
-#plt.savefig("img/H2_CH4_keinCO2.png", dpi = 300)
-#plt.close()
-
-#fig, axs = plt.subplots(1, 2, figsize=(8, 4))
-
-# CO2
-axs[2].plot(dist_pfr_aramco_no_co2, x_CO2_pfr_aramco_no_co2, label='aramco', color=colors[0])
-axs[2].plot(dist_pfr_gri_no_co2, x_CO2_pfr_gri_no_co2, label='gri', color=colors[1])
-axs[2].plot(dist_pfr_atr_no_co2, x_CO2_pfr_atr_no_co2, label='atr', color=colors[2])
-axs[2].plot(dist_pfr_nuig_no_co2, x_CO2_pfr_nuig_no_co2, label='nuig', color=colors[3])
-axs[2].set_xlabel("Reaktorlänge (m)")
-axs[2].set_ylabel("Massenanteil CO₂")
-axs[2].set_title("CO₂")
-axs[2].grid()
-axs[2].legend()
+# CO₂
+axs[1, 0].plot(dist_pfr_aramco_no_co2, x_CO2_pfr_aramco_no_co2, label='aramco', color=colors[0])
+axs[1, 0].plot(dist_pfr_gri_no_co2, x_CO2_pfr_gri_no_co2, label='gri', color=colors[1])
+axs[1, 0].plot(dist_pfr_atr_no_co2, x_CO2_pfr_atr_no_co2, label='atr', color=colors[2])
+axs[1, 0].plot(dist_pfr_nuig_no_co2, x_CO2_pfr_nuig_no_co2, label='nuig', color=colors[3])
+axs[1, 0].set_xlabel("Reaktorlänge (m)")
+axs[1, 0].set_ylabel("Massenanteil CO₂")
+axs[1, 0].set_title("CO₂")
+axs[1, 0].grid()
+axs[1, 0].legend()
 
 # CO
-axs[3].plot(dist_pfr_aramco_no_co2, x_CO_pfr_aramco_no_co2, label='aramco', color=colors[0])
-axs[3].plot(dist_pfr_gri_no_co2, x_CO_pfr_gri_no_co2, label='gri', color=colors[1])
-axs[3].plot(dist_pfr_atr_no_co2, x_CO_pfr_atr_no_co2, label='atr', color=colors[2])
-axs[3].plot(dist_pfr_nuig_no_co2, x_CO_pfr_nuig_no_co2, label='nuig', color=colors[3])
-axs[3].set_xlabel("Reaktorlänge (m)")
-axs[3].set_ylabel("Massenanteil CO")
-axs[3].set_title("CO")
-axs[3].grid()
-axs[3].legend()
+axs[1, 1].plot(dist_pfr_aramco_no_co2, x_CO_pfr_aramco_no_co2, label='aramco', color=colors[0])
+axs[1, 1].plot(dist_pfr_gri_no_co2, x_CO_pfr_gri_no_co2, label='gri', color=colors[1])
+axs[1, 1].plot(dist_pfr_atr_no_co2, x_CO_pfr_atr_no_co2, label='atr', color=colors[2])
+axs[1, 1].plot(dist_pfr_nuig_no_co2, x_CO_pfr_nuig_no_co2, label='nuig', color=colors[3])
+axs[1, 1].set_xlabel("Reaktorlänge (m)")
+axs[1, 1].set_ylabel("Massenanteil CO")
+axs[1, 1].set_title("CO")
+axs[1, 1].grid()
+axs[1, 1].legend()
 
 plt.tight_layout()
-plt.savefig("img/CO_CO2_keinCO2.png", dpi = 300)
+plt.savefig("img/H2_CH4_CO_CO2_keinCO2.png", dpi=300)
 plt.close()
 
-fig, axs = plt.subplots(1, 2, figsize=(8, 4))
+
+fig, axs = plt.subplots(2, 2, figsize=(7, 7))
+
+# CO
+axs[0, 0].plot(dist_pfr_aramco_co2, x_CO_pfr_aramco_co2, label='aramco', color=colors[0])
+axs[0, 0].plot(dist_pfr_gri_co2, x_CO_pfr_gri_co2, label='gri', color=colors[1])
+axs[0, 0].plot(dist_pfr_atr_co2, x_CO_pfr_atr_co2, label='atr', color=colors[2])
+axs[0, 0].plot(dist_pfr_nuig_co2, x_CO_pfr_nuig_co2, label='nuig', color=colors[3])
+axs[0, 0].set_xlabel("Reaktorlänge (m)")
+axs[0, 0].set_ylabel("Massenanteil CO")
+axs[0, 0].set_title("CO")
+axs[0, 0].grid()
+axs[0, 0].legend()
+
+# CO2
+axs[0, 1].plot(dist_pfr_aramco_co2, x_CO2_pfr_aramco_co2, label='aramco', color=colors[0])
+axs[0, 1].plot(dist_pfr_gri_co2, x_CO2_pfr_gri_co2, label='gri', color=colors[1])
+axs[0, 1].plot(dist_pfr_atr_co2, x_CO2_pfr_atr_co2, label='atr', color=colors[2])
+axs[0, 1].plot(dist_pfr_nuig_co2, x_CO2_pfr_nuig_co2, label='nuig', color=colors[3])
+axs[0, 1].set_xlabel("Reaktorlänge (m)")
+axs[0, 1].set_ylabel("Massenanteil CO₂")
+axs[0, 1].set_title("CO₂")
+axs[0, 1].grid()
+axs[0, 1].legend()
+
 # H2
-axs[0].plot(dist_pfr_aramco_co2, x_H2_pfr_aramco_co2, label='aramco', color=colors[0])
-axs[0].plot(dist_pfr_gri_co2, x_H2_pfr_gri_co2, label='gri', color=colors[1])
-axs[0].plot(dist_pfr_atr_co2, x_H2_pfr_atr_co2, label='atr', color=colors[2])
-axs[0].plot(dist_pfr_nuig_co2, x_H2_pfr_nuig_co2, label='nuig', color=colors[3])
-axs[0].set_xlabel("Reaktorlänge (m)")
-axs[0].set_ylabel("Massenanteil H₂")
-axs[0].set_title("H₂")
-axs[0].grid()
-axs[0].legend()
+axs[1, 0].plot(dist_pfr_aramco_co2, x_H2_pfr_aramco_co2, label='aramco', color=colors[0])
+axs[1, 0].plot(dist_pfr_gri_co2, x_H2_pfr_gri_co2, label='gri', color=colors[1])
+axs[1, 0].plot(dist_pfr_atr_co2, x_H2_pfr_atr_co2, label='atr', color=colors[2])
+axs[1, 0].plot(dist_pfr_nuig_co2, x_H2_pfr_nuig_co2, label='nuig', color=colors[3])
+axs[1, 0].set_xlabel("Reaktorlänge (m)")
+axs[1, 0].set_ylabel("Massenanteil H₂")
+axs[1, 0].set_title("H₂")
+axs[1, 0].grid()
+axs[1, 0].legend()
 
 # CH4
-axs[1].plot(dist_pfr_aramco_co2, x_CH4_pfr_aramco_co2, label='aramco', color=colors[0])
-axs[1].plot(dist_pfr_gri_co2, x_CH4_pfr_gri_co2, label='gri', color=colors[1])
-axs[1].plot(dist_pfr_atr_co2, x_CH4_pfr_atr_co2, label='atr', color=colors[2])
-axs[1].plot(dist_pfr_nuig_co2, x_CH4_pfr_nuig_co2, label='nuig', color=colors[3])
-axs[1].set_xlabel("Reaktorlänge (m)")
-axs[1].set_ylabel("Massenanteil CH₄")
-axs[1].set_title("CH₄")
-axs[1].grid()
-axs[1].legend()
+axs[1, 1].plot(dist_pfr_aramco_co2, x_CH4_pfr_aramco_co2, label='aramco', color=colors[0])
+axs[1, 1].plot(dist_pfr_gri_co2, x_CH4_pfr_gri_co2, label='gri', color=colors[1])
+axs[1, 1].plot(dist_pfr_atr_co2, x_CH4_pfr_atr_co2, label='atr', color=colors[2])
+axs[1, 1].plot(dist_pfr_nuig_co2, x_CH4_pfr_nuig_co2, label='nuig', color=colors[3])
+axs[1, 1].set_xlabel("Reaktorlänge (m)")
+axs[1, 1].set_ylabel("Massenanteil CH₄")
+axs[1, 1].set_title("CH₄")
+axs[1, 1].grid()
+axs[1, 1].legend()
 
 plt.tight_layout()
-plt.savefig("img/H2_CH4_CO2.png", dpi = 300)
-plt.close()
-
-fig, axs = plt.subplots(1, 2, figsize=(8, 4))
-# CO2
-axs[1].plot(dist_pfr_aramco_co2, x_CO2_pfr_aramco_co2, label='aramco', color=colors[0])
-axs[1].plot(dist_pfr_gri_co2, x_CO2_pfr_gri_co2, label='gri', color=colors[1])
-axs[1].plot(dist_pfr_atr_co2, x_CO2_pfr_atr_co2, label='atr', color=colors[2])
-axs[1].plot(dist_pfr_nuig_co2, x_CO2_pfr_nuig_co2, label='nuig', color=colors[3])
-axs[1].set_xlabel("Reaktorlänge (m)")
-axs[1].set_ylabel("Massenanteil CO₂")
-axs[1].set_title("CO₂")
-axs[1].grid()
-axs[1].legend()
-
-# CO
-axs[0].plot(dist_pfr_aramco_co2, x_CO_pfr_aramco_co2, label='aramco', color=colors[0])
-axs[0].plot(dist_pfr_gri_co2, x_CO_pfr_gri_co2, label='gri', color=colors[1])
-axs[0].plot(dist_pfr_atr_co2, x_CO_pfr_atr_co2, label='atr', color=colors[2])
-axs[0].plot(dist_pfr_nuig_co2, x_CO_pfr_nuig_co2, label='nuig', color=colors[3])
-axs[0].set_xlabel("Reaktorlänge (m)")
-axs[0].set_ylabel("Massenanteil CO")
-axs[0].set_title("CO")
-axs[0].grid()
-axs[0].legend()
-
-plt.tight_layout()
-plt.savefig("img/CO_CO2_CO2.png", dpi = 300)
+plt.savefig("img/H2_CH4_CO_CO2.png", dpi=300)
 plt.close()
 
 #%% DF für Datenvergleich 
@@ -381,3 +373,13 @@ ax3.legend(lines3 + lines4, labels3 + labels4, loc='upper right')
 plt.tight_layout()
 plt.savefig("img/Temp_CH4.png", dpi = 300)
 
+#%% Kopieren zu LaTeX 
+# Relativer Quell- und Zielpfad
+src_folder = "img"
+dst_folder = os.path.join("..","..","..", "LaTeX", "img_py")  # z. B. ../Bericht/Bilder
+
+# Zielordner erstellen, falls nicht vorhanden
+os.makedirs(dst_folder, exist_ok=True)
+
+# Inhalt von img nach ../Bericht/Bilder kopieren
+shutil.copytree(src_folder, dst_folder, dirs_exist_ok=True)
