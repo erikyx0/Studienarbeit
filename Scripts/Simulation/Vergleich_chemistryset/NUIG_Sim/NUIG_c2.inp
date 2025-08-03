@@ -1,0 +1,42 @@
+! 
+! problem type definition
+! 
+ENRG   ! Solve Gas Energy Equation
+MOMEN ON   ! Turn on Momentum Equation
+PLUG   ! Plug Flow Reactor
+RTIME ON   ! Turn on Residence Time Calculation
+! 
+! physical property
+! 
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS -782.7437858508604   ! Heat Flux Per Unit Length (cal/cm-sec)
+VIS 0.0   ! Mixture Viscosity at Inlet (g/cm-sec)
+! 
+! reactor dimension definition
+! 
+DIAM 360.0   ! Diameter (cm)
+XEND 120.0   ! Ending Axial Position (cm)
+XSTR 0.0   ! Starting Axial Position (cm)
+! 
+! solver control
+! 
+ACHG 0.0   ! Maximum Absolute Change in Site Fractions
+ADAP   ! Save Additional Adaptive Points
+ATLS 1.0E-5   ! Sensitivity Absolute Tolerance
+ATOL 1.0E-8   ! Absolute Tolerance
+MAXIT 4   ! Maximum Number of Iterations
+PSV 1.0E-8   ! Scaling Factor for Relaxing Surface Equations (cm/sec)
+RCHG 1.0E-6   ! Maximum Relative Change in Site Fractions
+RTLS 0.001   ! Sensitivity Relative Tolerance
+RTOL 1.0E-8   ! Relative Tolerance
+TSTP 1.0   ! Initial Integration Step (cm)
+! 
+! output control and other misc. property
+! 
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+XMLS C1__PSR_to_C2__PFR 1.0 W:\studienarbeit\Simulation\Vergleich_chemistryset\NUIG_Sim\XMLdata_NUIG_PSRC1.zip   
+! Initialization of Inlet Stream From Solution File
+INLET C1__PSR_to_C2__PFR 1   ! Inlet Stream
+END

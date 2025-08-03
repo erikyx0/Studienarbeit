@@ -1,0 +1,80 @@
+!
+! problem type definition
+!
+STST   ! Steady State Solver
+TGIV   ! Fix Gas Temperature
+!
+! physical property
+!
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+PRES 46.3853935356526   ! Pressure (atm)
+TEMP 1600.0   ! Temperature (K)
+VOL 2.9497E4   ! Volume (cm3)
+!
+! output control and other misc. property
+!
+EPSR 0.01   ! Threshold for Rate of Production
+EPSS 0.001   ! Threshold for Species Sensitivity
+EPST 0.001   ! Threshold for Temperature Sensitivity
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+PRNT 1   ! Print Level Control
+SDOUTPUT_WRITE   ! Write Standard Diagnostic Output
+SIZE 100000000   ! Solution Data Block Size (bytes)
+!tear!XMLS C4__Gas_Splitter_to_C7_R1_PSR 0.8 W:\studienarbeit\Simulation\Simulation*Cases\kein*CO2\XMLdata_Aramco-Rev7-Simplified_PFRC7.zip
+TINL C4__Gas_Splitter_to_C7_R1_PSR 1.65361673e+03
+FLRT C4__Gas_Splitter_to_C7_R1_PSR 4.326523E2
+REAC C4__Gas_Splitter_to_C7_R1_PSR H2 4.525769E-1
+REAC C4__Gas_Splitter_to_C7_R1_PSR H 9.278772E-6
+REAC C4__Gas_Splitter_to_C7_R1_PSR O 3.251402E-12
+REAC C4__Gas_Splitter_to_C7_R1_PSR O2 6.787914E-13
+REAC C4__Gas_Splitter_to_C7_R1_PSR OH 1.958868E-7
+REAC C4__Gas_Splitter_to_C7_R1_PSR H2O 2.095543E-1
+REAC C4__Gas_Splitter_to_C7_R1_PSR HO2 4.777868E-15
+REAC C4__Gas_Splitter_to_C7_R1_PSR H2O2 5.539785E-13
+REAC C4__Gas_Splitter_to_C7_R1_PSR C 1.734372E-16
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH 2.055045E-14
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH2 2.487561E-10
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH2(S) 7.217843E-12
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH3 1.280802E-5
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH4 3.077967E-2
+REAC C4__Gas_Splitter_to_C7_R1_PSR CO 2.650301E-1
+REAC C4__Gas_Splitter_to_C7_R1_PSR CO2 3.804361E-2
+REAC C4__Gas_Splitter_to_C7_R1_PSR HCO 1.066251E-7
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH2O 2.590948E-6
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH2OH 3.916993E-10
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH3O 5.236415E-12
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH3OH 2.975427E-7
+REAC C4__Gas_Splitter_to_C7_R1_PSR C2H 1.172029E-11
+REAC C4__Gas_Splitter_to_C7_R1_PSR C2H2 1.286625E-4
+REAC C4__Gas_Splitter_to_C7_R1_PSR C2H3 2.241928E-8
+REAC C4__Gas_Splitter_to_C7_R1_PSR C2H4 1.91954E-4
+REAC C4__Gas_Splitter_to_C7_R1_PSR C2H5 4.834252E-8
+REAC C4__Gas_Splitter_to_C7_R1_PSR C2H6 1.221294E-5
+REAC C4__Gas_Splitter_to_C7_R1_PSR HCCO 1.475244E-10
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH2CO 1.025275E-6
+REAC C4__Gas_Splitter_to_C7_R1_PSR HCCOH 1.030263E-8
+REAC C4__Gas_Splitter_to_C7_R1_PSR N 7.826123E-18
+REAC C4__Gas_Splitter_to_C7_R1_PSR NH 1.045271E-17
+REAC C4__Gas_Splitter_to_C7_R1_PSR NH2 5.765883E-15
+REAC C4__Gas_Splitter_to_C7_R1_PSR NH3 1.166481E-10
+REAC C4__Gas_Splitter_to_C7_R1_PSR NNH 2.869493E-12
+REAC C4__Gas_Splitter_to_C7_R1_PSR NO 3.5808E-15
+REAC C4__Gas_Splitter_to_C7_R1_PSR N2O 7.717056E-15
+REAC C4__Gas_Splitter_to_C7_R1_PSR HNO 1.452374E-18
+REAC C4__Gas_Splitter_to_C7_R1_PSR CN 6.330067E-18
+REAC C4__Gas_Splitter_to_C7_R1_PSR HCN 4.213444E-11
+REAC C4__Gas_Splitter_to_C7_R1_PSR H2CN 1.107458E-16
+REAC C4__Gas_Splitter_to_C7_R1_PSR HCNN 2.138787E-17
+REAC C4__Gas_Splitter_to_C7_R1_PSR HCNO 1.069793E-19
+REAC C4__Gas_Splitter_to_C7_R1_PSR HOCN 1.594415E-15
+REAC C4__Gas_Splitter_to_C7_R1_PSR HNCO 1.50133E-12
+REAC C4__Gas_Splitter_to_C7_R1_PSR NCO 7.026621E-18
+REAC C4__Gas_Splitter_to_C7_R1_PSR N2 3.656146E-3
+REAC C4__Gas_Splitter_to_C7_R1_PSR C3H7 4.971272E-11
+REAC C4__Gas_Splitter_to_C7_R1_PSR C3H8 1.219892E-8
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH2CHO 8.871721E-11
+REAC C4__Gas_Splitter_to_C7_R1_PSR CH3CHO 2.388363E-8
+! Initialization of Inlet Stream From Solution File
+INLET C4__Gas_Splitter_to_C7_R1_PSR 1   ! Inlet Stream
+END

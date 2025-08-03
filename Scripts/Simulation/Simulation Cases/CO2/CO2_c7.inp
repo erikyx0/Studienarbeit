@@ -1,0 +1,97 @@
+!
+! problem type definition
+!
+ENRG   ! Solve Gas Energy Equation
+MOMEN ON   ! Turn on Momentum Equation
+PLUG   ! Plug Flow Reactor
+RTIME ON   ! Turn on Residence Time Calculation
+!
+! physical property
+!
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 0.0   ! Heat Flux Per Unit Length (cal/cm-sec)
+TEMP 1600.0   ! Temperature (K)
+VIS 0.0   ! Mixture Viscosity at Inlet (g/cm-sec)
+!
+! reactor dimension definition
+!
+AREAF 6677.0   ! Cross-sectional Area (cm2)
+XEND 1.0   ! Ending Axial Position (cm)
+XSTR 0.0   ! Starting Axial Position (cm)
+!
+! solver control
+!
+ACHG 0.0   ! Maximum Absolute Change in Site Fractions
+ADAP   ! Save Additional Adaptive Points
+ATLS 1.0E-6   ! Sensitivity Absolute Tolerance
+ATOL 1.0E-7   ! Absolute Tolerance
+MAXIT 50   ! Maximum Number of Iterations
+PSV 1.0E-8   ! Scaling Factor for Relaxing Surface Equations (cm/sec)
+RCHG 1.0E-6   ! Maximum Relative Change in Site Fractions
+RELAXC   ! Relaxed Iteration
+RTLS 0.0001   ! Sensitivity Relative Tolerance
+RTOL 1.0E-5   ! Relative Tolerance
+TSTP 1.0   ! Initial Integration Step (cm)
+!
+! output control and other misc. property
+!
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+!tear!XMLS C7__Gas_Mixer_to_C4__PFR 1.0 W:\studienarbeit\Simulation\Simulation*Cases\CO2\XMLdata_CO2_Gas_MixerC6.zip
+TEMP 1.64450964e+03
+FLRT C7__Gas_Mixer_to_C4__PFR 8.578851E2
+REAC C7__Gas_Mixer_to_C4__PFR H2 2.795915E-1
+REAC C7__Gas_Mixer_to_C4__PFR H 6.972483E-6
+REAC C7__Gas_Mixer_to_C4__PFR O 8.164911E-12
+REAC C7__Gas_Mixer_to_C4__PFR O2 1.033713E-9
+REAC C7__Gas_Mixer_to_C4__PFR OH 3.553184E-7
+REAC C7__Gas_Mixer_to_C4__PFR H2O 3.04815E-1
+REAC C7__Gas_Mixer_to_C4__PFR HO2 7.529662E-13
+REAC C7__Gas_Mixer_to_C4__PFR H2O2 2.080687E-12
+REAC C7__Gas_Mixer_to_C4__PFR C 3.128131E-16
+REAC C7__Gas_Mixer_to_C4__PFR CH 2.630136E-14
+REAC C7__Gas_Mixer_to_C4__PFR CH2 2.306886E-10
+REAC C7__Gas_Mixer_to_C4__PFR CH2(S) 6.424242E-12
+REAC C7__Gas_Mixer_to_C4__PFR CH3 8.426672E-6
+REAC C7__Gas_Mixer_to_C4__PFR CH4 1.577095E-2
+REAC C7__Gas_Mixer_to_C4__PFR CO 2.942618E-1
+REAC C7__Gas_Mixer_to_C4__PFR CO2 1.021551E-1
+REAC C7__Gas_Mixer_to_C4__PFR HCO 8.899489E-8
+REAC C7__Gas_Mixer_to_C4__PFR CH2O 1.961217E-6
+REAC C7__Gas_Mixer_to_C4__PFR CH2OH 4.052956E-10
+REAC C7__Gas_Mixer_to_C4__PFR CH3O 6.238072E-12
+REAC C7__Gas_Mixer_to_C4__PFR CH3OH 3.852722E-7
+REAC C7__Gas_Mixer_to_C4__PFR C2H 2.77605E-11
+REAC C7__Gas_Mixer_to_C4__PFR C2H2 1.8526E-4
+REAC C7__Gas_Mixer_to_C4__PFR C2H3 2.608166E-8
+REAC C7__Gas_Mixer_to_C4__PFR C2H4 1.51196E-4
+REAC C7__Gas_Mixer_to_C4__PFR C2H5 3.032433E-8
+REAC C7__Gas_Mixer_to_C4__PFR C2H6 5.477596E-6
+REAC C7__Gas_Mixer_to_C4__PFR HCCO 2.004432E-10
+REAC C7__Gas_Mixer_to_C4__PFR CH2CO 9.982995E-7
+REAC C7__Gas_Mixer_to_C4__PFR HCCOH 3.874749E-8
+REAC C7__Gas_Mixer_to_C4__PFR N 9.797647E-18
+REAC C7__Gas_Mixer_to_C4__PFR NH 9.384133E-18
+REAC C7__Gas_Mixer_to_C4__PFR NH2 1.974293E-15
+REAC C7__Gas_Mixer_to_C4__PFR NH3 2.889504E-11
+REAC C7__Gas_Mixer_to_C4__PFR NNH 1.802013E-12
+REAC C7__Gas_Mixer_to_C4__PFR NO 2.28511E-14
+REAC C7__Gas_Mixer_to_C4__PFR N2O 5.443744E-15
+REAC C7__Gas_Mixer_to_C4__PFR HNO 3.932433E-18
+REAC C7__Gas_Mixer_to_C4__PFR CN 2.003118E-18
+REAC C7__Gas_Mixer_to_C4__PFR HCN 9.199519E-12
+REAC C7__Gas_Mixer_to_C4__PFR H2CN 1.949716E-17
+REAC C7__Gas_Mixer_to_C4__PFR HCNN 2.086317E-17
+REAC C7__Gas_Mixer_to_C4__PFR HCNO 1.365111E-17
+REAC C7__Gas_Mixer_to_C4__PFR HOCN 9.681528E-16
+REAC C7__Gas_Mixer_to_C4__PFR HNCO 8.781312E-13
+REAC C7__Gas_Mixer_to_C4__PFR NCO 4.890974E-18
+REAC C7__Gas_Mixer_to_C4__PFR N2 3.044341E-3
+REAC C7__Gas_Mixer_to_C4__PFR C3H7 2.990761E-11
+REAC C7__Gas_Mixer_to_C4__PFR C3H8 5.068144E-9
+REAC C7__Gas_Mixer_to_C4__PFR CH2CHO 6.950695E-11
+REAC C7__Gas_Mixer_to_C4__PFR CH3CHO 1.409907E-8
+! Initialization of Inlet Stream From Solution File
+INLET C7__Gas_Mixer_to_C4__PFR 1   ! Inlet Stream
+END

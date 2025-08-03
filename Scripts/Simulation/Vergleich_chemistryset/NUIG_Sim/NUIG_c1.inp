@@ -1,0 +1,79 @@
+! 
+! problem type definition
+! 
+ENRG   ! Solve Gas Energy Equation
+STST   ! Steady State Solver
+! 
+! physical property
+! 
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 1.0119789674952E5   ! Heat Loss (cal/sec)
+TEMP 2000.0   ! Temperature (K)
+VOL 6011.83   ! Volume (cm3)
+! 
+! species property
+! 
+XEST N2 1.0   ! Initial Gas Fraction (mole fraction)
+! 
+! solver control
+! 
+ATIM 1.0E-9   ! Absolute Tolerance for Pseudo Timestepping
+ATOL 1.0E-9   ! Absolute Tolerance
+DTMN 1.0E-10   ! Minimum Pseudo Time Step (sec)
+DTMX 0.01   ! Maximum Pseudo Time Step (sec)
+IRET 25   ! Number Time Steps Before Increasing
+ISTP 0   ! Number of Initial Pseudo Time Steps
+MAXTIME 100   ! Maximum Number of Pseudo Time Stepping Operations Allowed
+NJAC 20   ! Number of Iterations before Updating Jacobian
+RTIM 0.0001   ! Relative Tolerance for Pseudo Timestepping
+RTOL 0.0001   ! Relative Tolerance
+SFLR -0.0001   ! Minimum Bounds on Species Fractions
+SSMAXITER 100   ! Maximum Number of Iterations per Steady State Search
+TIM1 100.0 1.0E-6   ! Pseudo Time Steps (Fixed Temperature) (none, sec)
+TIM2 100.0 1.0E-6   ! Pseudo Time Steps (Energy Equation) (none, sec)
+TJAC 20   ! Number of Transient Iterations before Updating Jacobian
+TRMAXITER 25   ! Maximum Number of Iterations per Pseudo Time Step
+! 
+! output control and other misc. property
+! 
+DFAC 2.0   ! Time Step Decrement Factor
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+UFAC 2.0   ! Time Step Increment Factor
+! 
+! physical property
+! 
+FLRT C1_Inlet1 50.9   ! Mass Flow Rate (g/sec)
+TINL C1_Inlet1 339.15   ! Inlet Temperature (K)
+! 
+! species property
+! 
+REAC C1_Inlet1 C2H6 0.0151107105023   ! Reactant Fraction (mole fraction)
+REAC C1_Inlet1 CH4 0.9741145875013   ! Reactant Fraction (mole fraction)
+REAC C1_Inlet1 CO 0.0001171247391   ! Reactant Fraction (mole fraction)
+REAC C1_Inlet1 CO2 0.001229994989   ! Reactant Fraction (mole fraction)
+REAC C1_Inlet1 N2 0.0094275822682   ! Reactant Fraction (mole fraction)
+INLET C1_Inlet1 1   ! Inlet Stream
+! 
+! physical property
+! 
+FLRT C1_Inlet2 10.75   ! Mass Flow Rate (g/sec)
+TINL C1_Inlet2 626.55   ! Inlet Temperature (K)
+! 
+! species property
+! 
+REAC C1_Inlet2 H2O 1.0   ! Reactant Fraction (mole fraction)
+INLET C1_Inlet2 1   ! Inlet Stream
+! 
+! physical property
+! 
+FLRT C1_Inlet3 70.05   ! Mass Flow Rate (g/sec)
+TINL C1_Inlet3 504.35   ! Inlet Temperature (K)
+! 
+! species property
+! 
+REAC C1_Inlet3 H2O 0.0666801456327   ! Reactant Fraction (mole fraction)
+REAC C1_Inlet3 O2 0.9333198543673   ! Reactant Fraction (mole fraction)
+INLET C1_Inlet3 1   ! Inlet Stream
+END

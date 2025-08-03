@@ -1,0 +1,5 @@
+Brennzone: 6011830 mm^3 
+Rest: 1.2319e+08 mm^3 (1200 Länge, 360 D)
+
+Wärmeabgabe Brennzone: -4.23412E5 J/s
+Wärmeabgabe PFR: -327500 J/ms

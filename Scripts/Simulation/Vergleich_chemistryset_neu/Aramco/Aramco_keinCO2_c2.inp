@@ -1,0 +1,32 @@
+! 
+! problem type definition
+! 
+ENRG   ! Solve Gas Energy Equation
+MOMEN ON   ! Turn on Momentum Equation
+PLUG   ! Plug Flow Reactor
+RTIME ON   ! Turn on Residence Time Calculation
+! 
+! physical property
+! 
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+QLOS -783.5611854684512   ! Heat Flux Per Unit Length (cal/cm-sec)
+VIS 0.0   ! Mixture Viscosity at Inlet (g/cm-sec)
+! 
+! reactor dimension definition
+! 
+DIAM 36.0   ! Diameter (cm)
+XEND 133.5   ! Ending Axial Position (cm)
+XSTR 13.5   ! Starting Axial Position (cm)
+! 
+! solver control
+! 
+ADAP   ! Save Additional Adaptive Points
+! 
+! output control and other misc. property
+! 
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+XMLS C1__PSR_to_C2__PFR 1.0 W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco\XMLdata_Aramco_keinCO2_PSRC1.zip   
+! Initialization of Inlet Stream From Solution File
+INLET C1__PSR_to_C2__PFR 1   ! Inlet Stream
+END

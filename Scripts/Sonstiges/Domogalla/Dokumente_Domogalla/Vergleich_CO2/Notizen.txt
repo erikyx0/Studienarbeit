@@ -1,0 +1,2 @@
+- eigentlich keine Reaktion mehr im PFR9
+- Temp mit CO2 zwar höher, aber keine Reaktion (paralleler, linearer Verlauf beider Temperaturen)

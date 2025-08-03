@@ -1,0 +1,142 @@
+28
+species=H2               mw=2.015940
+species=H                mw=1.007970
+species=O                mw=15.99940
+species=O2               mw=31.99880
+species=OH               mw=17.00737
+species=H2O              mw=18.01534
+species=HO2              mw=33.00677
+species=H2O2             mw=34.01474
+species=CH               mw=13.01912
+species=CH2              mw=14.02709
+species=CH2(S)           mw=14.02709
+species=CH3              mw=15.03506
+species=CH4              mw=16.04303
+species=CO               mw=28.01055
+species=CO2              mw=44.00995
+species=HCO              mw=29.01852
+species=CH2O             mw=30.02649
+species=CH2OH            mw=31.03446
+species=CH3O             mw=31.03446
+species=CH3OH            mw=32.04243
+species=C2H2             mw=26.03824
+species=C2H3             mw=27.04621
+species=C2H4             mw=28.05418
+species=C2H5             mw=29.06215
+species=C2H6             mw=30.07012
+species=CH2CO            mw=42.03764
+species=AR               mw=39.94800
+species=N2               mw=28.01340
+112
+reaction=2O+M<=>O2+M
+reaction=O+H+M<=>OH+M
+reaction=O+H2<=>H+OH
+reaction=O+HO2<=>OH+O2
+reaction=O+H2O2<=>OH+HO2
+reaction=O+CH4<=>OH+CH3
+reaction=O+CO(+M)<=>CO2(+M)
+reaction=O+HCO<=>OH+CO
+reaction=O+CH3OH<=>OH+CH2OH
+reaction=O+CH3OH<=>OH+CH3O
+reaction=O+C2H2<=>CO+CH2
+reaction=O+C2H5<=>CH3+CH2O
+reaction=O+CH2CO<=>CH2+CO2
+reaction=O2+CH2O<=>HO2+HCO
+reaction=H+O2+M<=>HO2+M
+reaction=H+2O2<=>HO2+O2
+reaction=H+O2+H2O<=>HO2+H2O
+reaction=H+O2+N2<=>HO2+N2
+reaction=H+O2<=>O+OH
+reaction=2H+M<=>H2+M
+reaction=2H+H2<=>2H2
+reaction=2H+H2O<=>H2+H2O
+reaction=H+OH+M<=>H2O+M
+reaction=H+HO2<=>O+H2O
+reaction=H+HO2<=>O2+H2
+reaction=H+HO2<=>2OH
+reaction=H+H2O2<=>HO2+H2
+reaction=H+H2O2<=>OH+H2O
+reaction=H+CH3(+M)<=>CH4(+M)
+reaction=H+CH4<=>CH3+H2
+reaction=H+HCO(+M)<=>CH2O(+M)
+reaction=H+HCO<=>H2+CO
+reaction=H+CH2O(+M)<=>CH2OH(+M)
+reaction=H+CH2O(+M)<=>CH3O(+M)
+reaction=H+CH2O<=>HCO+H2
+reaction=H+CH2OH(+M)<=>CH3OH(+M)
+reaction=H+CH2OH<=>OH+CH3
+reaction=H+CH2OH<=>CH2(S)+H2O
+reaction=H+CH3O(+M)<=>CH3OH(+M)
+reaction=H+CH3O<=>OH+CH3
+reaction=H+CH3O<=>CH2(S)+H2O
+reaction=H+CH3OH<=>CH2OH+H2
+reaction=H+CH3OH<=>CH3O+H2
+reaction=H+C2H2(+M)<=>C2H3(+M)
+reaction=H+C2H4(+M)<=>C2H5(+M)
+reaction=H+C2H4<=>C2H3+H2
+reaction=H+C2H6<=>C2H5+H2
+reaction=H+CH2CO<=>CH3+CO
+reaction=OH+H2<=>H+H2O
+reaction=2OH(+M)<=>H2O2(+M)
+reaction=2OH<=>O+H2O
+reaction=OH+HO2<=>O2+H2O
+reaction=OH+H2O2<=>HO2+H2O
+reaction=OH+H2O2<=>HO2+H2O
+reaction=OH+CH3(+M)<=>CH3OH(+M)
+reaction=OH+CH3<=>CH2+H2O
+reaction=OH+CH3<=>CH2(S)+H2O
+reaction=OH+CH4<=>CH3+H2O
+reaction=OH+CO<=>H+CO2
+reaction=OH+CH2O<=>HCO+H2O
+reaction=OH+CH3OH<=>CH2OH+H2O
+reaction=OH+CH3OH<=>CH3O+H2O
+reaction=OH+C2H2<=>H+CH2CO
+reaction=OH+C2H4<=>C2H3+H2O
+reaction=OH+C2H6<=>C2H5+H2O
+reaction=2HO2<=>O2+H2O2
+reaction=2HO2<=>O2+H2O2
+reaction=HO2+CH3<=>O2+CH4
+reaction=HO2+CH3<=>OH+CH3O
+reaction=HO2+CO<=>OH+CO2
+reaction=HO2+CH2O<=>HCO+H2O2
+reaction=CH+O2<=>O+HCO
+reaction=CH+H2<=>H+CH2
+reaction=CH+H2O<=>H+CH2O
+reaction=CH+CH4<=>H+C2H4
+reaction=CH+CO2<=>HCO+CO
+reaction=CH2+O2=>OH+H+CO
+reaction=CH2+H2<=>H+CH3
+reaction=CH2+CH4<=>2CH3
+reaction=CH2+CO(+M)<=>CH2CO(+M)
+reaction=CH2(S)+O2<=>H+OH+CO
+reaction=CH2(S)+H2<=>CH3+H
+reaction=CH2(S)+H2O(+M)<=>CH3OH(+M)
+reaction=CH2(S)+H2O<=>CH2+H2O
+reaction=CH2(S)+CH4<=>2CH3
+reaction=CH2(S)+CO<=>CH2+CO
+reaction=CH2(S)+CO2<=>CO+CH2O
+reaction=CH3+O2<=>O+CH3O
+reaction=CH3+O2<=>OH+CH2O
+reaction=CH3+H2O2<=>HO2+CH4
+reaction=2CH3(+M)<=>C2H6(+M)
+reaction=2CH3<=>H+C2H5
+reaction=CH3+CH2O<=>HCO+CH4
+reaction=CH3+CH3OH<=>CH2OH+CH4
+reaction=CH3+CH3OH<=>CH3O+CH4
+reaction=CH3+C2H4<=>C2H3+CH4
+reaction=CH3+C2H6<=>C2H5+CH4
+reaction=HCO+H2O<=>H+CO+H2O
+reaction=HCO+M<=>H+CO+M
+reaction=HCO+O2<=>HO2+CO
+reaction=CH2OH+O2<=>HO2+CH2O
+reaction=CH3O+O2<=>HO2+CH2O
+reaction=C2H3+O2<=>HCO+CH2O
+reaction=C2H4(+M)<=>H2+C2H2(+M)
+reaction=C2H5+O2<=>HO2+C2H4
+reaction=O+CH3=>H+H2+CO
+reaction=OH+HO2<=>O2+H2O
+reaction=OH+CH3=>H2+CH2O
+reaction=CH+H2(+M)<=>CH3(+M)
+reaction=CH2+O2=>2H+CO2
+reaction=CH2(S)+H2O=>H2+CH2O
+reaction=C2H3+O2<=>HO2+C2H2

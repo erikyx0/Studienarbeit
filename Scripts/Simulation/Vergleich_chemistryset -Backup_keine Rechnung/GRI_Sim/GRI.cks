@@ -1,0 +1,21 @@
+#
+#Thu Jun 19 14:54:27 CEST 2025
+FIT_TRANSPORT_PROPERTIES=1
+IN_SURF_INPUT=
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__Run_Result=PREPROCESS_OK_42
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__OUT_SURF_SPECIES=
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__OUT_SURF_ASC=
+Chemistry\ Set\ Name=GRI
+IN_THERM_DB=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\GRI_Original\\thermo30.dat
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__OUT_CHEM_ASC=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim\\GRI_gas.asc
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__OUT_XML_PARAMETERS=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim\\GRI.xml
+IN_LIQUID_DB=
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__OUT_CHEM_OUTPUT=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim\\GRI_gas.out
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__OUT_SURF_OUTPUT=
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__OUT_TRAN_ASC=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim\\GRI_gtran.asc
+SYSTEM_FLAG=FALSE
+IN_TRANS_DB=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\GRI_Original\\trans30.dat
+IN_CHEM_INPUT=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\GRI_Original\\grimech30.inp
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__OUT_TRAN_OUTPUT=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim\\GRI_gtran.out
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim__OUT_CHEM_SPECIES=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\GRI_Sim\\GRI_gas.asu
+Chemistry\ Set\ Description=

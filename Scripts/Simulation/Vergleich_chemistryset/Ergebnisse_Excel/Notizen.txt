@@ -1,0 +1,10 @@
+NUIG: 35,95kW; 66.666 J/(cm s) -> alles andere instabil (solver -1 Größenordnung)
+
+NUIG Stabil:
+35,95kW; 100 J/cms; 1 bar
+
+Vergleichskriterien:
+- Tmax
+- T ende 
+- H2 ausbeute 
+- 

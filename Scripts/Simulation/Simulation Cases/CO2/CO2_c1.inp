@@ -1,0 +1,84 @@
+! 
+! problem type definition
+! 
+ENRG   ! Solve Gas Energy Equation
+STST   ! Steady State Solver
+! 
+! physical property
+! 
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 1.0119789674952E5   ! Heat Loss (cal/sec)
+TEMP 1500.0   ! Temperature (K)
+VOL 62.77778   ! Volume (cm3)
+! 
+! species property
+! 
+XEST N2 1.0   ! Initial Gas Fraction (mole fraction)
+! 
+! solver control
+! 
+! 
+! output control and other misc. property
+! 
+CSVOUTPUT_KOUT CH4 FIXED_mass_fraction   ! Table Output Parameter
+CSVOUTPUT_KOUT CO FIXED_mass_fraction   ! Table Output Parameter
+CSVOUTPUT_KOUT CO2 FIXED_mass_fraction   ! Table Output Parameter
+CSVOUTPUT_KOUT H2 FIXED_mass_fraction   ! Table Output Parameter
+CSVOUTPUT_KOUT H2O FIXED_mass_fraction   ! Table Output Parameter
+CSVOUTPUT_WRITE   ! Write CSV Output File
+EPSR 0.01   ! Threshold for Rate of Production
+EPSS 0.001   ! Threshold for Species Sensitivity
+EPST 0.001   ! Threshold for Temperature Sensitivity
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+PRNT 1   ! Print Level Control
+SDOUTPUT_WRITE   ! Write Standard Diagnostic Output
+SIZE 100000000   ! Solution Data Block Size (bytes)
+! 
+! physical property
+! 
+FLRT C1_Inlet1 25.76   ! Mass Flow Rate (g/sec)
+TINL C1_Inlet1 340.7   ! Inlet Temperature (K)
+! 
+! species property
+! 
+REAC C1_Inlet1 C2H6 0.0542   ! Reactant Fraction (mole fraction)
+REAC C1_Inlet1 C3H8 0.00227   ! Reactant Fraction (mole fraction)
+REAC C1_Inlet1 CH4 0.91751   ! Reactant Fraction (mole fraction)
+REAC C1_Inlet1 CO2 0.01221   ! Reactant Fraction (mole fraction)
+REAC C1_Inlet1 N2 0.01142   ! Reactant Fraction (mole fraction)
+INLET C1_Inlet1 1   ! Inlet Stream
+! 
+! physical property
+! 
+FLRT CO2 54.55   ! Mass Flow Rate (g/sec)
+TINL CO2 340.65   ! Inlet Temperature (K)
+! 
+! species property
+! 
+REAC CO2 CO2 1.0   ! Reactant Fraction (mole fraction)
+INLET CO2 1   ! Inlet Stream
+! 
+! physical property
+! 
+FLRT o2+steam 68.6   ! Mass Flow Rate (g/sec)
+TINL o2+steam 504.35   ! Inlet Temperature (K)
+! 
+! species property
+! 
+REAC o2+steam H2O 0.0666801456327   ! Reactant Fraction (mole fraction)
+REAC o2+steam O2 0.9333198543673   ! Reactant Fraction (mole fraction)
+INLET o2+steam 1   ! Inlet Stream
+! 
+! physical property
+! 
+FLRT steam 10.9   ! Mass Flow Rate (g/sec)
+TINL steam 626.6   ! Inlet Temperature (K)
+! 
+! species property
+! 
+REAC steam H2O 1.0   ! Reactant Fraction (mole fraction)
+INLET steam 1   ! Inlet Stream
+! Number of Continuation 0   ! Continuation Count
+END

@@ -1,0 +1,98 @@
+!
+! problem type definition
+!
+ENRG   ! Solve Gas Energy Equation
+MOMEN ON   ! Turn on Momentum Equation
+PLUG   ! Plug Flow Reactor
+RTIME ON   ! Turn on Residence Time Calculation
+!
+! physical property
+!
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 0.0   ! Heat Flux Per Unit Length (cal/cm-sec)
+TEMP 1600.0   ! Temperature (K)
+VIS 0.0   ! Mixture Viscosity at Inlet (g/cm-sec)
+!
+! reactor dimension definition
+!
+AREAF 1119.8   ! Cross-sectional Area (cm2)
+XEND 1.0   ! Ending Axial Position (cm)
+XSTR 0.0   ! Starting Axial Position (cm)
+!
+! solver control
+!
+ACHG 0.0   ! Maximum Absolute Change in Site Fractions
+ADAP   ! Save Additional Adaptive Points
+ATLS 1.0E-6   ! Sensitivity Absolute Tolerance
+ATOL 1.0E-6   ! Absolute Tolerance
+MAXIT 100   ! Maximum Number of Iterations
+PSV 1.0E-8   ! Scaling Factor for Relaxing Surface Equations (cm/sec)
+RCHG 1.0E-6   ! Maximum Relative Change in Site Fractions
+RELAXC   ! Relaxed Iteration
+RTLS 1.0E-5   ! Sensitivity Relative Tolerance
+RTOL 1.0E-5   ! Relative Tolerance
+TSTP 0.1   ! Initial Integration Step (cm)
+!
+! output control and other misc. property
+!
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+!tear!XMLS C2__Gas_Mixer_to_C3__PFR 1.0 W:\studienarbeit\Simulation\Simulation*Cases\kein*CO2\XMLdata_Aramco-Rev7-Simplified_Gas_MixerC2.zip
+TEMP 1.69915371e+03
+FLRT C2__Gas_Mixer_to_C3__PFR 6.504703E3
+REAC C2__Gas_Mixer_to_C3__PFR H2 4.450764E-1
+REAC C2__Gas_Mixer_to_C3__PFR H 1.427416E-5
+REAC C2__Gas_Mixer_to_C3__PFR O 5.188217E-10
+REAC C2__Gas_Mixer_to_C3__PFR O2 2.345076E-5
+REAC C2__Gas_Mixer_to_C3__PFR OH 4.214048E-7
+REAC C2__Gas_Mixer_to_C3__PFR H2O 2.152488E-1
+REAC C2__Gas_Mixer_to_C3__PFR HO2 3.292287E-8
+REAC C2__Gas_Mixer_to_C3__PFR H2O2 1.042963E-8
+REAC C2__Gas_Mixer_to_C3__PFR C 1.44907E-14
+REAC C2__Gas_Mixer_to_C3__PFR CH 8.223671E-13
+REAC C2__Gas_Mixer_to_C3__PFR CH2 2.416514E-9
+REAC C2__Gas_Mixer_to_C3__PFR CH2(S) 5.104886E-11
+REAC C2__Gas_Mixer_to_C3__PFR CH3 2.360789E-5
+REAC C2__Gas_Mixer_to_C3__PFR CH4 3.383894E-2
+REAC C2__Gas_Mixer_to_C3__PFR CO 2.629627E-1
+REAC C2__Gas_Mixer_to_C3__PFR CO2 3.81597E-2
+REAC C2__Gas_Mixer_to_C3__PFR HCO 1.407436E-7
+REAC C2__Gas_Mixer_to_C3__PFR CH2O 3.487292E-6
+REAC C2__Gas_Mixer_to_C3__PFR CH2OH 1.778882E-9
+REAC C2__Gas_Mixer_to_C3__PFR CH3O 1.018922E-10
+REAC C2__Gas_Mixer_to_C3__PFR CH3OH 1.006246E-6
+REAC C2__Gas_Mixer_to_C3__PFR C2H 4.796441E-10
+REAC C2__Gas_Mixer_to_C3__PFR C2H2 5.722283E-4
+REAC C2__Gas_Mixer_to_C3__PFR C2H3 1.148317E-7
+REAC C2__Gas_Mixer_to_C3__PFR C2H4 3.67901E-4
+REAC C2__Gas_Mixer_to_C3__PFR C2H5 1.168403E-7
+REAC C2__Gas_Mixer_to_C3__PFR C2H6 1.984755E-5
+REAC C2__Gas_Mixer_to_C3__PFR HCCO 6.416646E-9
+REAC C2__Gas_Mixer_to_C3__PFR CH2CO 4.104358E-6
+REAC C2__Gas_Mixer_to_C3__PFR HCCOH 5.09688E-7
+REAC C2__Gas_Mixer_to_C3__PFR N 4.358551E-16
+REAC C2__Gas_Mixer_to_C3__PFR NH 5.347123E-16
+REAC C2__Gas_Mixer_to_C3__PFR NH2 2.991999E-14
+REAC C2__Gas_Mixer_to_C3__PFR NH3 1.268074E-10
+REAC C2__Gas_Mixer_to_C3__PFR NNH 4.643787E-12
+REAC C2__Gas_Mixer_to_C3__PFR NO 1.115309E-12
+REAC C2__Gas_Mixer_to_C3__PFR NO2 2.10222E-15
+REAC C2__Gas_Mixer_to_C3__PFR N2O 1.747491E-12
+REAC C2__Gas_Mixer_to_C3__PFR HNO 7.935554E-16
+REAC C2__Gas_Mixer_to_C3__PFR CN 5.583011E-17
+REAC C2__Gas_Mixer_to_C3__PFR HCN 5.673857E-11
+REAC C2__Gas_Mixer_to_C3__PFR H2CN 1.842736E-16
+REAC C2__Gas_Mixer_to_C3__PFR HCNN 4.914119E-16
+REAC C2__Gas_Mixer_to_C3__PFR HCNO 4.028965E-14
+REAC C2__Gas_Mixer_to_C3__PFR HOCN 1.578197E-14
+REAC C2__Gas_Mixer_to_C3__PFR HNCO 3.041484E-12
+REAC C2__Gas_Mixer_to_C3__PFR NCO 1.195308E-16
+REAC C2__Gas_Mixer_to_C3__PFR N2 3.682182E-3
+REAC C2__Gas_Mixer_to_C3__PFR C3H7 2.780623E-10
+REAC C2__Gas_Mixer_to_C3__PFR C3H8 5.017041E-8
+REAC C2__Gas_Mixer_to_C3__PFR CH2CHO 6.979375E-10
+REAC C2__Gas_Mixer_to_C3__PFR CH3CHO 4.143649E-8
+! Initialization of Inlet Stream From Solution File
+INLET C2__Gas_Mixer_to_C3__PFR 1   ! Inlet Stream
+END

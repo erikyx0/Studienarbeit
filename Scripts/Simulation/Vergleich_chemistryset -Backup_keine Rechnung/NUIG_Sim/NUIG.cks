@@ -1,0 +1,21 @@
+#
+#Thu Jun 19 14:57:27 CEST 2025
+FIT_TRANSPORT_PROPERTIES=1
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__OUT_XML_PARAMETERS=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim\\NUIG.xml
+IN_SURF_INPUT=
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__OUT_CHEM_SPECIES=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim\\NUIG_gas.asu
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__OUT_SURF_SPECIES=
+IN_THERM_DB=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\NUIGMech1.1\\thermo_NUIGMECH.THERM
+Chemistry\ Set\ Name=NUIG
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__OUT_SURF_OUTPUT=
+IN_LIQUID_DB=
+SYSTEM_FLAG=FALSE
+IN_TRANS_DB=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\NUIGMech1.1\\trans_NUIGMech.TRAN
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__OUT_SURF_ASC=
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__OUT_TRAN_ASC=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim\\NUIG_gtran.asc
+IN_CHEM_INPUT=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\NUIGMech1.1\\NUIGMECH_HT.inp
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__Run_Result=PREPROCESS_OK_42
+Chemistry\ Set\ Description=
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__OUT_CHEM_ASC=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim\\NUIG_gas.asc
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__OUT_CHEM_OUTPUT=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim\\NUIG_gas.out
+W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim__OUT_TRAN_OUTPUT=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\NUIG_Sim\\NUIG_gtran.out

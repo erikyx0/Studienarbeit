@@ -1,0 +1,117 @@
+!
+! problem type definition
+!
+ENRG   ! Solve Gas Energy Equation
+STST   ! Steady State Solver
+!
+! physical property
+!
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 4916.276290630975   ! Heat Loss (cal/sec)
+TEMP 1600.0   ! Temperature (K)
+VOL 9.17242E4   ! Volume (cm3)
+!
+! solver control
+!
+ATIM 1.0E-9   ! Absolute Tolerance for Pseudo Timestepping
+ATOL 1.0E-9   ! Absolute Tolerance
+DTMN 1.0E-10   ! Minimum Pseudo Time Step (sec)
+DTMX 0.01   ! Maximum Pseudo Time Step (sec)
+IRET 25   ! Number Time Steps Before Increasing
+ISTP 0   ! Number of Initial Pseudo Time Steps
+MAXTIME 100   ! Maximum Number of Pseudo Time Stepping Operations Allowed
+NJAC 20   ! Number of Iterations before Updating Jacobian
+RTIM 0.0001   ! Relative Tolerance for Pseudo Timestepping
+RTOL 0.0001   ! Relative Tolerance
+SFLR -0.0001   ! Minimum Bounds on Species Fractions
+SSMAXITER 100   ! Maximum Number of Iterations per Steady State Search
+TIM1 100.0 1.0E-6   ! Pseudo Time Steps (Fixed Temperature) (none, sec)
+TIM2 100.0 1.0E-6   ! Pseudo Time Steps (Energy Equation) (none, sec)
+TJAC 20   ! Number of Transient Iterations before Updating Jacobian
+TRMAXITER 25   ! Maximum Number of Iterations per Pseudo Time Step
+!
+! output control and other misc. property
+!
+DFAC 2.0   ! Time Step Decrement Factor
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+UFAC 2.0   ! Time Step Increment Factor
+!tear!XMLS C3__Gas_Splitter_to_C7_R2_PSR 0.95 W:\studienarbeit\Simulation\Simulation*Cases\kein*CO2\XMLdata_Aramco-Rev7-Simplified_PFRC3.zip
+TINL C3__Gas_Splitter_to_C7_R2_PSR 1.700078e+03
+FLRT C3__Gas_Splitter_to_C7_R2_PSR 6.179468E3
+REAC C3__Gas_Splitter_to_C7_R2_PSR H2 4.447443E-1
+REAC C3__Gas_Splitter_to_C7_R2_PSR H 1.44581E-5
+REAC C3__Gas_Splitter_to_C7_R2_PSR O 9.281545E-12
+REAC C3__Gas_Splitter_to_C7_R2_PSR OH 3.619056E-7
+REAC C3__Gas_Splitter_to_C7_R2_PSR H2O 2.154749E-1
+REAC C3__Gas_Splitter_to_C7_R2_PSR H2O2 1.067641E-12
+REAC C3__Gas_Splitter_to_C7_R2_PSR C 1.035435E-15
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH 9.455114E-14
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH2 7.407987E-10
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH2(S) 2.268539E-11
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH3 2.237695E-5
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH4 3.395469E-2
+REAC C3__Gas_Splitter_to_C7_R2_PSR CO 2.632687E-1
+REAC C3__Gas_Splitter_to_C7_R2_PSR CO2 3.795489E-2
+REAC C3__Gas_Splitter_to_C7_R2_PSR HCO 1.421518E-7
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH2O 2.665582E-6
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH2OH 8.107492E-10
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH3O 1.247516E-11
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH3OH 4.78149E-7
+REAC C3__Gas_Splitter_to_C7_R2_PSR C2H 7.826625E-11
+REAC C3__Gas_Splitter_to_C7_R2_PSR C2H2 4.312806E-4
+REAC C3__Gas_Splitter_to_C7_R2_PSR C2H3 8.342492E-8
+REAC C3__Gas_Splitter_to_C7_R2_PSR C2H4 4.272106E-4
+REAC C3__Gas_Splitter_to_C7_R2_PSR C2H5 1.184193E-7
+REAC C3__Gas_Splitter_to_C7_R2_PSR C2H6 1.889323E-5
+REAC C3__Gas_Splitter_to_C7_R2_PSR HCCO 3.794967E-10
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH2CO 1.658189E-6
+REAC C3__Gas_Splitter_to_C7_R2_PSR HCCOH 4.514843E-8
+REAC C3__Gas_Splitter_to_C7_R2_PSR N 3.708298E-17
+REAC C3__Gas_Splitter_to_C7_R2_PSR NH 3.313721E-17
+REAC C3__Gas_Splitter_to_C7_R2_PSR NH2 1.056906E-14
+REAC C3__Gas_Splitter_to_C7_R2_PSR NH3 1.302943E-10
+REAC C3__Gas_Splitter_to_C7_R2_PSR NNH 4.706863E-12
+REAC C3__Gas_Splitter_to_C7_R2_PSR NO 1.019394E-14
+REAC C3__Gas_Splitter_to_C7_R2_PSR N2O 1.422506E-14
+REAC C3__Gas_Splitter_to_C7_R2_PSR HNO 4.817679E-18
+REAC C3__Gas_Splitter_to_C7_R2_PSR CN 1.597799E-17
+REAC C3__Gas_Splitter_to_C7_R2_PSR HCN 5.70639E-11
+REAC C3__Gas_Splitter_to_C7_R2_PSR H2CN 1.866516E-16
+REAC C3__Gas_Splitter_to_C7_R2_PSR HCNN 7.655961E-17
+REAC C3__Gas_Splitter_to_C7_R2_PSR HCNO 4.171319E-19
+REAC C3__Gas_Splitter_to_C7_R2_PSR HOCN 2.718818E-15
+REAC C3__Gas_Splitter_to_C7_R2_PSR HNCO 1.898289E-12
+REAC C3__Gas_Splitter_to_C7_R2_PSR NCO 1.513381E-17
+REAC C3__Gas_Splitter_to_C7_R2_PSR N2 3.682654E-3
+REAC C3__Gas_Splitter_to_C7_R2_PSR C3H7 1.60265E-10
+REAC C3__Gas_Splitter_to_C7_R2_PSR C3H8 2.55276E-8
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH2CHO 1.638006E-10
+REAC C3__Gas_Splitter_to_C7_R2_PSR CH3CHO 2.941037E-8
+! Initialization of Inlet Stream From Solution File
+INLET C3__Gas_Splitter_to_C7_R2_PSR 1   ! Inlet Stream
+!XMLS Inserted_Splitter5_to_C7_R2_PSR 0.5 W:\studienarbeit\Simulation\Simulation*Cases\kein*CO2\XMLdata_Aramco-Rev7-Simplified_PSRC8.zip
+TINL Inserted_Splitter5_to_C7_R2_PSR 1.6E3
+FLRT Inserted_Splitter5_to_C7_R2_PSR 2.163262E2
+REAC Inserted_Splitter5_to_C7_R2_PSR H2 4.583157E-1
+REAC Inserted_Splitter5_to_C7_R2_PSR H 5.393633E-6
+REAC Inserted_Splitter5_to_C7_R2_PSR OH 9.440844E-8
+REAC Inserted_Splitter5_to_C7_R2_PSR H2O 2.050246E-1
+REAC Inserted_Splitter5_to_C7_R2_PSR CH3 6.888819E-6
+REAC Inserted_Splitter5_to_C7_R2_PSR CH4 2.883493E-2
+REAC Inserted_Splitter5_to_C7_R2_PSR CO 2.646559E-1
+REAC Inserted_Splitter5_to_C7_R2_PSR CO2 3.936396E-2
+REAC Inserted_Splitter5_to_C7_R2_PSR HCO 7.431287E-8
+REAC Inserted_Splitter5_to_C7_R2_PSR CH2O 2.553248E-6
+REAC Inserted_Splitter5_to_C7_R2_PSR CH3OH 1.877393E-7
+REAC Inserted_Splitter5_to_C7_R2_PSR C2H2 4.119501E-5
+REAC Inserted_Splitter5_to_C7_R2_PSR C2H4 9.787678E-5
+REAC Inserted_Splitter5_to_C7_R2_PSR C2H5 2.124835E-8
+REAC Inserted_Splitter5_to_C7_R2_PSR C2H6 8.89156E-6
+REAC Inserted_Splitter5_to_C7_R2_PSR CH2CO 6.372959E-7
+REAC Inserted_Splitter5_to_C7_R2_PSR N2 3.641115E-3
+REAC Inserted_Splitter5_to_C7_R2_PSR CH3CHO 2.050153E-8
+! Initialization of Inlet Stream From Solution File
+INLET Inserted_Splitter5_to_C7_R2_PSR 1   ! Inlet Stream
+END

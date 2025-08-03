@@ -1,0 +1,21 @@
+The following species has more than one set of thermodynamic data:
+C4H71-1
+C4H71-2
+C4H71-4
+C4H6OHOOH1-4-3
+CH2CHCHCHO
+C4H612
+C4H6-2
+Only the FIRST data set will be used.
+
+The following species has more than one set of transport data:
+C2H5OH
+C3H6OH1-1
+C4H71-O
+C4H7O1-4
+C4H7O2-1
+C4H6O1-3OOH4
+C4H64,2-1OH
+C4H6OHOOH1-4-3
+CH2CHCHCHO
+Only the FIRST data set will be used.

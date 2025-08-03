@@ -1,0 +1,99 @@
+!
+! problem type definition
+!
+ENRG   ! Solve Gas Energy Equation
+STST   ! Steady State Solver
+!
+! physical property
+!
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 0.0   ! Heat Loss (cal/sec)
+VOL 1.0   ! Volume (cm3)
+!
+! output control and other misc. property
+!
+GFAC 0.0   ! Gas Reaction Rate Multiplier
+!XMLS C8_R2_PSR_to_C2__Gas_Mixer 1.0 W:\studienarbeit\Simulation\Simulation*Cases\kein*CO2\XMLdata_Aramco-Rev7-Simplified_PSRC5.zip
+TINL C8_R2_PSR_to_C2__Gas_Mixer 1.697859E3
+FLRT C8_R2_PSR_to_C2__Gas_Mixer 6.415048E3
+REAC C8_R2_PSR_to_C2__Gas_Mixer H2 4.490498E-1
+REAC C8_R2_PSR_to_C2__Gas_Mixer H 1.418359E-5
+REAC C8_R2_PSR_to_C2__Gas_Mixer OH 3.424513E-7
+REAC C8_R2_PSR_to_C2__Gas_Mixer H2O 2.11094E-1
+REAC C8_R2_PSR_to_C2__Gas_Mixer CH3 2.15503E-5
+REAC C8_R2_PSR_to_C2__Gas_Mixer CH4 3.365722E-2
+REAC C8_R2_PSR_to_C2__Gas_Mixer CO 2.648133E-1
+REAC C8_R2_PSR_to_C2__Gas_Mixer CO2 3.703269E-2
+REAC C8_R2_PSR_to_C2__Gas_Mixer HCO 1.41246E-7
+REAC C8_R2_PSR_to_C2__Gas_Mixer CH2O 2.679179E-6
+REAC C8_R2_PSR_to_C2__Gas_Mixer CH3OH 4.501467E-7
+REAC C8_R2_PSR_to_C2__Gas_Mixer C2H2 2.944003E-4
+REAC C8_R2_PSR_to_C2__Gas_Mixer C2H3 5.996607E-8
+REAC C8_R2_PSR_to_C2__Gas_Mixer C2H4 3.194208E-4
+REAC C8_R2_PSR_to_C2__Gas_Mixer C2H5 9.430889E-8
+REAC C8_R2_PSR_to_C2__Gas_Mixer C2H6 1.718706E-5
+REAC C8_R2_PSR_to_C2__Gas_Mixer CH2CO 1.551539E-6
+REAC C8_R2_PSR_to_C2__Gas_Mixer HCCOH 2.956458E-8
+REAC C8_R2_PSR_to_C2__Gas_Mixer N2 3.680806E-3
+REAC C8_R2_PSR_to_C2__Gas_Mixer C3H8 3.596995E-8
+REAC C8_R2_PSR_to_C2__Gas_Mixer CH3CHO 2.809217E-8
+! Initialization of Inlet Stream From Solution File
+INLET C8_R2_PSR_to_C2__Gas_Mixer 1   ! Inlet Stream
+!tear!XMLS Flame__PSR_(C1_R1)_to_C2__Gas_Mixer 1.0 W:\studienarbeit\Simulation\Simulation*Cases\kein*CO2\XMLdata_Aramco-Rev7-Simplified_PSRC1.zip
+TINL Flame__PSR_(C1_R1)_to_C2__Gas_Mixer 1.772505e+03
+FLRT Flame__PSR_(C1_R1)_to_C2__Gas_Mixer 1.114428E2
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer H2 1.048948E-1
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer H 1.971579E-5
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer O 4.332316E-8
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer O2 1.99085E-3
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer OH 6.991552E-6
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer H2O 5.680987E-1
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HO2 2.794983E-6
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer H2O2 8.853283E-7
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer C 1.154692E-12
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH 6.278174E-11
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH2 1.477637E-7
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH2(S) 2.560138E-9
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH3 1.958621E-4
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH4 5.308957E-2
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CO 1.046272E-1
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CO2 1.342404E-1
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HCO 8.22874E-8
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH2O 7.123534E-5
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH2OH 8.729501E-8
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH3O 7.679347E-9
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH3OH 4.767892E-5
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer C2H 3.640155E-8
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer C2H2 2.389146E-2
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer C2H3 4.717094E-6
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer C2H4 4.480274E-3
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer C2H5 2.015629E-6
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer C2H6 2.4664E-4
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HCCO 5.157627E-7
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH2CO 2.183104E-4
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HCCOH 4.078963E-5
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer N 3.426416E-14
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer NH 4.342058E-14
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer NH2 1.999078E-12
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer NH3 3.90412E-9
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer NNH 7.10514E-12
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer NO 9.391023E-11
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer NO2 1.784678E-13
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer N2O 1.471223E-10
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HNO 6.708228E-14
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CN 3.953611E-15
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HCN 1.91215E-9
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer H2CN 6.215942E-15
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HCNN 3.596383E-14
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HCNO 3.420351E-12
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HOCN 1.205006E-12
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer HNCO 1.588592E-10
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer NCO 9.366908E-15
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer N2 3.825658E-3
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer C3H7 1.259058E-8
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer C3H8 1.250445E-6
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH2CHO 4.645384E-8
+REAC Flame__PSR_(C1_R1)_to_C2__Gas_Mixer CH3CHO 1.163359E-6
+! Initialization of Inlet Stream From Solution File
+INLET Flame__PSR_(C1_R1)_to_C2__Gas_Mixer 1   ! Inlet Stream
+END

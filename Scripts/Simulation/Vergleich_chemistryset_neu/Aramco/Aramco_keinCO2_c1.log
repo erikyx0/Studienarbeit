@@ -1,0 +1,103 @@
+Execution of Job Resulted in the Following Lines of Output:
+
+Microsoft Windows [Version 10.0.19044.6093]
+(c) Microsoft Corporation. Alle Rechte vorbehalten.
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>REM Generated Batch Job Command File
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>REM get the runtime environment defined
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>CALL "C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin\run_chemkinpro_env_setup.bat"
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>set CHEMKIN_VERS=23.1 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>call "C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin\run_chemkinpro_env_setup_part2.bat" 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET REACTION_DIR=C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin\..\.. 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>FOR %i in ("C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin\.") do @SET "CHEMKIN_BIN=%~fi" 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET _ROOT_DIR=C:\Program Files\ANSYS Inc\v231 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET RD_JRE_BIN=C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin\..\..\..\tp\openjre\17\bin 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET relinfo_file=C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin\..\..\..\commonfiles\globalsettings\relinfo.xml 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>PUSHD C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>FOR /F "tokens=*" %a in ('ReadRelinfoExt.BAT') do set extvers_file=%a 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>set extvers_file=C:\Users\ed67qowe\AppData\Local\Temp\rd_22144493_ext.tmp 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>FOR /F "tokens=*" %a in ('ReadRelinfoInt.BAT') do set intvers_file=%a 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>set intvers_file=C:\Users\ed67qowe\AppData\Local\Temp\rd_1893378_int.tmp 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>FOR /F "usebackq delims==" %g IN (`type "C:\Users\ed67qowe\AppData\Local\Temp\rd_1893378_int.tmp"`) DO set CHEMKIN_INT_VERS=%g 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>set CHEMKIN_INT_VERS=231 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>FOR /F "usebackq delims==" %g IN (`type "C:\Users\ed67qowe\AppData\Local\Temp\rd_22144493_ext.tmp"`) DO set CHEMKIN_VERS=%g 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>set CHEMKIN_VERS=2023 R1 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>DEL /Q C:\Users\ed67qowe\AppData\Local\Temp\rd_1893378_int.tmp C:\Users\ed67qowe\AppData\Local\Temp\rd_22144493_ext.tmp 
+
+C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin>POPD
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET TP_DIR=C:\Program Files\ANSYS Inc\v231\tp 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>set BUILD_DATE_FILE=C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin\..\..\chemkinpro.win64\build_date.txt 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>set CHEMKIN_TITLE=ANSYS Chemkin-Pro 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>FOR /F "usebackq delims==" %g IN (`type "C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin\..\..\chemkinpro.win64\build_date.txt"`) DO set CHEMKIN_RELEASE_NUMBER=2023 R1 (%g) 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>set CHEMKIN_RELEASE_NUMBER=2023 R1 (17-Nov-2022 4:39:34 PM ) 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>set PATH=C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin;C:\Program Files\ANSYS Inc\v231\tp\IntelCompiler\2019.5.281\winx64;C:\Program Files\ANSYS Inc\v231\tp\IntelMKL\2021.3.0\winx64;C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\bin;C:\Program Files\ANSYS Inc\v231\tp\IntelCompiler\2019.5.281\winx64;C:\Program Files\ANSYS Inc\v231\tp\IntelMKL\2021.3.0\winx64;C:\Python311\Scripts\;C:\Python311\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\PCI Geomatics\Geomatica Banff\exe;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp;C:\PCI Geomatics\Geomatica 2018\exe;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.2\libnvvp;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\CMake\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\ProgramData\chocolatey\lib\tinyxml2\lib;C:\ProgramData\chocolatey\lib\log4cxx\lib;C:\opencv\x64\vc15\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.4.0\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\OSG\bin;C:\Program Files (x86)\dotnet\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\cygwin64\bin;C:\Program Files\Microsoft VS Code\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\ed67qowe\AppData\Local\Microsoft\WindowsApps;C:\Users\ed67qowe\AppData\Local\GitHubDesktop\bin;C:\Users\ed67qowe\AppData\Local\Programs\Microsoft VS Code\bin 
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>if "xx" == "xx" goto done_userpath 
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>REM cd to the Working Directory for this job
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>W: && cd \studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET MKL_NUM_THREADS=1
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET OMP_NUM_THREADS=1
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET ANSYS_PARENT_CHILD_ID=dbe4c33e-0725-4b26-9cb6-b4e7c9a20b82
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET ANSYS_PARENT_CHILD_SERVER=60748@R26.adds.tu-freiberg.de
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET ANSYS_LICENSING_CONTEXT_DATA="<ANSYS_LICENSING_CONTEXT_DATA><ID>dbe4c33e-0725-4b26-9cb6-b4e7c9a20b82</ID><TYPE>PARENT_CHILD</TYPE><NAME>Parent Child</NAME><HANDLER>60748@R26.adds.tu-freiberg.de</HANDLER></ANSYS_LICENSING_CONTEXT_DATA>"
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET XERCES_DISABLE_DTD=1
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>IF EXIST "W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco\XMLdata_Aramco_keinCO2_PSRC1.zip" DEL /F /Q "W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco\XMLdata_Aramco_keinCO2_PSRC1.zip"
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>COPY /Y "C:\Program Files\ANSYS Inc\v231\reaction\chemkinpro.win64\data\chemkindata.dtd" "W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco"
+        1 Datei(en) kopiert.
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>SET CHEMKIN_MODE=Pro
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>CKReactorGenericPSR -i "W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco\Aramco_keinCO2_c1.inp" -o "W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco\Aramco_keinCO2_c1.out" -x "W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco\XMLdata_Aramco_keinCO2_PSRC1.zip" Pro -m "Aramco_keinCO2_c1.out.mon" -c "W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco\Aramco_gas.asc" -t "W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco\Aramco_gtran.asc" Licenses Released
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>set exit_status=%errorlevel%
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>if exist CKRUN_ERROR.TXT del /F /Q CKRUN_ERROR.TXT
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>if exist CKRUN_SUCCESS.TXT del /F /Q CKRUN_SUCCESS.TXT
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>if %exit_status% gtr 0 echo exit_status=%exit_status% >CKRUN_ERROR.TXT
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>if %exit_status% equ 0 echo exit_status=%exit_status% >CKRUN_SUCCESS.TXT
+
+W:\studienarbeit\Simulation\Vergleich_chemistryset_neu\Aramco>exit %exit_status%
+
+
+

@@ -1,0 +1,34 @@
+! 
+! problem type definition
+! 
+ENRG   ! Solve Gas Energy Equation
+MOMEN ON   ! Turn on Momentum Equation
+PLUG   ! Plug Flow Reactor
+RTIME ON   ! Turn on Residence Time Calculation
+! 
+! physical property
+! 
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 49.1627629063098   ! Heat Flux Per Unit Length (cal/cm-sec)
+TEMP 1550.0   ! Temperature (K)
+VIS 0.0   ! Mixture Viscosity at Inlet (g/cm-sec)
+! 
+! reactor dimension definition
+! 
+AREAF 23.9596   ! Cross-sectional Area (cm2)
+XEND 100.0   ! Ending Axial Position (cm)
+XSTR 0.0   ! Starting Axial Position (cm)
+! 
+! solver control
+! 
+ADAP   ! Save Additional Adaptive Points
+! 
+! output control and other misc. property
+! 
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+XMLS C4__Gas_Splitter_to_C9__PFR 0.2 W:\studienarbeit\Simulation\Simulation*Cases\CO2\XMLdata_CO2_PFRC7.zip   
+! Initialization of Inlet Stream From Solution File
+INLET C4__Gas_Splitter_to_C9__PFR 1   ! Inlet Stream
+END

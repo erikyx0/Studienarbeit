@@ -1,0 +1,94 @@
+!
+! problem type definition
+!
+ENRG   ! Solve Gas Energy Equation
+STST   ! Steady State Solver
+!
+! physical property
+!
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 0.0   ! Heat Loss (cal/sec)
+VOL 1.0   ! Volume (cm3)
+!
+! output control and other misc. property
+!
+GFAC 0.0   ! Gas Reaction Rate Multiplier
+GFAC 0.0   ! Gas Reaction Rate Multiplier
+!tear!XMLS C3__Gas_Splitter_to_C7__Gas_Mixer 0.05 W:\studienarbeit\Simulation\Simulation*Cases\kein*CO2\XMLdata_Aramco-Rev7-Simplified_PFRC3.zip
+TINL C3__Gas_Splitter_to_C7__Gas_Mixer 1.700078e+03
+FLRT C3__Gas_Splitter_to_C7__Gas_Mixer 3.252352E2
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer H2 4.447443E-1
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer H 1.44581E-5
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer O 9.281545E-12
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer OH 3.619056E-7
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer H2O 2.154749E-1
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer H2O2 1.067641E-12
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer C 1.035435E-15
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH 9.455114E-14
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH2 7.407987E-10
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH2(S) 2.268539E-11
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH3 2.237695E-5
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH4 3.395469E-2
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CO 2.632687E-1
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CO2 3.795489E-2
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer HCO 1.421518E-7
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH2O 2.665582E-6
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH2OH 8.107492E-10
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH3O 1.247516E-11
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH3OH 4.78149E-7
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer C2H 7.826625E-11
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer C2H2 4.312806E-4
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer C2H3 8.342492E-8
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer C2H4 4.272106E-4
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer C2H5 1.184193E-7
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer C2H6 1.889323E-5
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer HCCO 3.794967E-10
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH2CO 1.658189E-6
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer HCCOH 4.514843E-8
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer N 3.708298E-17
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer NH 3.313721E-17
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer NH2 1.056906E-14
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer NH3 1.302943E-10
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer NNH 4.706863E-12
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer NO 1.019394E-14
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer N2O 1.422506E-14
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer HNO 4.817679E-18
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CN 1.597799E-17
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer HCN 5.70639E-11
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer H2CN 1.866516E-16
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer HCNN 7.655961E-17
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer HCNO 4.171319E-19
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer HOCN 2.718818E-15
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer HNCO 1.898289E-12
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer NCO 1.513381E-17
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer N2 3.682654E-3
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer C3H7 1.60265E-10
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer C3H8 2.55276E-8
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH2CHO 1.638006E-10
+REAC C3__Gas_Splitter_to_C7__Gas_Mixer CH3CHO 2.941037E-8
+! Initialization of Inlet Stream From Solution File
+INLET C3__Gas_Splitter_to_C7__Gas_Mixer 1   ! Inlet Stream
+!XMLS Inserted_Splitter5_to_C7__Gas_Mixer 0.5 W:\studienarbeit\Simulation\Simulation*Cases\kein*CO2\XMLdata_Aramco-Rev7-Simplified_PSRC8.zip
+TINL Inserted_Splitter5_to_C7__Gas_Mixer 1.6E3
+FLRT Inserted_Splitter5_to_C7__Gas_Mixer 2.163262E2
+REAC Inserted_Splitter5_to_C7__Gas_Mixer H2 4.583157E-1
+REAC Inserted_Splitter5_to_C7__Gas_Mixer H 5.393633E-6
+REAC Inserted_Splitter5_to_C7__Gas_Mixer OH 9.440844E-8
+REAC Inserted_Splitter5_to_C7__Gas_Mixer H2O 2.050246E-1
+REAC Inserted_Splitter5_to_C7__Gas_Mixer CH3 6.888819E-6
+REAC Inserted_Splitter5_to_C7__Gas_Mixer CH4 2.883493E-2
+REAC Inserted_Splitter5_to_C7__Gas_Mixer CO 2.646559E-1
+REAC Inserted_Splitter5_to_C7__Gas_Mixer CO2 3.936396E-2
+REAC Inserted_Splitter5_to_C7__Gas_Mixer HCO 7.431287E-8
+REAC Inserted_Splitter5_to_C7__Gas_Mixer CH2O 2.553248E-6
+REAC Inserted_Splitter5_to_C7__Gas_Mixer CH3OH 1.877393E-7
+REAC Inserted_Splitter5_to_C7__Gas_Mixer C2H2 4.119501E-5
+REAC Inserted_Splitter5_to_C7__Gas_Mixer C2H4 9.787678E-5
+REAC Inserted_Splitter5_to_C7__Gas_Mixer C2H5 2.124835E-8
+REAC Inserted_Splitter5_to_C7__Gas_Mixer C2H6 8.89156E-6
+REAC Inserted_Splitter5_to_C7__Gas_Mixer CH2CO 6.372959E-7
+REAC Inserted_Splitter5_to_C7__Gas_Mixer N2 3.641115E-3
+REAC Inserted_Splitter5_to_C7__Gas_Mixer CH3CHO 2.050153E-8
+! Initialization of Inlet Stream From Solution File
+INLET Inserted_Splitter5_to_C7__Gas_Mixer 1   ! Inlet Stream
+END
