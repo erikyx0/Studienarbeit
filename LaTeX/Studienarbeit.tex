@@ -74,12 +74,12 @@
                 &\mathrm{CH_4 + H_2O \rightleftharpoons CO + 3H_2} \qquad \Delta H_{1000} = 226 \;\mathrm{kJ/mol}~\label{eq:dampfreformierung}\\
                 &\mathrm{CO + H_2O \rightleftharpoons CO_2 + H_2} \qquad \Delta H_{1000} = -34,5 \;\mathrm{kJ/mol}
             \end{align}
-            Dabei ist Gleichung \ref{eq:dampfreformierung} die endotherme Dampfreformierungsreaktion, welche das nicht direkt in der Oxidation verbrauchte Methan verbraucht. Die vollständige Oxidation des Erdgases (Gleichung~\ref{eq:vollst_oxidation}) liefert dabei die nötige Energie für die Dampfreformierung~\cite{POX_Erdgas}.\\ 
+            Dabei ist Gleichung~\ref{eq:dampfreformierung} die endotherme Dampfreformierungsreaktion, welche das nicht direkt in der Oxidation verbrauchte Methan verbraucht. Die vollständige Oxidation des Erdgases (Gleichung~\ref{eq:vollst_oxidation}) liefert dabei die nötige Energie für die Dampfreformierung~\cite{POX_Erdgas}.\\ 
             Falls CO\textsubscript{2} vorliegt, ist auch statt einer Reaktion mit Wasser eine Reaktion mit diesem möglich:
             \begin{align}
-                &\mathrm{CH_4 + CO_2 \rightleftharpoons 2CO + 2H_2} \qquad \Delta H_{298} = 247,3 \;\mathrm{kJ/mol}~\label{eq:dampfreformierung}
+                &\mathrm{CH_4 + CO_2 \rightleftharpoons 2CO + 2H_2} \qquad \Delta H_{298} = 247,3 \;\mathrm{kJ/mol}~\label{eq:dry_reforming}
             \end{align}
-            Da diese Reaktion kein Wasser beinhaltet, wird sie auch als Dry Reforming bezeichnet. Dieser Prozess kann zukünftig Bedeutung erlangen, um Kohlenstoffdioxid in Syngas umzuwandeln, und somit den  Ausstoß von CO\textsubscript{2} zu reduzieren~\cite{LESACHE2022100970}. 
+            Da Reaktion \ref{eq:dry_reforming} kein Wasser beinhaltet, wird sie auch als Dry Reforming bezeichnet. Dieser Prozess kann zukünftig Bedeutung erlangen, um Kohlenstoffdioxid in Syngas umzuwandeln, und somit den  Ausstoß von CO\textsubscript{2} zu reduzieren beziehungsweise Kohlenstoffdioxid in chemische Produkte umzuwandeln~\cite{LESACHE2022100970}. 
         \section{Reaktionskinetische Grundlagen}
             Zur Beschreibung der Partialoxidation spielt die Reaktionskinetik eine entscheidende Rolle. Die Kinetik homogener Fluidreaktionen kann sehr oft ausreichend mit formalkinetischen Potenzansätzen beschrieben werden, die folgende allgemeine Form besitzen~\cite{Emig_Klemm_2017}:
             \begin{align}
@@ -112,7 +112,7 @@
     \subsection*{NUIGMech1.1}
         NUIGMech1.1 ist ein sehr umfangreicher Reaktionsmechanismus, welcher umfassend validiert wurde –- unter anderem für die Oxidation von C$_1$--C$_2$ Kohlenwasserstoffen, Erdgasgemischen, Propan/Propen-Gemischen. Propin, Isobuten sowie für die Autozündung und Pyrolyse von C$_2$ bis C$_6$ Alkenen~\cite{MARTINEZ2021401}.
     \section{Simulationen}
-        Für den Vergleich der Reaktionsmechanismen wurde ein einfaches Reaktornetzwerk, bestehend aus einem PSR und einem PFR durchgeführt. In diesem Reaktornetzwerk stellt der PSR die Flammzone dar, der PFR die Nachbrennzone. In Abbildung~\ref{fig:rom_mechanismusvergleich} ist das Reaktornetzwerk schematisch dargestellt.\\
+        Für den Vergleich der Reaktionsmechanismen wurde ein einfaches Reaktornetzwerk, bestehend aus einem PSR und einem PFR durchgeführt. In diesem Reaktornetzwerk stellt der PSR die Flammzone dar, der PFR die Nachbrennzone. In Abbildung~\ref{fig:rom_mechanismusvergleich} ist das Reaktornetzwerk schematisch dargestellt.
         \subsection{Simulation ohne \ch{CO2}}
         Über die Länge der Nachbrennzone lassen sich die Stoffmengenanteile aufteilen. In Abbildung~\ref{fig:vergleich_h2_ch4_keinco2} sind beispielsweise die Stoffmengenanteile von Wasserstoff und Methan dargestellt.
         \begin{figure}[H]
@@ -150,11 +150,11 @@
             \begin{tabular}{lccccc}
                 \toprule
                 & \textbf{Exp.} & \textbf{GRI} & \textbf{ARAMCO} & \textbf{ATR} & \textbf{NUIG} \\
-                \textbf{H\textsubscript{2}} [Vol.-\%]   & 0.4160 & 0.4215 & 0.4255 & 0.4217 & 0.4204 \\
-                \textbf{CO} [Vol.-\%]                  & 0.4240 & 0.4444 & 0.4443 & 0.4440 & 0.4444 \\
-                \textbf{CH\textsubscript{4}} [Vol.-\%] & 0.0012 & 0.0047 & 0.0022 & 0.0049 & 0.0048 \\
-                \textbf{CO\textsubscript{2}} [Vol.-\%] & 0.1510 & 0.1293 & 0.1280 & 0.1294 & 0.1305 \\
-                \textbf{CO\textsubscript{2}} [Vol.-\%] & 0{,}1510 & 0{,}1293 & 0{,}1280 & 0{,}1294 & 0{,}1305 \\
+                \midrule
+                \textbf{H\textsubscript{2}} [Vol.-\%]   & 0,4160 & 0,4215 & 0,4255 & 0,4217 & 0,4204 \\
+                \textbf{CO} [Vol.-\%]                  & 0,4240 & 0,4444 & 0,4443 & 0,4440 & 0,4444 \\
+                \textbf{CH\textsubscript{4}} [Vol.-\%] & 0,0012 & 0,0047 & 0,0022 & 0,0049 & 0,0048 \\
+                \textbf{CO\textsubscript{2}} [Vol.-\%] & 0,1510 & 0,1293 & 0,1280 & 0,1294 & 0,1305 \\
                 \bottomrule
             \end{tabular}
         \end{table}

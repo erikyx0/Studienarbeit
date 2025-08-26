@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber Studienarbeit"] 1756233523.14001 "Studienarbeit.bcf" "Studienarbeit.bbl" "Studienarbeit" 1756233541.57906 0
-  "Studienarbeit.bcf" 1756233541 108278 10771da088bf99ca4274e006121e55d4 "pdflatex"
+["biber Studienarbeit"] 1756235013.90561 "Studienarbeit.bcf" "Studienarbeit.bbl" "Studienarbeit" 1756235463.72378 0
+  "Studienarbeit.bcf" 1756235463 108278 10771da088bf99ca4274e006121e55d4 "pdflatex"
   "refs.bib" 1756233522 2847 4eab3c3934001a25e494bb023fe06c06 ""
   (generated)
   "Studienarbeit.bbl"
   "Studienarbeit.blg"
   (rewritten before read)
-["pdflatex"] 1756233536.26318 "c:/Users/erikd/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex" "Studienarbeit.pdf" "Studienarbeit" 1756233541.57988 0
-  "Studienarbeit.aux" 1756233541 10079 4b2b1e0d02fe5267b8c00a552e45a725 "pdflatex"
-  "Studienarbeit.bbl" 1756233525 14295 b6cd8952e5b08f9f304b62fe979b76fe "biber Studienarbeit"
-  "Studienarbeit.lof" 1756233541 500 2a01e33348f6e398db2d4d90b20a63f8 "pdflatex"
-  "Studienarbeit.out" 1756233539 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Studienarbeit.run.xml" 1756233541 2392 99ab4bfeef549f85683d5427335af636 "pdflatex"
-  "Studienarbeit.tex" 1756233522 11853 d9569919e8fe3cec7241d822762adcd3 ""
-  "Studienarbeit.toc" 1756233541 1134 a82e0f9d8aa57399ae1f8e3b8b4795a5 "pdflatex"
+["pdflatex"] 1756235457.48604 "c:/Users/erikd/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex" "Studienarbeit.pdf" "Studienarbeit" 1756235463.72492 0
+  "Studienarbeit.aux" 1756235463 10075 953e08f26afea4c7512fdd0a5215a33b "pdflatex"
+  "Studienarbeit.bbl" 1756235270 14295 b6cd8952e5b08f9f304b62fe979b76fe "biber Studienarbeit"
+  "Studienarbeit.lof" 1756235463 500 2a01e33348f6e398db2d4d90b20a63f8 "pdflatex"
+  "Studienarbeit.out" 1756235461 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Studienarbeit.run.xml" 1756235463 2392 99ab4bfeef549f85683d5427335af636 "pdflatex"
+  "Studienarbeit.tex" 1756235456 11844 734e4afe3d55f76ee549db84a44b7839 ""
+  "Studienarbeit.toc" 1756235463 1134 a82e0f9d8aa57399ae1f8e3b8b4795a5 "pdflatex"
   "Template/tubaf-color.sty" 1754386455 8601 392e3a26cf3a4fe698a0697bf2755803 ""
   "Template/tubaf-fonts.sty" 1754386455 971 330a5d13fff4ebc7fe966812c6fa9552 ""
   "Template/tubaf-logo.sty" 1754386455 175836 7cadc588595ed79abb3b8fe116c23b3f ""
@@ -22,7 +22,7 @@
   "Template/tubaf-thesis.cls" 1754386455 7877 bb2baf3f265f11800188dbc8d9acd16d ""
   "Template/tubaf-title.sty" 1754386455 11583 6d52c3f38cf7201985fffbc33a7bd008 ""
   "Template/tubaf-trapezoid.sty" 1754386455 2850 c4fff256c2355b03b964815f05789fc2 ""
-  "c:/Users/erikd/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex" 1756233522 11853 d9569919e8fe3cec7241d822762adcd3 ""
+  "c:/Users/erikd/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex" 1756235456 11844 734e4afe3d55f76ee549db84a44b7839 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec-sc.enc" 1742773371 2881 8e2aef9e38084b946e7656b60672fedb ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc" 1742773371 2457 aaabbccba4df2a7f7371410ee4e075a3 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1742768989 3524 cb3e574dea2d1052e39280babc910dc8 ""

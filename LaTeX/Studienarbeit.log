@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.24)  26 AUG 2025 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.24)  26 AUG 2025 21:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1223,10 +1223,6 @@ File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 ) (./Studienarbeit.aux
 Package babel Info: 'ngerman' activates 'ngerman' shorthands.
 (babel)             Reported  on input line 12.
-
-
-LaTeX Warning: Label `eq:dampfreformierung' multiply defined.
-
 )
 \openout1 = `Studienarbeit.aux'.
 
@@ -1384,12 +1380,7 @@ chapter 3.
 
 LaTeX Warning: Reference `fig:rom_mechanismusvergleich' on page 5 undefined on input line 115.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
-
- []
-
-<img_py/H2_CH4_CO_CO2_keinCO2.png, id=111, 505.89pt x 505.89pt>
+<img_py/H2_CH4_CO_CO2_keinCO2.png, id=112, 505.89pt x 505.89pt>
 File: img_py/H2_CH4_CO_CO2_keinCO2.png Graphic file (type png)
 <use img_py/H2_CH4_CO_CO2_keinCO2.png>
 Package pdftex.def Info: img_py/H2_CH4_CO_CO2_keinCO2.png  used on input line 120.
@@ -1399,7 +1390,7 @@ Package pdftex.def Info: img_py/H2_CH4_CO_CO2_keinCO2.png  used on input line 12
 [5]
 
 [6 <./img_py/H2_CH4_CO_CO2_keinCO2.png>]
-<img_py/H2_CH4_CO_CO2.png, id=126, 505.89pt x 505.89pt>
+<img_py/H2_CH4_CO_CO2.png, id=127, 505.89pt x 505.89pt>
 File: img_py/H2_CH4_CO_CO2.png Graphic file (type png)
 <use img_py/H2_CH4_CO_CO2.png>
 Package pdftex.def Info: img_py/H2_CH4_CO_CO2.png  used on input line 143.
@@ -1443,9 +1434,6 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `Studienarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'Studienarbeit.run.xml'.
@@ -1453,18 +1441,18 @@ Package logreq Info: Writing requests to 'Studienarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41158 strings out of 473190
- 857112 string characters out of 5719979
- 2243858 words of memory out of 5000000
- 63765 multiletter control sequences out of 15000+600000
+ 41159 strings out of 473190
+ 857130 string characters out of 5719979
+ 2243892 words of memory out of 5000000
+ 63766 multiletter control sequences out of 15000+600000
  607903 words of font info for 72 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  154i,20n,149p,38282b,2463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qcrr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
-Output written on Studienarbeit.pdf (13 pages, 771034 bytes).
+Output written on Studienarbeit.pdf (13 pages, 771105 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
+ 278 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
  49 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

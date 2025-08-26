@@ -1,11 +1,13 @@
 import numpy as np 
 import pandas as pd 
 import matplotlib.pyplot as plt 
+from matplotlib.ticker import FuncFormatter
 import seaborn as sb  # type: ignore
 
 import os 
 import shutil 
 from collections import OrderedDict
+
 
 from Latex_table import df_to_table
 
