@@ -8,7 +8,6 @@
     listof=totoc,
 }
 \usepackage{fontenc}
-\usepackage{inputenc}
 \usepackage[sans]{tubaf-fonts} % Arial
 %\usepackage[]{tubaf-fonts}    % Times
 \usepackage{graphicx}
@@ -19,8 +18,12 @@
 \usepackage{tikz}
 \usepackage[version=4]{mhchem}
 \usepackage{easyReview}
+\usepackage{chemformula}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
 
-\usepackage[backend=bibtex, sorting=none]{biblatex}
+\usepackage{csquotes} % Recommended for biblatex with babel/polyglossia
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \addbibresource{refs.bib}
 
 
@@ -30,7 +33,7 @@
 \title{Vergleich von Reaktornetzwerkmodellen für die nichtkatalytische Partialoxidation von Erdgas}
 \author{Erik Domogalla\\{\small Matrikel: 67\,470}}
 \date{\today}
-\examiners{Prof. Dr. Andreas Richter \and Gabriel Gonzales Ortiz}
+\examiners{Prof.\ Dr.\ Andreas Richter \and Gabriel Gonzales Ortiz}
 \course{Diplom Verfahrenstechnik und Chemieingenieurwesen}
 \logo{\includegraphics{img/tubaf_mtk_logo.png}} % Logo of Institute, Project etc.
 
@@ -52,28 +55,40 @@
     \clearpage
     \pagenumbering{arabic}
     \chapter{Einleitung}
-        Hier steht ne super Einleitung 
-    \chapter{theoretische Grundlagen}
-        \section{Chemische Prozesse}
-        \label{sec:chem_prozesse}
-        Die Partielle Oxidation (POx) ist ein thermochemischer Prozess zur Umwandlung von Kohlenwasserstoffen in Synthesegas, welches hauptsächlich aus Wasserstoff (H$_2$) sowie Kohlenstoffmonoxid (CO) besteht. Im Gegensatz zur vollständigen Oxidation (Verbrennung) wird bei der partiellen Oxidation gezielt eine Reaktion unter Sauerstoffmangel herbeigeführt.\\
-        Gleichung (\ref{eq:partielle_oxidation}) beschreibt die partielle Oxidation von Methan \cite{POX_Erdgas}. 
-        \begin{align}
-            \ce{CH4 + \frac{1}{2}O2 -> CO + 2H2 \qquad \qquad\quad &\Delta H^\circ_{1000} = -22,1\;\mathrm{kJ\;mol^{-1}}} \label{eq:partielle_oxidation}
-        \end{align}
-        Darüber hinaus können folgende Nebenreaktionen auftreten, welche die Wasserstoffausbeute senken können:
-        \begin{align}
-            \ce{CH4 + 2O2 ->  CO2 + 2H2O \qquad \qquad  &\Delta H^\circ = -800\;\mathrm{kJ\;mol^{-1}}} \label{eq:vollständige_oxidation}\\ 
-            \ce{H2 + 1/2O2 -> H2O \qquad \qquad  &\Delta H^\circ = -248\;\mathrm{kJ\;mol^{-1}}} \\
-            \ce{CO + 1/2 O2 -> CO2 \qquad \qquad  &\Delta H^\circ = -283\;\mathrm{kJ\;mol^{-1}}}
-        \end{align}
-        Zusätzlich kann die Wassergas-Shift-Reaktion auftreten:
-        \begin{align}
-            \ce{CO + H2O <=> CO2 + H2 \qquad \qquad  &\Delta H^\circ = -34,5\;\mathrm{kJ\;mol^{-1}}}
-        \end{align}
+        Hier steht ne super Einleitung Test
+\chapter{theoretische Grundlagen}
+        \section{Nichtkatalytische Partialoxidation von Erdgas}
+            Die nichtkatalytische Partialoxidation (POx) von Erdgas ist ein thermochemisches Verfahren zur Herstellung von Synthesegas (Syngas), bestehend aus Kohlenstoffmonoxid (CO) und Wasserstoff (H\textsubscript{2}). Dabei reagiert Methan mit Sauerstoff, allerdings ist nicht genug Methan für eine Vollständige Oxidation (Verbrennung) vorhanden. Als Hauptkomponente des Erdgases dient Methan (CH\textsubscript{4}) als Ausgangsstoff~\cite{en16062916}.
+            \begin{align}
+                \mathrm{CH_4 + \frac{1}{2}O_2 \longrightarrow CO + H_2O} \qquad \Delta H_{298} = -36 \;\mathrm{kJ/mol}
+            \end{align}
+            Ein Teil des Methans oxidiert jedoch vollständig:
+            \begin{align}
+                \mathrm{CH_4 + 2O_2 \longrightarrow CO_2 + 2H_2O} \qquad \Delta H_{298} = -891 \;\mathrm{kJ/mol}~\label{eq:vollst_oxidation}
+            \end{align}
+            Im Vergleich zur Reformation von Erdgas wird durch die exotherme Reaktion keine externe Energiezufuhr benötigt, weshalb diese Reaktion als ökonomischer betrachtet werden kann \parencite[S. 6]{en16062916}
+            Durch diese exotherme Reaktion benötigt die Reaktion keine externe Energiezufuhr und wird dadurch als ökonomischer betrachtet~\cite{en16062916}.\\
+            Diese Reaktionen finden bei Temperaturen von über 1000~$^\circ$C statt. Da die Oxidation ohne Katalysator direkt durch Sauerstoffzufuhr erfolgt, wird eine robuste Prozessführung ermöglicht. Allerdings können dadurch auch Nebenprodukte wie Kohlenstoffdioxid (CO\textsubscript{2}), Wasserdampf und Ruß entstehen.\\
+            Nach der direkten Oxidation finden in der Nachbrennzone weitere, deutlich langsamer verlaufende chemische Reaktionen statt:
+            \begin{align}
+                &\mathrm{CH_4 + H_2O \rightleftharpoons CO + 3H_2} \qquad \Delta H_{1000} = 226 \;\mathrm{kJ/mol}~\label{eq:dampfreformierung}\\
+                &\mathrm{CO + H_2O \rightleftharpoons CO_2 + H_2} \qquad \Delta H_{1000} = -34,5 \;\mathrm{kJ/mol}
+            \end{align}
+            Dabei ist Gleichung \ref{eq:dampfreformierung} die endotherme Dampfreformierungsreaktion, welche das nicht direkt in der Oxidation verbrauchte Methan verbraucht. Die vollständige Oxidation des Erdgases (Gleichung~\ref{eq:vollst_oxidation}) liefert dabei die nötige Energie für die Dampfreformierung~\cite{POX_Erdgas}.\\ 
+            Falls CO\textsubscript{2} vorliegt, ist auch statt einer Reaktion mit Wasser eine Reaktion mit diesem möglich:
+            \begin{align}
+                &\mathrm{CH_4 + CO_2 \rightleftharpoons 2CO + 2H_2} \qquad \Delta H_{298} = 247,3 \;\mathrm{kJ/mol}~\label{eq:dampfreformierung}
+            \end{align}
+            Da diese Reaktion kein Wasser beinhaltet, wird sie auch als Dry Reforming bezeichnet. Dieser Prozess kann zukünftig Bedeutung erlangen, um Kohlenstoffdioxid in Syngas umzuwandeln, und somit den  Ausstoß von CO\textsubscript{2} zu reduzieren~\cite{LESACHE2022100970}. 
+        \section{Reaktionskinetische Grundlagen}
+            Zur Beschreibung der Partialoxidation spielt die Reaktionskinetik eine entscheidende Rolle. Die Kinetik homogener Fluidreaktionen kann sehr oft ausreichend mit formalkinetischen Potenzansätzen beschrieben werden, die folgende allgemeine Form besitzen~\cite{Emig_Klemm_2017}:
+            \begin{align}
+                r = k\cdot c_1^{n_1}\cdot c_2^{n_2}\cdot{\dots}\cdot c_N^{n_N} = k \cdot \prod_{i=1}^N c_i^{n_i}
+            \end{align}
+            Dabei ist die Reaktionsgeschwindigkeit $r$ proportional zu dem Produkt der Konzentrationen. Die Exponenten geben dabei die Ordnung der Reaktion an. In Reaktionsmechanismen wie GriMech3.0 sind diese Parameter dokumentiert, sodass diese für Simulationen genutzt werden können.
 \chapter{Vergleich von Reaktionsmechanismen}
     \section{Überblick der Reaktionsmechanismen}
-    Als Grundlage der Modellierung chemischer Reaktionen nutzt Chemkin Datensätze für Reaktionsmechanismen. Es gibt verschiedene Datensätze, welche sich in der Anzahl von Spezies sowie Reaktionen unterscheiden. In Tabelle \ref{tab:reaktionsmechanismen_überblick} sind die in dieser Arbeit genutzten Reaktionsmechanismen aufgelistet. 
+    Als Grundlage der Modellierung chemischer Reaktionen nutzt Chemkin Datensätze für Reaktionsmechanismen. Es gibt verschiedene Datensätze, welche sich in der Anzahl von Spezies sowie Reaktionen unterscheiden. In Tabelle~\ref{tab:reaktionsmechanismen_überblick} sind die in dieser Arbeit genutzten Reaktionsmechanismen aufgelistet. 
     \begin{table}[H]
         \centering
         \begin{tabular}{lcc}
@@ -86,44 +101,29 @@
         NUIG1.1        & 2746 & 11270 \\
         \bottomrule
         \end{tabular}
-        \caption{Überblick über Anzahl der Spezies sowie Reaktionen verschiedener Reaktionsmechanismen}
-        \label{tab:reaktionsmechanismen_überblick}
+        \caption{Überblick über Anzahl der Spezies sowie Reaktionen verschiedener Reaktionsmechanismen}\label{tab:reaktionsmechanismen_überblick}
     \end{table}
     \subsection*{ATR}
         ATR (autothermal reforming) 
     \subsection*{GRI-Mech 3.0}
-        GRI-Mech 3.0 ist ein Mechanismus, der für die Verbrennung von Erdgas entwickelt wurde. Dabei berücksichtigt das Modell sowohl die Bildung von Stickoxiden (NO) als auch Nachverbrennungsreaktionen \cite{Gri-Mech}.
+        GRI-Mech 3.0 ist ein Mechanismus, der für die Verbrennung von Erdgas entwickelt wurde. Dabei berücksichtigt das Modell sowohl die Bildung von Stickoxiden (NO) als auch Nachverbrennungsreaktionen~\cite{Gri-Mech}.
     \subsection*{AramcoMech 2.0}
-        AramcoMech 2.0 wurde entwickelt, um eine große Anzahl an kurzkettigen Kohlenwasserstoffen C$_1$ bis C$_4$ zu charakterisieren. Entwickelt wurde das Modell von der Universität Galway, finanziert wurde es von Saudi Aramco \cite{Aramco20}. 
+        AramcoMech 2.0 wurde entwickelt, um eine große Anzahl an kurzkettigen Kohlenwasserstoffen C$_1$ bis C$_4$ zu charakterisieren. Entwickelt wurde das Modell von der Universität Galway, finanziert wurde es von Saudi Aramco~\cite{Aramco20}. 
     \subsection*{NUIGMech1.1}
-        NUIGMech1.1 ist ein sehr umfangreicher Reaktionsmechanismus, welcher umfassend validiert wurde - unter anderem für die Oxidation von C$_1$ - C$_2$ Kohlenwasserstoffen, Erdgasgemischen, Propan/Propen-Gemischen. Propin, Isobuten sowie für die Autozündung und Pyrolyse von C$_2$ bis C$_6$ Alkenen \cite{MARTINEZ2021401}.
+        NUIGMech1.1 ist ein sehr umfangreicher Reaktionsmechanismus, welcher umfassend validiert wurde –- unter anderem für die Oxidation von C$_1$--C$_2$ Kohlenwasserstoffen, Erdgasgemischen, Propan/Propen-Gemischen. Propin, Isobuten sowie für die Autozündung und Pyrolyse von C$_2$ bis C$_6$ Alkenen~\cite{MARTINEZ2021401}.
     \section{Simulationen}
-        Für den Vergleich der Reaktionsmechanismen wurde ein einfaches Reaktornetzwerk, bestehend aus einem PSR und einem PFR durchgeführt. In diesem Reaktornetzwerk stellt der PSR die Flammzone dar, der PFR die Nachbrennzone. In Abbildung \ref{fig:rom_mechanismusvergleich} ist das Reaktornetzwerk schematisch dargestellt.\\
-        \begin{tikzpicture}[node distance=3cm, thick, >=stealth]
-            % Nodes
-            \node[draw, rounded corners, fill=gray!15, minimum width=2cm, minimum height=1cm] (inlet) {Inlet};
-            \node[draw, rounded corners, fill=blue!15, minimum width=2cm, minimum height=1cm, right of=inlet] (psr) {PSR};
-            \node[draw, rounded corners, fill=blue!15, minimum width=2cm, minimum height=1cm, right of=psr] (pfr) {PFR};
-            \node[draw, rounded corners, fill=gray!15, minimum width=2cm, minimum height=1cm, right of=pfr] (outlet) {Outlet};
-          % Arrows
-          \draw[->] (inlet) -- (psr);
-          \draw[->] (psr) -- (pfr);
-          \draw[->] (pfr) -- (outlet);
-        \label{fig:rom_mechanismusvergleich}
-        \end{tikzpicture}
-        \subsection{Simulation ohne CO\textsubscript{2}}
+        Für den Vergleich der Reaktionsmechanismen wurde ein einfaches Reaktornetzwerk, bestehend aus einem PSR und einem PFR durchgeführt. In diesem Reaktornetzwerk stellt der PSR die Flammzone dar, der PFR die Nachbrennzone. In Abbildung~\ref{fig:rom_mechanismusvergleich} ist das Reaktornetzwerk schematisch dargestellt.\\
+        \subsection{Simulation ohne \ch{CO2}}
         Über die Länge der Nachbrennzone lassen sich die Stoffmengenanteile aufteilen. In Abbildung~\ref{fig:vergleich_h2_ch4_keinco2} sind beispielsweise die Stoffmengenanteile von Wasserstoff und Methan dargestellt.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.9\linewidth]{img_py/H2_CH4_CO_CO2_keinCO2.png}
-            \caption{Darstellung der Stoffmengenanteile Wasserstoff und Methan für die Simulation ohne CO$_2$}
-            \label{fig:vergleich_h2_ch4_keinco2}
+            \caption{Darstellung der Stoffmengenanteile Wasserstoff und Methan für die Simulation ohne CO$_2$}\label{fig:vergleich_h2_ch4_keinco2}
         \end{figure}
-        Zwar zeigen sich kleine Unterschiede für die verschiedenen Reaktionsmechanismen, allerdings ähnelt sich der Verlauf immer stark. So ist die berechnete Zusammensetzung des Abgases annähernd identisch. In Tabelle \ref{tab:vergleich_abgaszusammensetzung_keinco2} sind die Ergebnisse der Simulationen sowie die experimentell vorliegenden Daten dargestellt. Dabei handelt es sich um trockengas, bei dem Wasserdampf entfernt worden ist. 
+        Zwar zeigen sich kleine Unterschiede für die verschiedenen Reaktionsmechanismen, allerdings ähnelt sich der Verlauf immer stark. So ist die berechnete Zusammensetzung des Abgases annähernd identisch. In Tabelle~\ref{tab:vergleich_abgaszusammensetzung_keinco2} sind die Ergebnisse der Simulationen sowie die experimentell vorliegenden Daten dargestellt. Dabei handelt es sich um trockengas, bei dem Wasserdampf entfernt worden ist. 
         \begin{table}[H]
             \centering
-            \caption{Vergleich der Modell- und Experimentalwerte der Molenbrüche ohne CO\textsubscript{2}-Zugabe}
-            \label{tab:vergleich_abgaszusammensetzung_keinco2}
+            \caption{Vergleich der Modell- und Experimentalwerte der Molenbrüche ohne CO\textsubscript{2}-Zugabe}\label{tab:vergleich_abgaszusammensetzung_keinco2}
             \begin{tabular}{lccccc}
                 \toprule
                 & \textbf{Exp.} & \textbf{GRI} & \textbf{ARAMCO} & \textbf{ATR} & \textbf{NUIG} \\
@@ -136,26 +136,24 @@
             \end{tabular}
         \end{table}
         Die erhaltenen Werte weisen eine hohe Ähnlichkeit zu den experimentell ermittelten Werten auf, wobei es jedoch leichte Abweichungen beim Methan und Kohlenstoffdioxid gibt. 
-        \subsection{Simulation mit CO\textsubscript{2}}
-        Analog zur Simulation ohne CO$_2$ werden die Stoffe über die Länge der Nachbrennzone analysiert (siehe Abbildung \ref{fig:vergleich_h2_ch4_co2}).
+        \subsection{Simulation mit \ch{CO2}}
+        Analog zur Simulation ohne CO$_2$ werden die Stoffe über die Länge der Nachbrennzone analysiert (siehe Abbildung~\ref{fig:vergleich_h2_ch4_co2}).
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\linewidth]{img_py/H2_CH4_CO_CO2.png}
-            \caption{Darstellung der Stoffmengenanteile Wasserstoff und Methan für die Simulation mit CO$_2$}
-            \label{fig:vergleich_h2_ch4_co2}
+            \caption{Darstellung der Stoffmengenanteile Wasserstoff und Methan für die Simulation mit CO$_2$}~\label{fig:vergleich_h2_ch4_co2}
         \end{figure}
         Auch hier zeichnet sich ein ähnliches Bild. Die Verläufe sind alle sehr ähnlich und führen zu sehr ähnlichen Abgaszusammensetzungen. In Tabelle sind die berechneten Stoffmengenanteile sowie die experimentell ermittelten Daten dargestellt (wie in Tabelle \ref{tab:vergleich_abgaszusammensetzung_keinco2}).
         \begin{table}[H]
-            \centering
-            \label{tab:vergleich_abgaszusammensetzung_co2}
+            \centering\label{tab:vergleich_abgaszusammensetzung_co2}
             \caption{Vergleich der Modell- und Experimentalwerte der Molenbrüche mit CO\textsubscript{2}-Zugabe}
             \begin{tabular}{lccccc}
                 \toprule
                 & \textbf{Exp.} & \textbf{GRI} & \textbf{ARAMCO} & \textbf{ATR} & \textbf{NUIG} \\
-                \midrule
-                \textbf{H\textsubscript{2}} [Vol.-\%]   & 0{,}4160 & 0{,}4215 & 0{,}4255 & 0{,}4217 & 0{,}4204 \\
-                \textbf{CO} [Vol.-\%]                  & 0{,}4240 & 0{,}4444 & 0{,}4443 & 0{,}4440 & 0{,}4444 \\
-                \textbf{CH\textsubscript{4}} [Vol.-\%] & 0{,}0012 & 0{,}0047 & 0{,}0022 & 0{,}0049 & 0{,}0048 \\
+                \textbf{H\textsubscript{2}} [Vol.-\%]   & 0.4160 & 0.4215 & 0.4255 & 0.4217 & 0.4204 \\
+                \textbf{CO} [Vol.-\%]                  & 0.4240 & 0.4444 & 0.4443 & 0.4440 & 0.4444 \\
+                \textbf{CH\textsubscript{4}} [Vol.-\%] & 0.0012 & 0.0047 & 0.0022 & 0.0049 & 0.0048 \\
+                \textbf{CO\textsubscript{2}} [Vol.-\%] & 0.1510 & 0.1293 & 0.1280 & 0.1294 & 0.1305 \\
                 \textbf{CO\textsubscript{2}} [Vol.-\%] & 0{,}1510 & 0{,}1293 & 0{,}1280 & 0{,}1294 & 0{,}1305 \\
                 \bottomrule
             \end{tabular}

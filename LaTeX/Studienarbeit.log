@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.24)  4 AUG 2025 00:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.24)  26 AUG 2025 20:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -576,10 +576,6 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
 \l__tblr_tikz_node_box=\box95
 )) (c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks32
-\inpenc@posthook=\toks33
 ) (./Template/tubaf-fonts.sty
 
 LaTeX Warning: You have requested package `Template/tubaf-fonts',
@@ -624,9 +620,9 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 ) (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count342
-\float@exts=\toks34
+\float@exts=\toks32
 \float@box=\box96
-\@float@everytoks=\toks35
+\@float@everytoks=\toks33
 \@floatcapt=\box97
 ) (c:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
@@ -645,9 +641,9 @@ Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 \LT@rows=\count345
 \c@LT@tables=\count346
 \c@LT@chunks=\count347
-\LT@p@ftn=\toks36
+\LT@p@ftn=\toks34
 )
-Class scrreprt Info: longtable captions redefined on input line 18.
+Class scrreprt Info: longtable captions redefined on input line 17.
  (c:/texlive/2025/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2025/03/10 v25.5 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
 \babel@savecnt=\count348
@@ -677,7 +673,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2021/08/26 v2.01 AMS text
  (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks37
+\@emptytoks=\toks35
 \ex@=\dimen335
 )) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -715,21 +711,21 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \dotsspace@=\muskip17
 \c@parentequation=\count357
 \dspbrk@lvl=\count358
-\tag@help=\toks38
+\tag@help=\toks36
 \row@=\count359
 \column@=\count360
 \maxfields@=\count361
-\andhelp@=\toks39
+\andhelp@=\toks37
 \eqnshift@=\dimen338
 \alignsep@=\dimen339
 \tagshift@=\dimen340
 \tagwidth@=\dimen341
 \totwidth@=\dimen342
 \lineht@=\dimen343
-\@envbody=\toks40
+\@envbody=\toks38
 \multlinegap=\skip79
 \multlinetaggap=\skip80
-\mathdisplay@stack=\toks41
+\mathdisplay@stack=\toks39
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (c:/texlive/2025/texmf-dist/tex/latex/chemgreek/chemgreek.sty
@@ -760,12 +756,12 @@ Package: easyReview 2013/12/09 Package for Easy Review on LaTeX documents
 Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
  (c:/texlive/2025/texmf-dist/tex/generic/soul/soul-ori.sty
 Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
-\SOUL@word=\toks42
-\SOUL@lasttoken=\toks43
-\SOUL@syllable=\toks44
-\SOUL@cmds=\toks45
-\SOUL@buffer=\toks46
-\SOUL@token=\toks47
+\SOUL@word=\toks40
+\SOUL@lasttoken=\toks41
+\SOUL@syllable=\toks42
+\SOUL@cmds=\toks43
+\SOUL@buffer=\toks44
+\SOUL@token=\toks45
 \SOUL@syllgoal=\dimen348
 \SOUL@syllwidth=\dimen349
 \SOUL@charkern=\dimen350
@@ -793,6 +789,117 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 \c@@todonotes@numberoftodonotes=\count370
+)) (c:/texlive/2025/texmf-dist/tex/latex/chemformula/chemformula.sty (c:/texlive/2025/texmf-dist/tex/latex/xfrac/xfrac.sty
+Package: xfrac 2024-06-04 Split-level fractions
+\l__xfrac_slash_box=\box105
+\l__xfrac_tmp_box=\box106
+\l__xfrac_denominator_bot_sep_dim=\dimen357
+\l__xfrac_numerator_bot_sep_dim=\dimen358
+\l__xfrac_numerator_top_sep_dim=\dimen359
+\l__xfrac_slash_left_sep_dim=\dimen360
+\l__xfrac_slash_right_sep_dim=\dimen361
+\l__xfrac_slash_left_muskip=\muskip18
+\l__xfrac_slash_right_muskip=\muskip19
+
+LaTeX template Info: Declaring template type 'xfrac' taking 3 argument(s) on
+(template)           line 100.
+
+
+LaTeX template Info: Declaring instance 'cmr' of type xfrac on line 392.
+
+
+LaTeX template Info: Declaring instance 'cmss' of type xfrac on line 392.
+
+
+LaTeX template Info: Declaring instance 'cmtt' of type xfrac on line 392.
+
+) (c:/texlive/2025/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip92
+\L@UnitsRaiseTextstyle=\skip93
+\L@UnitsRaiseScriptstyle=\skip94
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen362
+\pgfarrowlength=\dimen363
+\pgfarrowwidth=\dimen364
+\pgfarrowlinewidth=\dimen365
+LaTeX Font Info:    Trying to load font information for T1+qtm on input line 204.
+ (c:/texlive/2025/texmf-dist/tex/latex/tex-gyre/t1qtm.fd
+File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
+))
+Package: chemformula 2022/01/23 v4.17 typeset chemical compounds and reactions (CN)
+\l__chemformula_tmpa_dim=\dimen366
+\l__chemformula_tmpb_dim=\dimen367
+\l__chemformula_tmpc_dim=\dimen368
+\l__chemformula_tmpa_int=\count371
+\l__chemformula_tmpb_int=\count372
+\l__chemformula_tmpc_int=\count373
+\l__chemformula_tmpa_box=\box107
+\l__chemformula_tmpb_box=\box108
+\l__chemformula_arrow_length_dim=\dimen369
+\l__chemformula_arrow_label_height_dim=\dimen370
+\l__chemformula_arrow_label_offset_dim=\dimen371
+\l__chemformula_arrow_minimum_length_dim=\dimen372
+\l__chemformula_arrow_shortage_dim=\dimen373
+\l__chemformula_arrow_offset_dim=\dimen374
+\l__chemformula_arrow_yshift_dim=\dimen375
+\l__chemformula_radical_radius_dim=\dimen376
+\l__chemformula_radical_hshift_dim=\dimen377
+\l__chemformula_radical_vshift_dim=\dimen378
+\l__chemformula_radical_space_dim=\dimen379
+\l__chemformula_arrow_head_dim=\dimen380
+\l__chemformula_name_dim=\dimen381
+\l__chemformula_adduct_space_dim=\dimen382
+\l__chemformula_charge_shift_dim=\dimen383
+\l__chemformula_subscript_shift_dim=\dimen384
+\l__chemformula_superscript_shift_dim=\dimen385
+\l__chemformula_subscript_dim=\dimen386
+\l__chemformula_superscript_dim=\dimen387
+\l__chemformula_bond_dim=\dimen388
+\l__chemformula_bond_space_dim=\dimen389
+\l__chemformula_elspec_pair_distance_dim=\dimen390
+\l__chemformula_elspec_pair_line_length_dim=\dimen391
+\l__chemformula_elspec_pair_width_dim=\dimen392
+\l__chemformula_kroegervink_positive_radius_dim=\dimen393
+\l__chemformula_kroegervink_positive_hshift_dim=\dimen394
+\l__chemformula_kroegervink_positive_vshift_dim=\dimen395
+\l__chemformula_kroegervink_positive_space_dim=\dimen396
+\l__chemformula_stoich_space_skip=\skip95
+\l__chemformula_math_space_skip=\skip96
+\l__chemformula_additions_symbol_space_skip=\skip97
+\l__chemformula_count_tokens_int=\count374
+\g__chemformula_lewis_int=\count375
+\l__chemformula_arrow_arg_i_box=\box109
+\l__chemformula_arrow_arg_ii_box=\box110
+\l__chemformula_superscript_box=\box111
+\l__chemformula_subscript_box=\box112
+\l__chemformula_plus_space_skip=\skip98
+\l__chemformula_minus_space_skip=\skip99
+) (c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks46
+\inpenc@posthook=\toks47
+) (c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+ (c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count376
+)
+\csq@reset=\count377
+\csq@gtype=\count378
+\csq@glevel=\count379
+\csq@qlevel=\count380
+\csq@maxlvl=\count381
+\csq@tshold=\count382
+\csq@ltx@everypar=\toks48
+ (c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
 )) (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
  (c:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
@@ -800,196 +907,185 @@ Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count371
 ) (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count372
+\lrq@indent=\count383
  (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip18
+\Urlmuskip=\muskip20
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count373
-\c@listtotal=\count374
-\c@listcount=\count375
-\c@liststart=\count376
-\c@liststop=\count377
-\c@citecount=\count378
-\c@citetotal=\count379
-\c@multicitecount=\count380
-\c@multicitetotal=\count381
-\c@instcount=\count382
-\c@maxnames=\count383
-\c@minnames=\count384
-\c@maxitems=\count385
-\c@minitems=\count386
-\c@citecounter=\count387
-\c@maxcitecounter=\count388
-\c@savedcitecounter=\count389
-\c@uniquelist=\count390
-\c@uniquename=\count391
-\c@refsection=\count392
-\c@refsegment=\count393
-\c@maxextratitle=\count394
-\c@maxextratitleyear=\count395
-\c@maxextraname=\count396
-\c@maxextradate=\count397
-\c@maxextraalpha=\count398
-\c@abbrvpenalty=\count399
-\c@highnamepenalty=\count400
-\c@lownamepenalty=\count401
-\c@maxparens=\count402
-\c@parenlevel=\count403
-\blx@tempcnta=\count404
-\blx@tempcntb=\count405
-\blx@tempcntc=\count406
-\c@blx@maxsection=\count407
-\blx@maxsegment@0=\count408
-\blx@notetype=\count409
-\blx@parenlevel@text=\count410
-\blx@parenlevel@foot=\count411
-\blx@sectionciteorder@0=\count412
-\blx@sectionciteorderinternal@0=\count413
-\blx@entrysetcounter=\count414
-\blx@biblioinstance=\count415
-\labelnumberwidth=\skip92
-\labelalphawidth=\skip93
-\biblabelsep=\skip94
-\bibitemsep=\skip95
-\bibnamesep=\skip96
-\bibinitsep=\skip97
-\bibparsep=\skip98
-\bibhang=\skip99
+\c@tabx@nest=\count384
+\c@listtotal=\count385
+\c@listcount=\count386
+\c@liststart=\count387
+\c@liststop=\count388
+\c@citecount=\count389
+\c@citetotal=\count390
+\c@multicitecount=\count391
+\c@multicitetotal=\count392
+\c@instcount=\count393
+\c@maxnames=\count394
+\c@minnames=\count395
+\c@maxitems=\count396
+\c@minitems=\count397
+\c@citecounter=\count398
+\c@maxcitecounter=\count399
+\c@savedcitecounter=\count400
+\c@uniquelist=\count401
+\c@uniquename=\count402
+\c@refsection=\count403
+\c@refsegment=\count404
+\c@maxextratitle=\count405
+\c@maxextratitleyear=\count406
+\c@maxextraname=\count407
+\c@maxextradate=\count408
+\c@maxextraalpha=\count409
+\c@abbrvpenalty=\count410
+\c@highnamepenalty=\count411
+\c@lownamepenalty=\count412
+\c@maxparens=\count413
+\c@parenlevel=\count414
+\blx@tempcnta=\count415
+\blx@tempcntb=\count416
+\blx@tempcntc=\count417
+\c@blx@maxsection=\count418
+\blx@maxsegment@0=\count419
+\blx@notetype=\count420
+\blx@parenlevel@text=\count421
+\blx@parenlevel@foot=\count422
+\blx@sectionciteorder@0=\count423
+\blx@sectionciteorderinternal@0=\count424
+\blx@entrysetcounter=\count425
+\blx@biblioinstance=\count426
+\labelnumberwidth=\skip100
+\labelalphawidth=\skip101
+\biblabelsep=\skip102
+\bibitemsep=\skip103
+\bibnamesep=\skip104
+\bibinitsep=\skip105
+\bibparsep=\skip106
+\bibhang=\skip107
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language91
-\c@mincomprange=\count416
-\c@maxcomprange=\count417
-\c@mincompwidth=\count418
+\c@mincomprange=\count427
+\c@maxcomprange=\count428
+\c@mincompwidth=\count429
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
 )
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count419
-\c@savedafterword=\count420
-\c@annotator=\count421
-\c@savedannotator=\count422
-\c@author=\count423
-\c@savedauthor=\count424
-\c@bookauthor=\count425
-\c@savedbookauthor=\count426
-\c@commentator=\count427
-\c@savedcommentator=\count428
-\c@editor=\count429
-\c@savededitor=\count430
-\c@editora=\count431
-\c@savededitora=\count432
-\c@editorb=\count433
-\c@savededitorb=\count434
-\c@editorc=\count435
-\c@savededitorc=\count436
-\c@foreword=\count437
-\c@savedforeword=\count438
-\c@holder=\count439
-\c@savedholder=\count440
-\c@introduction=\count441
-\c@savedintroduction=\count442
-\c@namea=\count443
-\c@savednamea=\count444
-\c@nameb=\count445
-\c@savednameb=\count446
-\c@namec=\count447
-\c@savednamec=\count448
-\c@translator=\count449
-\c@savedtranslator=\count450
-\c@shortauthor=\count451
-\c@savedshortauthor=\count452
-\c@shorteditor=\count453
-\c@savedshorteditor=\count454
-\c@labelname=\count455
-\c@savedlabelname=\count456
-\c@institution=\count457
-\c@savedinstitution=\count458
-\c@lista=\count459
-\c@savedlista=\count460
-\c@listb=\count461
-\c@savedlistb=\count462
-\c@listc=\count463
-\c@savedlistc=\count464
-\c@listd=\count465
-\c@savedlistd=\count466
-\c@liste=\count467
-\c@savedliste=\count468
-\c@listf=\count469
-\c@savedlistf=\count470
-\c@location=\count471
-\c@savedlocation=\count472
-\c@organization=\count473
-\c@savedorganization=\count474
-\c@origlocation=\count475
-\c@savedoriglocation=\count476
-\c@origpublisher=\count477
-\c@savedorigpublisher=\count478
-\c@publisher=\count479
-\c@savedpublisher=\count480
-\c@language=\count481
-\c@savedlanguage=\count482
-\c@origlanguage=\count483
-\c@savedoriglanguage=\count484
-\c@pageref=\count485
-\c@savedpageref=\count486
-\shorthandwidth=\skip100
-\shortjournalwidth=\skip101
-\shortserieswidth=\skip102
-\shorttitlewidth=\skip103
-\shortauthorwidth=\skip104
-\shorteditorwidth=\skip105
-\locallabelnumberwidth=\skip106
-\locallabelalphawidth=\skip107
-\localshorthandwidth=\skip108
-\localshortjournalwidth=\skip109
-\localshortserieswidth=\skip110
-\localshorttitlewidth=\skip111
-\localshortauthorwidth=\skip112
-\localshorteditorwidth=\skip113
+\c@afterword=\count430
+\c@savedafterword=\count431
+\c@annotator=\count432
+\c@savedannotator=\count433
+\c@author=\count434
+\c@savedauthor=\count435
+\c@bookauthor=\count436
+\c@savedbookauthor=\count437
+\c@commentator=\count438
+\c@savedcommentator=\count439
+\c@editor=\count440
+\c@savededitor=\count441
+\c@editora=\count442
+\c@savededitora=\count443
+\c@editorb=\count444
+\c@savededitorb=\count445
+\c@editorc=\count446
+\c@savededitorc=\count447
+\c@foreword=\count448
+\c@savedforeword=\count449
+\c@holder=\count450
+\c@savedholder=\count451
+\c@introduction=\count452
+\c@savedintroduction=\count453
+\c@namea=\count454
+\c@savednamea=\count455
+\c@nameb=\count456
+\c@savednameb=\count457
+\c@namec=\count458
+\c@savednamec=\count459
+\c@translator=\count460
+\c@savedtranslator=\count461
+\c@shortauthor=\count462
+\c@savedshortauthor=\count463
+\c@shorteditor=\count464
+\c@savedshorteditor=\count465
+\c@labelname=\count466
+\c@savedlabelname=\count467
+\c@institution=\count468
+\c@savedinstitution=\count469
+\c@lista=\count470
+\c@savedlista=\count471
+\c@listb=\count472
+\c@savedlistb=\count473
+\c@listc=\count474
+\c@savedlistc=\count475
+\c@listd=\count476
+\c@savedlistd=\count477
+\c@liste=\count478
+\c@savedliste=\count479
+\c@listf=\count480
+\c@savedlistf=\count481
+\c@location=\count482
+\c@savedlocation=\count483
+\c@organization=\count484
+\c@savedorganization=\count485
+\c@origlocation=\count486
+\c@savedoriglocation=\count487
+\c@origpublisher=\count488
+\c@savedorigpublisher=\count489
+\c@publisher=\count490
+\c@savedpublisher=\count491
+\c@language=\count492
+\c@savedlanguage=\count493
+\c@origlanguage=\count494
+\c@savedoriglanguage=\count495
+\c@pageref=\count496
+\c@savedpageref=\count497
+\shorthandwidth=\skip108
+\shortjournalwidth=\skip109
+\shortserieswidth=\skip110
+\shorttitlewidth=\skip111
+\shortauthorwidth=\skip112
+\shorteditorwidth=\skip113
+\locallabelnumberwidth=\skip114
+\locallabelalphawidth=\skip115
+\localshorthandwidth=\skip116
+\localshortjournalwidth=\skip117
+\localshortserieswidth=\skip118
+\localshorttitlewidth=\skip119
+\localshortauthorwidth=\skip120
+\localshorteditorwidth=\skip121
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
 )
-Package biblatex Info: Trying to load BibTeX backend compatibility...
-Package biblatex Info: ... file 'blx-bibtex.def' found.
- (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-bibtex.def
-File: blx-bibtex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-
-
-Package biblatex Warning: Using fall-back bibtex backend:
-(biblatex)                functionality may be reduced/unavailable.
-
-)
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count487
-\c@textcitetotal=\count488
-\c@textcitemaxnames=\count489
-\c@biburlbigbreakpenalty=\count490
-\c@biburlbreakpenalty=\count491
-\c@biburlnumpenalty=\count492
-\c@biburlucpenalty=\count493
-\c@biburllcpenalty=\count494
-\biburlbigskip=\muskip19
-\biburlnumskip=\muskip20
-\biburlucskip=\muskip21
-\biburllcskip=\muskip22
-\c@smartand=\count495
+\c@textcitecount=\count498
+\c@textcitetotal=\count499
+\c@textcitemaxnames=\count500
+\c@biburlbigbreakpenalty=\count501
+\c@biburlbreakpenalty=\count502
+\c@biburlnumpenalty=\count503
+\c@biburlucpenalty=\count504
+\c@biburllcpenalty=\count505
+\biburlbigskip=\muskip21
+\biburlnumskip=\muskip22
+\biburlucskip=\muskip23
+\biburllcskip=\muskip24
+\c@smartand=\count506
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -999,8 +1095,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count496
-\c@bbx:relatedtotal=\count497
+\c@bbx:relatedcount=\count507
+\c@bbx:relatedtotal=\count508
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1046,13 +1142,13 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count498
+\c@section@level=\count509
 ) (c:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen357
-\Hy@linkcounter=\count499
-\Hy@pagecounter=\count500
+\@linkdim=\dimen397
+\Hy@linkcounter=\count510
+\Hy@pagecounter=\count511
  (c:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -1060,7 +1156,7 @@ Now handling font encoding PD1 ...
 ) (c:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count501
+\Hy@SavedSpaceFactor=\count512
  (c:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -1073,17 +1169,17 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count502
+\c@Hy@tempcnt=\count513
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen358
+\XeTeXLinkMargin=\dimen398
  (c:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (c:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count503
-\Field@Width=\dimen359
-\Fld@charsize=\dimen360
+\Fld@menulength=\count514
+\Field@Width=\dimen399
+\Fld@charsize=\dimen400
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -1095,9 +1191,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count504
-\c@Item=\count505
-\c@Hfootnote=\count506
+\Hy@abspage=\count515
+\c@Item=\count516
+\c@Hfootnote=\count517
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -1106,8 +1202,8 @@ File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count507
-\c@bookmark@seq@number=\count508
+\Fld@listcount=\count518
+\c@bookmark@seq@number=\count519
  (c:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (c:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -1115,77 +1211,79 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip114
+\Hy@SectionHShift=\skip122
 )
-
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
-
-\@quotelevel=\count509
-\@quotereset=\count510
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 40.
-(c:/texlive/2025/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 43.
+ (c:/texlive/2025/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 ) (./Studienarbeit.aux
 Package babel Info: 'ngerman' activates 'ngerman' shorthands.
-(babel)             Reported  on input line 15.
+(babel)             Reported  on input line 12.
+
+
+LaTeX Warning: Label `eq:dampfreformierung' multiply defined.
+
 )
 \openout1 = `Studienarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
  (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count511
-\scratchdimen=\dimen361
-\scratchbox=\box105
-\nofMPsegments=\count512
-\nofMParguments=\count513
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count514
-\MPscratchDim=\dimen362
-\MPnumerator=\count515
-\makeMPintoPDFobject=\count516
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count520
+\scratchdimen=\dimen401
+\scratchbox=\box113
+\nofMPsegments=\count521
+\nofMParguments=\count522
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count523
+\MPscratchDim=\dimen402
+\MPnumerator=\count524
+\makeMPintoPDFobject=\count525
+\everyMPtoPDFconversion=\toks50
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package scrbase Info: activating ngerman \tubaf@logoname on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@supervisorname on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@supervisorsname on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@examinersname on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@reviewersname on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@coursename on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@submittedby on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@bornon on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@submittedto on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@approvedby on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@toattain on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@dateofsubmission on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@dateofaward on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@declarationofauthorshipname on input line 40.
-Package scrbase Info: activating ngerman \tubaf@thesis@declarationofauthorshiptext on input line 40.
+Package scrbase Info: activating ngerman \tubaf@logoname on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@supervisorname on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@supervisorsname on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@examinersname on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@reviewersname on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@coursename on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@submittedby on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@bornon on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@submittedto on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@approvedby on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@toattain on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@dateofsubmission on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@dateofaward on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@declarationofauthorshipname on input line 43.
+Package scrbase Info: activating ngerman \tubaf@thesis@declarationofauthorshiptext on input line 43.
 
-Package chemgreek Info: Activating mapping `default' on line 40.
+Package chemgreek Info: Activating mapping `default' on line 43.
 
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
@@ -1204,17 +1302,14 @@ File: german.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-\openout4 = `Studienarbeit-blx.bib'.
+\openout4 = `Studienarbeit.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Studienarbeit.bbl' found.
  (./Studienarbeit.bbl)
-Package biblatex Info: Reference section=0 on input line 40.
-Package biblatex Info: Reference segment=0 on input line 40.
-Package hyperref Info: Link coloring OFF on input line 40.
+Package biblatex Info: Reference section=0 on input line 43.
+Package biblatex Info: Reference segment=0 on input line 43.
+Package hyperref Info: Link coloring OFF on input line 43.
  (./Studienarbeit.out) (./Studienarbeit.out)
 \@outlinefile=\write5
 \openout5 = `Studienarbeit.out'.
@@ -1226,17 +1321,17 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 40.
+(scrreprt)           before \begin{document} on input line 43.
  (c:/texlive/2025/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (c:/texlive/2025/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count517
+\BKM@id=\count526
 ))
 <img/tubaf_mtk_logo.png, id=7, 145.29282pt x 165.61874pt>
 File: img/tubaf_mtk_logo.png Graphic file (type png)
 <use img/tubaf_mtk_logo.png>
-Package pdftex.def Info: img/tubaf_mtk_logo.png  used on input line 45.
+Package pdftex.def Info: img/tubaf_mtk_logo.png  used on input line 48.
 (pdftex.def)             Requested size: 145.29245pt x 165.61833pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1276,82 +1371,68 @@ chapter 2.
 [2
 
 ]
+
+Package babel Info: 'ngerman' activates 'ngerman' shorthands.
+(babel)             Reported  on input line 89.
+[3]
 chapter 3.
 
 
-[3
+[4
 
 ]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 114.
+LaTeX Warning: Reference `fig:rom_mechanismusvergleich' on page 5 undefined on input line 115.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 114.
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
+ []
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 114.
-
-<img_py/H2_CH4_CO_CO2_keinCO2.png, id=91, 505.89pt x 505.89pt>
+<img_py/H2_CH4_CO_CO2_keinCO2.png, id=111, 505.89pt x 505.89pt>
 File: img_py/H2_CH4_CO_CO2_keinCO2.png Graphic file (type png)
 <use img_py/H2_CH4_CO_CO2_keinCO2.png>
-Package pdftex.def Info: img_py/H2_CH4_CO_CO2_keinCO2.png  used on input line 118.
+Package pdftex.def Info: img_py/H2_CH4_CO_CO2_keinCO2.png  used on input line 120.
 (pdftex.def)             Requested size: 376.42744pt x 376.43692pt.
 
 
-Package babel Info: 'ngerman' activates 'ngerman' shorthands.
-(babel)             Reported  on input line 122.
-[4]
+[5]
 
-[5 <./img_py/H2_CH4_CO_CO2_keinCO2.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 139.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 139.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 139.
-
-<img_py/H2_CH4_CO_CO2.png, id=107, 505.89pt x 505.89pt>
+[6 <./img_py/H2_CH4_CO_CO2_keinCO2.png>]
+<img_py/H2_CH4_CO_CO2.png, id=126, 505.89pt x 505.89pt>
 File: img_py/H2_CH4_CO_CO2.png Graphic file (type png)
 <use img_py/H2_CH4_CO_CO2.png>
 Package pdftex.def Info: img_py/H2_CH4_CO_CO2.png  used on input line 143.
 (pdftex.def)             Requested size: 334.60571pt x 334.61403pt.
 
 
-[6]
-Overfull \hbox (7.1507pt too wide) in paragraph at lines 147--162
+[7]
+Overfull \hbox (7.1507pt too wide) in paragraph at lines 146--160
 \T1/qhv/m/n/10.95 men-gen-an-tei-le so-wie die ex-pe-ri-men-tell er-mit-tel-ten Da-ten dar-ge-stellt (wie in Ta-bel-le []3.2[]). 
  []
 
 
 
-[7 <./img_py/H2_CH4_CO_CO2.png>]
+[8 <./img_py/H2_CH4_CO_CO2.png>]
 
-[8]
+[9]
 chapter without number
-LaTeX Font Info:    Trying to load font information for T1+qcr on input line 167.
+LaTeX Font Info:    Trying to load font information for T1+qcr on input line 165.
 (c:/texlive/2025/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
 File: t1qcr.fd 2009/09/25 v1.2 font definition file for T1/qcr
 )
-Overfull \hbox (2.815pt too wide) in paragraph at lines 167--167
+Overfull \hbox (2.815pt too wide) in paragraph at lines 165--165
 []\T1/qhv/m/n/10.95 Gregory P. Smith u.a. \T1/qhv/m/it/10.95 Gri-Mech\T1/qhv/m/n/10.95 . 19. Ju-ni 2025. \T1/qhv/m/sc/10.95 url\T1/qhv/m/n/10.95 : []$\T1/qcr/m/n/10.95 http : / / www . me . berkeley .
  []
 
 
-Overfull \hbox (45.06027pt too wide) in paragraph at lines 167--167
+Overfull \hbox (45.06027pt too wide) in paragraph at lines 165--165
 \T1/qcr/m/n/10.95 universityofgalway . ie / combustionchemistrycentre / mechanismdownloads /
  []
 
 
 
-[9
+[10
 
 {c:/texlive/2025/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}] (./Studienarbeit.aux)
  ***********
@@ -1362,30 +1443,28 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Studienarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                Studienarbeit
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'Studienarbeit.run.xml'.
 \openout1 = `Studienarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39402 strings out of 473190
- 811762 string characters out of 5719979
- 2130317 words of memory out of 5000000
- 62039 multiletter control sequences out of 15000+600000
- 599129 words of font info for 69 fonts, out of 8000000 for 9000
+ 41158 strings out of 473190
+ 857112 string characters out of 5719979
+ 2243858 words of memory out of 5000000
+ 63765 multiletter control sequences out of 15000+600000
+ 607903 words of font info for 72 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 154i,22n,149p,38282b,2463s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qcrr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
-Output written on Studienarbeit.pdf (12 pages, 811851 bytes).
+ 154i,20n,149p,38282b,2463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qcrr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
+Output written on Studienarbeit.pdf (13 pages, 771034 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 190 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 277 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

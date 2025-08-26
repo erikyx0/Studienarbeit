@@ -5,6 +5,9 @@ import seaborn as sb  # type: ignore
 
 import os 
 import shutil 
+from collections import OrderedDict
+
+from Latex_table import df_to_table
 
 #%% Farben für die Plots definieren
 # Diese Farben können angepasst werden, um die Lesbarkeit zu verbessern
@@ -198,10 +201,25 @@ axs[1, 1].set_title("CO")
 axs[1, 1].grid()
 axs[1, 1].legend()
 
-plt.tight_layout()
+# --- gemeinsame Legende erstellen ---
+# alle Handles/Labels von allen Achsen einsammeln
+handles, labels = [], []
+for ax in axs.flat:
+    h, l = ax.get_legend_handles_labels()
+    handles.extend(h)
+    labels.extend(l)
+    ax.legend().remove()   # lokale Legende ausblenden
+
+# duplikate vermeiden (nur einmal je Mechanismus)
+by_label = OrderedDict(zip(labels, handles))
+
+# zentrale Legende unten oder oben
+fig.legend(by_label.values(), by_label.keys(),
+           loc="lower center", ncol=4, frameon=False)
+
+plt.tight_layout(rect=[0,0.05,1,1])  # Platz für Legende oben lassen
 plt.savefig("img/H2_CH4_CO_CO2_keinCO2.png", dpi=300)
 plt.close()
-
 
 fig, axs = plt.subplots(2, 2, figsize=(7, 7))
 
@@ -249,7 +267,23 @@ axs[1, 1].set_title("CH₄")
 axs[1, 1].grid()
 axs[1, 1].legend()
 
-plt.tight_layout()
+# --- gemeinsame Legende erstellen ---
+# alle Handles/Labels von allen Achsen einsammeln
+handles, labels = [], []
+for ax in axs.flat:
+    h, l = ax.get_legend_handles_labels()
+    handles.extend(h)
+    labels.extend(l)
+    ax.legend().remove()   # lokale Legende ausblenden
+
+# duplikate vermeiden (nur einmal je Mechanismus)
+by_label = OrderedDict(zip(labels, handles))
+
+# zentrale Legende unten oder oben
+fig.legend(by_label.values(), by_label.keys(),
+           loc="lower center", ncol=4, frameon=False)
+
+plt.tight_layout(rect=[0,0.05,1,1])  # Platz für Legende oben lassen
 plt.savefig("img/H2_CH4_CO_CO2.png", dpi=300)
 plt.close()
 
@@ -260,8 +294,6 @@ last_row_co2 = df_co2_gri_pfr.iloc[-1][[col for col in df_co2_gri_pfr.columns if
 # Funktion anwenden
 no_co2_normiert = remove_water_and_normalize_topn(last_row_no_co2, 5)
 co2_normiert = remove_water_and_normalize_topn(last_row_co2, 5)
-
-print(df_exp_data)
 
 species_column_map = {
     "H2":   " Mole_fraction_H2_PFRC2_()",
@@ -296,7 +328,21 @@ df_exp_data["ATR_CO2"]       = atr_co2.reindex(vergleich_species)
 df_exp_data["NUIG_noCO2"]    = nuig_no_co2.reindex(vergleich_species)
 df_exp_data["NUIG_CO2"]      = nuig_co2.reindex(vergleich_species)
 
-print(df_exp_data)
+df_to_table(df_exp_data, 
+            columns = ["kein CO2 Exp", "GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2"],
+            rounding = [3,3,3,3,3],
+            latex = True,
+            filepath = "Tabellen/Tabelle_Vergleich_keinCO2.tex",
+            decimal_sep = ","
+            )
+
+df_to_table(df_exp_data, 
+            columns = ["CO2 Exp", "GRI_CO2", "ARAMCO_CO2", "ATR_CO2", "NUIG_CO2"],
+            rounding = [3,3,3,3,3],
+            latex = True,
+            filepath = "Tabellen/Tabelle_Vergleich_CO2.tex",
+            decimal_sep = ","
+            )
 
 
 # Spalten gruppieren: jeweils "kein CO2" und "CO2" separat plotten
