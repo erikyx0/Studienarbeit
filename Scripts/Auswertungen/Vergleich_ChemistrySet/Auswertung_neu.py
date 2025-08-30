@@ -350,22 +350,40 @@ df_to_table(df_exp_data,
 # Spalten gruppieren: jeweils "kein CO2" und "CO2" separat plotten
 gruppen = [
     ["kein CO2 Exp", "GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2"],
-    ["CO2 Exp", "GRI_CO2", "ARAMCO_CO2", "ATR_CO2", "NUIG_CO2"]
+    ["CO2 Exp",      "GRI_CO2",   "ARAMCO_CO2",   "ATR_CO2",   "NUIG_CO2"]
 ]
-titel = ["Vergleich ohne CO2", "Vergleich mit CO2"]
+titel = ["Vergleich ohne CO₂", "Vergleich mit CO₂"]
+
+k = 10.0            # Skalierungsfaktor
+scale_species = ["CH4"]   # nur CH4 wird skaliert
 
 fig, axes = plt.subplots(1, 2, figsize=(13, 5), sharey=True)
 
 for i, group in enumerate(gruppen):
-    df_exp_data[group].plot(kind="bar", ax=axes[i], color = colors)
-    axes[i].set_title(titel[i])
-    axes[i].set_ylabel("Molenbruch (normiert)")
-    axes[i].legend(loc="upper right")
-    axes[i].set_xlabel("Spezies")
-    axes[i].grid(axis='y', linestyle=':')
+    ax = axes[i]
+    df_plot = df_exp_data[group].copy()
+
+    # CH4 skalieren (nur linke Achse)
+    if "CH4" in df_plot.index:
+        df_plot.loc["CH4"] = df_plot.loc["CH4"] * k
+
+    # Balken zeichnen (linke Achse)
+    df_plot.plot(kind="bar", ax=ax, color=colors)
+    ax.set_title(titel[i])
+    ax.set_xlabel("Spezies")
+    ax.set_ylabel(f"Molenbruch (CH₄ ×{int(k)}, alle anderen original)")
+    ax.grid(axis='y', linestyle=':')
+    ax.legend(loc="upper right")
+
+    # rechte Achse zeigt Originalwerte
+    ax2 = ax.twinx()
+    ax2.set_ylim(ax.get_ylim())
+    ax2.set_yticks(ax.get_yticks())
+    ax2.yaxis.set_major_formatter(FuncFormatter(lambda v, pos: f"{v/k:.3f}"))
+    ax2.set_ylabel("Molenbruch (Originalwerte CH₄)")
 
 plt.tight_layout()
-plt.savefig("img/vergleich Experimentaldaten.png", dpi = 300)
+plt.savefig("img/vergleich_Experimentaldaten_scaled_CH4.png", dpi=300)
 plt.close()
 
 #%% Temperatur und CH4 Plot 
