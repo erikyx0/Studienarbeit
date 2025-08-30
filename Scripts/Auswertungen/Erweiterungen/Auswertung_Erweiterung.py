@@ -91,7 +91,7 @@ plt.plot(x_h2_co2_6, label = "6")
 plt.grid()
 plt.tight_layout()
 plt.legend()
-plt.show()
+#plt.show()
 
 x_h2_no_co2_1 = df_no_co2_1_pfr_Stoffmenge[" Mole_fraction_H2_PFRC2_()"]
 x_h2_no_co2_2 = df_no_co2_2_pfr_Stoffmenge[" Mole_fraction_H2_PFRC4_()"]
@@ -107,8 +107,8 @@ plt.plot(x_h2_no_co2_6, label = "6")
 plt.grid()
 plt.tight_layout()
 plt.legend()
-plt.show()
-
+#plt.show()
+plt.close("all")
 
 #%% Vergleich experimentaldaten
 
@@ -178,7 +178,8 @@ ax.set_ylabel("Molenbruch")
 ax.set_title("Experiment vs. Simulation (CO₂-Fall)")
 plt.xticks(rotation=0)
 plt.tight_layout()
-plt.show()
+#plt.show()
+
 
 # Optional speichern:
 # plt.savefig("saeulendiagramm.png", dpi=300)
@@ -230,7 +231,7 @@ ax.set_ylabel("Molenbruch")
 ax.set_title("Experiment vs. Simulation (CO₂-Fall)")
 plt.xticks(rotation=0)
 plt.tight_layout()
-plt.show()
+#plt.show()
 
 # Optional speichern:
 # plt.savefig("saeulendiagramm.png", dpi=300)
@@ -248,7 +249,9 @@ vis_co2    = df_co2.copy()
 for d in (vis_no_co2, vis_co2):
     d.loc["CH4"] *= 10
 
-fig, axes = plt.subplots(1, 2, figsize=(12, 4), sharey=True)
+plt.close("all")
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 6), sharey=True)
 
 vis_no_co2.plot(kind="bar", ax=axes[0], color=colors, legend=False)
 axes[0].set_title("ohne CO₂"); axes[0].set_xlabel("Spezies"); axes[0].set_ylabel("Molenbruch (CH₄ ×10)")
@@ -258,6 +261,21 @@ vis_co2.plot(kind="bar", ax=axes[1], color=colors, legend=False)
 axes[1].set_title("mit CO₂"); axes[1].set_xlabel("Spezies")
 axes[1].tick_params(axis="x", rotation=0)
 
-handles, labels = axes[0].get_legend_handles_labels()
-fig.legend(handles, labels, loc="upper center", ncol=len(labels), bbox_to_anchor=(0.5, 1.06))
-plt.tight_layout(rect=[0, 0, 1, 0.95]); plt.show()
+handles, _ = axes[0].get_legend_handles_labels()
+legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
+
+species_labels = [r"H$_2$", "CO", r"CH$_4\cdot 10$", r"CO$_2$"]
+for d in (df_no_co2, df_co2):
+    d.index = species_labels
+for a in axes:
+    a.tick_params(axis="x", rotation=0)
+
+for a in axes:
+    a.set_axisbelow(True)
+
+axes[1].legend(handles, legend_labels)
+
+axes[0].grid(axis="y", linestyle = "dotted")
+axes[1].grid(axis="y", linestyle = "dotted")
+plt.tight_layout()
+plt.show()
