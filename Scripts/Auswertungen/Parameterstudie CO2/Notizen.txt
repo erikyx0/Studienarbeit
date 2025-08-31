@@ -1,0 +1,2 @@
+Parameterstudie CO2: 0 kg/s - 0,2 kg / s
+einfaches Reaktornetzwerk (1) PSR -> PFR, da hoher Zeitbedarf und Divergenz bei mehr CO2 als im realen Fall genutzt. 
