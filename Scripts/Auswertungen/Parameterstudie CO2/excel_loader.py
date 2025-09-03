@@ -31,38 +31,45 @@ def get_col_by_canonical(df: pd.DataFrame, target_name: str) -> str | None:
     mapping = {canonical(c): c for c in df.columns}
     return mapping.get(target_can)
 
-def load_runs(file: str, runs=range(1,22)) -> pd.DataFrame:
-    """Lade alle gewünschten Runs in ein einheitliches DataFrame [Distance, H2, Run]."""
-    data_long = []
+# in excel_loader.py
+def load_runs(file: str, runs=range(1,22), mode="long", species="H2"):
+    """
+    mode='long'  → Distance_m, <species>, Run  (schlank für Plots/Heatmap)  [aktuell]
+    mode='raw'   → alle Originalspalten je Sheet + Run
+    """
+    import pandas as pd
+    data_parts = []
 
     for i in runs:
         sheetname = f"{i+8}.soln_no_1_PFRC2_Run#{i}"
-
-        # Erstmal roh laden, Header suchen
+        # (… dein bestehender Header-Fix etc. bleibt gleich …)
         df_raw = pd.read_excel(file, sheet_name=sheetname, header=None, engine="openpyxl")
         hdr_row = find_header_row(df_raw, i)
         df = pd.read_excel(file, sheet_name=sheetname, header=hdr_row, engine="openpyxl")
 
+        if mode == "raw":
+            df["Run"] = i
+            data_parts.append(df)
+            continue
+
+        # mode == 'long'
         dist_name = f"Distance_PFRC2_Run#{i}_(m)"
-        h2_name   = f"Mole_fraction_H2_PFRC2_Run#{i}_()"
-
+        spec_name = f"Mole_fraction_{species}_PFRC2_Run#{i}_()"
         dist_col = get_col_by_canonical(df, dist_name)
-        h2_col   = get_col_by_canonical(df, h2_name)
-
-        if not dist_col or not h2_col:
+        spec_col = get_col_by_canonical(df, spec_name)
+        if not dist_col or not spec_col:
             print(f"[Warnung] Run {i}: Spalten nicht gefunden in Sheet '{sheetname}'.")
-            print("  Beispiel-Spalten:", [repr(c) for c in list(df.columns)[:8]])
             continue
 
         d = pd.DataFrame({
             "Distance_m": df[dist_col],
-            "H2": df[h2_col],
+            species: df[spec_col],
             "Run": i
         }).dropna()
+        data_parts.append(d)
 
-        data_long.append(d)
-
-    if not data_long:
+    if not data_parts:
         raise RuntimeError("Keine Daten gefunden – prüfe Sheet-/Spaltennamen.")
 
-    return pd.concat(data_long, ignore_index=True)
+    out = pd.concat(data_parts, ignore_index=True)
+    return out
