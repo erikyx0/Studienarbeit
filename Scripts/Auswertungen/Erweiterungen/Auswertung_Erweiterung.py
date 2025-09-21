@@ -169,7 +169,7 @@ exp_data = {
 }
 
 df_exp_data = pd.DataFrame(exp_data, index = ["H2", "CO", "CH4", "CO2"])
-print(df_exp_data)
+#print(df_exp_data)
 
 # Säulendiagramm (gruppiert)
 ax = df_exp_data.plot(kind="bar", color=colors)
@@ -222,7 +222,7 @@ exp_data = {
 }
 
 df_exp_data = pd.DataFrame(exp_data, index = ["H2", "CO", "CH4", "CO2"])
-print(df_exp_data)
+#print(df_exp_data)
 
 # Säulendiagramm (gruppiert)
 ax = df_exp_data.plot(kind="bar", color=colors)
@@ -279,3 +279,30 @@ axes[0].grid(axis="y", linestyle = "dotted")
 axes[1].grid(axis="y", linestyle = "dotted")
 plt.tight_layout()
 plt.savefig("Bilder/Vergleich_Erweiterungen", dpi=300)
+plt.close("all")
+
+#%% Temperaturen extrahieren
+# Outlet Temperaturen
+x_h2_no_co2_1
+temp_co2_1 =  df_co2_1_pfr_Masse[' Temperature_PFRC2_(K)']
+temp_co2_2 =  df_co2_2_pfr_Masse[' Temperature_PFRC4_(K)']
+temp_co2_3 =  df_co2_3_pfr8_Masse[' Temperature_PFRC8_(K)']
+temp_co2_4 =  df_co2_4_pfr7_Masse[' Temperature_PFRC7_(K)']
+temp_co2_6 =  df_co2_6_pfr3_Masse[' Temperature_PFRC3_(K)']
+
+temp_no_co2_1 =  df_no_co2_1_pfr_Masse[' Temperature_PFRC2_(K)']
+temp_no_co2_2 =  df_no_co2_2_pfr_Masse[' Temperature_PFRC4_(K)']
+temp_no_co2_3 =  df_no_co2_3_pfr8_Masse[' Temperature_PFRC8_(K)']
+temp_no_co2_4 =  df_no_co2_4_pfr7_Masse[' Temperature_PFRC7_(K)']
+temp_no_co2_6 =  df_no_co2_6_pfr3_Masse[' Temperature_PFRC3_(K)']
+
+print(f"temp_co2_1: {temp_co2_1.iloc[-1]-273.15}")
+print(f"temp_co2_2: {temp_co2_2.iloc[-1]-273.15}")
+print(f"temp_co2_3: {temp_co2_3.iloc[-1]-273.15}")
+print(f"temp_co2_4: {temp_co2_4.iloc[-1]-273.15}")
+print(f"temp_co2_6: {temp_co2_6.iloc[-1]-273.15}")
+print(f"temp_no_co2_1: {temp_no_co2_1.iloc[-1]-273.15}")
+print(f"temp_no_co2_2: {temp_no_co2_2.iloc[-1]-273.15}")
+print(f"temp_no_co2_3: {temp_no_co2_3.iloc[-1]-273.15}")
+print(f"temp_no_co2_4: {temp_no_co2_4.iloc[-1]-273.15}")
+print(f"temp_no_co2_6: {temp_no_co2_6.iloc[-1]-273.15}")
