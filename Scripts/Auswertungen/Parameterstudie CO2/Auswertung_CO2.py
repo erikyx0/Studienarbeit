@@ -135,3 +135,12 @@ plt.vlines(x=[0.05455], ymin = 1350, ymax = 2200, colors = "grey", linestyles="-
 plt.legend()
 plt.savefig('Bilder/Parameterstudie_CO2_Temperaturen.png', dpi=300, bbox_inches='tight')
 plt.close("all")
+
+#%% ermitteln CH4-Schlupf
+plt.plot(co2_run_number[1:], data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:], marker = 's')
+plt.grid()
+plt.xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
+plt.ylabel(r'Molenbruch CH$_4$ am Ende des Reaktors')
+plt.vlines(x=[0.05455], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "grey", linestyles="--", label="Komplexere Simulation")
+#plt.show()
+plt.savefig('Bilder/Parameterstudie_CO2_CH4_Schlupf.png', dpi=300)
