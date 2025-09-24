@@ -168,11 +168,11 @@ exp_data = {
     "6 CO2": comp_6.tolist(),
 }
 
-df_exp_data = pd.DataFrame(exp_data, index = ["H2", "CO", "CH4", "CO2"])
+df_exp_data_no_CO2 = pd.DataFrame(exp_data, index = ["H2", "CO", "CH4", "CO2"])
 #print(df_exp_data)
 
 # Säulendiagramm (gruppiert)
-ax = df_exp_data.plot(kind="bar", color=colors)
+ax = df_exp_data_no_CO2.plot(kind="bar", color=colors)
 ax.set_xlabel("Spezies")
 ax.set_ylabel("Molenbruch")
 ax.set_title("Experiment vs. Simulation (CO₂-Fall)")
@@ -192,12 +192,12 @@ def tvd_scores(df, exp_col="Exp"):
     tvd = 0.5 * (sims.sub(exp, axis=0).abs()).sum(axis=0)
     return tvd.sort_values()  # kleiner = besser
 
-scores = tvd_scores(df_exp_data)
+scores = tvd_scores(df_exp_data_no_CO2)
 print("TVD pro Modell (0=perfekt, 1=schlecht):")
 print(scores)
 print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
 
-df_no_co2 = df_exp_data
+df_no_co2 = df_exp_data_no_CO2
 
 ## CO2-Fall:
 df1, map1 = build_species_map(df_co2_1_pfr_Stoffmenge)
@@ -221,11 +221,11 @@ exp_data = {
     "6 CO2": comp_6.tolist(),
 }
 
-df_exp_data = pd.DataFrame(exp_data, index = ["H2", "CO", "CH4", "CO2"])
+df_exp_data_CO2 = pd.DataFrame(exp_data, index = ["H2", "CO", "CH4", "CO2"])
 #print(df_exp_data)
 
 # Säulendiagramm (gruppiert)
-ax = df_exp_data.plot(kind="bar", color=colors)
+ax = df_exp_data_CO2.plot(kind="bar", color=colors)
 ax.set_xlabel("Spezies")
 ax.set_ylabel("Molenbruch")
 ax.set_title("Experiment vs. Simulation (CO₂-Fall)")
@@ -236,12 +236,12 @@ plt.tight_layout()
 # Optional speichern:
 # plt.savefig("saeulendiagramm.png", dpi=300)
 
-scores = tvd_scores(df_exp_data)
+scores = tvd_scores(df_exp_data_CO2)
 print("TVD pro Modell (0=perfekt, 1=schlecht):")
 print(scores)
 print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
 
-df_co2 = df_exp_data
+df_co2 = df_exp_data_CO2
 
 ## Plotten beider Fälle zusammen 
 vis_no_co2 = df_no_co2.copy()
@@ -282,8 +282,6 @@ plt.savefig("Bilder/Vergleich_Erweiterungen", dpi=300)
 plt.close("all")
 
 #%% Temperaturen extrahieren
-# Outlet Temperaturen
-x_h2_no_co2_1
 temp_co2_1 =  df_co2_1_pfr_Masse[' Temperature_PFRC2_(K)']
 temp_co2_2 =  df_co2_2_pfr_Masse[' Temperature_PFRC4_(K)']
 temp_co2_3 =  df_co2_3_pfr8_Masse[' Temperature_PFRC8_(K)']
@@ -306,3 +304,114 @@ print(f"temp_no_co2_2: {temp_no_co2_2.iloc[-1]-273.15}")
 print(f"temp_no_co2_3: {temp_no_co2_3.iloc[-1]-273.15}")
 print(f"temp_no_co2_4: {temp_no_co2_4.iloc[-1]-273.15}")
 print(f"temp_no_co2_6: {temp_no_co2_6.iloc[-1]-273.15}")
+
+
+df_exp_data_no_CO2.loc["Temperatur Ausgang"] = [1300+273.15,temp_no_co2_1.iloc[-1],temp_no_co2_2.iloc[-1],temp_no_co2_3.iloc[-1],temp_no_co2_4.iloc[-1],temp_no_co2_6.iloc[-1]]
+df_exp_data_no_CO2.loc["Temperatur 15"] = [1351.9+273.15,temp_no_co2_1.iloc[round(2/3 * len(temp_no_co2_1))],temp_no_co2_2.iloc[round(2/3 * len(temp_no_co2_2))],temp_no_co2_3.iloc[round(2/3 * len(temp_no_co2_3))],temp_no_co2_4.iloc[round(2/3 * len(temp_no_co2_4))],temp_no_co2_6.iloc[round(2/3 * len(temp_no_co2_6))]]
+df_exp_data_no_CO2.loc["Temperatur 11"] = [1407.4+273.15,temp_no_co2_1.iloc[0],temp_no_co2_2.iloc[0],temp_no_co2_3.iloc[0],temp_no_co2_4.iloc[0],temp_no_co2_6.iloc[0]]
+
+df_exp_data_CO2.loc["Temperatur Ausgang"] = [1342+273.15,temp_co2_1.iloc[-1],temp_co2_2.iloc[-1],temp_co2_3.iloc[-1],temp_co2_4.iloc[-1],temp_co2_6.iloc[-1]]
+df_exp_data_CO2.loc["Temperatur 15"] = [1371.6+273.15,temp_co2_1.iloc[round(2/3 * len(temp_co2_1))],temp_co2_2.iloc[round(2/3 * len(temp_co2_2))],temp_co2_3.iloc[round(2/3 * len(temp_co2_3))],temp_co2_4.iloc[round(2/3 * len(temp_co2_4))],temp_co2_6.iloc[round(2/3 * len(temp_co2_6))]]
+df_exp_data_CO2.loc["Temperatur 11"] = [1411.4+273.15,temp_co2_1.iloc[0],temp_co2_2.iloc[0],temp_co2_3.iloc[0],temp_co2_4.iloc[0],temp_co2_6.iloc[0]]
+
+print(df_exp_data_no_CO2)
+print(df_exp_data_CO2)
+
+#%% Plot Temperaturen
+temp_rows = ["Temperatur Ausgang", "Temperatur 15", "Temperatur 11"]
+legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
+
+# Hilfsfunktion: selektiert vorhandene Spalten robust in richtiger Reihenfolge
+def select_temp_cols(df):
+    candidates = ["Exp", "1 CO2", "2 CO2", "3 CO2", "4 CO2", "6 CO2"]
+    return [c for c in candidates if c in df.columns]
+
+# Daten für NO-CO2 (falls vorhanden)
+have_no_co2 = 'df_exp_data_no_CO2' in globals() and all(r in df_exp_data_no_CO2.index for r in temp_rows)
+# Daten für CO2
+have_co2    = 'df_exp_data_CO2'    in globals() and all(r in df_exp_data_CO2.index    for r in temp_rows)
+
+# Baue die DataFrames in Plot-Form: Index = Temperatur-Zeilen, Columns = Exp/Sim...
+dfs = []
+if have_no_co2:
+    cols_no = select_temp_cols(df_exp_data_no_CO2)
+    vis_temp_no_co2 = df_exp_data_no_CO2.loc[temp_rows, cols_no]
+    # Spalten-Namen hübsch für Legend:
+    rename_map = {"Exp": "Experiment", "1 CO2": "Simulation 1", "2 CO2": "Simulation 2",
+                  "3 CO2": "Simulation 3", "4 CO2": "Simulation 4", "6 CO2": "Simulation 6"}
+    vis_temp_no_co2 = vis_temp_no_co2.rename(columns=rename_map)
+else:
+    vis_temp_no_co2 = None
+
+if have_co2:
+    cols_co2 = select_temp_cols(df_exp_data_CO2)
+    vis_temp_co2 = df_exp_data_CO2.loc[temp_rows, cols_co2]
+    rename_map = {"Exp": "Experiment", "1 CO2": "Simulation 1", "2 CO2": "Simulation 2",
+                  "3 CO2": "Simulation 3", "4 CO2": "Simulation 4", "6 CO2": "Simulation 6"}
+    vis_temp_co2 = vis_temp_co2.rename(columns=rename_map)
+else:
+    vis_temp_co2 = None
+
+# Plot
+if vis_temp_no_co2 is not None and vis_temp_co2 is not None:
+    fig, axes = plt.subplots(1, 2, figsize=(12, 6), sharey=True)
+elif vis_temp_co2 is not None:
+    fig, axes = plt.subplots(1, 1, figsize=(6, 6))
+    axes = [axes]  # vereinheitlichen
+elif vis_temp_no_co2 is not None:
+    fig, axes = plt.subplots(1, 1, figsize=(6, 6))
+    axes = [axes]
+else:
+    raise RuntimeError("Keine Temperatur-Datenreihen gefunden. Prüfe, ob die drei Zeilen im/den DataFrame(s) vorhanden sind.")
+
+# Farben (mind. so viele, wie es Spalten gibt)
+def col_colors(df_like):
+    # mappe auf die Reihenfolge in df_like.columns
+    label_to_idx = {name: i for i, name in enumerate(legend_labels)}
+    idxs = [label_to_idx.get(c, 0) for c in df_like.columns]
+    return [colors[i % len(colors)] for i in idxs]
+
+ax_i = 0
+if vis_temp_no_co2 is not None:
+    vis_temp_no_co2.plot(kind="bar", ax=axes[ax_i], color=col_colors(vis_temp_no_co2), legend=False)
+    axes[ax_i].set_title("Temperatur ohne CO₂")
+    axes[ax_i].set_xlabel("Mess-/Positionspunkt")
+    axes[ax_i].set_ylabel("Temperatur [K]")
+    axes[ax_i].tick_params(axis="x", rotation=0)
+    axes[ax_i].set_axisbelow(True)
+    axes[ax_i].grid(axis="y", linestyle="dotted")
+    ax_i += 1
+
+if vis_temp_co2 is not None:
+    vis_temp_co2.plot(kind="bar", ax=axes[ax_i], color=col_colors(vis_temp_co2), legend=False)
+    axes[ax_i].set_title("Temperatur mit CO₂")
+    axes[ax_i].set_xlabel("Mess-/Positionspunkt")
+    if len(axes) == 1:  # falls nur ein Plot, Y-Achse hier beschriften
+        axes[ax_i].set_ylabel("Temperatur [K]")
+    axes[ax_i].tick_params(axis="x", rotation=0)
+    axes[ax_i].set_axisbelow(True)
+    axes[ax_i].grid(axis="y", linestyle="dotted")
+
+# Legend aus dem rechten (oder einzigen) Plot holen
+handles, labels = axes[-1].get_legend_handles_labels()
+if not handles:
+    # Falls Legende aus blieb (legend=False), nimm die Spaltennamen und generiere Handles via Dummy-Plot:
+    axes[-1].legend(vis_temp_co2.columns if vis_temp_co2 is not None else vis_temp_no_co2.columns,
+                    loc="best")
+else:
+    axes[-1].legend(labels, loc="best")
+
+plt.tight_layout()
+plt.savefig("Bilder/Vergleich_Temperaturen.png", dpi=300)
+# plt.show()
+
+##% Ähnlichkeiten überprüfen
+scores = tvd_scores(df_exp_data_no_CO2)
+print("TVD pro Modell (0=perfekt, 1=schlecht):")
+print(scores)
+print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
+
+scores = tvd_scores(df_exp_data_CO2)
+print("TVD pro Modell (0=perfekt, 1=schlecht):")
+print(scores)
+print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
