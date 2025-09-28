@@ -9,8 +9,16 @@ color1 = '#4878A8'
 color2 = '#7E9680'
 color3 = '#B3B3B3'
 color4 = '#BC6C25'
-color5 = "#960B0B"
-color6 = "#077B1A"
+color5 = "#6B2D2D"
+color6 = "#0B4915"
+"""
+color1 = "#446A87"  # gedecktes Stahlblau
+color2 = "#5C735F"  # dunkles Olivgrün
+color3 = "#8C8C8C"  # mittleres Grau
+color4 = "#A65E2E"  # warmes Kupferbraun
+color5 = "#7B3F3F"  # gedecktes Rotbraun
+color6 = "#2F6F4F"  # dunkles Tannengrün
+"""
 
 colors = [color1,color2,color3,color4,color5, color6]
 
@@ -191,6 +199,24 @@ def tvd_scores(df, exp_col="Exp"):
     # TVD = 0.5 * L1-Distanz der Verteilungen
     tvd = 0.5 * (sims.sub(exp, axis=0).abs()).sum(axis=0)
     return tvd.sort_values()  # kleiner = besser
+
+def relative_error_scores(df, exp_col="Exp", eps=1e-6):
+    """
+    Berechnet mittleren relativen Fehler pro Simulation.
+    
+    df: DataFrame mit Spalten [exp_col, sim1, sim2, ...]
+    exp_col: Name der Spalte mit den Experimentwerten
+    eps: kleiner Wert, um Division durch 0 zu vermeiden
+    """
+    exp = df[exp_col].astype(float).replace(0, eps)   # kleine Werte absichern
+    sims = df.drop(columns=[exp_col]).astype(float)
+
+    # relativer Fehler: |sim - exp| / |exp|
+    rel_errors = (sims.sub(exp, axis=0).abs().div(exp.abs(), axis=0))
+
+    # Mittelwert über alle Zeilen → Score pro Simulation
+    scores = rel_errors.mean(axis=0).sort_values()
+    return scores  # kleiner = besser
 
 scores = tvd_scores(df_exp_data_no_CO2)
 print("TVD pro Modell (0=perfekt, 1=schlecht):")
@@ -401,17 +427,19 @@ if not handles:
 else:
     axes[-1].legend(labels, loc="best")
 
+plt.ylim(1200)
+
 plt.tight_layout()
 plt.savefig("Bilder/Vergleich_Temperaturen.png", dpi=300)
 # plt.show()
 
 ##% Ähnlichkeiten überprüfen
-scores = tvd_scores(df_exp_data_no_CO2)
-print("TVD pro Modell (0=perfekt, 1=schlecht):")
+scores = relative_error_scores(df_exp_data_no_CO2)
+print("MRE pro Modell (0=perfekt, 1=schlecht):")
 print(scores)
 print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
 
-scores = tvd_scores(df_exp_data_CO2)
-print("TVD pro Modell (0=perfekt, 1=schlecht):")
+scores = relative_error_scores(df_exp_data_CO2)
+print("MRE pro Modell (0=perfekt, 1=schlecht):")
 print(scores)
 print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))

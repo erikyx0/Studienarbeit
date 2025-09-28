@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="Plot Schlupf Methan">
-      <change beforePath="$PROJECT_DIR$/Scripts/Sonstiges/Domogalla/Documents/Reaction Mechanisms &amp; ROMs.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Sonstiges/Domogalla/Documents/Reaction Mechanisms &amp; ROMs.pptx" afterDir="false" />
-    </list>
+    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="Plot Schlupf Methan" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +123,7 @@
       <updated>1758475718171</updated>
       <workItem from="1758475720503" duration="1083000" />
       <workItem from="1758476835204" duration="776000" />
-      <workItem from="1758720341869" duration="3427000" />
+      <workItem from="1758720341869" duration="3519000" />
     </task>
     <task id="LOCAL-00001" summary="Plot Schlupf Methan">
       <option name="closed" value="true" />
