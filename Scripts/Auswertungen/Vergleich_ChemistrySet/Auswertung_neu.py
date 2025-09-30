@@ -74,109 +74,109 @@ dist_pfr_aramco_co2 = df_co2_aramco_pfr['Distance_PFRC2_(m)']
 dist_pfr_gri_co2 = df_co2_gri_pfr['Distance_PFRC2_(m)']
 dist_pfr_atr_co2 = df_co2_atr_pfr['Distance_PFRC2_(m)']
 dist_pfr_nuig_co2 = df_co2_nuig_pfr['Distance_PFRC2_(m)']
-dist_pfr_smoke_co2 = df_co2_nuig_pfr['Distance_PFRC2_(m)']
+dist_pfr_smoke_co2 = df_co2_smoke_pfr['Distance_PFRC2_(cm)']
 
 temp_pfr_aramco_co2 = df_co2_aramco_pfr[' Temperature_PFRC2_(K)']
 temp_pfr_gri_co2 = df_co2_gri_pfr[' Temperature_PFRC2_(K)']
 temp_pfr_atr_co2 = df_co2_atr_pfr[' Temperature_PFRC2_(K)']
 temp_pfr_nuig_co2 = df_co2_nuig_pfr[' Temperature_PFRC2_(K)']
-temp_pfr_smoke_co2 = df_co2_nuig_pfr[' Temperature_PFRC2_(K)']
+temp_pfr_smoke_co2 = df_co2_smoke_pfr[' Temperature_PFRC2_(K)']
 
 x_H2_pfr_aramco_co2 = df_co2_aramco_pfr[' Mole_fraction_H2_PFRC2_()']
 x_H2_pfr_gri_co2 = df_co2_gri_pfr[' Mole_fraction_H2_PFRC2_()']
 x_H2_pfr_atr_co2 = df_co2_atr_pfr[' Mole_fraction_H2_PFRC2_()']
 x_H2_pfr_nuig_co2 = df_co2_nuig_pfr[' Mole_fraction_H2_PFRC2_()']
-x_H2_pfr_smoke_co2 = df_co2_nuig_pfr[' Mole_fraction_H2_PFRC2_()']
+x_H2_pfr_smoke_co2 = df_co2_smoke_pfr[' Mole_fraction_H2_PFRC2_()']
 
 x_H2O_pfr_aramco_co2 = df_co2_aramco_pfr[' Mole_fraction_H2O_PFRC2_()']
 x_H2O_pfr_gri_co2 = df_co2_gri_pfr[' Mole_fraction_H2O_PFRC2_()']
 x_H2O_pfr_atr_co2 = df_co2_atr_pfr[' Mole_fraction_H2O_PFRC2_()']
 x_H2O_pfr_nuig_co2 = df_co2_nuig_pfr[' Mole_fraction_H2O_PFRC2_()']
-x_H2O_pfr_smoke_co2 = df_co2_nuig_pfr[' Mole_fraction_H2O_PFRC2_()']
+x_H2O_pfr_smoke_co2 = df_co2_smoke_pfr[' Mole_fraction_H2O_PFRC2_()']
 
 x_CO_pfr_aramco_co2 = df_co2_aramco_pfr[' Mole_fraction_CO_PFRC2_()']
 x_CO_pfr_gri_co2 = df_co2_gri_pfr[' Mole_fraction_CO_PFRC2_()']
 x_CO_pfr_atr_co2 = df_co2_atr_pfr[' Mole_fraction_CO_PFRC2_()']
 x_CO_pfr_nuig_co2 = df_co2_nuig_pfr[' Mole_fraction_CO_PFRC2_()']
-x_CO_pfr_smoke_co2 = df_co2_nuig_pfr[' Mole_fraction_CO_PFRC2_()']
+x_CO_pfr_smoke_co2 = df_co2_smoke_pfr[' Mole_fraction_CO_PFRC2_()']
 
 x_CO2_pfr_aramco_co2 = df_co2_aramco_pfr[' Mole_fraction_CO2_PFRC2_()']
 x_CO2_pfr_gri_co2 = df_co2_gri_pfr[' Mole_fraction_CO2_PFRC2_()']
 x_CO2_pfr_atr_co2 = df_co2_atr_pfr[' Mole_fraction_CO2_PFRC2_()']
 x_CO2_pfr_nuig_co2 = df_co2_nuig_pfr[' Mole_fraction_CO2_PFRC2_()']
-x_CO2_pfr_smoke_co2 = df_co2_nuig_pfr[' Mole_fraction_CO2_PFRC2_()']
+x_CO2_pfr_smoke_co2 = df_co2_smoke_pfr[' Mole_fraction_CO2_PFRC2_()']
 
 x_CH4_pfr_aramco_co2 = df_co2_aramco_pfr[' Mole_fraction_CH4_PFRC2_()']
 x_CH4_pfr_gri_co2 = df_co2_gri_pfr[' Mole_fraction_CH4_PFRC2_()']
 x_CH4_pfr_atr_co2 = df_co2_atr_pfr[' Mole_fraction_CH4_PFRC2_()']
 x_CH4_pfr_nuig_co2 = df_co2_nuig_pfr[' Mole_fraction_CH4_PFRC2_()']
-x_CH4_pfr_smoke_co2 = df_co2_nuig_pfr[' Mole_fraction_CH4_PFRC2_()']
+x_CH4_pfr_smoke_co2 = df_co2_smoke_pfr[' Mole_fraction_CH4_PFRC2_()']
 
 x_unburned_pfr_aramco_co2 = df_co2_aramco_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
 x_unburned_pfr_gri_co2 = df_co2_gri_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
 x_unburned_pfr_atr_co2 = df_co2_atr_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
 x_unburned_pfr_nuig_co2 = df_co2_nuig_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
-x_unburned_pfr_smoke_co2 = df_co2_nuig_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
+x_unburned_pfr_smoke_co2 = df_co2_smoke_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
 
 x_test_pfr_aramco_co2 = df_co2_aramco_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_gri_co2 = df_co2_gri_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_atr_co2 = df_co2_atr_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_nuig_co2 = df_co2_nuig_pfr[' Mole_fraction_N2_PFRC2_()']
-x_test_pfr_smoke_co2 = df_co2_nuig_pfr[' Mole_fraction_N2_PFRC2_()']#%% Arrays kein CO2
+x_test_pfr_smoke_co2 = df_co2_smoke_pfr[' Mole_fraction_N2_PFRC2_()']#%% Arrays kein CO2
 
 dist_pfr_aramco_no_co2 = df_no_co2_aramco_pfr['Distance_PFRC2_(m)']
 dist_pfr_gri_no_co2 = df_no_co2_gri_pfr['Distance_PFRC2_(m)']
 dist_pfr_atr_no_co2 = df_no_co2_atr_pfr['Distance_PFRC2_(m)']
 dist_pfr_nuig_no_co2 = df_no_co2_nuig_pfr['Distance_PFRC2_(m)']
-dist_pfr_smoke_no_co2 = df_no_co2_nuig_pfr['Distance_PFRC2_(m)']
+dist_pfr_smoke_no_co2 = df_no_co2_smoke_pfr['Distance_PFRC2_(m)']
 
 temp_pfr_aramco_no_co2 = df_no_co2_aramco_pfr[' Temperature_PFRC2_(K)']
 temp_pfr_gri_no_co2 = df_no_co2_gri_pfr[' Temperature_PFRC2_(K)']
 temp_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Temperature_PFRC2_(K)']
 temp_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Temperature_PFRC2_(K)']
-temp_pfr_smoke_no_co2 = df_no_co2_nuig_pfr[' Temperature_PFRC2_(K)']
+temp_pfr_smoke_no_co2 = df_no_co2_smoke_pfr[' Temperature_PFRC2_(K)']
 
 x_H2_pfr_aramco_no_co2 = df_no_co2_aramco_pfr[' Mole_fraction_H2_PFRC2_()']
 x_H2_pfr_gri_no_co2 = df_no_co2_gri_pfr[' Mole_fraction_H2_PFRC2_()']
 x_H2_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Mole_fraction_H2_PFRC2_()']
 x_H2_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_H2_PFRC2_()']
-x_H2_pfr_smoke_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_H2_PFRC2_()']
+x_H2_pfr_smoke_no_co2 = df_no_co2_smoke_pfr[' Mole_fraction_H2_PFRC2_()']
 
 x_H2O_pfr_aramco_no_co2 = df_no_co2_aramco_pfr[' Mole_fraction_H2O_PFRC2_()']
 x_H2O_pfr_gri_no_co2 = df_no_co2_gri_pfr[' Mole_fraction_H2O_PFRC2_()']
 x_H2O_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Mole_fraction_H2O_PFRC2_()']
 x_H2O_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_H2O_PFRC2_()']
-x_H2O_pfr_smoke_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_H2O_PFRC2_()']
+x_H2O_pfr_smoke_no_co2 = df_no_co2_smoke_pfr[' Mole_fraction_H2O_PFRC2_()']
 
 x_CO_pfr_aramco_no_co2 = df_no_co2_aramco_pfr[' Mole_fraction_CO_PFRC2_()']
 x_CO_pfr_gri_no_co2 = df_no_co2_gri_pfr[' Mole_fraction_CO_PFRC2_()']
 x_CO_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Mole_fraction_CO_PFRC2_()']
 x_CO_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_CO_PFRC2_()']
-x_CO_pfr_smoke_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_CO_PFRC2_()']
+x_CO_pfr_smoke_no_co2 = df_no_co2_smoke_pfr[' Mole_fraction_CO_PFRC2_()']
 
 x_CO2_pfr_aramco_no_co2 = df_no_co2_aramco_pfr[' Mole_fraction_CO2_PFRC2_()']
 x_CO2_pfr_gri_no_co2 = df_no_co2_gri_pfr[' Mole_fraction_CO2_PFRC2_()']
 x_CO2_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Mole_fraction_CO2_PFRC2_()']
 x_CO2_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_CO2_PFRC2_()']
-x_CO2_pfr_smoke_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_CO2_PFRC2_()']
+x_CO2_pfr_smoke_no_co2 = df_no_co2_smoke_pfr[' Mole_fraction_CO2_PFRC2_()']
 
 x_CH4_pfr_aramco_no_co2 = df_no_co2_aramco_pfr[' Mole_fraction_CH4_PFRC2_()']
 x_CH4_pfr_gri_no_co2 = df_no_co2_gri_pfr[' Mole_fraction_CH4_PFRC2_()']
 x_CH4_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Mole_fraction_CH4_PFRC2_()']
 x_CH4_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_CH4_PFRC2_()']
-x_CH4_pfr_smoke_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_CH4_PFRC2_()']
+x_CH4_pfr_smoke_no_co2 = df_no_co2_smoke_pfr[' Mole_fraction_CH4_PFRC2_()']
 
 x_unburned_pfr_aramco_no_co2 = df_no_co2_aramco_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
 x_unburned_pfr_gri_no_co2 = df_no_co2_gri_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
 x_unburned_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
 x_unburned_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
-x_unburned_pfr_smoke_no_co2 = df_no_co2_nuig_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
+x_unburned_pfr_smoke_no_co2 = df_no_co2_smoke_pfr[' Unburned_hydrocarbons_PFRC2_(ppm)']
 
 x_test_pfr_aramco_no_co2 = df_no_co2_aramco_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_gri_no_co2 = df_no_co2_gri_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_N2_PFRC2_()']
-x_test_pfr_smoke_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_N2_PFRC2_()']#%% Plots 
+x_test_pfr_smoke_no_co2 = df_no_co2_smoke_pfr[' Mole_fraction_N2_PFRC2_()']#%% Plots 
 
 fig, axs = plt.subplots(2, 2, figsize=(7, 7))
 
@@ -499,5 +499,3 @@ plt.show()
 
 print(temp_pfr_nuig_no_co2)
 print(temp_pfr_smoke_no_co2)
-
-print(temp_pfr_nuig_no_co2 == temp_pfr_smoke_no_co2)

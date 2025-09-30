@@ -443,3 +443,15 @@ scores = relative_error_scores(df_exp_data_CO2)
 print("MRE pro Modell (0=perfekt, 1=schlecht):")
 print(scores)
 print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
+
+"""
+                1 & 0.159 & 0.261 \\
+                2 & 0.169 & 0.190 \\
+                3 & 0.300 & 0.765 \\
+                4 & \textbf{0.096} & \textbf{0.167} \\
+                6 & 0.494 & 2.426 \\
+"""
+
+for i in range(100):
+    print(i)
+    
