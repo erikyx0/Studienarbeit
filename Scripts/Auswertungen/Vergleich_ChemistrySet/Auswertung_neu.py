@@ -457,14 +457,14 @@ ax3.plot(dist_pfr_aramco_co2, temp_pfr_aramco_co2, color=colors[0], label='aramc
 ax3.plot(dist_pfr_gri_co2, temp_pfr_gri_co2, color=colors[1], label='gri, Temperatur')
 ax3.plot(dist_pfr_atr_co2, temp_pfr_atr_co2, color=colors[2], label='atr, Temperatur')
 ax3.plot(dist_pfr_nuig_co2, temp_pfr_nuig_co2, color=colors[3], label='nuig, Temperatur')
-ax3.plot(dist_pfr_smoke_co2, temp_pfr_smoke_co2, color=colors[4], label='smoke, Temperatur')
+ax3.plot(dist_pfr_smoke_co2 * 0.01, temp_pfr_smoke_co2, color=colors[4], label='smoke, Temperatur')
 ax3.set_ylabel("Temperatur (K)")
 
 ax4.plot(dist_pfr_aramco_co2, x_CH4_pfr_aramco_co2, color=colors[0], label='aramco, CH4', linestyle = "--")
 ax4.plot(dist_pfr_gri_co2, x_CH4_pfr_gri_co2, color=colors[1], label='gri, CH4', linestyle = "--")
 ax4.plot(dist_pfr_atr_co2, x_CH4_pfr_atr_co2, color=colors[2], label='atr, CH4', linestyle = "--")
 ax4.plot(dist_pfr_nuig_co2, x_CH4_pfr_nuig_co2, color=colors[3], label='nuig, CH4', linestyle = "--")
-ax4.plot(dist_pfr_smoke_co2, x_CH4_pfr_smoke_co2, color=colors[4], label='smoke, CH4', linestyle = "--")
+ax4.plot(dist_pfr_smoke_co2 * 0.01, x_CH4_pfr_smoke_co2, color=colors[4], label='smoke, CH4', linestyle = "--")
 ax4.set_ylabel("CH$_4$ Molenbruch")
 
 ax3.set_title("mit CO₂")
@@ -501,24 +501,72 @@ print(temp_pfr_nuig_no_co2)
 print(temp_pfr_smoke_no_co2)
 
 #%% Plot Temperaturen
+cols = ["Experiment", "GriMech", "Aramco", "ATR", "NUIG", "CRECK"]
 
-df_temp_CO2 = pd.DataFrame(columns=["Experiment", "ATR", "GriMech", "Aramco", "NUIG", "CRECK"])
-df_temp_no_CO2 = pd.DataFrame(columns=["Experiment", "ATR", "GriMech", "Aramco", "NUIG", "CRECK"])
+df_temp_CO2 = pd.DataFrame(columns=cols)
+df_temp_no_CO2 = pd.DataFrame(columns=cols)
 
-df_temp_no_CO2.loc["Temperatur Ausgang"] = [1300+273.15, temp_pfr_atr_no_co2.iloc[-1],temp_pfr_gri_no_co2.iloc[-1], temp_pfr_aramco_no_co2.iloc[-1], temp_pfr_nuig_co2.iloc[-1], temp_pfr_smoke_no_co2.iloc[-1]]
-df_temp_no_CO2.loc["Temperatur 15"] = [1351.9+273.15,temp_pfr_atr_no_co2.iloc[round(2/3 * len(temp_pfr_atr_no_co2))],temp_pfr_gri_no_co2.iloc[round(2/3 * len(temp_pfr_gri_no_co2))], temp_pfr_aramco_no_co2.iloc[round(2/3 * len(temp_pfr_aramco_no_co2))], temp_pfr_nuig_no_co2.iloc[round(2/3 * len(temp_pfr_nuig_no_co2))], temp_pfr_smoke_no_co2.iloc[round(2/3 * len(temp_pfr_smoke_no_co2))]]
-df_temp_no_CO2.loc["Temperatur 11"] = [1407.4+273.15, temp_pfr_atr_no_co2.iloc[0],temp_pfr_gri_no_co2.iloc[0], temp_pfr_aramco_no_co2.iloc[0], temp_pfr_nuig_co2.iloc[0], temp_pfr_smoke_no_co2.iloc[0]]
+# --- ohne CO2 ---
+df_temp_no_CO2.loc["Temperatur Ausgang"] = [
+    1300 + 273.15,
+    temp_pfr_gri_no_co2.iloc[-1],
+    temp_pfr_aramco_no_co2.iloc[-1],
+    temp_pfr_atr_no_co2.iloc[-1],
+    temp_pfr_nuig_no_co2.iloc[-1],
+    temp_pfr_smoke_no_co2.iloc[-1],
+]
 
-df_temp_CO2.loc["Temperatur Ausgang"] = [1342+273.15, temp_pfr_atr_co2.iloc[-1],temp_pfr_gri_co2.iloc[-1], temp_pfr_aramco_co2.iloc[-1], temp_pfr_nuig_co2.iloc[-1], temp_pfr_smoke_co2.iloc[-1]]
-df_temp_CO2.loc["Temperatur 15"] = [1371.6+273.15,temp_pfr_atr_co2.iloc[round(2/3 * len(temp_pfr_atr_co2))],temp_pfr_gri_co2.iloc[round(2/3 * len(temp_pfr_gri_co2))], temp_pfr_aramco_co2.iloc[round(2/3 * len(temp_pfr_aramco_co2))], temp_pfr_nuig_co2.iloc[round(2/3 * len(temp_pfr_nuig_co2))], temp_pfr_smoke_co2.iloc[round(2/3 * len(temp_pfr_smoke_co2))]]
-df_temp_CO2.loc["Temperatur 11"] = [1411.4+273.15, temp_pfr_atr_co2.iloc[0],temp_pfr_gri_co2.iloc[0], temp_pfr_aramco_co2.iloc[0], temp_pfr_nuig_co2.iloc[0], temp_pfr_smoke_co2.iloc[0]]
+df_temp_no_CO2.loc["Temperatur 15"] = [
+    1351.9 + 273.15,
+    temp_pfr_gri_no_co2.iloc[round(2/3 * len(temp_pfr_gri_no_co2))],
+    temp_pfr_aramco_no_co2.iloc[round(2/3 * len(temp_pfr_aramco_no_co2))],
+    temp_pfr_atr_no_co2.iloc[round(2/3 * len(temp_pfr_atr_no_co2))],
+    temp_pfr_nuig_no_co2.iloc[round(2/3 * len(temp_pfr_nuig_no_co2))],
+    temp_pfr_smoke_no_co2.iloc[round(2/3 * len(temp_pfr_smoke_no_co2))],
+]
 
+df_temp_no_CO2.loc["Temperatur 11"] = [
+    1407.4 + 273.15,
+    temp_pfr_gri_no_co2.iloc[0],
+    temp_pfr_aramco_no_co2.iloc[0],
+    temp_pfr_atr_no_co2.iloc[0],
+    temp_pfr_nuig_no_co2.iloc[0],
+    temp_pfr_smoke_no_co2.iloc[0],
+]
+
+# --- mit CO2 ---
+df_temp_CO2.loc["Temperatur Ausgang"] = [
+    1342 + 273.15,
+    temp_pfr_gri_co2.iloc[-1],
+    temp_pfr_aramco_co2.iloc[-1],
+    temp_pfr_atr_co2.iloc[-1],
+    temp_pfr_nuig_co2.iloc[-1],
+    temp_pfr_smoke_co2.iloc[-1],
+]
+
+df_temp_CO2.loc["Temperatur 15"] = [
+    1371.6 + 273.15,
+    temp_pfr_gri_co2.iloc[round(2/3 * len(temp_pfr_gri_co2))],
+    temp_pfr_aramco_co2.iloc[round(2/3 * len(temp_pfr_aramco_co2))],
+    temp_pfr_atr_co2.iloc[round(2/3 * len(temp_pfr_atr_co2))],
+    temp_pfr_nuig_co2.iloc[round(2/3 * len(temp_pfr_nuig_co2))],
+    temp_pfr_smoke_co2.iloc[round(2/3 * len(temp_pfr_smoke_co2))],
+]
+
+df_temp_CO2.loc["Temperatur 11"] = [
+    1411.4 + 273.15,
+    temp_pfr_gri_co2.iloc[0],
+    temp_pfr_aramco_co2.iloc[0],
+    temp_pfr_atr_co2.iloc[0],
+    temp_pfr_nuig_co2.iloc[0],
+    temp_pfr_smoke_co2.iloc[0],
+]
 temp_rows = ["Temperatur Ausgang", "Temperatur 15", "Temperatur 11"]
-legend_labels = ["Experiment", "ATR", "GriMech", "Aramco", "NUIG", "CRECK"]
+legend_labels = ["Experiment", "GriMech", "Aramco", "ATR", "NUIG", "CRECK"]
 
 # Hilfsfunktion: selektiert vorhandene Spalten robust in richtiger Reihenfolge
 def select_temp_cols(df):
-    candidates = ["Experiment", "ATR", "GriMech", "Aramco", "NUIG", "CRECK"]
+    candidates = ["Experiment", "GriMech", "Aramco", "ATR", "NUIG", "CRECK"]
     return [c for c in candidates if c in df.columns]
 
 # Daten für NO-CO2 (falls vorhanden)
