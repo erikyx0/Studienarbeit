@@ -451,7 +451,3 @@ print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
                 4 & \textbf{0.096} & \textbf{0.167} \\
                 6 & 0.494 & 2.426 \\
 """
-
-for i in range(100):
-    print(i)
-    

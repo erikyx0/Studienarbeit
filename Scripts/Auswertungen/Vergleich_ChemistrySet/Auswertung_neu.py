@@ -255,7 +255,7 @@ axs[0, 0].plot(dist_pfr_aramco_co2, x_CO_pfr_aramco_co2, label='aramco', color=c
 axs[0, 0].plot(dist_pfr_gri_co2, x_CO_pfr_gri_co2, label='gri', color=colors[1])
 axs[0, 0].plot(dist_pfr_atr_co2, x_CO_pfr_atr_co2, label='atr', color=colors[2])
 axs[0, 0].plot(dist_pfr_nuig_co2, x_CO_pfr_nuig_co2, label='nuig', color=colors[3])
-axs[0, 0].plot(dist_pfr_smoke_co2, x_CO_pfr_smoke_co2, label='OpenSmoke', color=colors[4])
+axs[0, 0].plot(dist_pfr_smoke_co2 * 0.01, x_CO_pfr_smoke_co2, label='OpenSmoke', color=colors[4])
 axs[0, 0].set_xlabel("Reaktorlänge (m)")
 axs[0, 0].set_ylabel("Massenanteil CO")
 axs[0, 0].set_title("CO")
@@ -499,3 +499,134 @@ plt.show()
 
 print(temp_pfr_nuig_no_co2)
 print(temp_pfr_smoke_no_co2)
+
+#%% Plot Temperaturen
+
+df_temp_CO2 = pd.DataFrame(columns=["Experiment", "ATR", "GriMech", "Aramco", "NUIG", "CRECK"])
+df_temp_no_CO2 = pd.DataFrame(columns=["Experiment", "ATR", "GriMech", "Aramco", "NUIG", "CRECK"])
+
+df_temp_no_CO2.loc["Temperatur Ausgang"] = [1300+273.15, temp_pfr_atr_no_co2.iloc[-1],temp_pfr_gri_no_co2.iloc[-1], temp_pfr_aramco_no_co2.iloc[-1], temp_pfr_nuig_co2.iloc[-1], temp_pfr_smoke_no_co2.iloc[-1]]
+df_temp_no_CO2.loc["Temperatur 15"] = [1351.9+273.15,temp_pfr_atr_no_co2.iloc[round(2/3 * len(temp_pfr_atr_no_co2))],temp_pfr_gri_no_co2.iloc[round(2/3 * len(temp_pfr_gri_no_co2))], temp_pfr_aramco_no_co2.iloc[round(2/3 * len(temp_pfr_aramco_no_co2))], temp_pfr_nuig_no_co2.iloc[round(2/3 * len(temp_pfr_nuig_no_co2))], temp_pfr_smoke_no_co2.iloc[round(2/3 * len(temp_pfr_smoke_no_co2))]]
+df_temp_no_CO2.loc["Temperatur 11"] = [1407.4+273.15, temp_pfr_atr_no_co2.iloc[0],temp_pfr_gri_no_co2.iloc[0], temp_pfr_aramco_no_co2.iloc[0], temp_pfr_nuig_co2.iloc[0], temp_pfr_smoke_no_co2.iloc[0]]
+
+df_temp_CO2.loc["Temperatur Ausgang"] = [1342+273.15, temp_pfr_atr_co2.iloc[-1],temp_pfr_gri_co2.iloc[-1], temp_pfr_aramco_co2.iloc[-1], temp_pfr_nuig_co2.iloc[-1], temp_pfr_smoke_co2.iloc[-1]]
+df_temp_CO2.loc["Temperatur 15"] = [1371.6+273.15,temp_pfr_atr_co2.iloc[round(2/3 * len(temp_pfr_atr_co2))],temp_pfr_gri_co2.iloc[round(2/3 * len(temp_pfr_gri_co2))], temp_pfr_aramco_co2.iloc[round(2/3 * len(temp_pfr_aramco_co2))], temp_pfr_nuig_co2.iloc[round(2/3 * len(temp_pfr_nuig_co2))], temp_pfr_smoke_co2.iloc[round(2/3 * len(temp_pfr_smoke_co2))]]
+df_temp_CO2.loc["Temperatur 11"] = [1411.4+273.15, temp_pfr_atr_co2.iloc[0],temp_pfr_gri_co2.iloc[0], temp_pfr_aramco_co2.iloc[0], temp_pfr_nuig_co2.iloc[0], temp_pfr_smoke_co2.iloc[0]]
+
+temp_rows = ["Temperatur Ausgang", "Temperatur 15", "Temperatur 11"]
+legend_labels = ["Experiment", "ATR", "GriMech", "Aramco", "NUIG", "CRECK"]
+
+# Hilfsfunktion: selektiert vorhandene Spalten robust in richtiger Reihenfolge
+def select_temp_cols(df):
+    candidates = ["Experiment", "ATR", "GriMech", "Aramco", "NUIG", "CRECK"]
+    return [c for c in candidates if c in df.columns]
+
+# Daten für NO-CO2 (falls vorhanden)
+have_no_co2 = 'df_temp_no_CO2' in globals() and all(r in df_temp_no_CO2.index for r in temp_rows)
+# Daten für CO2
+have_co2    = 'df_temp_CO2'    in globals() and all(r in df_temp_CO2.index    for r in temp_rows)
+
+# Baue die DataFrames in Plot-Form: Index = Temperatur-Zeilen, Columns = Exp/Sim...
+dfs = []
+if have_no_co2:
+    cols_no = select_temp_cols(df_temp_no_CO2)
+    vis_temp_no_co2 = df_temp_no_CO2.loc[temp_rows, cols_no]
+    # Spalten-Namen hübsch für Legend:
+    rename_map = {"Exp": "Experiment", "1 CO2": "Simulation 1", "2 CO2": "Simulation 2",
+                  "3 CO2": "Simulation 3", "4 CO2": "Simulation 4", "6 CO2": "Simulation 6"}
+    vis_temp_no_co2 = vis_temp_no_co2.rename(columns=rename_map)
+else:
+    vis_temp_no_co2 = None
+
+if have_co2:
+    cols_co2 = select_temp_cols(df_temp_CO2)
+    vis_temp_co2 = df_temp_CO2.loc[temp_rows, cols_co2]
+    rename_map = {"Exp": "Experiment", "1 CO2": "Simulation 1", "2 CO2": "Simulation 2",
+                  "3 CO2": "Simulation 3", "4 CO2": "Simulation 4", "6 CO2": "Simulation 6"}
+    vis_temp_co2 = vis_temp_co2.rename(columns=rename_map)
+else:
+    vis_temp_co2 = None
+
+# Plot
+if vis_temp_no_co2 is not None and vis_temp_co2 is not None:
+    fig, axes = plt.subplots(1, 2, figsize=(12, 6), sharey=True)
+elif vis_temp_co2 is not None:
+    fig, axes = plt.subplots(1, 1, figsize=(6, 6))
+    axes = [axes]  # vereinheitlichen
+elif vis_temp_no_co2 is not None:
+    fig, axes = plt.subplots(1, 1, figsize=(6, 6))
+    axes = [axes]
+else:
+    raise RuntimeError("Keine Temperatur-Datenreihen gefunden. Prüfe, ob die drei Zeilen im/den DataFrame(s) vorhanden sind.")
+
+# Farben (mind. so viele, wie es Spalten gibt)
+def col_colors(df_like):
+    # mappe auf die Reihenfolge in df_like.columns
+    label_to_idx = {name: i for i, name in enumerate(legend_labels)}
+    idxs = [label_to_idx.get(c, 0) for c in df_like.columns]
+    return [colors[i % len(colors)] for i in idxs]
+
+ax_i = 0
+if vis_temp_no_co2 is not None:
+    vis_temp_no_co2.plot(kind="bar", ax=axes[ax_i], color=col_colors(vis_temp_no_co2), legend=False)
+    axes[ax_i].set_title("Temperatur ohne CO₂")
+    axes[ax_i].set_xlabel("Mess-/Positionspunkt")
+    axes[ax_i].set_ylabel("Temperatur [K]")
+    axes[ax_i].tick_params(axis="x", rotation=0)
+    axes[ax_i].set_axisbelow(True)
+    axes[ax_i].grid(axis="y", linestyle="dotted")
+    ax_i += 1
+
+if vis_temp_co2 is not None:
+    vis_temp_co2.plot(kind="bar", ax=axes[ax_i], color=col_colors(vis_temp_co2), legend=False)
+    axes[ax_i].set_title("Temperatur mit CO₂")
+    axes[ax_i].set_xlabel("Mess-/Positionspunkt")
+    if len(axes) == 1:  # falls nur ein Plot, Y-Achse hier beschriften
+        axes[ax_i].set_ylabel("Temperatur [K]")
+    axes[ax_i].tick_params(axis="x", rotation=0)
+    axes[ax_i].set_axisbelow(True)
+    axes[ax_i].grid(axis="y", linestyle="dotted")
+
+# Legend aus dem rechten (oder einzigen) Plot holen
+handles, labels = axes[-1].get_legend_handles_labels()
+if not handles:
+    # Falls Legende aus blieb (legend=False), nimm die Spaltennamen und generiere Handles via Dummy-Plot:
+    axes[-1].legend(vis_temp_co2.columns if vis_temp_co2 is not None else vis_temp_no_co2.columns,
+                    loc="best")
+else:
+    axes[-1].legend(labels, loc="best")
+
+plt.ylim(1200)
+
+plt.tight_layout()
+plt.savefig("img/Vergleich_Temperaturen.png", dpi=300)
+# plt.show()
+
+#%% Ähnlichkeiten überprüfen
+def relative_error_scores(df, exp_col="Exp", eps=1e-6):
+    """
+    Berechnet mittleren relativen Fehler pro Simulation.
+    
+    df: DataFrame mit Spalten [exp_col, sim1, sim2, ...]
+    exp_col: Name der Spalte mit den Experimentwerten
+    eps: kleiner Wert, um Division durch 0 zu vermeiden
+    """
+    exp = df[exp_col].astype(float).replace(0, eps)   # kleine Werte absichern
+    sims = df.drop(columns=[exp_col]).astype(float)
+
+    # relativer Fehler: |sim - exp| / |exp|
+    rel_errors = (sims.sub(exp, axis=0).abs().div(exp.abs(), axis=0))
+
+    # Mittelwert über alle Zeilen → Score pro Simulation
+    scores = rel_errors.mean(axis=0).sort_values()
+    return scores  # kleiner = besser
+
+scores = relative_error_scores(df_temp_no_CO2, "Experiment")
+print("MRE pro Modell (0=perfekt, 1=schlecht):")
+print(scores)
+print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
+
+scores = relative_error_scores(df_temp_CO2, "Experiment")
+print("MRE pro Modell (0=perfekt, 1=schlecht):")
+print(scores)
+print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
