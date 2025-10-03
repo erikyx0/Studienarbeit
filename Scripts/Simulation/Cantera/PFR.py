@@ -127,86 +127,74 @@ class PlugFlowReactorPSRChain:
     # ------------------------ Hauptlauf ------------------------
 
     def run(self) -> None:
-        """Kette aufbauen, auf stationär lösen, Profile einsammeln."""
-        # Inlet-Zustand
+        import cantera as ct
+        import numpy as np
+
+        # 1) Startzustand als "laufendes" Inlet
         gas_in = ct.Solution(self.mechanism, loglevel=self.loglevel)
         gas_in.TPX = self.T0, self.P0, self.composition
 
-        upstream = ct.Reservoir(gas_in, name="inlet")
-
-        # Downstream-Reservoir (zur Druckankopplung)
-        gas_out = ct.Solution(self.mechanism, loglevel=self.loglevel)
-        gas_out.TPX = self.T0, self.P0, self.composition
-        downstream = ct.Reservoir(gas_out, name="outlet")
-
-        # Startwerte (z=0) loggen
+        # Ergebnisse an z=0
         self._T[0] = gas_in.T
         self._P[0] = gas_in.P
-        for s in self._X.keys():
+        for s in self._X:
             if s in gas_in.species_names:
                 self._X[s][0] = gas_in[s].X[0]
 
-        reactors: List[ct.IdealGasConstPressureReactor] = []
-        mfc_in: List[ct.MassFlowController] = []
-        walls = []
-
-        prev_reactor = None
-        for i in range(self.n):
-            # Segment i – eigener Gaszustand (Kopieren des aktuellen Inlet-Zustands)
-            gas_i = ct.Solution(self.mechanism, loglevel=self.loglevel)
-            gas_i.TPX = gas_in.T, gas_in.P, gas_in.X
-
-            r = ct.IdealGasConstPressureReactor(gas_i, energy="on", name=f"psr_{i}")
-            r.volume = self.area * self.dz[i]
-            reactors.append(r)
-
-            # Einlass: entweder Inlet-Reservoir oder vorheriger PSR
-            src = upstream if prev_reactor is None else prev_reactor
-            mfc_in.append(ct.MassFlowController(src, r, mdot=self.mdot))
-
-            # Optionale Wärmeverluste
-            if self.U is not None:
-                env_gas = ct.Solution(self.mechanism, loglevel=self.loglevel)
-                env_gas.TPX = self.T_env, self.P0, self.composition
-                env = ct.Reservoir(env_gas, name=f"env_{i}")
-                walls.append(ct.Wall(r, env, A=float(self.Aw[i]), U=float(self.U[i])))
-
-            prev_reactor = r
-
-            # Update "gas_in" für das nächste Segment: zu Beginn identisch,
-            # nach Lösung des Netzes wird unten der reale stationäre Zustand gelesen.
-
-        # Auslass vom letzten Reaktor
-        ct.MassFlowController(reactors[-1], downstream, mdot=self.mdot)
-
-        # Netz lösen (stationär)
-        net = ct.ReactorNet(reactors)
-        # Optional: Toleranzen
-        # net.rtol = 1e-9
-        # net.atol = 1e-15
-        net.advance_to_steady_state()
-
-        # Profile einsammeln + Verweilzeiten berechnen
         tau_cum = 0.0
-        for i, r in enumerate(reactors, start=1):
-            self._T[i] = r.T
-            self._P[i] = r.thermo.P
 
-            rho_i = r.thermo.density
-            u_i = self.mdot / (rho_i * self.area)  # m/s
-            if u_i <= 0.0:
-                raise RuntimeError("Nichtpositive Geschwindigkeit u_i – prüfe mdot/area/State.")
-            dt_i = self.dz[i - 1] / u_i
-            tau_cum += dt_i
-            self._tau[i] = tau_cum
+        # 2) Marching über Segmente (jedes Segment: eigenes kleines Netz)
+        for i in range(self.n):
+            # Fixes Inlet-Reservoir mit *gefrorenem* Zustand = Outlet des vorigen Segments
+            inlet_res = ct.Reservoir(gas_in, name=f"inlet_seg_{i}")
 
-            for s in self._X.keys():
+            # Downstream-Reservoir (nur zum Abführen; Zustand egal, aber stabil)
+            gas_out = ct.Solution(self.mechanism, loglevel=self.loglevel)
+            gas_out.TPX = gas_in.T, gas_in.P, gas_in.X
+            outlet_res = ct.Reservoir(gas_out, name=f"outlet_seg_{i}")
+
+            # PSR für Segment i
+            gseg = ct.Solution(self.mechanism, loglevel=self.loglevel)
+            gseg.TPX = gas_in.T, gas_in.P, gas_in.X  # **warm start**
+            r = ct.IdealGasConstPressureReactor(gseg, energy="on", name=f"psr_{i}")
+            r.volume = self.area * self.dz[i]
+
+            # Ein-/Auslass (fixer mdot)
+            ct.MassFlowController(inlet_res, r, mdot=self.mdot)
+            ct.MassFlowController(r, outlet_res, mdot=self.mdot)
+
+            # Optional: Wärmeverlust an Umgebung
+            if self.U is not None:
+                env_g = ct.Solution(self.mechanism, loglevel=self.loglevel)
+                env_g.TPX = self.T_env, self.P0, self.composition
+                env = ct.Reservoir(env_g, name=f"env_{i}")
+                ct.Wall(r, env, A=float(self.Aw[i]), U=float(self.U[i]))
+
+            # Kleines Netz nur mit DIESEM Reaktor lösen
+            net = ct.ReactorNet([r])
+            # Toleranzen (etwas relaxter ist oft deutlich schneller)
+            net.rtol = 1e-6
+            net.atol = 1e-12
+            net.advance_to_steady_state()
+
+            # Profil schreiben
+            self._T[i + 1] = r.T
+            self._P[i + 1] = r.thermo.P
+
+            rho = r.thermo.density
+            u = self.mdot / (rho * self.area)
+            if u <= 0:
+                raise RuntimeError("Nichtpositive Geschwindigkeit u – prüfe mdot/area/State.")
+            tau_cum += self.dz[i] / u
+            self._tau[i + 1] = tau_cum
+
+            for s in self._X:
                 if s in r.thermo.species_names:
-                    self._X[s][i] = r.thermo[s].X[0]
+                    self._X[s][i + 1] = r.thermo[s].X[0]
 
-        # Finalisieren
-        self._reactors = reactors
-        self._net = net
+            # 3) Update des "laufenden" Inlet-Zustands für das nächste Segment
+            gas_in = ct.Solution(self.mechanism, loglevel=self.loglevel)
+            gas_in.TPX = r.T, r.thermo.P, r.thermo.X
 
     # ------------------------ Zugriff/Export ------------------------
 
