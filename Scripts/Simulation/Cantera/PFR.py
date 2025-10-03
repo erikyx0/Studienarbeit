@@ -430,6 +430,334 @@ class NonReactiveMixer:
         if not self._ran:
             raise RuntimeError("Mixer noch nicht gelaufen. Rufe .run() zuerst auf.")
 
+class CSTR:
+    """
+    Einfacher, stationärer/instationärer CSTR (const-p) für ideale Gasgemische.
+
+    Annahmen:
+      - Ein Gas-Inlet (mdot_in, T_in, P_in, composition)
+      - Ein Outlet mit gleichem Massenstrom (stationär)
+      - Druckführung über Downstream-Reservoir (≈ P_set)
+      - Keine mechanische Wellen-/Rührerarbeit (nur Wärme)
+
+    Wärmeführung (exakt EINE Variante):
+      1) Konvektiv: U [W/m²K], A_wall [m²], T_env [K]
+      2) Direkt:    Qdot_target [W]  (positiv: Heizleistung in den Reaktor;
+                                      negativ: Wärmeverlust aus dem Reaktor)
+
+    Parameter
+    ---------
+    mechanism : str            z. B. "gri30.yaml"
+    V : float                  Reaktorvolumen [m³]
+    P_set : float              Soll-Druck (Pa), via Downstream-Reservoir
+    mdot_in : float            Massenstrom Inlet [kg/s]
+    T_in : float               Inlettemperatur [K]
+    P_in : float               Inletdruck [Pa] (meist = P_set)
+    composition_in : str|dict  Inlet-Zusammensetzung
+    species_to_record : list[str]  Spezies, die geloggt werden
+    U, A_wall, T_env : Wärmeübergang (konvektiv) – exklusiv zu Qdot_target
+    Qdot_target : float|None   Ziel-Wärmestrom (W) – exklusiv zu U/A_wall
+    rtol, atol : float         CVODE-Toleranzen
+    loglevel : int             Cantera-Loglevel
+    """
+
+    def __init__(
+        self,
+        mechanism: str,
+        V: float,
+        P_set: float,
+        mdot_in: float,
+        T_in: float,
+        P_in: float,
+        composition_in: Union[str, Dict[str, float]],
+        *,
+        species_to_record: Optional[list[str]] = None,
+        # Wärmeführung (Variante A)
+        U: Optional[float] = None,
+        A_wall: Optional[float] = None,
+        T_env: Optional[float] = None,
+        # Wärmeführung (Variante B)
+        Qdot_target: Optional[float] = None,
+        # Numerik
+        rtol: float = 1e-6,
+        atol: float = 1e-12,
+        loglevel: int = 0,
+    ) -> None:
+        self.mechanism = mechanism
+        self.V = float(V)
+        self.P_set = float(P_set)
+        self.mdot_in = float(mdot_in)
+        self.T_in = float(T_in)
+        self.P_in = float(P_in)
+        self.composition_in = composition_in
+        self.rtol = float(rtol)
+        self.atol = float(atol)
+        self.loglevel = int(loglevel)
+
+        self.species_to_record = species_to_record or ["CH4", "O2", "CO2", "H2O", "CO", "H2", "OH"]
+
+        # Wärmeführung – Exklusivität prüfen
+        have_conv = (U is not None) or (A_wall is not None) or (T_env is not None)
+        have_qdot = (Qdot_target is not None)
+        if have_conv and have_qdot:
+            raise ValueError("Entweder konvektiv (U/A_wall[/T_env]) ODER Qdot_target angeben – nicht beides.")
+
+        if have_conv:
+            if (U is None) or (A_wall is None):
+                raise ValueError("Für konvektive Wärmeführung bitte U und A_wall angeben.")
+            if T_env is None:
+                T_env = 300.0
+            self.mode = "convective"
+            self.U = float(U)
+            self.Aw = float(A_wall)
+            self.Tenv = float(T_env)
+            self.Qdot_target = None
+        elif have_qdot:
+            self.mode = "qdot"
+            self.Qdot_target = float(Qdot_target)
+            self.U = self.Aw = None
+            self.Tenv = 300.0  # Startwert, wird intern gesucht
+        else:
+            self.mode = "adiabatic"
+            self.U = self.Aw = None
+            self.Tenv = None
+            self.Qdot_target = None
+
+        # Ergebniscontainer
+        self._ran = False
+        self.T: float = np.nan
+        self.P: float = np.nan
+        self.tau: float = np.nan
+        self._X: Dict[str, float] = {}
+        self._g_last = None  # letzter Reactor-Gaszustand
+
+    # -------------------------- Steady State --------------------------
+
+    def run_steady(self) -> None:
+        """Stationären Zustand berechnen (advance_to_steady_state)."""
+        inlet_g = ct.Solution(self.mechanism, loglevel=self.loglevel)
+        inlet_g.TPX = self.T_in, self.P_in, self.composition_in
+        upstream = ct.Reservoir(inlet_g, name="upstream")
+
+        # Downstream bei P_set
+        out_g = ct.Solution(self.mechanism, loglevel=self.loglevel)
+        out_g.TPX = self.T_in, self.P_set, self.composition_in
+        downstream = ct.Reservoir(out_g, name="downstream")
+
+        # Reaktor initialisieren (warm start mit Inlet)
+        g0 = ct.Solution(self.mechanism, loglevel=self.loglevel)
+        g0.TPX = self.T_in, self.P_set, self.composition_in
+        r = ct.IdealGasConstPressureReactor(g0, energy="on", name="cstr")
+        r.volume = self.V
+
+        # Ein- und Auslass MFC (gleicher mdot → stationär Massenbilanz erfüllt)
+        ct.MassFlowController(upstream, r, mdot=self.mdot_in)
+        ct.MassFlowController(r, downstream, mdot=self.mdot_in)
+
+        # Wärmeführung
+        env = None
+        if self.mode == "convective":
+            genv = ct.Solution(self.mechanism, loglevel=self.loglevel)
+            genv.TPX = self.Tenv, self.P_set, self.composition_in
+            env = ct.Reservoir(genv, name="environment")
+            ct.Wall(r, env, A=self.Aw, U=self.U)
+        elif self.mode == "qdot":
+            # Wir implementieren konstantes Qdot, indem wir T_env einer "starken" Wall so wählen,
+            # dass Qdot_actual ≈ Qdot_target (Bisection).
+            r, env = self._tune_env_for_Qdot(r, upstream)
+
+        net = ct.ReactorNet([r])
+        net.rtol, net.atol = self.rtol, self.atol
+        net.advance_to_steady_state()
+
+        # Ergebnisse
+        self.T = r.T
+        self.P = r.thermo.P
+        rho = r.thermo.density
+        self.tau = self.V * rho / self.mdot_in  # s
+        self._X = {s: r.thermo[s].X[0] for s in self.species_to_record if s in r.thermo.species_names}
+        self._g_last = r.thermo
+        self._ran = True
+
+    # -------------------------- Transient --------------------------
+
+    def run_transient(self, t_end: float, dt_save: float = 1e-3):
+        """
+        Zeitintegration (z. B. Anfahrvorgang). Gibt (t, T, P, dict(species->array)) zurück.
+        """
+        inlet_g = ct.Solution(self.mechanism, loglevel=self.loglevel)
+        inlet_g.TPX = self.T_in, self.P_in, self.composition_in
+        upstream = ct.Reservoir(inlet_g)
+
+        out_g = ct.Solution(self.mechanism, loglevel=self.loglevel)
+        out_g.TPX = self.T_in, self.P_set, self.composition_in
+        downstream = ct.Reservoir(out_g)
+
+        g0 = ct.Solution(self.mechanism, loglevel=self.loglevel)
+        g0.TPX = self.T_in, self.P_set, self.composition_in
+        r = ct.IdealGasConstPressureReactor(g0, energy="on")
+        r.volume = self.V
+
+        ct.MassFlowController(upstream, r, mdot=self.mdot_in)
+        ct.MassFlowController(r, downstream, mdot=self.mdot_in)
+
+        env = None
+        if self.mode == "convective":
+            genv = ct.Solution(self.mechanism, loglevel=self.loglevel)
+            genv.TPX = (self.Tenv if self.Tenv is not None else 300.0), self.P_set, self.composition_in
+            env = ct.Reservoir(genv)
+            ct.Wall(r, env, A=self.Aw, U=self.U)
+        elif self.mode == "qdot":
+            # Für transient konstantes Qdot: einfache PI-artige Nachführung von T_env
+            env = self._env_for_transient_Qdot(r, upstream, Kp=5.0, UA=1e5)
+
+        net = ct.ReactorNet([r])
+        net.rtol, net.atol = self.rtol, self.atol
+
+        ts, Ts, Ps = [], [], []
+        species_traces = {s: [] for s in self.species_to_record if s in r.thermo.species_names}
+
+        t = 0.0
+        while t < t_end:
+            t_next = min(t + dt_save, t_end)
+            net.advance(t_next)
+            t = t_next
+            ts.append(t)
+            Ts.append(r.T)
+            Ps.append(r.thermo.P)
+            for s in species_traces.keys():
+                species_traces[s].append(r.thermo[s].X[0])
+
+        # letzte Zustände für Properties:
+        self.T = Ts[-1]
+        self.P = Ps[-1]
+        rho = r.thermo.density
+        self.tau = self.V * rho / self.mdot_in
+        self._X = {s: species_traces[s][-1] for s in species_traces.keys()}
+        self._g_last = r.thermo
+        self._ran = True
+
+        return (np.array(ts), np.array(Ts), np.array(Ps),
+                {s: np.array(vals) for s, vals in species_traces.items()})
+
+    # -------------------------- Output --------------------------
+
+    def X_out(self) -> Dict[str, float]:
+        self._assert_ran()
+        return dict(self._X)
+
+    def Y_out(self) -> Dict[str, float]:
+        self._assert_ran()
+        g = ct.Solution(self.mechanism, loglevel=self.loglevel)
+        g.TPX = self.T, self.P, {k: self._X.get(k, 0.0) for k in g.species_names}
+        return {sp: float(y) for sp, y in zip(g.species_names, g.Y)}
+
+    def summary(self) -> str:
+        self._assert_ran()
+        return (f"CSTR steady-state:\n"
+                f"  T = {self.T:.2f} K,  P = {self.P:.0f} Pa\n"
+                f"  tau = {self.tau:.4f} s,  mdot = {self.mdot_in:.4f} kg/s\n"
+                f"  Top species X: " +
+                ", ".join(f"{k}={v:.4e}" for k, v in list(self._X.items())[:6]))
+
+    def as_dataframe(self):
+        self._assert_ran()
+        if pd is None:
+            raise RuntimeError("pandas ist nicht installiert (pip install pandas).")
+        data = {
+            "property": ["T_K", "P_Pa", "tau_s", "mdot_in_kg_s"],
+            "value": [self.T, self.P, self.tau, self.mdot_in],
+        }
+        df = pd.DataFrame(data)
+        return df
+
+    # -------------------------- Interna --------------------------
+
+    def _tune_env_for_Qdot(self, r: ct.IdealGasConstPressureReactor, upstream: ct.Reservoir):
+        """
+        Stellt für steady-state ein Ziel-Qdot ein, indem T_env einer starken Wall per
+        Bisektion gesucht wird. Qdot_actual = mdot*(h_out - h_in).
+        """
+        UA = 1e5  # starke Kopplung, damit T_env direkt wirkt
+        T_lo, T_hi = 80.0, 3000.0
+        tol_W = max(5.0, 1e-5 * abs(self.Qdot_target))
+
+        def solve_with_Tenv(Tenv: float) -> Tuple[float, ct.Reservoir]:
+            genv = ct.Solution(self.mechanism, loglevel=self.loglevel)
+            genv.TPX = Tenv, self.P_set, self.composition_in
+            env = ct.Reservoir(genv)
+            ct.Wall(r, env, A=1.0, U=UA)
+            net = ct.ReactorNet([r])
+            net.rtol, net.atol = self.rtol, self.atol
+            net.advance_to_steady_state()
+            h_in = upstream.thermo.enthalpy_mass
+            h_out = r.thermo.enthalpy_mass
+            Qdot_actual = self.mdot_in * (h_out - h_in)
+            return Qdot_actual, env
+
+        # initiale Versuche
+        Q_lo, env_lo = solve_with_Tenv(T_lo)
+        # Wall-Objekte hängen nun; für neuen Test re-initialisieren wir Reaktorzustand:
+        g_reset = ct.Solution(self.mechanism, loglevel=self.loglevel); g_reset.TPX = self.T_in, self.P_set, self.composition_in
+        r = ct.IdealGasConstPressureReactor(g_reset, energy="on"); r.volume = self.V
+        ct.MassFlowController(upstream, r, mdot=self.mdot_in)
+        out_g = ct.Solution(self.mechanism, loglevel=self.loglevel); out_g.TPX = self.T_in, self.P_set, self.composition_in
+        downstream = ct.Reservoir(out_g); ct.MassFlowController(r, downstream, mdot=self.mdot_in)
+
+        Q_hi, env_hi = solve_with_Tenv(T_hi)
+        # reset again for bisection loop
+        g_reset = ct.Solution(self.mechanism, loglevel=self.loglevel); g_reset.TPX = self.T_in, self.P_set, self.composition_in
+        r = ct.IdealGasConstPressureReactor(g_reset, energy="on"); r.volume = self.V
+        ct.MassFlowController(upstream, r, mdot=self.mdot_in)
+        out_g = ct.Solution(self.mechanism, loglevel=self.loglevel); out_g.TPX = self.T_in, self.P_set, self.composition_in
+        downstream = ct.Reservoir(out_g); ct.MassFlowController(r, downstream, mdot=self.mdot_in)
+
+        # Prüfen, ob Ziel in [Q_lo, Q_hi]
+        if not (min(Q_lo, Q_hi) <= self.Qdot_target <= max(Q_lo, Q_hi)):
+            # Clip auf näheren Rand
+            return (r, env_lo) if abs(Q_lo - self.Qdot_target) < abs(Q_hi - self.Qdot_target) else (r, env_hi)
+
+        env_best = None
+        for _ in range(40):
+            T_mid = 0.5 * (T_lo + T_hi)
+            # reset Reaktorzustand vor jedem Test
+            g_reset = ct.Solution(self.mechanism, loglevel=self.loglevel); g_reset.TPX = self.T_in, self.P_set, self.composition_in
+            r = ct.IdealGasConstPressureReactor(g_reset, energy="on"); r.volume = self.V
+            ct.MassFlowController(upstream, r, mdot=self.mdot_in)
+            out_g = ct.Solution(self.mechanism, loglevel=self.loglevel); out_g.TPX = self.T_in, self.P_set, self.composition_in
+            downstream = ct.Reservoir(out_g); ct.MassFlowController(r, downstream, mdot=self.mdot_in)
+
+            Q_mid, env_mid = solve_with_Tenv(T_mid)
+            if abs(Q_mid - self.Qdot_target) <= tol_W:
+                env_best = env_mid
+                break
+            if (Q_lo - self.Qdot_target) * (Q_mid - self.Qdot_target) <= 0:
+                T_hi, Q_hi, env_hi = T_mid, Q_mid, env_mid
+            else:
+                T_lo, Q_lo, env_lo = T_mid, Q_mid, env_mid
+            env_best = env_mid
+
+        return r, env_best
+
+    def _env_for_transient_Qdot(self, r: ct.IdealGasConstPressureReactor, upstream: ct.Reservoir, Kp: float = 5.0, UA: float = 1e5):
+        """
+        Erzeugt ein environment-Reservoir, dessen Temperatur wir für transiente
+        Läufe in run_transient() *inkrementell* nachführen könnten (einfacher P-Regler).
+        Hier nur Erstellung – die eigentliche Regelung müsstest du im Zeitloop implementieren,
+        falls wirklich nötig.
+        """
+        genv = ct.Solution(self.mechanism, loglevel=self.loglevel)
+        genv.TPX = 300.0, self.P_set, self.composition_in
+        env = ct.Reservoir(genv)
+        ct.Wall(r, env, A=1.0, U=UA)
+        # (Optional: in deinem Zeitloop könntest du env.thermo.T anpassen, um Qdot näher an Ziel zu bringen.)
+        return env
+
+    def _assert_ran(self):
+        if not self._ran:
+            raise RuntimeError("Reaktor wurde noch nicht berechnet. Rufe run_steady() oder run_transient() zuerst auf.")
+
+
 """
 # ------------------------ Demo PFR ------------------------
 if __name__ == "__main__":
@@ -466,6 +794,8 @@ if __name__ == "__main__":
         print(f"CSV nicht gespeichert: {e}")
 """
 
+
+"""
 # --------------------- Demo Mixer ---------------------
 if __name__ == "__main__":
     # Zwei Ströme CH4-Luft (unterschiedlich heiß), adiabatisch gemischt
@@ -490,3 +820,46 @@ if __name__ == "__main__":
     print("X_out (Top 6):", dict(list(m.X_out().items())[:6]))
     stop_time = timeit.default_timer()
     print(f"Rechenzeit: {stop_time - start_time:.3f} s")
+"""
+
+# ----------------------- Demo CSTR -----------------------
+if __name__ == "__main__":
+    mech = "gri30.yaml"
+    P = ct.one_atm
+
+    # stöchiometrische CH4-Luft am Inlet
+    phi = 1.0
+    O2 = 2.0/phi
+    N2 = 3.76*O2
+    X_in = f"CH4:1, O2:{O2}, N2:{N2}"
+
+    # A) Adiabatischer CSTR (steady)
+    cstr = CSTR(
+        mechanism=mech,
+        V=1e-3,            # 1 Liter
+        P_set=P,
+        mdot_in=0.05,      # kg/s
+        T_in=1000.0,       # K
+        P_in=P,
+        composition_in=X_in,
+    )
+    cstr.run_steady()
+    print(cstr.summary())
+
+    # B) Konvektiv gekühlt
+    cstrU = CSTR(
+        mechanism=mech, V=1e-3, P_set=P,
+        mdot_in=0.05, T_in=1000.0, P_in=P, composition_in=X_in,
+        U=50.0, A_wall=0.2, T_env=300.0
+    )
+    cstrU.run_steady()
+    print("Konvektiv:", cstrU.summary())
+
+    # C) Ziel-Qdot = -10 kW (Wärmeverlust)
+    cstrQ = CSTR(
+        mechanism=mech, V=1e-3, P_set=P,
+        mdot_in=0.05, T_in=1000.0, P_in=P, composition_in=X_in,
+        Qdot_target=-10_000.0
+    )
+    cstrQ.run_steady()
+    print("Qdot:", cstrQ.summary())
