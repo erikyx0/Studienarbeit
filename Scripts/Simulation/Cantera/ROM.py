@@ -226,14 +226,14 @@ def f(mechanism_path: str, P_bar: float = 30.0, A_m2: float = 1.0e-2, porosity: 
         res1 = run_case(mechanism_path, CASE1, P_bar=P_bar, A_m2=A_m2, porosity=porosity,
                         pfr_tau_override=tau_pfr_case1, csv_basename="case1_flowreactor")
         results['case1'] = res1
-        print(f"[Case 1] runtime={res1['runtime_s']:.3f}s | τ_PSR={res1['psr_tau_s']:.4f}s | τ_PFR={res1['pfr_tau_s']:.4f}s | "
-              f"A={A_m2} m², ε={porosity}, L={res1['pfr']['L_m']:.3f} m | CSV={res1['csv']}")
+        #print(f"[Case 1] runtime={res1['runtime_s']:.3f}s | τ_PSR={res1['psr_tau_s']:.4f}s | τ_PFR={res1['pfr_tau_s']:.4f}s | "
+              #f"A={A_m2} m², ε={porosity}, L={res1['pfr']['L_m']:.3f} m | CSV={res1['csv']}")
     if n_case in (None, 2):
         res2 = run_case(mechanism_path, CASE2, P_bar=P_bar, A_m2=A_m2, porosity=porosity,
                         pfr_tau_override=tau_pfr_case2, csv_basename="case2_flowreactor")
         results['case2'] = res2
-        print(f"[Case 2] runtime={res2['runtime_s']:.3f}s | τ_PSR={res2['psr_tau_s']:.4f}s | τ_PFR={res2['pfr_tau_s']:.4f}s | "
-              f"A={A_m2} m², ε={porosity}, L={res2['pfr']['L_m']:.3f} m | CSV={res2['csv']}")
+        #print(f"[Case 2] runtime={res2['runtime_s']:.3f}s | τ_PSR={res2['psr_tau_s']:.4f}s | τ_PFR={res2['pfr_tau_s']:.4f}s | "
+              #f"A={A_m2} m², ε={porosity}, L={res2['pfr']['L_m']:.3f} m | CSV={res2['csv']}")
     return results
 
 # -------- CLI --------
