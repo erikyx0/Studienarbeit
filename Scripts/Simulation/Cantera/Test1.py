@@ -45,7 +45,7 @@ def run_case(U):
 
     pfr = PlugFlowReactorPSRChain(
         mechanism=mech, T0=T0, P0=P0, composition=X0,
-        mdot=0.1, area=0.01, length=1.0,
+        mdot=10, area=0.01, length=0.05,
         n_segments=60,           # etwas feiner als 30 für glatte Kurven
         U=U, A_wall=0.5, T_env=300.0,
         species_to_record=["CH4","O2","CO2","H2O"]
