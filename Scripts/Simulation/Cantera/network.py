@@ -114,6 +114,7 @@ def run_network_pox():
     plt.show()
 
     # Falls du die finalen X willst:
+    #Test
     final_state = pfr_out
     xs = final_state["X"]  # dict: {"species": mole_fraction}
     top_sorted = sorted(xs.items(), key=lambda kv: kv[1], reverse=True)[:8]

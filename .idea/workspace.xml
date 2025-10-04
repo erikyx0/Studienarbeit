@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="Demo Netzwerkerstellung">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Simulation/Cantera/network.py" afterDir="false" />
-    </list>
+    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="Demo Netzwerkerstellung POx" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -232,7 +228,7 @@
       <workItem from="1758720341869" duration="3519000" />
       <workItem from="1759517982237" duration="329000" />
       <workItem from="1759518325111" duration="8283000" />
-      <workItem from="1759590597715" duration="2220000" />
+      <workItem from="1759590597715" duration="2531000" />
     </task>
     <task id="LOCAL-00001" summary="Plot Schlupf Methan">
       <option name="closed" value="true" />
@@ -282,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759530939999</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Demo Netzwerkerstellung POx">
+      <option name="closed" value="true" />
+      <created>1759593083464</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759593083464</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +309,8 @@
     <MESSAGE value="non reactive Mixer" />
     <MESSAGE value="CSTR Klasse" />
     <MESSAGE value="Demo Netzwerkerstellung" />
-    <option name="LAST_COMMIT_MESSAGE" value="Demo Netzwerkerstellung" />
+    <MESSAGE value="Demo Netzwerkerstellung POx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Demo Netzwerkerstellung POx" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PFR_py$network.coverage" NAME="network Coverage Results" MODIFIED="1759530531749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Simulation/Cantera" />
