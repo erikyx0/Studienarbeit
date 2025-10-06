@@ -1,0 +1,17 @@
+IN_CHEM_INPUT=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu_neu\Mechanismen\CRECK\kinetics.inp
+IN_SURF_INPUT=
+IN_THERM_DB=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu_neu\Mechanismen\CRECK\trans_clean.dat
+IN_TRANS_DB=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu_neu\Mechanismen\CRECK\thermo.dat
+IN_LIQUID_DB=
+FIT_TRANSPORT_PROPERTIES=1
+OUT_CHEM_OUTPUT=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\CRECK\CO2\Creck_Mechanismus_gas.out
+OUT_CHEM_ASC=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\CRECK\CO2\Creck_Mechanismus_gas.asc
+OUT_CHEM_SPECIES=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\CRECK\CO2\Creck_Mechanismus_gas.asu
+OUT_SURF_OUTPUT=
+OUT_SURF_ASC=
+OUT_SURF_SPECIES=
+OUT_TRAN_OUTPUT=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\CRECK\CO2\Creck_Mechanismus_gtran.out
+OUT_TRAN_ASC=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\CRECK\CO2\Creck_Mechanismus_gtran.asc
+OUT_XML_PARAMETERS=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\CRECK\CO2\Creck_Mechanismus.xml
+OUT_COMPOSITION=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\CRECK\CO2\Creck_Mechanismus.cklmnt
+OUT_REACTIONS=C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\CRECK\CO2\Creck_Mechanismus.cktab

@@ -1,0 +1,101 @@
+Execution of Job Resulted in the Following Lines of Output:
+
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>REM Generated Batch Job Command File 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>REM get the runtime environment defined 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>CALL "E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin\run_chemkin_env_setup.bat" 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>set CHEMKIN_VERS=25.2 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>call "E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin\run_chemkin_env_setup_part2.bat" 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET REACTION_DIR=E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin\..\.. 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>FOR %i in ("E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin\.") do @SET "CHEMKIN_BIN=%~fi" 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET _ROOT_DIR=E:\Ansys\ANSYS Inc\ANSYS Student\v252 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET TP_DIR=E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET RD_JRE_BIN=E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp\openjre\17\bin 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET relinfo_file=E:\Ansys\ANSYS Inc\ANSYS Student\v252\commonfiles\globalsettings\relinfo.xml 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>PUSHD E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "tokens=*" %a in ('ReadRelinfoExt.BAT') do set extvers_file=%a 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set extvers_file=C:\Users\erikd\AppData\Local\Temp\rd_51048332_ext.tmp 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "tokens=*" %a in ('ReadRelinfoInt.BAT') do set intvers_file=%a 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set intvers_file=C:\Users\erikd\AppData\Local\Temp\rd_26138067_int.tmp 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "usebackq delims==" %g IN (`type "C:\Users\erikd\AppData\Local\Temp\rd_26138067_int.tmp"`) DO set CHEMKIN_INT_VERS=%g 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set CHEMKIN_INT_VERS=252 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "usebackq delims==" %g IN (`type "C:\Users\erikd\AppData\Local\Temp\rd_51048332_ext.tmp"`) DO set CHEMKIN_VERS=%g 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set CHEMKIN_VERS=2025 R2 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>DEL /Q C:\Users\erikd\AppData\Local\Temp\rd_26138067_int.tmp C:\Users\erikd\AppData\Local\Temp\rd_51048332_ext.tmp 
+
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>POPD
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET ZLIB_DIR=E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp\zlib\1.2.13\winx64 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET MKL_DIR=E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp\IntelMKL\2023.1.0\winx64 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>set BUILD_DATE_FILE=E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin\..\..\chemkin.win64\build_date.txt 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>set CHEMKIN_TITLE=ANSYS Chemkin 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>FOR /F "usebackq delims==" %g IN (`type "E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin\..\..\chemkin.win64\build_date.txt"`) DO set CHEMKIN_RELEASE_NUMBER=2025 R2 (%g) 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>set CHEMKIN_RELEASE_NUMBER=2025 R2 (18-May-2025  3:21:56 AM ) 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>set PATH=E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin;E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp\IntelCompiler\2023.1.0\winx64;E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp\IntelMKL\2023.1.0\winx64;E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp\zlib\1.2.13\winx64;E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin;E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp\IntelCompiler\2023.1.0\winx64;E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp\IntelMKL\2023.1.0\winx64;E:\Ansys\ANSYS Inc\ANSYS Student\v252\tp\zlib\1.2.13\winx64;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MATLAB\R2024b\bin;C:\Program Files\Git\cmd;C:\Users\erikd\AppData\Local\Programs\Python\Python313\Scripts;C:\Program Files\dotnet\;C:\Users\erikd\AppData\Local\Programs\Python\Launcher\;C:\Users\erikd\AppData\Local\Microsoft\WindowsApps;C:\texlive\2025\bin\windows;C:\Program Files\Graphviz\bin;C:\Users\erikd\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\erikd\AppData\Local\GitHubDesktop\bin;C:\Users\erikd\AppData\Local\gitkraken\bin;C:\Users\erikd\AppData\Local\Programs\Python\Python313\Scripts;C:\Program Files\Inkscape\bin 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>if "xx" == "xx" goto done_userpath 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>REM cd to the Working Directory for this job 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>C:   && cd \Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET MKL_NUM_THREADS=1 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET OMP_NUM_THREADS=1 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>SET XERCES_DISABLE_DTD=1 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>REM DELETE ANY INTERMEDIATE FILES LEFTOVER FROM PREVIOUS RUN 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>IF EXIST "C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2\XMLdata_GRI_keinCO2_PSRC1.zip" DEL /F /Q "C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2\XMLdata_GRI_keinCO2_PSRC1.zip" 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>REM COPY FILES TO WORKING DIR 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>COPY /Y "E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\data\chemkindata.dtd" "C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2" 
+        1 Datei(en) kopiert.
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>REM RUN THE JOB AND CAPTURE EXIT STATUS 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>CKReactorGenericPSR -i "C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2\GRI_keinCO2_c1.inp" -o "C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2\GRI_keinCO2_c1.out" -x "C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2\XMLdata_GRI_keinCO2_PSRC1.zip" -m "GRI_keinCO2_c1.out.mon" -c "C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2\GriMech_gas.asc" -t "C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2\GriMech_gtran.asc" 
+Licenses Released
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>set exit_status=0 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>if exist CKRUN_ERROR.TXT del /F /Q CKRUN_ERROR.TXT 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>if exist CKRUN_SUCCESS.TXT del /F /Q CKRUN_SUCCESS.TXT 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>if 0 GTR 0 echo exit_status=0  1>CKRUN_ERROR.TXT 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>if 0 EQU 0 echo exit_status=0  1>CKRUN_SUCCESS.TXT 
+
+C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein CO2>exit 0 
+
+
+
