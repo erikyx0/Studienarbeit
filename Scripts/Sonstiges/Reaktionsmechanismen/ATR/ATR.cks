@@ -1,0 +1,31 @@
+#
+#Sun Oct 05 20:26:13 CEST 2025
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_XML_PARAMETERS=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\ATR.xml
+IN_TRANS_DB=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Sonstiges\\Reaktionsmechanismen\\ATR\\thermo30.dat
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_CHEM_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\ATR_gas.asc
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_SURF_SPECIES=
+IN_CHEM_INPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Sonstiges\\Reaktionsmechanismen\\ATR\\grimech30_113.inp
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__OUT_TRAN_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2\\ATR_gtran.out
+Chemistry\ Set\ Description=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__OUT_XML_PARAMETERS=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2\\ATR.xml
+FIT_TRANSPORT_PROPERTIES=1
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__OUT_SURF_ASC=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_CHEM_SPECIES=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\ATR_gas.asu
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__OUT_CHEM_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2\\ATR_gas.out
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__OUT_CHEM_SPECIES=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2\\ATR_gas.asu
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_TRAN_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\ATR_gtran.out
+IN_SURF_INPUT=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_TRAN_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\ATR_gtran.asc
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_SURF_OUTPUT=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__OUT_CHEM_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2\\ATR_gas.asc
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_SURF_ASC=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__OUT_SURF_OUTPUT=
+Chemistry\ Set\ Name=ATR
+IN_THERM_DB=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Sonstiges\\Reaktionsmechanismen\\ATR\\thermo30.dat
+IN_LIQUID_DB=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__OUT_SURF_SPECIES=
+SYSTEM_FLAG=FALSE
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__Run_Result=PREPROCESS_BAD
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__Run_Result=PREPROCESS_BAD
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_CHEM_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\ATR_gas.out
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2__OUT_TRAN_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\ATR\\CO2\\ATR_gtran.asc
