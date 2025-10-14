@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="Demo Netzwerkerstellung POx">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/Auswertung_Zeit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/ROM.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/Test1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/network.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/pfr_profile.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/reactors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/Reactors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Simulation/Cantera/Reactors.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,6 +37,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="Cantera_Modular" />
+                    <option name="lastUsedInstant" value="1760457488" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="Cantera" />
                     <option name="lastUsedInstant" value="1759518375" />
@@ -68,52 +73,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.Auswertung_CO2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Auswertung_Erweiterung.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PFR.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.network.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.Auswertung_CO2.executor": "Run",
+    "Python.Auswertung_Erweiterung.executor": "Run",
+    "Python.PFR.executor": "Run",
+    "Python.Reactors.executor": "Run",
+    "Python.Test1.executor": "Run",
+    "Python.network.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Cantera__Modular",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python.network">
-    <configuration name="Auswertung_CO2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Studienarbeit" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Auswertung_CO2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="Python.Reactors">
     <configuration name="Auswertung_Erweiterung" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Studienarbeit" />
       <option name="ENV_FILES" value="" />
@@ -152,6 +135,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/Simulation/Cantera/PFR.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Reactors" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Studienarbeit" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts/Simulation/Cantera" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/Simulation/Cantera/Reactors.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -208,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Reactors" />
         <item itemvalue="Python.network" />
         <item itemvalue="Python.PFR" />
         <item itemvalue="Python.Test1" />
         <item itemvalue="Python.Auswertung_Erweiterung" />
-        <item itemvalue="Python.Auswertung_CO2" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +245,7 @@
       <workItem from="1759518325111" duration="8283000" />
       <workItem from="1759590597715" duration="2531000" />
       <workItem from="1760028942407" duration="1219000" />
-      <workItem from="1760457095563" duration="316000" />
+      <workItem from="1760457095563" duration="1760000" />
     </task>
     <task id="LOCAL-00001" summary="Plot Schlupf Methan">
       <option name="closed" value="true" />
@@ -328,6 +334,7 @@
     <SUITE FILE_PATH="coverage/Auswertung_Erweiterung_py$Auswertung_Erweiterung.coverage" NAME="Auswertung_Erweiterung Coverage Results" MODIFIED="1758722970169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen" />
     <SUITE FILE_PATH="coverage/PFR_py$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1759528625981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Simulation/Cantera" />
     <SUITE FILE_PATH="coverage/PFR_py$PFR.coverage" NAME="PFR Coverage Results" MODIFIED="1759529985382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Simulation/Cantera" />
+    <SUITE FILE_PATH="coverage/Auswertung_neu_py$Reactors.coverage" NAME="Reactors Coverage Results" MODIFIED="1760458803777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Simulation/Cantera" />
     <SUITE FILE_PATH="coverage/Studienarbeit$Auswertung_CO2.coverage" NAME="Auswertung_CO2 Coverage Results" MODIFIED="1758476406301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2" />
     <SUITE FILE_PATH="coverage/Auswertung_CO2_py$Auswertung_Erweiterung.coverage" NAME="Auswertung_Erweiterung Coverage Results" MODIFIED="1758477748242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen" />
     <SUITE FILE_PATH="coverage/ROM_py$network.coverage" NAME="network Coverage Results" MODIFIED="1759592782390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Simulation/Cantera" />
