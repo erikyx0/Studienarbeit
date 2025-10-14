@@ -1,0 +1,36 @@
+# Bytecode / Cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtuelle Umgebungen
+venv/
+.env/
+.venv/
+
+# IDE / Editor
+.vscode/
+.idea/
+.spyproject/
+
+# System / OS
+.DS_Store
+Thumbs.db
+
+# Logs, temporäre Dateien
+*.log
+*.tmp
+
+# Notebooks-Checkpoints
+.ipynb_checkpoints/
+
+# Output-Daten
+results/
+output/
+*.csv
+*.dat
+*.h5
+
+# Config-Dateien mit Zugangsdaten
+config.json
+.env

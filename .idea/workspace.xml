@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="Demo Netzwerkerstellung POx" />
+    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="Demo Netzwerkerstellung POx">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/Auswertung_Zeit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/ROM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/Test1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/network.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/pfr_profile.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Simulation/Cantera/reactors.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +79,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Cantera&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -229,6 +238,8 @@
       <workItem from="1759517982237" duration="329000" />
       <workItem from="1759518325111" duration="8283000" />
       <workItem from="1759590597715" duration="2531000" />
+      <workItem from="1760028942407" duration="1219000" />
+      <workItem from="1760457095563" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="Plot Schlupf Methan">
       <option name="closed" value="true" />
