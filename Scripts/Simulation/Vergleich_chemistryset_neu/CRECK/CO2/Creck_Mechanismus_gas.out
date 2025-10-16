@@ -1,0 +1,57 @@
+
+
+     *****************************************************************
+     *                     ANSYS Chemkin 2025 R2                     *
+     *                       CHEM Application                        *
+     *                GAS-PHASE MECHANISM INTERPRETER                *
+     *                 Copyright(c) 2025 ANSYS, Inc.                 *                
+     *Run Date and Time: Oct 05, 2025   21:02:58     120 min from UTC*
+     *****************************************************************
+
+
+
+Initializing CHEMKIN Gas-phase Interpreter a component of ANSYS Chemkin 2025 R2, Build date: May 18, 2025
+This and All Other Chemkin(R) Libraries are Copyright (c) 2025 Ansys, Inc.  Unauthorized use, distribution, or duplication is prohibited.  This product is subject to U.S. laws governing export and re-export.  For full Legal Notice, see documentation.
+
+
+LICENSE INFORMATION: 
+ 
+
+LicNum: unknown                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+                WORKING SPACE REQUIREMENTS
+                 PROVIDED        REQUIRED 
+ LOGICAL              497            497
+ INTEGER          2686095        2686095
+ REAL             5917583        5917583
+ CHARACTER         246016         246016
+
+This problem requires     45.148MB of memory for the REAL array.
+                          --------------------
+                          ELEMENTS     ATOMIC
+                          CONSIDERED   WEIGHT
+                          --------------------
+                           1. C       12.0112    
+                           2. H       1.00797    
+                           3. O       15.9994    
+                           4. N       14.0067    
+                           5. HE      4.00260    
+                           6. AR      39.9480    
+                          --------------------
+Error: number of gas-phase species      497 exceeds student licensing limit of       75
+
+
+ WARNING...THERE IS AN ERROR IN THE LINKING FILE,
+           DUE TO MECHANISM INPUT ERRORS.
+
+ GAS PHASE WORKING SPACE REQUIREMENTS ARE
+    INTEGER:       5973
+    REAL:         11943
+    CHARACTER:      504
+
+***NOTE:  There are ERROR messages in the printout above***
+
+ Total CPUtime: 0.082 (seconds)
+
+Failure on Gas-phase Kinetics processing
+

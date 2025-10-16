@@ -1,0 +1,11 @@
+#
+#Sun Oct 05 20:56:13 CEST 2025
+FIT_TRANSPORT_PROPERTIES=1
+SYSTEM_FLAG=FALSE
+IN_TRANS_DB=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Sonstiges\\Reaktionsmechanismen\\CRECK\\trans.dat
+IN_SURF_INPUT=
+IN_CHEM_INPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Sonstiges\\Reaktionsmechanismen\\CRECK\\kinetics.inp
+Chemistry\ Set\ Name=CRECK
+Chemistry\ Set\ Description=
+IN_THERM_DB=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Sonstiges\\Reaktionsmechanismen\\CRECK\\thermo.dat
+IN_LIQUID_DB=

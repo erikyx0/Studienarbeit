@@ -1,0 +1,23 @@
+
+
+     *****************************************************************
+     *                     ANSYS Chemkin 2025 R2                     *
+     *                       TRAN Application                        *
+     *             TRANSPORT PROPERTIES FITTING PROGRAM              *
+     *                 Copyright(c) 2025 ANSYS, Inc.                 *                
+     *Run Date and Time: Oct 05, 2025   21:02:58     120 min from UTC*
+     *****************************************************************
+
+
+      ERROR...Gas-phase mechanism error(s) prohibits 
+      fitting of transport properties 
+
+
+ ERROR...THERE IS AN ERROR IN THE TRANSPORT LINKFILE;
+ CHECK THE TRANSPORT FITTING PRINTOUT FOR ERROR MESSAGES.
+
+
+ TRANSPORT LIBRARY WORKING SPACE REQUIREMENTS ARE
+    INTEGER:       2485
+    REAL:       6930666
+

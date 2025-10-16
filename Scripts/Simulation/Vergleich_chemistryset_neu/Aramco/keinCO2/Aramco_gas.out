@@ -1,0 +1,81 @@
+
+
+     *****************************************************************
+     *                     ANSYS Chemkin 2025 R2                     *
+     *                       CHEM Application                        *
+     *                GAS-PHASE MECHANISM INTERPRETER                *
+     *                 Copyright(c) 2025 ANSYS, Inc.                 *                
+     *Run Date and Time: Oct 05, 2025   20:18:17     120 min from UTC*
+     *****************************************************************
+
+
+
+Initializing CHEMKIN Gas-phase Interpreter a component of ANSYS Chemkin 2025 R2, Build date: May 18, 2025
+This and All Other Chemkin(R) Libraries are Copyright (c) 2025 Ansys, Inc.  Unauthorized use, distribution, or duplication is prohibited.  This product is subject to U.S. laws governing export and re-export.  For full Legal Notice, see documentation.
+
+
+LICENSE INFORMATION: 
+ 
+
+LicNum: unknown                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+                WORKING SPACE REQUIREMENTS
+                 PROVIDED        REQUIRED 
+ LOGICAL                1              1
+ INTEGER             6568           6568
+ REAL                 182            182
+ CHARACTER             14             14
+
+This problem requires      0.001MB of memory for the REAL array.
+      Warning...unrecognized REACTION units string ignored...C1_Inlet1                                                                                                                                                                                                                                                          
+      Warning...unrecognized REACTION units string ignored...C2H6                                                                                                                                                                                                                                                               
+      Warning...unrecognized REACTION units string ignored...0.0542                                                                                                                                                                                                                                                             
+      Warning...unrecognized REACTION units string ignored...C1_Inlet1                                                                                                                                                                                                                                                          
+      Warning...unrecognized REACTION units string ignored...C3H8                                                                                                                                                                                                                                                               
+      Warning...unrecognized REACTION units string ignored...0.00227                                                                                                                                                                                                                                                            
+      Warning...unrecognized REACTION units string ignored...C1_Inlet1                                                                                                                                                                                                                                                          
+      Warning...unrecognized REACTION units string ignored...CH4                                                                                                                                                                                                                                                                
+      Warning...unrecognized REACTION units string ignored...0.91751                                                                                                                                                                                                                                                            
+      Warning...unrecognized REACTION units string ignored...C1_Inlet1                                                                                                                                                                                                                                                          
+      Warning...unrecognized REACTION units string ignored...CO2                                                                                                                                                                                                                                                                
+      Warning...unrecognized REACTION units string ignored...0.01221                                                                                                                                                                                                                                                            
+      Warning...unrecognized REACTION units string ignored...C1_Inlet1                                                                                                                                                                                                                                                          
+      Warning...unrecognized REACTION units string ignored...N2                                                                                                                                                                                                                                                                 
+      Warning...unrecognized REACTION units string ignored...0.01142                                                                                                                                                                                                                                                            
+      Error...cannot use TRAN until SPECies have been given...
+ -------------------------------------------------------------------------------
+                            C
+                         P  H
+                         H  A
+                         A  R
+ SPECIES                 S  G  MOLECULAR  TEMPERATURE  ELEMENT COUNT
+ CONSIDERED              E  E  WEIGHT     LOW    HIGH  
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+
+
+
+                                                      (k = A T**b exp(-E/RT))
+      REACTIONS CONSIDERED                              A        b        E
+
+      User may provide all species rates-of-production,
+      no type parameter specified, a default value of 1 will be used
+
+
+
+ WARNING...THERE IS AN ERROR IN THE LINKING FILE,
+           DUE TO MECHANISM INPUT ERRORS.
+
+ GAS PHASE WORKING SPACE REQUIREMENTS ARE
+    INTEGER:         53
+    REAL:            22
+    CHARACTER:        1
+
+***NOTE:  There are WARNING messages in the printout above***
+
+***NOTE:  There are ERROR messages in the printout above***
+
+ Total CPUtime: 0.018 (seconds)
+
+Failure on Gas-phase Kinetics processing
+
