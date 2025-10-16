@@ -27,7 +27,6 @@ color2 = '#7E9680'
 color3 = '#B3B3B3'
 color4 = '#BC6C25'
 
-
 # Set the working directory to the location of the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)

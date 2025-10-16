@@ -9,7 +9,14 @@ import unicodedata
 from matplotlib.collections import LineCollection
 
 import re 
-import glob 
+import glob
+import sys
+
+# Pfad zum Hauptordner hinzufügen
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../utils')))
+
+from colors import colors_new
+print(colors_new)
 
 color1 = '#4878A8'
 color2 = '#7E9680'
@@ -18,6 +25,12 @@ color4 = '#BC6C25'
 color5 = "#960B0B"
 color6 = "#077B1A"
 
+color1 = colors_new[0]
+color2 = colors_new[1]
+color3 = colors_new[2]
+color4 = colors_new[3]
+color5 = colors_new[4]
+color6 = colors_new[5]
 
 colors = [color1,color2,color3,color4,color5,color6]
 
@@ -143,6 +156,7 @@ plt.grid()
 plt.xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
 plt.ylabel(r'Molenbruch CH$_4$ am Ende des Reaktors')
 plt.vlines(x=[0.05455], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "grey", linestyles="--", label="Komplexere Simulation")
+plt.vlines(x=[0.0842], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "red", linestyles="--", label="Maximale Betriebsgrenze")
 #plt.show()
 plt.savefig('Bilder/Parameterstudie_CO2_CH4_Schlupf.png', dpi=300)
 

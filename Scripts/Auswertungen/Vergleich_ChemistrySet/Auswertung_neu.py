@@ -12,22 +12,29 @@ from collections import OrderedDict
 from Latex_table import df_to_table
 
 #%% Farben für die Plots definieren
-# Diese Farben können angepasst werden, um die Lesbarkeit zu verbessern
+import sys
 
-color1 = '#1f77b4'
-color2 = '#2ca02c'
-color3 = "#3b3b3b"
-color4 = '#d62728'
+# Pfad zum Hauptordner hinzufügen
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../utils')))
+
+from colors import colors_new
+print(colors_new)
 
 color1 = '#4878A8'
 color2 = '#7E9680'
 color3 = '#B3B3B3'
 color4 = '#BC6C25'
-color5 = "#960B0B" 
+color5 = "#960B0B"
 color6 = "#077B1A"
 
-colors = [color1,color2,color3,color4,color5, color6]
-#colors = sb.color_palette("muted", 5)
+color1 = colors_new[0]
+color2 = colors_new[1]
+color3 = colors_new[2]
+color4 = colors_new[3]
+color5 = colors_new[4]
+color6 = colors_new[5]
+
+colors = [color1,color2,color3,color4,color5,color6]
 
 # Set the working directory to the location of the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
