@@ -1,0 +1,31 @@
+#
+#Sun Oct 05 20:29:23 CEST 2025
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__OUT_SURF_SPECIES=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__OUT_TRAN_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2\\Aramco_gtran.asc
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_XML_PARAMETERS=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\Aramco.xml
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__OUT_CHEM_SPECIES=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2\\Aramco_gas.asu
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__OUT_CHEM_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2\\Aramco_gas.out
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__OUT_TRAN_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2\\Aramco_gtran.out
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__OUT_SURF_ASC=
+IN_TRANS_DB=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Sonstiges\\Reaktionsmechanismen\\Aramco3.0\\trans_aramco.dat
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_CHEM_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\Aramco_gas.asc
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_SURF_SPECIES=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__Run_Result=PREPROCESS_BAD
+IN_CHEM_INPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\Aramco_keinCO2_c1.inp
+Chemistry\ Set\ Description=
+FIT_TRANSPORT_PROPERTIES=1
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__OUT_XML_PARAMETERS=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2\\Aramco.xml
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_CHEM_SPECIES=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\Aramco_gas.asu
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_TRAN_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\Aramco_gtran.out
+IN_SURF_INPUT=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_TRAN_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\Aramco_gtran.asc
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_SURF_OUTPUT=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_SURF_ASC=
+Chemistry\ Set\ Name=Aramco
+IN_THERM_DB=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Sonstiges\\Reaktionsmechanismen\\Aramco3.0\\thermo_aramco.dat
+IN_LIQUID_DB=
+SYSTEM_FLAG=FALSE
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__OUT_CHEM_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2\\Aramco_gas.asc
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__Run_Result=PREPROCESS_BAD
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR__OUT_CHEM_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\ATR\\Aramco_gas.out
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\Aramco\\keinCO2__OUT_SURF_OUTPUT=
