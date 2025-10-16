@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="MSE">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/img_py/H2_CH4_CO_CO2.png" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/img_py/H2_CH4_CO_CO2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/img_py/H2_CH4_CO_CO2_keinCO2.png" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/img_py/H2_CH4_CO_CO2_keinCO2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/img_py/Temp_CH4.png" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/img_py/Temp_CH4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/img_py/vergleich_Experimentaldaten_scaled_CH4.png" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/img_py/vergleich_Experimentaldaten_scaled_CH4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Auswertung_CO2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Auswertung_CO2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Bilanz.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Bilanz.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_CH4_Schlupf.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_CH4_Schlupf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Massenstrom_Ende.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Massenstrom_Ende.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Molenbruch_Ende.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Molenbruch_Ende.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Temperaturen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Temperaturen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/plots_mit_legende.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/plots_mit_legende.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_CO2/Auswertung_CO2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_CO2/Auswertung_CO2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/Auswertung_neu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/Auswertung_neu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/H2_CH4_CO_CO2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/H2_CH4_CO_CO2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/H2_CH4_CO_CO2_keinCO2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/H2_CH4_CO_CO2_keinCO2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/Temp_CH4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/Temp_CH4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/vergleich_Experimentaldaten_scaled_CH4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/vergleich_Experimentaldaten_scaled_CH4.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +86,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Cantera__Modular",
+    "git-widget-placeholder": "#4 on Cantera__Modular",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -401,7 +383,8 @@
     <MESSAGE value="Klasse BaseReactor und PSR: konstanter Wärmeverlust" />
     <MESSAGE value="Bild zwei Plots" />
     <MESSAGE value="MSE" />
-    <option name="LAST_COMMIT_MESSAGE" value="MSE" />
+    <MESSAGE value="Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
