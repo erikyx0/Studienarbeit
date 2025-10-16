@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import seaborn as sns
 import unicodedata
+from matplotlib.collections import LineCollection
 
 import re 
 import glob 

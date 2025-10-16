@@ -364,6 +364,7 @@ df_exp_data["NUIG_CO2"]      = nuig_co2.reindex(vergleich_species)
 df_exp_data["Smoke_noCO2"]    = smoke_no_co2.reindex(vergleich_species)
 df_exp_data["Smoke_CO2"]      = smoke_co2.reindex(vergleich_species)
 
+# Export zu LaTeX Format reine Tabellen
 df_to_table(df_exp_data, 
             columns = ["kein CO2 Exp", "GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2", "Smoke_noCO2"],
             rounding = [3,3,3,3,3,3],
@@ -477,6 +478,56 @@ ax3.legend(lines3 + lines4, labels3 + labels4, loc='upper right')
 plt.tight_layout()
 plt.savefig("img/Temp_CH4.png", dpi = 300)
 
+#%% Berechnung MSE
+# Vergleichslisten
+vergleich_species = ["H2", "CO", "CH4", "CO2"]
+mechanisms_noCO2 = ["GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2", "Smoke_noCO2"]
+mechanisms_CO2   = ["GRI_CO2",   "ARAMCO_CO2",   "ATR_CO2",   "NUIG_CO2",   "Smoke_CO2"]
+
+# Funktion für MSE-Berechnung
+def mse(y_true, y_pred):
+    return np.mean((y_true - y_pred)**2)
+
+# === Fehler für "kein CO2" ===
+mse_noCO2 = {}
+for mech in mechanisms_noCO2:
+    species_mse = {}
+    for sp in vergleich_species:
+        species_mse[sp] = mse(df_exp_data.loc[sp, "kein CO2 Exp"], df_exp_data.loc[sp, mech])
+    species_mse["Gesamt_MSE"] = np.mean(list(species_mse.values()))
+    mse_noCO2[mech] = species_mse
+
+df_mse_noCO2 = pd.DataFrame(mse_noCO2)
+print("\nMittlerer quadratischer Fehler (kein CO2):")
+print(df_mse_noCO2.round(5))
+
+# === Fehler für "CO2" ===
+mse_CO2 = {}
+for mech in mechanisms_CO2:
+    species_mse = {}
+    for sp in vergleich_species:
+        species_mse[sp] = mse(df_exp_data.loc[sp, "CO2 Exp"], df_exp_data.loc[sp, mech])
+    species_mse["Gesamt_MSE"] = np.mean(list(species_mse.values()))
+    mse_CO2[mech] = species_mse
+
+df_mse_CO2 = pd.DataFrame(mse_CO2)
+print("\nMittlerer quadratischer Fehler (CO2):")
+print(df_mse_CO2.round(5))
+
+#%% LaTeX Tabellen MSE
+df_to_table(df_exp_data,
+            columns = ["GRI_CO2", "ARAMCO_CO2", "ATR_CO2", "NUIG_CO2", "Smoke_CO2"],
+            rounding = [5,5,5,5,5],
+            latex = True,
+            filepath = "Tabellen/Tabelle_MSE_CO2.tex",
+            decimal_sep = ",")
+
+df_to_table(df_mse_noCO2,
+            columns = ["GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2", "Smoke_noCO2"],
+            rounding = [5,5,5,5,5],
+            latex = True,
+            filepath = "Tabellen/Tabelle_MSE_noCO2.tex",
+            decimal_sep = "," )
 #%% Kopieren zu LaTeX 
 # Relativer Quell- und Zielpfad
 src_folder = "img"
@@ -489,12 +540,3 @@ os.makedirs(dst_folder, exist_ok=True)
 shutil.copytree(src_folder, dst_folder, dirs_exist_ok=True)
 
 plt.close("all")
-
-#plt.plot(dist_pfr_nuig_no_co2, temp_pfr_nuig_no_co2, color=colors[3], label='nuig, Temperatur')
-#plt.plot(dist_pfr_smoke_no_co2, temp_pfr_smoke_no_co2, color=colors[4], label='smoke, Temperatur')
-plt.plot(dist_pfr_nuig_no_co2, temp_pfr_nuig_no_co2 - temp_pfr_smoke_no_co2, color=colors[3], label='nuig, Temperatur')
-plt.legend()
-plt.grid()
-plt.show()
-
-print(dist_pfr_smoke_no_co2)
