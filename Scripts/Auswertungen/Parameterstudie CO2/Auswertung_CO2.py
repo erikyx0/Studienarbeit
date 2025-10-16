@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import seaborn as sns
 import unicodedata
+from matplotlib.collections import LineCollection
 
 import re 
 import glob 
@@ -144,3 +145,47 @@ plt.ylabel(r'Molenbruch CH$_4$ am Ende des Reaktors')
 plt.vlines(x=[0.05455], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "grey", linestyles="--", label="Komplexere Simulation")
 #plt.show()
 plt.savefig('Bilder/Parameterstudie_CO2_CH4_Schlupf.png', dpi=300)
+
+#%% zwei Plots Stoffmenge und Masse
+fig, ax = plt.subplots(1, 2, figsize=(10, 5))
+# Plot 1: Stoffmengen
+ax[0].plot(co2_run_number[1:], data_end_para[' Mole_fraction_CO2_PFRC2_end_point_()'][1:], color=color1, label=r'CO$_2$', marker = 's')
+ax[0].plot(co2_run_number[1:], data_end_para[' Mole_fraction_CO_PFRC2_end_point_()'][1:], color=color2, label=r'CO', marker = 's')
+ax[0].plot(co2_run_number[1:], data_end_para[' Mole_fraction_H2_PFRC2_end_point_()'][1:], color=color4, label=r'H$_2$', marker = 's')
+ax[0].plot(co2_run_number[1:], data_end_para[' Mole_fraction_H2O_PFRC2_end_point_()'][1:], color=color5, label=r'H$_2$O', marker = 's')
+ax[0].set_xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
+ax[0].set_ylabel("Stoffmengenanteil am Reaktorausgang")
+ax[0].grid()
+
+
+# Plot 2: Massenströme
+ax[1].plot(co2_run_number[1:], data_end_para['Massentrom CO2'][1:], color=color1, label=r'CO$_2$', marker = 's')
+ax[1].plot(co2_run_number[1:], data_end_para['Massentrom CO'][1:], color=color2, label=r'CO', marker = 's')
+ax[1].plot(co2_run_number[1:], data_end_para['Massentrom H2'][1:], color=color4, label=r'H$_2$', marker = 's')
+ax[1].plot(co2_run_number[1:], data_end_para['Massentrom H2O'][1:], color=color5, label=r'H$_2$O', marker = 's')
+ax[1].set_xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
+ax[1].set_ylabel("Massenanteil am Reaktorausgang")
+ax[1].grid()
+
+# === Gemeinsame Legende ===
+handles, labels = [], []
+for a in ax:
+    h, l = a.get_legend_handles_labels()
+    handles += h
+    labels += l
+
+from collections import OrderedDict
+by_label = OrderedDict(zip(labels, handles))
+
+# Legende UNTER der Grafik, außerhalb des Plotbereichs
+leg = fig.legend(by_label.values(), by_label.keys(),
+                 loc='lower center', ncol=4, bbox_to_anchor=(0.5, -0.05), frameon=False)
+
+# keine Layoutanpassung hier!
+plt.tight_layout()
+
+# beim Anzeigen wird’s in manchen Umgebungen abgeschnitten:
+#plt.show()
+
+# --- aber beim Speichern:
+fig.savefig("Bilder/plots_mit_legende.png", bbox_inches='tight', bbox_extra_artists=(leg,))
