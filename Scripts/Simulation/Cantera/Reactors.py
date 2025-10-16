@@ -600,12 +600,206 @@ class PSR(BaseReactor):
         return self.gas.density * self.reactor.volume / mdot
 
 
+# ----------------- CSTR -----------------
+class CSTR(BaseReactor):
+    """
+    Continuous Stirred-Tank Reactor (PSR/CSTR) auf Cantera-Basis.
+
+    Features
+    --------
+    - isobar (ConstPressureReactor) oder isochor (IdealGasReactor)
+    - Inlet: Reservoir + MassFlowController (konstanter mdot)
+    - Outlet: Reservoir + Valve (Druckreferenz, einfacher Abfluss)
+    - Komfort: set_mdot(), set_tau()
+    - Stationär lösen: advance_to_steady_state() + robuster Fallback
+    - Sensoren: tau, mdot_in
+
+    Wärmeführung (aus BaseReactor):
+      set_adiabatic(), set_heat_UA(UA, T_env), set_fixed_heat(Qdot[, UA_hint]),
+      set_Twall(T_wall[, UA]), set_heat_callback(func[, UA_hint])
+    """
+
+    def __init__(
+        self,
+        gas: ct.Solution,
+        name: str = "CSTR",
+        *,
+        T: Optional[float] = None,
+        P: Optional[float] = None,
+        X: Optional[Dict[str, float]] = None,
+        Y: Optional[Dict[str, float]] = None,
+        volume: float = 1.0e-3,
+        constant_pressure: bool = True,
+        energy_enabled: bool = True,
+        state_is_copy: bool = True,
+    ) -> None:
+        self.volume = float(volume)
+        self.constant_pressure = bool(constant_pressure)
+
+        # IO-Objekte
+        self._inlet_res: Optional[ct.Reservoir] = None
+        self._outlet_res: Optional[ct.Reservoir] = None
+        self._mfc_in: Optional[ct.MassFlowController] = None
+        self._valve_out: Optional[ct.Valve] = None
+        self._C_out: float = 1e-5  # Default Ventilkoeffizient
+
+        super().__init__(
+            gas, name=name, T=T, P=P, X=X, Y=Y,
+            state_is_copy=state_is_copy, energy_enabled=energy_enabled
+        )
+
+        # Volumen setzen (nachdem der Reaktor erzeugt wurde)
+        self.reactor.volume = self.volume
+
+        # Zusätzliche Sensoren
+        self.add_sensor("tau", lambda self: self.current_tau())
+        self.add_sensor("mdot_in", lambda self: _get_mfc_mdot(self._mfc_in))
+
+    # ---- Reaktoraufbau ----
+    def _build_reactor(self) -> None:
+        if self.constant_pressure:
+            self.reactor = ct.ConstPressureReactor(
+                self.gas, name=self.name,
+                energy=("on" if self.energy_enabled else "off")
+            )
+        else:
+            self.reactor = ct.IdealGasReactor(
+                self.gas, name=self.name,
+                energy=("on" if self.energy_enabled else "off")
+            )
+        self.network = ct.ReactorNet([self.reactor])
+
+    # ---- IO-Setup ----
+    def set_inlet(
+        self,
+        *,
+        T: float,
+        P: float,
+        X: Optional[Dict[str, float]] = None,
+        Y: Optional[Dict[str, float]] = None,
+        mdot: Optional[float] = None,
+    ) -> None:
+        """Inlet-Reservoir + MassFlowController aufsetzen/aktualisieren."""
+        inlet_gas = safe_clone(self.gas)
+        if X is not None:
+            inlet_gas.TPX = T, P, self._dict_to_fraction_vector(X, basis="X")
+        elif Y is not None:
+            inlet_gas.TPY = T, P, self._dict_to_fraction_vector(Y, basis="Y")
+        else:
+            inlet_gas.TP = T, P
+
+        if self._inlet_res is None:
+            self._inlet_res = ct.Reservoir(inlet_gas, name=f"{self.name}_in")
+        else:
+            # Zustand des bestehenden Reservoirs aktualisieren
+            if X is not None:
+                self._inlet_res.thermo.TPX = T, P, self._dict_to_fraction_vector(X, basis="X")
+            elif Y is not None:
+                self._inlet_res.thermo.TPY = T, P, self._dict_to_fraction_vector(Y, basis="Y")
+            else:
+                self._inlet_res.thermo.TP = T, P
+
+        # Massenstromregler
+        if self._mfc_in is None:
+            self._mfc_in = ct.MassFlowController(self._inlet_res, self.reactor,
+                                                 mdot=(mdot if mdot is not None else 0.0))
+        elif mdot is not None:
+            _set_mfc_mdot(self._mfc_in, mdot)
+
+        # Outlet-Reservoir + Ventil
+        if self._outlet_res is None:
+            self._outlet_res = ct.Reservoir(safe_clone(self.gas), name=f"{self.name}_out")
+        if self._valve_out is None:
+            self._valve_out = ct.Valve(self.reactor, self._outlet_res)
+            _set_valve_coeff(self._valve_out, self._C_out)
+
+    def set_outlet_valve_coeff(self, C_out: float) -> None:
+        """Ventilkoeffizient des Outlets setzen (Einfluss auf Abfluss/Druck)."""
+        self._C_out = float(C_out)
+        if self._valve_out is not None:
+            _set_valve_coeff(self._valve_out, self._C_out)
+
+    # ---- Bedien-API ----
+    def set_mdot(self, mdot: float) -> None:
+        """Inlet-Massenstrom setzen [kg/s]."""
+        if self._mfc_in is None:
+            raise RuntimeError("Kein Inlet konfiguriert. set_inlet(...) zuerst aufrufen.")
+        _set_mfc_mdot(self._mfc_in, mdot)
+
+    def set_tau(self, tau: float) -> None:
+        """
+        mdot so setzen, dass (momentan) tau ≈ rho*V/mdot gilt.
+        Hinweis: ρ ändert sich dynamisch → dies ist ein statischer Set auf Basis des aktuellen Zustands.
+        """
+        rho = self.gas.density
+        mdot = rho * self.reactor.volume / float(tau)
+        self.set_mdot(mdot)
+
+    # ---- Convenience/Sensoren ----
+    def current_tau(self) -> float:
+        mdot = _get_mfc_mdot(self._mfc_in)
+        if mdot <= 0 or math.isnan(mdot):
+            return float("inf")
+        return self.gas.density * self.reactor.volume / mdot
+
+    # ---- Stationär lösen ----
+    def solve_steady(
+        self,
+        *,
+        max_time: float = 10.0,
+        ctrl_dt: float = 1e-3,
+        tol_T: float = 1e-8,
+        tol_X: float = 1e-10,
+        after_step: Optional[Callable[["CSTR"], None]] = None,
+    ) -> Dict[str, object]:
+        """
+        Versucht zuerst `advance_to_steady_state()`. Fällt zurück auf
+        kurze Integrationsschritte, bis dT/dt und dX/dt praktisch 0 sind.
+        Gibt einen Snapshot (dict) des stationären Zustands zurück.
+        """
+        # 1) Direkter Versuch (wenn verfügbar)
+        try:
+            self.network.advance_to_steady_state()
+            return self.snapshot_state()
+        except Exception:
+            pass
+
+        # 2) Fallback: kurze Schritte, Konvergenz prüfen
+        if self.network is None:
+            self.network = ct.ReactorNet([self.reactor])
+
+        t0 = self.network.time
+        last_T = self.gas.T
+        last_X = self.gas.X.copy()
+
+        while self.network.time - t0 < max_time:
+            t_next = self.network.time + ctrl_dt
+            # Wärme-Randbedingungen aus BaseReactor aktualisieren:
+            self._update_heat_before_step()
+            self.network.advance(t_next)
+
+            # Optionale Hook
+            if after_step is not None:
+                after_step(self)
+
+            dT = abs(self.gas.T - last_T)
+            dX = float(abs(self.gas.X - last_X).max())
+
+            last_T = self.gas.T
+            last_X = self.gas.X.copy()
+
+            if dT < tol_T and dX < tol_X:
+                break
+
+        return self.snapshot_state()
+
+
 # ---------- Minimalbeispiel ----------
 if __name__ == "__main__":
     gas = ct.Solution("gri30.yaml")
-    psr = PSR(
+    r = CSTR(
         gas,
-        name="psr_demo",
+        name="cstr_demo",
         T=1000.0, P=ct.one_atm,
         X={"CH4": 1, "O2": 2, "N2": 7.52},
         volume=2e-3,
@@ -613,22 +807,13 @@ if __name__ == "__main__":
         energy_enabled=True,
     )
 
-    # Inlet setzen
-    psr.set_inlet(
-        T=900.0, P=ct.one_atm,
-        X={"CH4": 1, "O2": 2, "N2": 7.52},
-        mdot=0.02
-    )
-
+    # Inlet & Betriebsweise
+    r.set_inlet(T=900.0, P=ct.one_atm, X={"CH4": 1, "O2": 2, "N2": 7.52}, mdot=0.02)
     # Wärmeführung (kommt aus BaseReactor)
-    # psr.set_adiabatic()
-    #psr.set_heat_UA(UA=80.0, T_env=800.0)
-    psr.set_fixed_heat(Qdot_W=-5000.0)      # fester Wärmeverlust: 5 kW
-    # psr.set_Twall(T_wall_K=900.0, UA=1e6)
+    # r.set_adiabatic()
+    r.set_heat_UA(UA=80.0, T_env=800.0)
+    # r.set_fixed_heat(Qdot_W=-5000.0)   # fester Wärmeverlust 5 kW
 
-    # Integration & Logging
-    psr.integrate(0.05, dt_log=1e-3)
-
-    import pandas as pd
-    df = psr.history_as_dataframe()
-    print(df.filter(["t", "T", "P", "tau", "mdot_in", "Qdot"]).head())
+    # Stationär lösen
+    steady = r.solve_steady(max_time=2.0, ctrl_dt=5e-4)
+    print({k: steady[k] for k in ("T", "P", "Qdot", "heat_mode")})
