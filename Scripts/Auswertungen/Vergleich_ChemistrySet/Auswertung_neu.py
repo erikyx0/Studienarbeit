@@ -536,7 +536,7 @@ df_to_table(df_mse_noCO2,
             filepath = "Tabellen/Tabelle_MSE_noCO2.tex",
             decimal_sep = "," )
 
-#%% Plot Temperaturen
+#%% Plot Temperaturen Säulen
 # -----------------------------
 # Datenaufbau
 # -----------------------------
@@ -636,7 +636,7 @@ axes[1].grid(axis="y", linestyle="dotted")
 axes[1].set_axisbelow(True)
 
 # Gemeinsame y-Untergrenze
-axes[0].set_ylim(bottom=1200)
+axes[0].set_ylim(bottom=0)
 
 # Legende (zentral unter beiden Plots)
 handles, labels = axes[1].get_legend_handles_labels()
@@ -655,9 +655,9 @@ fig.legend(
 plt.tight_layout(rect=[0, 0.05, 1, 1])  # Platz für Legende unten
 
 # Ausgabeordner sicherstellen
-os.makedirs("Bilder", exist_ok=True)
-plt.savefig("Bilder/Vergleich_Temperaturen.png", dpi=300)
+plt.savefig("img/Vergleich_Temperaturen.png", dpi=300)
 # plt.show()
+
 
 #%% Kopieren zu LaTeX 
 # Relativer Quell- und Zielpfad

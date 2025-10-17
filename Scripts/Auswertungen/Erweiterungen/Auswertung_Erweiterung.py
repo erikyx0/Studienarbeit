@@ -218,7 +218,24 @@ def relative_error_scores(df, exp_col="Exp", eps=1e-6):
     scores = rel_errors.mean(axis=0).sort_values()
     return scores  # kleiner = besser
 
-scores = tvd_scores(df_exp_data_no_CO2)
+def mse_scores(df, exp_col="Exp"):
+    """
+    Berechnet den mittleren quadratischen Fehler (MSE) pro Simulation.
+
+    df: DataFrame mit Spalten [exp_col, sim1, sim2, ...]
+    exp_col: Name der Spalte mit den Experimentwerten
+    """
+    exp = df[exp_col].astype(float)
+    sims = df.drop(columns=[exp_col]).astype(float)
+
+    # quadratischer Fehler: (sim - exp)^2
+    sq_errors = (sims.sub(exp, axis=0)) ** 2
+
+    # Mittelwert über alle Zeilen → MSE pro Simulation
+    mse = sq_errors.mean(axis=0).sort_values()
+    return mse  # kleiner = besser
+
+scores = mse_scores(df_exp_data_no_CO2)
 print("TVD pro Modell (0=perfekt, 1=schlecht):")
 print(scores)
 print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
@@ -262,7 +279,7 @@ plt.tight_layout()
 # Optional speichern:
 # plt.savefig("saeulendiagramm.png", dpi=300)
 
-scores = tvd_scores(df_exp_data_CO2)
+scores = mse_scores(df_exp_data_CO2)
 print("TVD pro Modell (0=perfekt, 1=schlecht):")
 print(scores)
 print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
@@ -434,12 +451,12 @@ plt.savefig("Bilder/Vergleich_Temperaturen.png", dpi=300)
 # plt.show()
 
 ##% Ähnlichkeiten überprüfen
-scores = relative_error_scores(df_exp_data_no_CO2)
+scores = mse_scores(df_exp_data_no_CO2)
 print("MRE pro Modell (0=perfekt, 1=schlecht):")
 print(scores)
 print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
 
-scores = relative_error_scores(df_exp_data_CO2)
+scores = mse_scores(df_exp_data_CO2)
 print("MRE pro Modell (0=perfekt, 1=schlecht):")
 print(scores)
 print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
@@ -451,7 +468,3 @@ print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
                 4 & \textbf{0.096} & \textbf{0.167} \\
                 6 & 0.494 & 2.426 \\
 """
-
-for i in range(100):
-    print(i)
-    
