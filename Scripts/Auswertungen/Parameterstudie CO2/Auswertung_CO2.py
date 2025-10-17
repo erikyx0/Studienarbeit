@@ -69,7 +69,7 @@ data_end_para['Massentrom H2'] = data_end_para[' Mole_fraction_H2_PFRC2_end_poin
 data_end_para['Massentrom CO'] = data_end_para[' Mole_fraction_CO_PFRC2_end_point_()'] * data_end_para[' Exit_mass_flow_rate_PFRC2_end_point_(kg/sec)']
 data_end_para['Massentrom H2O'] = data_end_para[' Mole_fraction_H2O_PFRC2_end_point_()'] * data_end_para[' Exit_mass_flow_rate_PFRC2_end_point_(kg/sec)']
 
-data_end_para['H2/CO2'] = data_end_para['Massentrom H2'] / data_end_para['Massentrom CO2']
+data_end_para['H2/CO'] = data_end_para['Massentrom H2'] / data_end_para['Massentrom CO']
 
 #%% Plots 
 # Runnumber Case 2: 7.18 (interpoliert) (entspricht 0.05455 kg/s) 
@@ -83,6 +83,7 @@ plt.grid()
 plt.xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
 plt.ylabel('Molenbruch am Ende des Reaktors')
 plt.vlines(x=[0.05455], ymin = 0, ymax = 0.45, colors = "grey", linestyles="--", label="Komplexere Simulation")
+plt.vlines(x=[0.0842], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "red", linestyles="--", label="Maximale Betriebsgrenze")
 plt.legend()
 plt.savefig('Bilder/Parameterstudie_CO2_Molenbruch_Ende.png', dpi=300, bbox_inches='tight')
 plt.close("all")
@@ -97,28 +98,26 @@ plt.grid()
 plt.xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
 plt.ylabel('Massenstrom am Ende des Reaktors')
 plt.vlines(x=[0.05455], ymin = 0, ymax = 0.1, colors = "grey", linestyles="--", label="Komplexere Simulation")
+plt.vlines(x=[0.0842], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "red", linestyles="--", label="Maximale Betriebsgrenze")
 plt.legend()
 plt.savefig('Bilder/Parameterstudie_CO2_Massenstrom_Ende.png', dpi=300, bbox_inches='tight')
 plt.close("all")
-
-# Plot für bestes H2 / CO2 ergebnis 
-plt.figure(figsize=(10,6))
 
 
 # Testbestimmung CO2 Massenstrom Einlass 
 fig, ax1 = plt.subplots(figsize=(7,5))
 
-# --- Erste Achse: Verhältnis H2/CO2 ---
-ax1.plot(co2_run_number[1:], data_end_para['H2/CO2'][1:],
-         color=color1, label=r'H$_2$/CO$_2$', marker='v')
+# --- Erste Achse: Verhältnis H2/CO ---
+ax1.plot(co2_run_number[1:], data_end_para['H2/CO'][1:],
+         color=color1, label=r'H$_2$/CO', marker='v')
 ax1.set_xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
-ax1.set_ylabel(r'Verhältnis H$_2$/CO$_2$ am Ende des Reaktors', color=color1)
+ax1.set_ylabel(r'Verhältnis H$_2$/CO am Ende des Reaktors', color=color1)
 ax1.tick_params(axis='y', labelcolor=color1)
 ax1.grid(True)
 
 # vertikale Linie
-ax1.vlines(x=[0.05455], ymin=0, ymax=12.5,
-           colors="grey", linestyles="--", label="Komplexere Simulation")
+ax1.vlines(x=[0.05455], ymin=0, ymax=2, colors="grey", linestyles="--", label="Komplexere Simulation")
+ax1.vlines(x=[0.0842], ymin = 0, ymax = 2, colors = "red", linestyles="--", label="Maximale Betriebsgrenze")
 
 # --- Zweite Achse: CO2 Netto ---
 ax2 = ax1.twinx()
@@ -146,18 +145,20 @@ plt.grid()
 plt.xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
 plt.ylabel('Temperatur (K)')
 plt.vlines(x=[0.05455], ymin = 1350, ymax = 2200, colors = "grey", linestyles="--", label="Komplexere Simulation")
+plt.vlines(x=[0.0842], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "red", linestyles="--", label="Maximale Betriebsgrenze")
 plt.legend()
 plt.savefig('Bilder/Parameterstudie_CO2_Temperaturen.png', dpi=300, bbox_inches='tight')
 plt.close("all")
 
 #%% ermitteln CH4-Schlupf
-plt.plot(co2_run_number[1:], data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:], marker = 's')
+plt.plot(co2_run_number[1:], data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:], marker = 's', color = color1)
 plt.grid()
 plt.xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
 plt.ylabel(r'Molenbruch CH$_4$ am Ende des Reaktors')
 plt.vlines(x=[0.05455], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "grey", linestyles="--", label="Komplexere Simulation")
 plt.vlines(x=[0.0842], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "red", linestyles="--", label="Maximale Betriebsgrenze")
 #plt.show()
+plt.legend(loc="best")
 plt.savefig('Bilder/Parameterstudie_CO2_CH4_Schlupf.png', dpi=300)
 
 #%% zwei Plots Stoffmenge und Masse
