@@ -17,7 +17,6 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../utils')))
 
 from colors import colors_new
-print(colors_new)
 
 color1 = '#4878A8'
 color2 = '#7E9680'
@@ -204,3 +203,18 @@ plt.tight_layout()
 
 # --- aber beim Speichern:
 fig.savefig("Bilder/plots_mit_legende.png", bbox_inches='tight', bbox_extra_artists=(leg,))
+
+#%% 3D Plot
+from complex_plots import *
+import re
+
+# Farbverlauf Rot Gelb Blau
+from matplotlib.colors import LinearSegmentedColormap
+
+# Verlauf: Rot → Gelb → Blau
+cmap_red_yellow_blue = LinearSegmentedColormap.from_list(
+    "red_yellow_blue",
+    ["blue", "#B9B100", "red"]
+)
+
+plot_runs_3d_simple(list(dfs_by_run.values())[1:], cmap=cmap_red_yellow_blue, point_step=5, run_step=1)

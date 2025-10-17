@@ -10,6 +10,7 @@ from collections import OrderedDict
 
 
 from Latex_table import df_to_table
+from complex_plots import *
 
 #%% Farben für die Plots definieren
 import sys
@@ -535,6 +536,7 @@ df_to_table(df_mse_noCO2,
             latex = True,
             filepath = "Tabellen/Tabelle_MSE_noCO2.tex",
             decimal_sep = "," )
+
 #%% Kopieren zu LaTeX 
 # Relativer Quell- und Zielpfad
 src_folder = "img"
