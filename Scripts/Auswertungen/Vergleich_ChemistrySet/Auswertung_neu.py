@@ -536,6 +536,129 @@ df_to_table(df_mse_noCO2,
             filepath = "Tabellen/Tabelle_MSE_noCO2.tex",
             decimal_sep = "," )
 
+#%% Plot Temperaturen
+# -----------------------------
+# Datenaufbau
+# -----------------------------
+columns = ["Experiment", "GRI-Mech 3.0", "Aramco", "ATR", "NUIG", "Smoke"]
+temp_rows = ["Temperatur Ausgang", "Temperatur 15", "Temperatur 11"]
+
+# DataFrame: ohne CO2
+df_temp_no_CO2 = pd.DataFrame(columns=columns)
+df_temp_no_CO2.loc["Temperatur Ausgang"] = [
+    1300 + 273.1,
+    temp_pfr_gri_no_co2.iloc[-1],
+    temp_pfr_aramco_no_co2.iloc[-1],
+    temp_pfr_atr_no_co2.iloc[-1],
+    temp_pfr_nuig_no_co2.iloc[-1],
+    temp_pfr_smoke_no_co2.iloc[-1],
+]
+df_temp_no_CO2.loc["Temperatur 15"] = [
+    1351.9 + 273.15,
+    temp_pfr_gri_no_co2.iloc[round(2 / 3 * len(temp_pfr_gri_no_co2))],
+    temp_pfr_aramco_no_co2.iloc[round(2 / 3 * len(temp_pfr_aramco_no_co2))],
+    temp_pfr_atr_no_co2.iloc[round(2 / 3 * len(temp_pfr_atr_no_co2))],
+    temp_pfr_nuig_no_co2.iloc[round(2 / 3 * len(temp_pfr_nuig_no_co2))],
+    temp_pfr_smoke_no_co2.iloc[round(2 / 3 * len(temp_pfr_smoke_no_co2))],
+]
+df_temp_no_CO2.loc["Temperatur 11"] = [
+    1407.4 + 273.15,
+    temp_pfr_gri_no_co2.iloc[0],
+    temp_pfr_aramco_no_co2.iloc[0],
+    temp_pfr_atr_no_co2.iloc[0],
+    temp_pfr_nuig_no_co2.iloc[0],
+    temp_pfr_smoke_no_co2.iloc[0],
+]
+
+# DataFrame: mit CO2
+df_temp_CO2 = pd.DataFrame(columns=columns)
+df_temp_CO2.loc["Temperatur Ausgang"] = [
+    1342 + 273.15,
+    temp_pfr_gri_co2.iloc[-1],
+    temp_pfr_aramco_co2.iloc[-1],
+    temp_pfr_atr_co2.iloc[-1],
+    temp_pfr_nuig_co2.iloc[-1],
+    temp_pfr_smoke_co2.iloc[-1],
+]
+df_temp_CO2.loc["Temperatur 15"] = [
+    1371.6 + 273.15,
+    temp_pfr_gri_co2.iloc[round(2 / 3 * len(temp_pfr_gri_co2))],
+    temp_pfr_aramco_co2.iloc[round(2 / 3 * len(temp_pfr_aramco_co2))],
+    temp_pfr_atr_co2.iloc[round(2 / 3 * len(temp_pfr_atr_co2))],
+    temp_pfr_nuig_co2.iloc[round(2 / 3 * len(temp_pfr_nuig_co2))],
+    temp_pfr_smoke_co2.iloc[round(2 / 3 * len(temp_pfr_smoke_co2))],
+]
+df_temp_CO2.loc["Temperatur 11"] = [
+    1411.4 + 273.15,
+    temp_pfr_gri_co2.iloc[0],
+    temp_pfr_aramco_co2.iloc[0],
+    temp_pfr_atr_co2.iloc[0],
+    temp_pfr_nuig_co2.iloc[0],
+    temp_pfr_smoke_co2.iloc[0],
+]
+
+# Reihenfolge der Zeilen sicherstellen
+df_temp_no_CO2 = df_temp_no_CO2.loc[temp_rows]
+df_temp_CO2   = df_temp_CO2.loc[temp_rows]
+
+# -----------------------------
+# Plot
+# -----------------------------
+# Falls nur ein Satz verfügbar wäre, könnte man hier dynamisch 1x1 setzen – bei dir sind beide vorhanden.
+fig, axes = plt.subplots(1, 2, figsize=(12, 6), sharey=True)
+
+# ohne CO2
+df_temp_no_CO2.plot(
+    kind="bar",
+    ax=axes[0],
+    color=colors[:len(df_temp_no_CO2.columns)],  # hier color, nicht colors!
+    legend=False
+)
+axes[0].set_title("Temperatur ohne CO₂")
+axes[0].set_xlabel("Mess-/Positionspunkt")
+axes[0].set_ylabel("Temperatur [K]")
+axes[0].tick_params(axis="x", rotation=0)
+axes[0].grid(axis="y", linestyle="dotted")
+axes[0].set_axisbelow(True)
+
+# mit CO2
+df_temp_CO2.plot(
+    kind="bar",
+    ax=axes[1],
+    color=colors[:len(df_temp_CO2.columns)],
+    legend=False
+)
+
+axes[1].set_title("Temperatur mit CO₂")
+axes[1].set_xlabel("Mess-/Positionspunkt")
+axes[1].tick_params(axis="x", rotation=0)
+axes[1].grid(axis="y", linestyle="dotted")
+axes[1].set_axisbelow(True)
+
+# Gemeinsame y-Untergrenze
+axes[0].set_ylim(bottom=1200)
+
+# Legende (zentral unter beiden Plots)
+handles, labels = axes[1].get_legend_handles_labels()
+if not handles:
+    # Falls pandas keine Handles zurückgibt (weil legend=False),
+    # baue sie aus den Spaltennamen des rechten Plots.
+    labels = list(df_temp_CO2.columns)
+
+fig.legend(
+    labels,
+    loc="lower center",
+    ncol=len(columns),
+    bbox_to_anchor=(0.5, -0.02),
+)
+
+plt.tight_layout(rect=[0, 0.05, 1, 1])  # Platz für Legende unten
+
+# Ausgabeordner sicherstellen
+os.makedirs("Bilder", exist_ok=True)
+plt.savefig("Bilder/Vergleich_Temperaturen.png", dpi=300)
+# plt.show()
+
 #%% Kopieren zu LaTeX 
 # Relativer Quell- und Zielpfad
 src_folder = "img"
