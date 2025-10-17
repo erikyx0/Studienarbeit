@@ -10,7 +10,6 @@ from collections import OrderedDict
 
 
 from Latex_table import df_to_table
-from complex_plots import *
 
 #%% Farben für die Plots definieren
 import sys
@@ -186,55 +185,55 @@ x_test_pfr_atr_no_co2 = df_no_co2_atr_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_nuig_no_co2 = df_no_co2_nuig_pfr[' Mole_fraction_N2_PFRC2_()']
 x_test_pfr_smoke_no_co2 = df_no_co2_smoke_pfr[' Mole_fraction_N2_PFRC2_()']#%% Plots 
 
-fig, axs = plt.subplots(2, 2, figsize=(7, 7))
+fig, axs = plt.subplots(1, 4, figsize=(16*0.8, 4*0.8))
 
 # H2
-axs[0, 0].plot(dist_pfr_aramco_no_co2, x_H2_pfr_aramco_no_co2, label='aramco', color=colors[0])
-axs[0, 0].plot(dist_pfr_gri_no_co2, x_H2_pfr_gri_no_co2, label='gri', color=colors[1])
-axs[0, 0].plot(dist_pfr_atr_no_co2, x_H2_pfr_atr_no_co2, label='atr', color=colors[2])
-axs[0, 0].plot(dist_pfr_nuig_no_co2, x_H2_pfr_nuig_no_co2, label='nuig', color=colors[3])
-axs[0, 0].plot(dist_pfr_smoke_no_co2, x_H2_pfr_smoke_no_co2, label='OpenSmoke', color=colors[4])  
-axs[0, 0].set_xlabel("Reaktorlänge (m)")
-axs[0, 0].set_ylabel("Massenanteil H₂")
-axs[0, 0].set_title("H₂")
-axs[0, 0].grid()
-axs[0, 0].legend()
+axs[0].plot(dist_pfr_aramco_no_co2, x_H2_pfr_aramco_no_co2, label='aramco', color=colors[0])
+axs[0].plot(dist_pfr_gri_no_co2, x_H2_pfr_gri_no_co2, label='gri', color=colors[1])
+axs[0].plot(dist_pfr_atr_no_co2, x_H2_pfr_atr_no_co2, label='atr', color=colors[2])
+axs[0].plot(dist_pfr_nuig_no_co2, x_H2_pfr_nuig_no_co2, label='nuig', color=colors[3])
+axs[0].plot(dist_pfr_smoke_no_co2, x_H2_pfr_smoke_no_co2, label='OpenSmoke', color=colors[4])
+axs[0].set_xlabel("Reaktorlänge (m)")
+axs[0].set_ylabel("Massenanteil H₂")
+axs[0].set_title("H₂")
+axs[0].grid()
+axs[0].legend()
 
 # CH4
-axs[0, 1].plot(dist_pfr_aramco_no_co2, x_CH4_pfr_aramco_no_co2, label='aramco', color=colors[0])
-axs[0, 1].plot(dist_pfr_gri_no_co2, x_CH4_pfr_gri_no_co2, label='gri', color=colors[1])
-axs[0, 1].plot(dist_pfr_atr_no_co2, x_CH4_pfr_atr_no_co2, label='atr', color=colors[2])
-axs[0, 1].plot(dist_pfr_nuig_no_co2, x_CH4_pfr_nuig_no_co2, label='nuig', color=colors[3])
-axs[0, 1].plot(dist_pfr_smoke_no_co2, x_CH4_pfr_smoke_no_co2, label='OpenSmoke', color=colors[4]) 
-axs[0, 1].set_xlabel("Reaktorlänge (m)")
-axs[0, 1].set_ylabel("Massenanteil CH₄")
-axs[0, 1].set_title("CH₄")
-axs[0, 1].grid()
-axs[0, 1].legend()
+axs[1].plot(dist_pfr_aramco_no_co2, x_CH4_pfr_aramco_no_co2, label='aramco', color=colors[0])
+axs[1].plot(dist_pfr_gri_no_co2, x_CH4_pfr_gri_no_co2, label='gri', color=colors[1])
+axs[1].plot(dist_pfr_atr_no_co2, x_CH4_pfr_atr_no_co2, label='atr', color=colors[2])
+axs[1].plot(dist_pfr_nuig_no_co2, x_CH4_pfr_nuig_no_co2, label='nuig', color=colors[3])
+axs[1].plot(dist_pfr_smoke_no_co2, x_CH4_pfr_smoke_no_co2, label='OpenSmoke', color=colors[4])
+axs[1].set_xlabel("Reaktorlänge (m)")
+axs[1].set_ylabel("Massenanteil CH₄")
+axs[1].set_title("CH₄")
+axs[1].grid()
+axs[1].legend()
 
 # CO₂
-axs[1, 0].plot(dist_pfr_aramco_no_co2, x_CO2_pfr_aramco_no_co2, label='aramco', color=colors[0])
-axs[1, 0].plot(dist_pfr_gri_no_co2, x_CO2_pfr_gri_no_co2, label='gri', color=colors[1])
-axs[1, 0].plot(dist_pfr_atr_no_co2, x_CO2_pfr_atr_no_co2, label='atr', color=colors[2])
-axs[1, 0].plot(dist_pfr_nuig_no_co2, x_CO2_pfr_nuig_no_co2, label='nuig', color=colors[3])
-axs[1, 0].plot(dist_pfr_smoke_no_co2, x_CO2_pfr_smoke_no_co2, label='OpenSmoke', color=colors[4]) 
-axs[1, 0].set_xlabel("Reaktorlänge (m)")
-axs[1, 0].set_ylabel("Massenanteil CO₂")
-axs[1, 0].set_title("CO₂")
-axs[1, 0].grid()
-axs[1, 0].legend()
+axs[2].plot(dist_pfr_aramco_no_co2, x_CO2_pfr_aramco_no_co2, label='aramco', color=colors[0])
+axs[2].plot(dist_pfr_gri_no_co2, x_CO2_pfr_gri_no_co2, label='gri', color=colors[1])
+axs[2].plot(dist_pfr_atr_no_co2, x_CO2_pfr_atr_no_co2, label='atr', color=colors[2])
+axs[2].plot(dist_pfr_nuig_no_co2, x_CO2_pfr_nuig_no_co2, label='nuig', color=colors[3])
+axs[2].plot(dist_pfr_smoke_no_co2, x_CO2_pfr_smoke_no_co2, label='OpenSmoke', color=colors[4])
+axs[2].set_xlabel("Reaktorlänge (m)")
+axs[2].set_ylabel("Massenanteil CO₂")
+axs[2].set_title("CO₂")
+axs[2].grid()
+axs[2].legend()
 
 # CO
-axs[1, 1].plot(dist_pfr_aramco_no_co2, x_CO_pfr_aramco_no_co2, label='aramco', color=colors[0])
-axs[1, 1].plot(dist_pfr_gri_no_co2, x_CO_pfr_gri_no_co2, label='gri', color=colors[1])
-axs[1, 1].plot(dist_pfr_atr_no_co2, x_CO_pfr_atr_no_co2, label='atr', color=colors[2])
-axs[1, 1].plot(dist_pfr_nuig_no_co2, x_CO_pfr_nuig_no_co2, label='nuig', color=colors[3])
-axs[1, 1].plot(dist_pfr_smoke_no_co2, x_CO_pfr_smoke_no_co2, label='OpenSmoke', color=colors[4]) 
-axs[1, 1].set_xlabel("Reaktorlänge (m)")
-axs[1, 1].set_ylabel("Massenanteil CO")
-axs[1, 1].set_title("CO")
-axs[1, 1].grid()
-axs[1, 1].legend()
+axs[3].plot(dist_pfr_aramco_no_co2, x_CO_pfr_aramco_no_co2, label='aramco', color=colors[0])
+axs[3].plot(dist_pfr_gri_no_co2, x_CO_pfr_gri_no_co2, label='gri', color=colors[1])
+axs[3].plot(dist_pfr_atr_no_co2, x_CO_pfr_atr_no_co2, label='atr', color=colors[2])
+axs[3].plot(dist_pfr_nuig_no_co2, x_CO_pfr_nuig_no_co2, label='nuig', color=colors[3])
+axs[3].plot(dist_pfr_smoke_no_co2, x_CO_pfr_smoke_no_co2, label='OpenSmoke', color=colors[4])
+axs[3].set_xlabel("Reaktorlänge (m)")
+axs[3].set_ylabel("Massenanteil CO")
+axs[3].set_title("CO")
+axs[3].grid()
+axs[3].legend()
 
 # --- gemeinsame Legende erstellen ---
 # alle Handles/Labels von allen Achsen einsammeln
