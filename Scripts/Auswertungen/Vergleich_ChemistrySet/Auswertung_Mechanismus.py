@@ -57,6 +57,11 @@ def get_normalized_composition_strict(df, column_map):
     comp_series = pd.Series(comp)
     comp_series = comp_series / comp_series.sum()
     return comp_series
+
+# Funktion für MSE-Berechnung
+def mse(y_true, y_pred):
+    return np.mean((y_true - y_pred)**2)
+
 #%% Experimentelle Daten 
 exp_data = {
     "kein CO2 Exp": [0.599,0.341,0.007,0.048],
@@ -491,10 +496,6 @@ vergleich_species = ["H2", "CO", "CH4", "CO2"]
 mechanisms_noCO2 = ["GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2", "Smoke_noCO2"]
 mechanisms_CO2   = ["GRI_CO2",   "ARAMCO_CO2",   "ATR_CO2",   "NUIG_CO2",   "Smoke_CO2"]
 
-# Funktion für MSE-Berechnung
-def mse(y_true, y_pred):
-    return np.mean((y_true - y_pred)**2)
-
 # === Fehler für "kein CO2" ===
 mse_noCO2 = {}
 for mech in mechanisms_noCO2:
@@ -521,19 +522,20 @@ df_mse_CO2 = pd.DataFrame(mse_CO2)
 print("\nMittlerer quadratischer Fehler (CO2):")
 print(df_mse_CO2.round(5))
 
-#%% LaTeX Tabellen MSE
+
+#%% LaTeX Tabellen MSE Stoffe
 df_to_table(df_exp_data,
             columns = ["GRI_CO2", "ARAMCO_CO2", "ATR_CO2", "NUIG_CO2", "Smoke_CO2"],
             rounding = [5,5,5,5,5],
             latex = True,
-            filepath = "Tabellen/Tabelle_MSE_CO2.tex",
+            filepath = "Tabellen/Tabelle_MSE_CO2_species.tex",
             decimal_sep = ",")
 
 df_to_table(df_mse_noCO2,
             columns = ["GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2", "Smoke_noCO2"],
             rounding = [5,5,5,5,5],
             latex = True,
-            filepath = "Tabellen/Tabelle_MSE_noCO2.tex",
+            filepath = "Tabellen/Tabelle_MSE_noCO2_species.tex",
             decimal_sep = "," )
 
 #%% Plot Temperaturen Säulen
@@ -658,6 +660,134 @@ plt.tight_layout(rect=[0, 0.05, 1, 1])  # Platz für Legende unten
 plt.savefig("img/Vergleich_Temperaturen.png", dpi=300)
 # plt.show()
 
+#%% Berechnung MSE mit Temperatur
+# Vergleichslisten
+vergleich_species = ["H2", "CO", "CH4", "CO2"]
+mechanisms_noCO2 = ["GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2", "Smoke_noCO2"]
+mechanisms_CO2   = ["GRI_CO2",   "ARAMCO_CO2",   "ATR_CO2",   "NUIG_CO2",   "Smoke_CO2"]
+
+# --- Sicherstellen, dass Temperatur-DF die erwarteten Spalten hat ---
+# Erwartete Spaltenreihenfolge: ["Exp"] + mechanisms_noCO2
+if "Exp" not in getattr(df_temp_no_CO2, "columns", []):
+    # Falls dein DF anders heißt (z.B. "kein CO2 Exp"), mappen wir es hier auf "Exp"
+    # Wir gehen davon aus, dass die Listen beim Zuweisen oben der Reihenfolge [Exp, GRI, ARAMCO, ATR, NUIG, Smoke] folgten.
+    df_temp_no_CO2.columns = ["Exp"] + mechanisms_noCO2
+
+# Optional: Falls du auch CO2-Temperaturen hast, gleiche Struktur:
+if 'df_temp_CO2' in globals():
+    if "Exp" not in getattr(df_temp_CO2, "columns", []):
+        df_temp_CO2.columns = ["Exp"] + mechanisms_CO2
+
+# --- Funktion: Gesamt-MSE (Spezies + Temperaturen) je Mechanismus berechnen ---
+def combined_mse_block(df_exp, exp_col, mech_cols, df_temp=None, label_prefix=""):
+    """
+    df_exp:     DataFrame mit Spezies (Index = Speziesnamen), Spalten [exp_col, ...mech_cols]
+    exp_col:    Name der Experimentspalte für diesen Fall (z.B. "kein CO2 Exp" oder "CO2 Exp")
+    mech_cols:  Liste der Mechanismus-Spaltennamen
+    df_temp:    DataFrame mit Temperaturpunkten; Spalten ["Exp"] + mech_cols, Index = Messpunktnamen
+    """
+    detail_rows = []
+    overall = {}
+
+    # pro Mechanismus: Vektor aus Spezies + (optional) Temperaturpunkten zusammenstellen
+    for mech in mech_cols:
+        # Spezies
+        y_true_species = df_exp.loc[vergleich_species, exp_col].astype(float)
+        y_pred_species = df_exp.loc[vergleich_species, mech].astype(float)
+
+        # Temperatur (optional)
+        if df_temp is not None:
+            y_true_temp = df_temp["Exp"].astype(float)
+            y_pred_temp = df_temp[mech].astype(float)
+
+            # --- Optionale Normierung, falls gewünscht ---
+            # Aktivieren, um jeden Messkanal separat zu skalieren (z.B. z-Score oder Range):
+            # y_true_species = (y_true_species - y_true_species.mean()) / (y_true_species.std()+1e-12)
+            # y_pred_species = (y_pred_species - y_pred_species.mean()) / (y_pred_species.std()+1e-12)
+            # y_true_temp = (y_true_temp - y_true_temp.mean()) / (y_true_temp.std()+1e-12)
+            # y_pred_temp = (y_pred_temp - y_pred_temp.mean()) / (y_pred_temp.std()+1e-12)
+
+            y_true_all = pd.concat([y_true_species, y_true_temp], axis=0)
+            y_pred_all = pd.concat([y_pred_species, y_pred_temp], axis=0)
+        else:
+            y_true_all = y_true_species.copy()
+            y_pred_all = y_pred_species.copy()
+
+        # Gesamt-MSE
+        overall[mech] = mse(y_true_all.values, y_pred_all.values)
+
+        # Detail-MSEs (Spezies + einzelne Temperaturpunkte)
+        for sp in vergleich_species:
+            detail_rows.append({
+                "Signal": f"{label_prefix}Spezies:{sp}",
+                "Mechanismus": mech,
+                "MSE": mse(df_exp.loc[sp, exp_col], df_exp.loc[sp, mech])
+            })
+        if df_temp is not None:
+            for tp in df_temp.index:
+                detail_rows.append({
+                    "Signal": f"{label_prefix}{tp}",
+                    "Mechanismus": mech,
+                    "MSE": mse(df_temp.loc[tp, "Exp"], df_temp.loc[tp, mech])
+                })
+
+    df_overall = pd.Series(overall, name=f"{label_prefix}Gesamt_MSE").to_frame()
+    df_detail = pd.DataFrame(detail_rows).pivot(index="Signal", columns="Mechanismus", values="MSE")
+    return df_overall, df_detail
+
+# --- Anwendung: KEIN CO2 ---
+overall_noCO2, detail_noCO2 = combined_mse_block(
+    df_exp=df_exp_data,
+    exp_col="kein CO2 Exp",
+    mech_cols=mechanisms_noCO2,
+    df_temp=df_temp_no_CO2,
+    label_prefix="noCO2| "
+)
+
+#print("\n=== Gesamt-MSE über alle Datenpunkte (kein CO2) ===")
+#print(overall_noCO2.sort_values(by="noCO2| Gesamt_MSE").round(6))
+
+#print("\n--- Zerlegung (MSE pro Spezies/Temperaturpunkt, kein CO2) ---")
+#print(detail_noCO2.round(6))
+
+# --- Anwendung: CO2 (nur falls Temperaturdaten vorhanden; sonst nur Spezies) ---
+if 'df_temp_CO2' in globals():
+    overall_CO2, detail_CO2 = combined_mse_block(
+        df_exp=df_exp_data,
+        exp_col="CO2 Exp",
+        mech_cols=mechanisms_CO2,
+        df_temp=df_temp_CO2,
+        label_prefix="CO2| "
+    )
+else:
+    overall_CO2, detail_CO2 = combined_mse_block(
+        df_exp=df_exp_data,
+        exp_col="CO2 Exp",
+        mech_cols=mechanisms_CO2,
+        df_temp=None,
+        label_prefix="CO2| "
+    )
+
+#print("\n=== Gesamt-MSE über alle Datenpunkte (CO2) ===")
+#print(overall_CO2.sort_values(by="CO2| Gesamt_MSE").round(6))
+
+#print("\n--- Zerlegung (MSE pro Spezies/Temperaturpunkt, CO2) ---")
+#print(detail_CO2.round(6))
+
+#%% LaTeX Tabellen MSE
+df_to_table(df_exp_data,
+            columns = ["GRI_CO2", "ARAMCO_CO2", "ATR_CO2", "NUIG_CO2", "Smoke_CO2"],
+            rounding = [5,5,5,5,5],
+            latex = True,
+            filepath = "Tabellen/Tabelle_MSE_CO2.tex",
+            decimal_sep = ",")
+
+df_to_table(df_mse_noCO2,
+            columns = ["GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2", "Smoke_noCO2"],
+            rounding = [5,5,5,5,5],
+            latex = True,
+            filepath = "Tabellen/Tabelle_MSE_noCO2.tex",
+            decimal_sep = "," )
 
 #%% Kopieren zu LaTeX 
 # Relativer Quell- und Zielpfad
