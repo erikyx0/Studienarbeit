@@ -444,7 +444,7 @@ if not handles:
 else:
     axes[-1].legend(labels, loc="best")
 
-plt.ylim(1200)
+plt.ylim(0)
 
 plt.tight_layout()
 plt.savefig("Bilder/Vergleich_Temperaturen.png", dpi=300)

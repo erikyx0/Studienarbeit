@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="xml">
+    <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="mse verbessert">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/Auswertung_neu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/Auswertung_Mechanismus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Auswertung_Erweiterung.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Auswertung_Erweiterung.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Bilder/Vergleich_Temperaturen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Bilder/Vergleich_Temperaturen.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +249,7 @@
       <workItem from="1760711690379" duration="4979000" />
       <workItem from="1760717636796" duration="82000" />
       <workItem from="1760717727599" duration="10206000" />
-      <workItem from="1760789040762" duration="1542000" />
+      <workItem from="1760789040762" duration="5293000" />
     </task>
     <task id="LOCAL-00001" summary="Plot Schlupf Methan">
       <option name="closed" value="true" />
@@ -354,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760737557486</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="mse verbessert">
+      <option name="closed" value="true" />
+      <created>1760791980128</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1760791980128</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +393,8 @@
     <MESSAGE value="Balkendiagramm Temperatur Mechanismusvergleich" />
     <MESSAGE value="Fehler berechnung" />
     <MESSAGE value="xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml" />
+    <MESSAGE value="mse verbessert" />
+    <option name="LAST_COMMIT_MESSAGE" value="mse verbessert" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Auswertung_Zeit_py$Auswertung_Mechanismus__1_.coverage" NAME="Auswertung_Mechanismus (1) Coverage Results" MODIFIED="1760789951889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet" />
@@ -396,7 +406,7 @@
     <SUITE FILE_PATH="coverage/Auswertung_CO2_py$Auswertung_Erweiterung.coverage" NAME="Auswertung_Erweiterung Coverage Results" MODIFIED="1758477748242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen" />
     <SUITE FILE_PATH="coverage/ROM_py$network.coverage" NAME="network Coverage Results" MODIFIED="1759592782390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Simulation/Cantera" />
     <SUITE FILE_PATH="coverage/Auswertung_Zeit_py$Auswertung_neu.coverage" NAME="Auswertung_neu Coverage Results" MODIFIED="1760735302647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet" />
-    <SUITE FILE_PATH="coverage/Auswertung_Zeit_py$Auswertung_Erweiterung.coverage" NAME="Auswertung_Erweiterung Coverage Results" MODIFIED="1760791252959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen" />
+    <SUITE FILE_PATH="coverage/Auswertung_Zeit_py$Auswertung_Erweiterung.coverage" NAME="Auswertung_Erweiterung Coverage Results" MODIFIED="1760799116478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen" />
     <SUITE FILE_PATH="coverage/PFR_py$network.coverage" NAME="network Coverage Results" MODIFIED="1759530531749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Simulation/Cantera" />
     <SUITE FILE_PATH="coverage/Studienarbeit$Auswertung_CO2.coverage" NAME="Auswertung_CO2 Coverage Results" MODIFIED="1758476406301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2" />
   </component>
