@@ -307,14 +307,16 @@ axes[1].tick_params(axis="x", rotation=0)
 handles, _ = axes[0].get_legend_handles_labels()
 legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
 
-species_labels = [r"H$_2$", "CO", r"CH$_4\cdot 10$", r"CO$_2$"]
+species_labels = [r"$\mathrm{H_2}$", "CO", r"CH$_4\cdot 10$", r"CO$_2$"]
 for d in (df_no_co2, df_co2):
     d.index = species_labels
 for a in axes:
     a.tick_params(axis="x", rotation=0)
-
 for a in axes:
     a.set_axisbelow(True)
+for a in axes:
+    # X-Tick-Labels holen
+    a.set_xticklabels(species_labels)
 
 axes[1].legend(handles, legend_labels)
 
@@ -440,9 +442,9 @@ handles, labels = axes[-1].get_legend_handles_labels()
 if not handles:
     # Falls Legende aus blieb (legend=False), nimm die Spaltennamen und generiere Handles via Dummy-Plot:
     axes[-1].legend(vis_temp_co2.columns if vis_temp_co2 is not None else vis_temp_no_co2.columns,
-                    loc="best")
+                    loc="lower right", fontsize = 14)
 else:
-    axes[-1].legend(labels, loc="best")
+    axes[-1].legend(labels, loc="lower right", fontsize = 14)
 
 plt.ylim(0)
 

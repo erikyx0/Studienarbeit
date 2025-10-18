@@ -215,7 +215,7 @@ from matplotlib.colors import LinearSegmentedColormap
 # Verlauf: Rot → Gelb → Blau
 cmap_red_yellow_blue = LinearSegmentedColormap.from_list(
     "red_yellow_blue",
-    ["blue", "#B9B100", "red"]
+    ["blue", "#E9009FF2", "red"]
 )
 
 plot_runs_3d_simple(list(dfs_by_run.values())[1:], cmap=cmap_red_yellow_blue, point_step=5, run_step=1)
