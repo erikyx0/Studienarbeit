@@ -7,6 +7,7 @@ import matplotlib.ticker as mticker
 import seaborn as sns
 import unicodedata
 from matplotlib.collections import LineCollection
+from matplotlib.colors import LinearSegmentedColormap
 
 import re 
 import glob
@@ -151,15 +152,59 @@ plt.savefig('Bilder/Parameterstudie_CO2_Temperaturen.png', dpi=300, bbox_inches=
 plt.close("all")
 
 #%% ermitteln CH4-Schlupf
-plt.plot(co2_run_number[1:], data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:], marker = 's', color = color1)
-plt.grid()
-plt.xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
-plt.ylabel(r'Molenbruch CH$_4$ am Ende des Reaktors')
-plt.vlines(x=[0.05455], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "grey", linestyles="--", label="Komplexere Simulation")
-plt.vlines(x=[0.0842], ymin = 0, ymax = data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:].max(), colors = "red", linestyles="--", label="Maximale Betriebsgrenze")
-#plt.show()
-plt.legend(loc="best")
-plt.savefig('Bilder/Parameterstudie_CO2_CH4_Schlupf.png', dpi=300)
+
+
+x = np.asarray(co2_run_number[1:])
+y = np.asarray(data_end_para[' Mole_fraction_CH4_PFRC2_end_point_()'][1:])
+
+# z.B. Farbe nach mittlerer Temperatur
+Tmin  = np.asarray(data_end_para[' Surface_temperature_PFRC2_end_point_(K)'][1:])
+Tmax  = np.asarray(data_max_para[' Surface_temperature_PFRC2_max_point_(K)'][1:])
+Tmean = 0.5*(Tmin + Tmax)
+
+# Segmente für farbige Linie
+points = np.array([x, y]).T.reshape(-1, 1, 2)
+segments = np.concatenate([points[:-1], points[1:]], axis=1)
+norm = plt.Normalize(Tmean.min(), Tmean.max())
+
+fig, ax = plt.subplots(figsize=(8,5))
+
+cmap_red_yellow_blue = LinearSegmentedColormap.from_list(
+    "red_yellow_blue",
+    ["blue", "#FFD900F1", "red"]
+)
+
+
+# farbige Linie
+lc = LineCollection(segments, cmap=cmap_red_yellow_blue, norm=norm, linewidth=3)
+lc.set_array(Tmean)
+ax.add_collection(lc)
+
+
+# Marker-Ebene (auf derselben Farbskala)
+sc = ax.scatter(x, y, c=Tmean, cmap=cmap_red_yellow_blue, norm=norm,
+                s=50, edgecolor=None, zorder=3)
+
+# Farbskala
+cb = plt.colorbar(lc, ax=ax)
+cb.set_label('mittlere Temperatur T̄ [K]')
+
+# Layout
+ax.set_xlim(x.min(), x.max())
+ax.set_ylim(0, y.max()*1.05)
+ax.set_xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
+ax.set_ylabel(r'Molenbruch CH$_4$ am Ende des Reaktors')
+ax.grid(True, linestyle=':')
+
+# vertikale Linien und Legende
+ax.vlines([0.05455], ymin=0, ymax=y.max()*1.05, colors="grey", linestyles="--", label="Komplexere Simulation")
+ax.vlines([0.0842],  ymin=0, ymax=y.max()*1.05, colors="red",  linestyles="--", label="Maximale Betriebsgrenze")
+ax.legend(loc="best")
+ax.set_ylim(-0.002)
+
+plt.tight_layout()
+plt.savefig('Bilder/Parameterstudie_CO2_CH4_Schlupf_colormap_marker.png', dpi=300, bbox_inches='tight')
+# plt.show()
 
 #%% zwei Plots Stoffmenge und Masse
 fig, ax = plt.subplots(1, 2, figsize=(10, 5))
@@ -210,7 +255,7 @@ from complex_plots import *
 import re
 
 # Farbverlauf Rot Gelb Blau
-from matplotlib.colors import LinearSegmentedColormap
+
 
 # Verlauf: Rot → Gelb → Blau
 cmap_red_yellow_blue = LinearSegmentedColormap.from_list(
@@ -218,4 +263,4 @@ cmap_red_yellow_blue = LinearSegmentedColormap.from_list(
     ["blue", "#E9009FF2", "red"]
 )
 
-plot_runs_3d_simple(list(dfs_by_run.values())[1:], cmap=cmap_red_yellow_blue, point_step=5, run_step=1)
+#plot_runs_3d_simple(list(dfs_by_run.values())[1:], cmap=cmap_red_yellow_blue, point_step=5, run_step=1)
