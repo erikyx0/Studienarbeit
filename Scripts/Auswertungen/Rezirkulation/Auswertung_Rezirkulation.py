@@ -49,7 +49,10 @@ os.chdir(script_dir)
 """
 
 #%% Daten einlesen 
-#df_R1_PFR7 = pd.read_csv('Daten/1/21.soln_no_1_PFRC7.csv')
+df_R1_PFR7 = pd.read_csv('Daten/kein CO2/1/21.soln_no_1_PFRC7.csv')
 df_R2_PFR7 = pd.read_csv('Daten/kein CO2/2/21.soln_no_1_PFRC7.csv')
 df_R3_PFR7 = pd.read_csv('Daten/kein CO2/3/21.soln_no_1_PFRC7.csv')
 
+print(len(df_R1_PFR7['Distance_PFRC7_(m)']))
+print(len(df_R2_PFR7['Distance_PFRC7_(m)']))
+print(len(df_R3_PFR7['Distance_PFRC7_(m)']))
