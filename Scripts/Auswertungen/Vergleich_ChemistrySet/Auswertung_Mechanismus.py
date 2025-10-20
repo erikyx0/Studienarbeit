@@ -36,6 +36,8 @@ color6 = colors_new[5]
 
 colors = [color1,color2,color3,color4,color5,color6]
 
+colors = colors_new
+
 # Set the working directory to the location of the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
@@ -414,8 +416,29 @@ for i, group in enumerate(gruppen):
     if "CH4" in df_plot.index:
         df_plot.loc["CH4"] = df_plot.loc["CH4"] * k
 
+    # Legendenlabels (Spaltennamen) anpassen
+    legend_labels = {
+        "kein CO2 Exp": "Experiment",
+        "CO2 Exp": "Experiment",
+        "GRI_noCO2": "GRI-Mech 3.0",
+        "GRI_CO2": "GRI-Mech 3.0",
+        "ARAMCO_noCO2": "AramcoMech",
+        "ARAMCO_CO2": "AramcoMech",
+        "ATR_noCO2": "ATR",
+        "ATR_CO2": "ATR",
+        "NUIG_noCO2": "NUIG",
+        "NUIG_CO2": "NUIG",
+        "Smoke_noCO2": "OpenSmoke++",
+        "Smoke_CO2": "OpenSmoke++",
+    }
+    df_plot.rename(columns=legend_labels, inplace=True)
+
+
     # Balken zeichnen (linke Achse)
+    latex_labels = {"H2": r"H$_2$", "CO2": r"CO$_2$", "CH4": r"CH$_4 \cdot 10$", "H2O": r"H$_2$O", "CO": r"CO"}
+    df_plot.rename(index=latex_labels, inplace=True)
     df_plot.plot(kind="bar", ax=ax, color=colors)
+    ax.tick_params(axis='x', rotation=0)
     ax.set_title(titel[i])
     ax.set_xlabel("Spezies")
     ax.set_ylabel(f"Molenbruch (CH₄ ×{int(k)}, alle anderen original)")
