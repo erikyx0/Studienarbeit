@@ -36,7 +36,7 @@ def get_normalized_composition_strict(df, column_map):
     comp_series = comp_series / comp_series.sum()
     return comp_series
 
-#%% Dataframes einlesen
+#%% Dataframes einlesen Excel (alt)
 """
 letzter PFR:
 1: PFRC2 
@@ -45,11 +45,11 @@ letzter PFR:
 4: PFRC7
 """
 
-df_co2_1_pfr_Masse = pd.read_excel('Daten/1_CO2_Masse.xlsm', sheet_name='2.soln_no_1_PFRC2')
-df_co2_1_pfr_Stoffmenge = pd.read_excel('Daten/1_CO2_Stoffmenge.xlsm', sheet_name='2.soln_no_1_PFRC2')
+#df_co2_1_pfr_Masse = pd.read_excel('Daten/1_CO2_Masse.xlsm', sheet_name='2.soln_no_1_PFRC2')
+#df_co2_1_pfr_Stoffmenge = pd.read_excel('Daten/1_CO2_Stoffmenge.xlsm', sheet_name='2.soln_no_1_PFRC2')
 
-df_co2_2_pfr_Masse = pd.read_excel('Daten/2_CO2_Masse.xlsm', sheet_name='9.soln_no_1_PFRC4')
-df_co2_2_pfr_Stoffmenge = pd.read_excel('Daten/2_CO2_Stoffmenge.xlsm', sheet_name='9.soln_no_1_PFRC4')
+#df_co2_2_pfr_Masse = pd.read_excel('Daten/2_CO2_Masse.xlsm', sheet_name='9.soln_no_1_PFRC4')
+#df_co2_2_pfr_Stoffmenge = pd.read_excel('Daten/2_CO2_Stoffmenge.xlsm', sheet_name='9.soln_no_1_PFRC4')
 
 df_co2_3_pfr8_Masse = pd.read_excel('Daten/3_CO2_Masse.xlsm', sheet_name='24.soln_no_1_PFRC8')
 df_co2_3_pfr8_Stoffmenge = pd.read_excel('Daten/3_CO2_Stoffmenge.xlsm', sheet_name='24.soln_no_1_PFRC8')
@@ -83,6 +83,13 @@ df_no_co2_4_pfr7_Stoffmenge = pd.read_excel('Daten/4_kein_CO2_Stoffmenge.xlsm', 
 df_no_co2_6_pfr3_Masse = pd.read_excel('Daten/6_kein_CO2_Masse.xlsm', sheet_name='6.soln_no_1_PFRC3')
 df_no_co2_6_pfr3_Stoffmenge = pd.read_excel('Daten/6_kein_CO2_Stoffmenge.xlsm', sheet_name='6.soln_no_1_PFRC3')
 
+#%% Dataframes einlesen csv
+
+df_co2_1_pfr_Stoffmenge = pd.read_csv('Daten_neu/1/CO2/Stoffmenge/2.soln_no_1_PFRC2.csv')
+df_co2_1_pfr_Masse = pd.read_csv('Daten_neu/1/CO2/Masse/2.soln_no_1_PFRC2.csv')
+
+df_co2_2_pfr_Stoffmenge = pd.read_csv('Daten_neu/2/CO2/Stoffmenge/9.soln_no_1_PFRC4.csv')
+df_co2_2_pfr_Masse = pd.read_csv('Daten_neu/2/CO2/Masse/9.soln_no_1_PFRC4.csv')
 
 #%% Daten vorbereiten 
 x_h2_co2_1 = df_co2_1_pfr_Stoffmenge[" Mole_fraction_H2_PFRC2_()"]

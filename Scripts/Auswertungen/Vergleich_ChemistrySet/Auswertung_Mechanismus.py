@@ -71,7 +71,8 @@ exp_data = {
 }
 
 df_exp_data = pd.DataFrame(exp_data, index = ["H2", "CO", "CH4", "CO2"])
-#%% Einlesen der Dataframes 
+#%% Einlesen der Dataframes aus excel (alt)
+"""
 df_co2_aramco_pfr = pd.read_excel('Daten/Aramco_CO2.xlsm', sheet_name='2.soln_no_1_PFRC2', decimal=',')
 df_co2_gri_pfr = pd.read_excel('Daten/GRI_CO2.xlsm', sheet_name= '2.soln_no_1_PFRC2', decimal=',')
 df_co2_atr_pfr = pd.read_excel('Daten/ATR_CO2.xlsm', sheet_name= '2.soln_no_1_PFRC2', decimal=',')
@@ -83,12 +84,26 @@ df_no_co2_gri_pfr = pd.read_excel('Daten/GRI_keinCO2.xlsm', sheet_name= '2.soln_
 df_no_co2_atr_pfr = pd.read_excel('Daten/ATR_keinCO2.xlsm', sheet_name= '2.soln_no_1_PFRC2', decimal=',')
 df_no_co2_nuig_pfr = pd.read_excel('Daten/NUIG_keinCO2.xlsm', sheet_name= '2.soln_no_1_PFRC2', decimal=',')
 df_no_co2_smoke_pfr = pd.read_excel('Daten/OpenSmoke_keinCO2.xlsm', sheet_name= '2.soln_no_1_PFRC2', decimal=',')
+"""
+
+#%% Einlesen der Dataframes aus csv
+df_co2_aramco_pfr = pd.read_csv('Daten_neu/Aramco/CO2/2.soln_no_1_PFRC2.csv')
+df_co2_gri_pfr = pd.read_csv('Daten_neu/GRI/CO2/2.soln_no_1_PFRC2.csv')
+df_co2_atr_pfr = pd.read_csv('Daten_neu/ATR/CO2/2.soln_no_1_PFRC2.csv')
+df_co2_nuig_pfr = pd.read_csv('Daten_neu/NUIG/CO2/2.soln_no_1_PFRC2.csv')
+df_co2_smoke_pfr = pd.read_csv('Daten_neu/CRECK/CO2/2.soln_no_1_PFRC2.csv')
+
+df_no_co2_aramco_pfr = pd.read_csv('Daten_neu/Aramco/kein_CO2/2.soln_no_1_PFRC2.csv')
+df_no_co2_gri_pfr = pd.read_csv('Daten_neu/GRI/kein_CO2/2.soln_no_1_PFRC2.csv')
+df_no_co2_atr_pfr = pd.read_csv('Daten_neu/ATR/kein_CO2/2.soln_no_1_PFRC2.csv')
+df_no_co2_nuig_pfr = pd.read_csv('Daten_neu/NUIG/kein_CO2/2.soln_no_1_PFRC2.csv')
+df_no_co2_smoke_pfr = pd.read_csv('Daten_neu/CRECK/kein_CO2/2.soln_no_1_PFRC2.csv')
 #%% Arrays CO2
 dist_pfr_aramco_co2 = df_co2_aramco_pfr['Distance_PFRC2_(m)']
 dist_pfr_gri_co2 = df_co2_gri_pfr['Distance_PFRC2_(m)']
 dist_pfr_atr_co2 = df_co2_atr_pfr['Distance_PFRC2_(m)']
 dist_pfr_nuig_co2 = df_co2_nuig_pfr['Distance_PFRC2_(m)']
-dist_pfr_smoke_co2 = df_co2_smoke_pfr['Distance_PFRC2_(cm)']
+dist_pfr_smoke_co2 = df_co2_smoke_pfr['Distance_PFRC2_(m)']
 
 temp_pfr_aramco_co2 = df_co2_aramco_pfr[' Temperature_PFRC2_(K)']
 temp_pfr_gri_co2 = df_co2_gri_pfr[' Temperature_PFRC2_(K)']
@@ -269,7 +284,7 @@ axs[0, 0].plot(dist_pfr_aramco_co2, x_CO_pfr_aramco_co2, label='aramco', color=c
 axs[0, 0].plot(dist_pfr_gri_co2, x_CO_pfr_gri_co2, label='gri', color=colors[1])
 axs[0, 0].plot(dist_pfr_atr_co2, x_CO_pfr_atr_co2, label='atr', color=colors[2])
 axs[0, 0].plot(dist_pfr_nuig_co2, x_CO_pfr_nuig_co2, label='nuig', color=colors[3])
-axs[0, 0].plot(dist_pfr_smoke_co2 * 0.01, x_CO_pfr_smoke_co2, label='OpenSmoke', color=colors[4]) #cm in m umrechnen
+axs[0, 0].plot(dist_pfr_smoke_co2, x_CO_pfr_smoke_co2, label='OpenSmoke', color=colors[4]) #cm in m umrechnen
 axs[0, 0].set_xlabel("Reaktorlänge (m)")
 axs[0, 0].set_ylabel("Massenanteil CO")
 axs[0, 0].set_title("CO")
@@ -281,7 +296,7 @@ axs[0, 1].plot(dist_pfr_aramco_co2, x_CO2_pfr_aramco_co2, label='aramco', color=
 axs[0, 1].plot(dist_pfr_gri_co2, x_CO2_pfr_gri_co2, label='gri', color=colors[1])
 axs[0, 1].plot(dist_pfr_atr_co2, x_CO2_pfr_atr_co2, label='atr', color=colors[2])
 axs[0, 1].plot(dist_pfr_nuig_co2, x_CO2_pfr_nuig_co2, label='nuig', color=colors[3])
-axs[0, 1].plot(dist_pfr_smoke_co2 * 0.01, x_CO2_pfr_smoke_co2, label='OpenSmoke', color=colors[4]) #cm in m umrechnen
+axs[0, 1].plot(dist_pfr_smoke_co2 , x_CO2_pfr_smoke_co2, label='OpenSmoke', color=colors[4]) #cm in m umrechnen
 axs[0, 1].set_xlabel("Reaktorlänge (m)")
 axs[0, 1].set_ylabel("Massenanteil CO₂")
 axs[0, 1].set_title("CO₂")
@@ -293,7 +308,7 @@ axs[1, 0].plot(dist_pfr_aramco_co2, x_H2_pfr_aramco_co2, label='aramco', color=c
 axs[1, 0].plot(dist_pfr_gri_co2, x_H2_pfr_gri_co2, label='gri', color=colors[1])
 axs[1, 0].plot(dist_pfr_atr_co2, x_H2_pfr_atr_co2, label='atr', color=colors[2])
 axs[1, 0].plot(dist_pfr_nuig_co2, x_H2_pfr_nuig_co2, label='nuig', color=colors[3])
-axs[1, 0].plot(dist_pfr_smoke_co2 * 0.01, x_H2_pfr_smoke_co2, label='OpenSmoke', color=colors[4]) #cm in m umrechnen
+axs[1, 0].plot(dist_pfr_smoke_co2 , x_H2_pfr_smoke_co2, label='OpenSmoke', color=colors[4]) #cm in m umrechnen
 axs[1, 0].set_xlabel("Reaktorlänge (m)")
 axs[1, 0].set_ylabel("Massenanteil H₂")
 axs[1, 0].set_title("H₂")
@@ -305,7 +320,7 @@ axs[1, 1].plot(dist_pfr_aramco_co2, x_CH4_pfr_aramco_co2, label='aramco', color=
 axs[1, 1].plot(dist_pfr_gri_co2, x_CH4_pfr_gri_co2, label='gri', color=colors[1])
 axs[1, 1].plot(dist_pfr_atr_co2, x_CH4_pfr_atr_co2, label='atr', color=colors[2])
 axs[1, 1].plot(dist_pfr_nuig_co2, x_CH4_pfr_nuig_co2, label='nuig', color=colors[3])
-axs[1, 1].plot(dist_pfr_smoke_co2 * 0.01, x_CH4_pfr_smoke_co2, label='OpenSmoke', color=colors[4]) #cm in m umrechnen
+axs[1, 1].plot(dist_pfr_smoke_co2 , x_CH4_pfr_smoke_co2, label='OpenSmoke', color=colors[4]) #cm in m umrechnen
 axs[1, 1].set_xlabel("Reaktorlänge (m)")
 axs[1, 1].set_ylabel("Massenanteil CH₄")
 axs[1, 1].set_title("CH₄")
