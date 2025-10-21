@@ -411,56 +411,88 @@ df_to_table(df_exp_data,
             )
 
 
-# Spalten gruppieren: jeweils "kein CO2" und "CO2" separat plotten
+
+# --- Eingaben ---
 gruppen = [
     ["kein CO2 Exp", "GRI_noCO2", "ARAMCO_noCO2", "ATR_noCO2", "NUIG_noCO2", "Smoke_noCO2"],
-    ["CO2 Exp",      "GRI_CO2",   "ARAMCO_CO2",   "ATR_CO2",   "NUIG_CO2", "Smoke_CO2"]
+    ["CO2 Exp",      "GRI_CO2",   "ARAMCO_CO2",   "ATR_CO2",   "NUIG_CO2",   "Smoke_CO2"]
 ]
 titel = ["Vergleich ohne CO₂", "Vergleich mit CO₂"]
 
-k = 10.0            # Skalierungsfaktor
-scale_species = ["CH4"]   # nur CH4 wird skaliert
+k = 10.0                 # Skalierung für CH4
+gap = 0.01               # zusätzlicher Abstand zwischen direkt nebeneinanderliegenden Säulen
+bar_width = 0.1        # Breite je Säule
+species_order = ["H2", "CO", "CH4", "CO2", "H2O"]  # falls du eine feste Reihenfolge willst
 
+# Farben (mindestens so viele wie Spalten je Plot)
+# colors = ["#4878A8", "#7E9680", "#B3B3B3", "#BC6C25", "#960B0B", "#077B1A"]
+
+# Mapping für schöne Labels
+legend_labels = {
+    "kein CO2 Exp": "Experiment",
+    "CO2 Exp": "Experiment",
+    "GRI_noCO2": "GRI-Mech 3.0",
+    "GRI_CO2": "GRI-Mech 3.0",
+    "ARAMCO_noCO2": "AramcoMech",
+    "ARAMCO_CO2": "AramcoMech",
+    "ATR_noCO2": "ATR",
+    "ATR_CO2": "ATR",
+    "NUIG_noCO2": "NUIG",
+    "NUIG_CO2": "NUIG",
+    "Smoke_noCO2": "OpenSmoke++",
+    "Smoke_CO2": "OpenSmoke++",
+}
+latex_labels = {"H2": r"H$_2$", "CO2": r"CO$_2$", "CH4": r"CH$_4 \cdot 10$", "H2O": r"H$_2$O", "CO": r"CO"}
+
+# --- Plot ---
 fig, axes = plt.subplots(1, 2, figsize=(13, 5), sharey=True)
 
 for i, group in enumerate(gruppen):
     ax = axes[i]
-    df_plot = df_exp_data[group].copy()
 
-    # CH4 skalieren (nur linke Achse)
+    # Daten vorbereiten
+    df_plot = df_exp_data[group].copy()
+    # optional Reihenfolge erzwingen, nur Zeilen behalten die existieren
+    if species_order:
+        keep = [s for s in species_order if s in df_plot.index]
+        df_plot = df_plot.loc[keep]
+
+    # CH4 skalieren (linke Achse)
     if "CH4" in df_plot.index:
         df_plot.loc["CH4"] = df_plot.loc["CH4"] * k
 
-    # Legendenlabels (Spaltennamen) anpassen
-    legend_labels = {
-        "kein CO2 Exp": "Experiment",
-        "CO2 Exp": "Experiment",
-        "GRI_noCO2": "GRI-Mech 3.0",
-        "GRI_CO2": "GRI-Mech 3.0",
-        "ARAMCO_noCO2": "AramcoMech",
-        "ARAMCO_CO2": "AramcoMech",
-        "ATR_noCO2": "ATR",
-        "ATR_CO2": "ATR",
-        "NUIG_noCO2": "NUIG",
-        "NUIG_CO2": "NUIG",
-        "Smoke_noCO2": "OpenSmoke++",
-        "Smoke_CO2": "OpenSmoke++",
-    }
-    df_plot.rename(columns=legend_labels, inplace=True)
+    # Spaltennamen für Legende mappen
+    df_plot = df_plot.rename(columns=legend_labels)
 
+    # x-Positionen je Spezies
+    x = np.arange(len(df_plot.index))
+    n_cols = df_plot.shape[1]
 
-    # Balken zeichnen (linke Achse)
-    latex_labels = {"H2": r"H$_2$", "CO2": r"CO$_2$", "CH4": r"CH$_4 \cdot 10$", "H2O": r"H$_2$O", "CO": r"CO"}
-    df_plot.rename(index=latex_labels, inplace=True)
-    df_plot.plot(kind="bar", ax=ax, color=colors)
-    ax.tick_params(axis='x', rotation=0)
+    # Bars manuell zeichnen mit zusätzlichem gap
+    for j, col in enumerate(df_plot.columns):
+        offsets = x + j * (bar_width + gap)
+        ax.bar(offsets, df_plot[col].values, width=bar_width, label=col, color=colors[j])
+
+    # xticks mittig unter die Gruppe setzen
+    group_span = n_cols * (bar_width + gap) - gap
+    centers = x + group_span / 2 - (bar_width + gap) / 2
+    ax.set_xticks(centers)
+    # Latex-Indexlabels setzen
+    tick_labels = [latex_labels.get(idx, idx) for idx in df_plot.index]
+    ax.set_xticklabels(tick_labels, rotation=0)
+
+    # Achsen, Titel, Raster
     ax.set_title(titel[i])
     ax.set_xlabel("Spezies")
-    ax.set_ylabel(f"Molenbruch (CH₄ ×{int(k)}, alle anderen original)")
+    ax.set_ylabel(f"Molenbruch (CH₄ ×{int(k)}, andere unverändert)")
     ax.grid(axis='y', linestyle=':')
-    ax.legend(loc="upper right")
 
-    # rechte Achse zeigt Originalwerte
+    # Legende nur einmal pro Subplot, Duplikate zusammenführen
+    handles, labels = ax.get_legend_handles_labels()
+    uniq = dict(zip(labels, handles))
+    ax.legend(uniq.values(), uniq.keys(), loc="upper right", frameon=False)
+
+    # rechte Achse für Original-CH4-Werte
     ax2 = ax.twinx()
     ax2.set_ylim(ax.get_ylim())
     ax2.set_yticks(ax.get_yticks())
@@ -468,7 +500,7 @@ for i, group in enumerate(gruppen):
     ax2.set_ylabel("Molenbruch (Originalwerte CH₄)")
 
 plt.tight_layout()
-plt.savefig("img/vergleich_Experimentaldaten_scaled_CH4.png", dpi=300)
+plt.savefig("img/vergleich_Experimentaldaten_scaled_CH4_gap.png", dpi=300)
 plt.close()
 
 #%% Temperatur und CH4 Plot 
@@ -642,60 +674,60 @@ df_temp_no_CO2 = df_temp_no_CO2.loc[temp_rows]
 df_temp_CO2   = df_temp_CO2.loc[temp_rows]
 
 # -----------------------------
-# Plot
+# Parameter für Abstände/Breiten
 # -----------------------------
-# Falls nur ein Satz verfügbar wäre, könnte man hier dynamisch 1x1 setzen – bei dir sind beide vorhanden.
+gap = 0.01          # zusätzlicher Abstand zwischen direkt benachbarten Säulen
+bar_width = 0.10    # Breite je Säule
+
+# -----------------------------
+# Plot (manuell, damit gap & bar_width wirken)
+# -----------------------------
+import numpy as np
 fig, axes = plt.subplots(1, 2, figsize=(12, 6), sharey=True)
 
-# ohne CO2
-df_temp_no_CO2.plot(
-    kind="bar",
-    ax=axes[0],
-    color=colors[:len(df_temp_no_CO2.columns)],  # hier color, nicht colors!
-    legend=False
-)
-axes[0].set_title("Temperatur ohne CO₂")
-axes[0].set_xlabel("Mess-/Positionspunkt")
-axes[0].set_ylabel("Temperatur [K]")
-axes[0].tick_params(axis="x", rotation=0)
-axes[0].grid(axis="y", linestyle="dotted")
-axes[0].set_axisbelow(True)
+datasets = [(df_temp_no_CO2, "Temperatur ohne CO₂"), (df_temp_CO2, "Temperatur mit CO₂")]
 
-# mit CO2
-df_temp_CO2.plot(
-    kind="bar",
-    ax=axes[1],
-    color=colors[:len(df_temp_CO2.columns)],
-    legend=False
-)
+for i, (df_temp, title) in enumerate(datasets):
+    ax = axes[i]
+    x = np.arange(len(df_temp.index))
+    n_cols = len(df_temp.columns)
 
-axes[1].set_title("Temperatur mit CO₂")
-axes[1].set_xlabel("Mess-/Positionspunkt")
-axes[1].tick_params(axis="x", rotation=0)
-axes[1].grid(axis="y", linestyle="dotted")
-axes[1].set_axisbelow(True)
+    # Balken zeichnen
+    for j, col in enumerate(df_temp.columns):
+        offset = j * (bar_width + gap)
+        ax.bar(
+            x + offset,
+            df_temp[col].values.astype(float),
+            width=bar_width,
+            label=col,
+            color=colors[j % len(colors)]
+        )
 
-# Gemeinsame y-Untergrenze
-axes[0].set_ylim(bottom=0)
+    # xticks mittig unter die Gruppen
+    group_span = n_cols * (bar_width + gap) - gap
+    centers = x + group_span / 2 - (bar_width + gap) / 2
+    ax.set_xticks(centers)
+    ax.set_xticklabels(df_temp.index, rotation=0)
 
-# Legende (zentral unter beiden Plots)
-handles, labels = axes[1].get_legend_handles_labels()
-if not handles:
-    # Falls pandas keine Handles zurückgibt (weil legend=False),
-    # baue sie aus den Spaltennamen des rechten Plots.
-    labels = list(df_temp_CO2.columns)
+    # Achsen, Titel, Raster
+    ax.set_title(title)
+    ax.set_xlabel("Mess-/Positionspunkt")
+    if i == 0:
+        ax.set_ylabel("Temperatur [K]")
+        ax.set_ylim(bottom=0)
+    ax.grid(axis="y", linestyle="dotted")
+    ax.set_axisbelow(True)
 
+# Legende zentral unten
 fig.legend(
-    labels,
+    columns,
     loc="lower center",
     ncol=len(columns),
     bbox_to_anchor=(0.5, -0.02),
 )
 
-plt.tight_layout(rect=[0, 0.05, 1, 1])  # Platz für Legende unten
-
-# Ausgabeordner sicherstellen
-plt.savefig("img/Vergleich_Temperaturen.png", dpi=300)
+plt.tight_layout(rect=[0, 0.05, 1, 1])
+plt.savefig("img/Vergleich_Temperaturen_gap_manual.png", dpi=300)
 # plt.show()
 
 #%% Berechnung MSE mit Temperatur
