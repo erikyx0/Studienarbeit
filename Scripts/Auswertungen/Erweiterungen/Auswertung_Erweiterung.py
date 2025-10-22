@@ -5,22 +5,32 @@ import os
 import matplotlib.pyplot as plt
 import re
 
+#%% Farben für die Plots definieren
+import sys
+
+# Pfad zum Hauptordner hinzufügen
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../utils')))
+
+from colors import colors_new
+print(colors_new)
+
 color1 = '#4878A8'
 color2 = '#7E9680'
 color3 = '#B3B3B3'
 color4 = '#BC6C25'
-color5 = "#6B2D2D"
-color6 = "#0B4915"
-"""
-color1 = "#446A87"  # gedecktes Stahlblau
-color2 = "#5C735F"  # dunkles Olivgrün
-color3 = "#8C8C8C"  # mittleres Grau
-color4 = "#A65E2E"  # warmes Kupferbraun
-color5 = "#7B3F3F"  # gedecktes Rotbraun
-color6 = "#2F6F4F"  # dunkles Tannengrün
-"""
+color5 = "#960B0B"
+color6 = "#077B1A"
 
-colors = [color1,color2,color3,color4,color5, color6]
+color1 = colors_new[0]
+color2 = colors_new[1]
+color3 = colors_new[2]
+color4 = colors_new[3]
+color5 = colors_new[4]
+color6 = colors_new[5]
+
+colors = [color1,color2,color3,color4,color5,color6]
+
+colors = colors_new
 
 # Set the working directory to the location of the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -274,64 +284,102 @@ exp_data = {
 df_exp_data_CO2 = pd.DataFrame(exp_data, index = ["H2", "CO", "CH4", "CO2"])
 #print(df_exp_data)
 
-# Säulendiagramm (gruppiert)
-ax = df_exp_data_CO2.plot(kind="bar", color=colors)
-ax.set_xlabel("Spezies")
-ax.set_ylabel("Molenbruch")
-ax.set_title("Experiment vs. Simulation (CO₂-Fall)")
-plt.xticks(rotation=0)
-plt.tight_layout()
-#plt.show()
+# -------------------------------------------------
+# Vorbereitung
+# -------------------------------------------------
+legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
+col_map_in  = ["Exp", "1 CO2", "2 CO2", "3 CO2", "4 CO2", "6 CO2"]
+col_map_out = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
 
-# Optional speichern:
-# plt.savefig("saeulendiagramm.png", dpi=300)
+# robuste Spaltenselektion in fixer Reihenfolge
+def select_cols(df):
+    return [c for c in col_map_in if c in df.columns]
 
-scores = mse_scores(df_exp_data_CO2)
-print("TVD pro Modell (0=perfekt, 1=schlecht):")
-print(scores)
-print("\nBestes Modell:", scores.idxmin(), "mit TVD =", float(scores.min()))
+def rename_cols(df):
+    return df.rename(columns=dict(zip(col_map_in, col_map_out)))
 
-df_co2 = df_exp_data_CO2
+# Datenquellen
+df_co2 = df_exp_data_CO2.copy()
+df_no  = df_no_co2.copy()
 
-## Plotten beider Fälle zusammen 
-vis_no_co2 = df_no_co2.copy()
-vis_co2    = df_co2.copy()
-for d in (vis_no_co2, vis_co2):
-    d.loc["CH4"] *= 10
+# CH4 ×10
+for d in (df_no, df_co2):
+    if "CH4" in d.index:
+        d.loc["CH4"] = d.loc["CH4"] * 10
 
+# Index-Beschriftungen in MathText
+species_labels = [r"$\mathrm{H_2}$", r"$\mathrm{CO}$", r"$\mathrm{CH_4}\cdot 10$", r"$\mathrm{CO_2}$"]
+for d in (df_no, df_co2):
+    d.index = species_labels
+
+# Spaltenreihenfolge + Umbenennung für Legende/Farben
+vis_no  = rename_cols(df_no.loc[:, select_cols(df_no)])
+vis_co2 = rename_cols(df_co2.loc[:, select_cols(df_co2)])
+
+# -------------------------------------------------
+# Plot-Parameter wie Referenz
+# -------------------------------------------------
+gap = 0.01
+bar_width = 0.10
+
+def col_colors(df_like):
+    label_to_idx = {name: i for i, name in enumerate(legend_labels)}
+    idxs = [label_to_idx.get(c, 0) for c in df_like.columns]
+    return [colors[i % len(colors)] for i in idxs]
+
+# -------------------------------------------------
+# Plot
+# -------------------------------------------------
 plt.close("all")
-
 fig, axes = plt.subplots(1, 2, figsize=(12, 6), sharey=True)
 
-vis_no_co2.plot(kind="bar", ax=axes[0], color=colors, legend=False)
-axes[0].set_title("ohne CO₂"); axes[0].set_xlabel("Spezies"); axes[0].set_ylabel("Molenbruch (CH₄ ×10)")
-axes[0].tick_params(axis="x", rotation=0)
+plots = [
+    (vis_no.astype(float),  "ohne CO₂"),
+    (vis_co2.astype(float), "mit CO₂"),
+]
 
-vis_co2.plot(kind="bar", ax=axes[1], color=colors, legend=False)
-axes[1].set_title("mit CO₂"); axes[1].set_xlabel("Spezies")
-axes[1].tick_params(axis="x", rotation=0)
+for i, (dfp, title) in enumerate(plots):
+    ax = axes[i]
+    x = np.arange(len(dfp.index))
+    n_cols = len(dfp.columns)
+    cols   = dfp.columns
+    ccols  = col_colors(dfp)
 
-handles, _ = axes[0].get_legend_handles_labels()
-legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
+    # Balken manuell zeichnen
+    for j, col in enumerate(cols):
+        offset = j * (bar_width + gap)
+        ax.bar(x + offset, dfp[col].values, width=bar_width, color=ccols[j], label=col)
 
-species_labels = [r"$\mathrm{H_2}$", "CO", r"CH$_4\cdot 10$", r"CO$_2$"]
-for d in (df_no_co2, df_co2):
-    d.index = species_labels
-for a in axes:
-    a.tick_params(axis="x", rotation=0)
-for a in axes:
-    a.set_axisbelow(True)
-for a in axes:
-    # X-Tick-Labels holen
-    a.set_xticklabels(species_labels)
+    # Gruppenzentrierte xticks
+    group_span = n_cols * (bar_width + gap) - gap
+    centers = x + group_span/2 - (bar_width + gap)/2
+    ax.set_xticks(centers)
+    ax.set_xticklabels(dfp.index, rotation=0)
+    ax.tick_params(axis='x', which='major', labelsize=14)
+    ax.tick_params(axis='y', which='major', labelsize=14)
 
-axes[1].legend(handles, legend_labels)
+    ax.set_title(title)
+    ax.set_xlabel("Spezies")
+    if i == 0:
+        ax.set_ylabel(r"Molenbruch (CH₄ \cdot 10)")
+        ax.set_ylim(bottom=0)
+    ax.grid(axis="y", linestyle="dotted")
+    ax.set_axisbelow(True)
 
-axes[0].grid(axis="y", linestyle = "dotted")
-axes[1].grid(axis="y", linestyle = "dotted")
+# Legende rechts unten wie im Original
+axes[1].legend(legend_labels, loc="upper right", fontsize=14)
+
 plt.tight_layout()
-plt.savefig("Bilder/Vergleich_Erweiterungen", dpi=300)
+plt.savefig("Bilder/Vergleich_Erweiterungen.png", dpi=300)
 plt.close("all")
+
+# -------------------------------------------------
+# Kennzahlen
+# -------------------------------------------------
+scores = mse_scores(df_exp_data_CO2)  # Achtung: Funktion liefert MSE, nicht TVD
+print("MSE pro Modell (0=perfekt, ↑=schlechter):")
+print(scores)
+print("\nBestes Modell:", scores.idxmin(), "mit MSE =", float(scores.min()))
 
 #%% Temperaturen extrahieren
 temp_co2_1 =  df_co2_1_pfr_Masse[' Temperature_PFRC2_(K)']
@@ -369,91 +417,103 @@ df_exp_data_CO2.loc["Temperatur 11"] = [1411.4+273.15,temp_co2_1.iloc[0],temp_co
 print(df_exp_data_no_CO2)
 print(df_exp_data_CO2)
 
-#%% Plot Temperaturen
 temp_rows = ["Temperatur Ausgang", "Temperatur 15", "Temperatur 11"]
 legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
 
-# Hilfsfunktion: selektiert vorhandene Spalten robust in richtiger Reihenfolge
+# Spaltenauswahl
 def select_temp_cols(df):
     candidates = ["Exp", "1 CO2", "2 CO2", "3 CO2", "4 CO2", "6 CO2"]
     return [c for c in candidates if c in df.columns]
 
-# Daten für NO-CO2 (falls vorhanden)
+# Daten
 have_no_co2 = 'df_exp_data_no_CO2' in globals() and all(r in df_exp_data_no_CO2.index for r in temp_rows)
-# Daten für CO2
 have_co2    = 'df_exp_data_CO2'    in globals() and all(r in df_exp_data_CO2.index    for r in temp_rows)
 
-# Baue die DataFrames in Plot-Form: Index = Temperatur-Zeilen, Columns = Exp/Sim...
-dfs = []
+rename_map = {"Exp": "Experiment",
+              "1 CO2": "Simulation 1", "2 CO2": "Simulation 2",
+              "3 CO2": "Simulation 3", "4 CO2": "Simulation 4",
+              "6 CO2": "Simulation 6"}
+
+vis_temp_no_co2 = None
+vis_temp_co2 = None
+
 if have_no_co2:
     cols_no = select_temp_cols(df_exp_data_no_CO2)
-    vis_temp_no_co2 = df_exp_data_no_CO2.loc[temp_rows, cols_no]
-    # Spalten-Namen hübsch für Legend:
-    rename_map = {"Exp": "Experiment", "1 CO2": "Simulation 1", "2 CO2": "Simulation 2",
-                  "3 CO2": "Simulation 3", "4 CO2": "Simulation 4", "6 CO2": "Simulation 6"}
-    vis_temp_no_co2 = vis_temp_no_co2.rename(columns=rename_map)
-else:
-    vis_temp_no_co2 = None
+    vis_temp_no_co2 = df_exp_data_no_CO2.loc[temp_rows, cols_no].rename(columns=rename_map)
 
 if have_co2:
     cols_co2 = select_temp_cols(df_exp_data_CO2)
-    vis_temp_co2 = df_exp_data_CO2.loc[temp_rows, cols_co2]
-    rename_map = {"Exp": "Experiment", "1 CO2": "Simulation 1", "2 CO2": "Simulation 2",
-                  "3 CO2": "Simulation 3", "4 CO2": "Simulation 4", "6 CO2": "Simulation 6"}
-    vis_temp_co2 = vis_temp_co2.rename(columns=rename_map)
-else:
-    vis_temp_co2 = None
+    vis_temp_co2 = df_exp_data_CO2.loc[temp_rows, cols_co2].rename(columns=rename_map)
 
-# Plot
+# Figure/Axes
 if vis_temp_no_co2 is not None and vis_temp_co2 is not None:
     fig, axes = plt.subplots(1, 2, figsize=(12, 6), sharey=True)
 elif vis_temp_co2 is not None:
-    fig, axes = plt.subplots(1, 1, figsize=(6, 6))
-    axes = [axes]  # vereinheitlichen
+    fig, ax = plt.subplots(1, 1, figsize=(6, 6))
+    axes = [ax]
 elif vis_temp_no_co2 is not None:
-    fig, axes = plt.subplots(1, 1, figsize=(6, 6))
-    axes = [axes]
+    fig, ax = plt.subplots(1, 1, figsize=(6, 6))
+    axes = [ax]
 else:
-    raise RuntimeError("Keine Temperatur-Datenreihen gefunden. Prüfe, ob die drei Zeilen im/den DataFrame(s) vorhanden sind.")
+    raise RuntimeError("Keine Temperatur-Datenreihen gefunden.")
 
-# Farben (mind. so viele, wie es Spalten gibt)
+# Farben
 def col_colors(df_like):
-    # mappe auf die Reihenfolge in df_like.columns
     label_to_idx = {name: i for i, name in enumerate(legend_labels)}
     idxs = [label_to_idx.get(c, 0) for c in df_like.columns]
     return [colors[i % len(colors)] for i in idxs]
 
-ax_i = 0
+# Plotparameter
+gap = 0.01
+bar_width = 0.10
+
+plots = []
 if vis_temp_no_co2 is not None:
-    vis_temp_no_co2.plot(kind="bar", ax=axes[ax_i], color=col_colors(vis_temp_no_co2), legend=False)
-    axes[ax_i].set_title("Temperatur ohne CO₂")
-    axes[ax_i].set_xlabel("Mess-/Positionspunkt")
-    axes[ax_i].set_ylabel("Temperatur [K]")
-    axes[ax_i].tick_params(axis="x", rotation=0)
-    axes[ax_i].set_axisbelow(True)
-    axes[ax_i].grid(axis="y", linestyle="dotted")
-    ax_i += 1
-
+    plots.append((vis_temp_no_co2.astype(float), "Temperatur ohne CO₂"))
 if vis_temp_co2 is not None:
-    vis_temp_co2.plot(kind="bar", ax=axes[ax_i], color=col_colors(vis_temp_co2), legend=False)
-    axes[ax_i].set_title("Temperatur mit CO₂")
-    axes[ax_i].set_xlabel("Mess-/Positionspunkt")
-    if len(axes) == 1:  # falls nur ein Plot, Y-Achse hier beschriften
-        axes[ax_i].set_ylabel("Temperatur [K]")
-    axes[ax_i].tick_params(axis="x", rotation=0)
-    axes[ax_i].set_axisbelow(True)
-    axes[ax_i].grid(axis="y", linestyle="dotted")
+    plots.append((vis_temp_co2.astype(float), "Temperatur mit CO₂"))
 
-# Legend aus dem rechten (oder einzigen) Plot holen
-handles, labels = axes[-1].get_legend_handles_labels()
-if not handles:
-    # Falls Legende aus blieb (legend=False), nimm die Spaltennamen und generiere Handles via Dummy-Plot:
-    axes[-1].legend(vis_temp_co2.columns if vis_temp_co2 is not None else vis_temp_no_co2.columns,
-                    loc="lower right", fontsize = 14)
-else:
-    axes[-1].legend(labels, loc="lower right", fontsize = 14)
+# Balken zeichnen
+for i, (df_temp, title) in enumerate(plots):
+    ax = axes[i]
+    x = np.arange(len(df_temp.index))
+    n_cols = len(df_temp.columns)
+    col_set = col_colors(df_temp)
 
-plt.ylim(0)
+    for j, col in enumerate(df_temp.columns):
+        offset = j * (bar_width + gap)
+        ax.bar(
+            x + offset,
+            df_temp[col].values,
+            width=bar_width,
+            label=col,
+            color=col_set[j]
+        )
+
+    group_span = n_cols * (bar_width + gap) - gap
+    centers = x + group_span / 2 - (bar_width + gap) / 2
+    ax.set_xticks(centers)
+    ax.set_xticklabels(df_temp.index, rotation=0)
+
+    ax.set_title(title)
+    ax.set_xlabel("Mess-/Positionspunkt", fontsize=12)
+    if i == 0:
+        ax.set_ylabel("Temperatur [K]")
+        ax.set_ylim(bottom=0)
+    ax.grid(axis="y", linestyle="dotted")
+    ax.set_axisbelow(True)
+    ax.tick_params(axis='x', which='major', labelsize=12)
+    ax.tick_params(axis='y', which='major', labelsize=12)
+
+# Legende nur im rechten Plot
+"""
+axes[-1].legend(
+    handles=[plt.Rectangle((0,0),1,1,color=c) for c in col_colors(plots[-1][0])],
+    labels=plots[-1][0].columns,
+    loc="lower right",
+    fontsize=12
+)"""
+axes[-1].legend(loc="lower right", fontsize=14)
 
 plt.tight_layout()
 plt.savefig("Bilder/Vergleich_Temperaturen.png", dpi=300)

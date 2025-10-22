@@ -439,8 +439,8 @@ legend_labels = {
     "ATR_CO2": "ATR",
     "NUIG_noCO2": "NUIG",
     "NUIG_CO2": "NUIG",
-    "Smoke_noCO2": "OpenSmoke++",
-    "Smoke_CO2": "OpenSmoke++",
+    "Smoke_noCO2": "CRECK",
+    "Smoke_CO2": "CRECK",
 }
 latex_labels = {"H2": r"H$_2$", "CO2": r"CO$_2$", "CH4": r"CH$_4 \cdot 10$", "H2O": r"H$_2$O", "CO": r"CO"}
 
@@ -483,14 +483,16 @@ for i, group in enumerate(gruppen):
 
     # Achsen, Titel, Raster
     ax.set_title(titel[i])
-    ax.set_xlabel("Spezies")
-    ax.set_ylabel(f"Molenbruch (CH₄ ×{int(k)}, andere unverändert)")
+    ax.set_xlabel("Spezies", fontsize=14)
+    ax.set_ylabel(r"Molenbruch (CH₄ $\cdot$10, andere unverändert)")
     ax.grid(axis='y', linestyle=':')
 
     # Legende nur einmal pro Subplot, Duplikate zusammenführen
     handles, labels = ax.get_legend_handles_labels()
     uniq = dict(zip(labels, handles))
-    ax.legend(uniq.values(), uniq.keys(), loc="upper right", frameon=False)
+    ax.legend(uniq.values(), uniq.keys(), loc="upper right", fontsize = 12)
+    ax.tick_params(axis='x', which='major', labelsize=12)
+    ax.tick_params(axis='y', which='major', labelsize=12)
 
     # rechte Achse für Original-CH4-Werte
     ax2 = ax.twinx()
@@ -510,52 +512,61 @@ fig, axs = plt.subplots(1, 2, figsize=(12, 5), sharey=False)
 ax1 = axs[0]
 ax2 = ax1.twinx()  # zweite y-Achse
 
-ax1.plot(dist_pfr_aramco_no_co2, temp_pfr_aramco_no_co2, color=colors[0], label='aramco, Temperatur')
-ax1.plot(dist_pfr_gri_no_co2, temp_pfr_gri_no_co2, color=colors[1], label='gri, Temperatur')
-ax1.plot(dist_pfr_atr_no_co2, temp_pfr_atr_no_co2, color=colors[2], label='atr, Temperatur')
-ax1.plot(dist_pfr_nuig_no_co2, temp_pfr_nuig_no_co2, color=colors[3], label='nuig, Temperatur')
-ax1.plot(dist_pfr_smoke_no_co2, temp_pfr_smoke_no_co2, color=colors[4], label='smoke, Temperatur')
+ax1.plot(dist_pfr_aramco_no_co2, temp_pfr_aramco_no_co2, color=colors[0], label='AramcoMech, Temperatur')
+ax1.plot(dist_pfr_gri_no_co2, temp_pfr_gri_no_co2, color=colors[1], label='GRI-Mech 3.0, Temperatur')
+ax1.plot(dist_pfr_atr_no_co2, temp_pfr_atr_no_co2, color=colors[2], label='ATR, Temperatur')
+ax1.plot(dist_pfr_nuig_no_co2, temp_pfr_nuig_no_co2, color=colors[3], label='NUIG, Temperatur')
+ax1.plot(dist_pfr_smoke_no_co2, temp_pfr_smoke_no_co2, color=colors[4], label='CRECK, Temperatur')
 ax1.set_ylabel("Temperatur (K)")
 
-ax2.plot(dist_pfr_aramco_no_co2, x_CH4_pfr_aramco_no_co2, color=colors[0], label='aramco, CH4', linestyle = "--")
-ax2.plot(dist_pfr_gri_no_co2, x_CH4_pfr_gri_no_co2, color=colors[1], label='gri, CH4', linestyle = "--")
-ax2.plot(dist_pfr_atr_no_co2, x_CH4_pfr_atr_no_co2, color=colors[2], label='atr, CH4', linestyle = "--")
-ax2.plot(dist_pfr_nuig_no_co2, x_CH4_pfr_nuig_no_co2, color=colors[3], label='nuig, CH4', linestyle = "--")
-ax2.plot(dist_pfr_smoke_no_co2, x_CH4_pfr_smoke_no_co2, color=colors[4], label='smoke, CH4', linestyle = "--")
-ax2.set_ylabel("CH$_4$ Molenbruch")
+ax2.plot(dist_pfr_aramco_no_co2, x_CH4_pfr_aramco_no_co2, color=colors[0], label='AramcoMech, CH4', linestyle = "--")
+ax2.plot(dist_pfr_gri_no_co2, x_CH4_pfr_gri_no_co2, color=colors[1], label='GRI-Mech 3.0, CH4', linestyle = "--")
+ax2.plot(dist_pfr_atr_no_co2, x_CH4_pfr_atr_no_co2, color=colors[2], label='ATR, CH4', linestyle = "--")
+ax2.plot(dist_pfr_nuig_no_co2, x_CH4_pfr_nuig_no_co2, color=colors[3], label='NUIG, CH4', linestyle = "--")
+ax2.plot(dist_pfr_smoke_no_co2, x_CH4_pfr_smoke_no_co2, color=colors[4], label='CRECK, CH4', linestyle = "--")
+ax2.set_ylabel("CH$_4$ Molenbruch", fontsize = 12)
 
-ax1.set_title("ohne CO₂")
-ax1.set_xlabel("Reaktorlänge (m)")
+ax1.set_title("ohne CO₂", fontsize = 12)
+ax1.set_xlabel("Reaktorlänge (m)", fontsize = 12)
 ax1.grid()
 # Legende beider Achsen zusammenführen
 lines1, labels1 = ax1.get_legend_handles_labels()
 lines2, labels2 = ax2.get_legend_handles_labels()
-ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right')
+#ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right')
 
 # Mit CO₂ (rechts)
 ax3 = axs[1]
 ax4 = ax3.twinx()
 
-ax3.plot(dist_pfr_aramco_co2, temp_pfr_aramco_co2, color=colors[0], label='aramco, Temperatur')
-ax3.plot(dist_pfr_gri_co2, temp_pfr_gri_co2, color=colors[1], label='gri, Temperatur')
-ax3.plot(dist_pfr_atr_co2, temp_pfr_atr_co2, color=colors[2], label='atr, Temperatur')
-ax3.plot(dist_pfr_nuig_co2, temp_pfr_nuig_co2, color=colors[3], label='nuig, Temperatur')
-ax3.plot(dist_pfr_smoke_co2, temp_pfr_smoke_co2, color=colors[4], label='smoke, Temperatur')
-ax3.set_ylabel("Temperatur (K)")
+ax3.plot(dist_pfr_aramco_co2, temp_pfr_aramco_co2, color=colors[0], label='AramcoMech, Temperatur')
+ax3.plot(dist_pfr_gri_co2, temp_pfr_gri_co2, color=colors[1], label='GRI-Mech 3.0, Temperatur')
+ax3.plot(dist_pfr_atr_co2, temp_pfr_atr_co2, color=colors[2], label='ATR, Temperatur')
+ax3.plot(dist_pfr_nuig_co2, temp_pfr_nuig_co2, color=colors[3], label='NUIG, Temperatur')
+ax3.plot(dist_pfr_smoke_co2, temp_pfr_smoke_co2, color=colors[4], label='CRECK, Temperatur')
+ax3.set_ylabel("Temperatur (K)", fontsize = 12)
 
-ax4.plot(dist_pfr_aramco_co2, x_CH4_pfr_aramco_co2, color=colors[0], label='aramco, CH4', linestyle = "--")
-ax4.plot(dist_pfr_gri_co2, x_CH4_pfr_gri_co2, color=colors[1], label='gri, CH4', linestyle = "--")
-ax4.plot(dist_pfr_atr_co2, x_CH4_pfr_atr_co2, color=colors[2], label='atr, CH4', linestyle = "--")
-ax4.plot(dist_pfr_nuig_co2, x_CH4_pfr_nuig_co2, color=colors[3], label='nuig, CH4', linestyle = "--")
-ax4.plot(dist_pfr_smoke_co2, x_CH4_pfr_smoke_co2, color=colors[4], label='smoke, CH4', linestyle = "--")
-ax4.set_ylabel("CH$_4$ Molenbruch")
+ax4.plot(dist_pfr_aramco_co2, x_CH4_pfr_aramco_co2, color=colors[0], label=r'AramcoMech, CH$_4$', linestyle = "--")
+ax4.plot(dist_pfr_gri_co2, x_CH4_pfr_gri_co2, color=colors[1], label=r'GRI-Mech 3.0, CH$_4$', linestyle = "--")
+ax4.plot(dist_pfr_atr_co2, x_CH4_pfr_atr_co2, color=colors[2], label=r'ATR, CH$_4$', linestyle = "--")
+ax4.plot(dist_pfr_nuig_co2, x_CH4_pfr_nuig_co2, color=colors[3], label=r'NUIG, CH$_4$', linestyle = "--")
+ax4.plot(dist_pfr_smoke_co2, x_CH4_pfr_smoke_co2, color=colors[4], label=r'CRECK, CH$_4$', linestyle = "--")
+ax4.set_ylabel("CH$_4$ Molenbruch", fontsize = 12)
 
-ax3.set_title("mit CO₂")
-ax3.set_xlabel("Reaktorlänge (m)")
+ax3.set_title("mit CO₂", fontsize = 12)
+ax3.set_xlabel("Reaktorlänge (m)", fontsize = 12)
 ax3.grid()
 lines3, labels3 = ax3.get_legend_handles_labels()
 lines4, labels4 = ax4.get_legend_handles_labels()
-ax3.legend(lines3 + lines4, labels3 + labels4, loc='upper right')
+ax3.legend(lines3 + lines4, labels3 + labels4, loc='upper right', fontsize = 12)
+
+
+"""
+ax1.tick_params(axis='x', which='major', labelsize=12)
+ax3.tick_params(axis='x', which='major', labelsize=12)
+"""
+
+ax1.set_xlim(0.135,0.3)
+ax3.set_xlim(0.135,0.3)
 
 plt.tight_layout()
 plt.savefig("img/Temp_CH4.png", dpi = 300)
@@ -612,7 +623,7 @@ df_to_table(df_mse_noCO2,
 # -----------------------------
 # Datenaufbau
 # -----------------------------
-columns = ["Experiment", "GRI-Mech 3.0", "Aramco", "ATR", "NUIG", "Smoke"]
+columns = ["Experiment", "GRI-Mech 3.0", "Aramco", "ATR", "NUIG", "CRECK"]
 temp_rows = ["Temperatur Ausgang", "Temperatur 15", "Temperatur 11"]
 
 # DataFrame: ohne CO2
@@ -711,20 +722,25 @@ for i, (df_temp, title) in enumerate(datasets):
 
     # Achsen, Titel, Raster
     ax.set_title(title)
-    ax.set_xlabel("Mess-/Positionspunkt")
+    ax.set_xlabel("Mess-/Positionspunkt", fontsize = 12)
     if i == 0:
         ax.set_ylabel("Temperatur [K]")
         ax.set_ylim(bottom=0)
     ax.grid(axis="y", linestyle="dotted")
-    ax.set_axisbelow(True)
+    ax.set_axisbelow(True) 
 
-# Legende zentral unten
-fig.legend(
-    columns,
-    loc="lower center",
-    ncol=len(columns),
-    bbox_to_anchor=(0.5, -0.02),
-)
+    ax.tick_params(axis='x', which='major', labelsize=12)
+    ax.tick_params(axis='y', which='major', labelsize=12)
+
+# Legende nur im rechten Plot
+"""
+axes[-1].legend(
+    handles=[plt.Rectangle((0,0),1,1,color=c) for c in col_colors(plots[-1][0])],
+    labels=plots[-1][0].columns,
+    loc="lower right",
+    fontsize=12
+)"""
+axes[-1].legend(loc="lower right", fontsize=14)
 
 plt.tight_layout(rect=[0, 0.05, 1, 1])
 plt.savefig("img/Vergleich_Temperaturen_gap_manual.png", dpi=300)

@@ -65,12 +65,26 @@ x_H2_end = data_end_para[' Mole_fraction_H2_PFRC2_end_point_()']
 
 #%% Berechnung und Plot der Massenströme 
 # Gegeben sind Molenbruch und Gesamtmassenstrom 
-data_end_para['Massentrom CO2'] = data_end_para[' Mole_fraction_CO2_PFRC2_end_point_()'] * data_end_para[' Exit_mass_flow_rate_PFRC2_end_point_(kg/sec)']
-data_end_para['Massentrom H2'] = data_end_para[' Mole_fraction_H2_PFRC2_end_point_()'] * data_end_para[' Exit_mass_flow_rate_PFRC2_end_point_(kg/sec)']
-data_end_para['Massentrom CO'] = data_end_para[' Mole_fraction_CO_PFRC2_end_point_()'] * data_end_para[' Exit_mass_flow_rate_PFRC2_end_point_(kg/sec)']
-data_end_para['Massentrom H2O'] = data_end_para[' Mole_fraction_H2O_PFRC2_end_point_()'] * data_end_para[' Exit_mass_flow_rate_PFRC2_end_point_(kg/sec)']
+M = {"CO2": 44.0095, "H2": 2.01588, "CO": 28.0101, "H2O": 18.01528}  # g/mol
 
-data_end_para['H2/CO'] = data_end_para['Massentrom H2'] / data_end_para['Massentrom CO']
+x = pd.DataFrame({
+    "CO2": data_end_para[' Mole_fraction_CO2_PFRC2_end_point_()'],
+    "H2" : data_end_para[' Mole_fraction_H2_PFRC2_end_point_()'],
+    "CO" : data_end_para[' Mole_fraction_CO_PFRC2_end_point_()'],
+    "H2O": data_end_para[' Mole_fraction_H2O_PFRC2_end_point_()'],
+})
+M_mix = (x * pd.Series(M)).sum(axis=1)
+w = x.mul(pd.Series(M), axis=1).div(M_mix, axis=0)  # Massenbrüche
+
+m_tot = data_end_para[' Exit_mass_flow_rate_PFRC2_end_point_(kg/sec)']
+m_spec = w.mul(m_tot, axis=0)  # kg/s je Spezies
+
+data_end_para['Massentrom CO2'] = m_spec['CO2']
+data_end_para['Massentrom H2']  = m_spec['H2']
+data_end_para['Massentrom CO']  = m_spec['CO']
+data_end_para['Massentrom H2O'] = m_spec['H2O']
+
+data_end_para['H2/CO'] = data_end_para[' Mole_fraction_H2_PFRC2_end_point_()'] / data_end_para[' Mole_fraction_CO_PFRC2_end_point_()']
 
 #%% Plots 
 # Runnumber Case 2: 7.18 (interpoliert) (entspricht 0.05455 kg/s) 
@@ -111,8 +125,8 @@ fig, ax1 = plt.subplots(figsize=(7,5))
 # --- Erste Achse: Verhältnis H2/CO ---
 ax1.plot(co2_run_number[1:], data_end_para['H2/CO'][1:],
          color=color1, label=r'H$_2$/CO', marker='v')
-ax1.set_xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
-ax1.set_ylabel(r'Verhältnis H$_2$/CO am Ende des Reaktors', color=color1)
+ax1.set_xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)', fontsize = 12)
+ax1.set_ylabel(r'Verhältnis H$_2$/CO am Ende des Reaktors', color=color1, fontsize = 12)
 ax1.tick_params(axis='y', labelcolor=color1)
 ax1.grid(True)
 
@@ -121,16 +135,18 @@ ax1.vlines(x=[0.05455], ymin=0, ymax=2, colors="grey", linestyles="--", label="K
 ax1.vlines(x=[0.0842], ymin = 0, ymax = 2, colors = "red", linestyles="--", label="Maximale Betriebsgrenze")
 
 # --- Zweite Achse: CO2 Netto ---
+
+X_CO2 = (data_end_para['Massentrom CO2'][1:] - co2_run_number[1:]) / co2_run_number[1:] * 100 
 ax2 = ax1.twinx()
-ax2.plot(co2_run_number[1:], data_end_para['Massentrom CO2'][1:] - co2_run_number[1:],
+ax2.plot(co2_run_number[1:], X_CO2,
          color=color5, label=r'CO$_2$ Netto', marker='o')
-ax2.set_ylabel(r'CO$_2$ Bilanz (Ausstoß - Eintrag) [kg/s]', color=color5)
+ax2.set_ylabel('Umsatz in %', color=color5, fontsize = 12)
 ax2.tick_params(axis='y', labelcolor=color5)
 
 # --- gemeinsame Legende ---
 lines1, labels1 = ax1.get_legend_handles_labels()
 lines2, labels2 = ax2.get_legend_handles_labels()
-ax1.legend(lines1 + lines2, labels1 + labels2, loc="best")
+ax1.legend(lines1 + lines2, labels1 + labels2, loc="best", fontsize = 12)
 
 plt.tight_layout()
 plt.savefig('Bilder/Parameterstudie_CO2_Bilanz.png',
@@ -187,19 +203,19 @@ sc = ax.scatter(x, y, c=Tmean, cmap=cmap_red_yellow_blue, norm=norm,
 
 # Farbskala
 cb = plt.colorbar(lc, ax=ax)
-cb.set_label('mittlere Temperatur T̄ [K]')
+cb.set_label('mittlere Temperatur T̄ [K]', fontsize = 12)
 
 # Layout
 ax.set_xlim(x.min(), x.max())
 ax.set_ylim(0, y.max()*1.05)
-ax.set_xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)')
-ax.set_ylabel(r'Molenbruch CH$_4$ am Ende des Reaktors')
+ax.set_xlabel(r'CO$_2$ Massenstrom am Einlass (kg/s)', fontsize = 12)
+ax.set_ylabel(r'Molenbruch CH$_4$ am Ende des Reaktors', fontsize = 12)
 ax.grid(True, linestyle=':')
 
 # vertikale Linien und Legende
 ax.vlines([0.05455], ymin=0, ymax=y.max()*1.05, colors="grey", linestyles="--", label="Komplexere Simulation")
 ax.vlines([0.0842],  ymin=0, ymax=y.max()*1.05, colors="red",  linestyles="--", label="Maximale Betriebsgrenze")
-ax.legend(loc="best")
+ax.legend(loc="best", fontsize = 12)
 ax.set_ylim(-0.002)
 
 plt.tight_layout()
