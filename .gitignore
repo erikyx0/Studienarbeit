@@ -27,7 +27,6 @@ Thumbs.db
 # Output-Daten
 results/
 output/
-*.csv
 *.dat
 *.h5
 
