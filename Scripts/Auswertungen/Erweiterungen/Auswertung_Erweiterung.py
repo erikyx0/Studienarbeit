@@ -361,7 +361,7 @@ for i, (dfp, title) in enumerate(plots):
     ax.set_title(title)
     ax.set_xlabel("Spezies")
     if i == 0:
-        ax.set_ylabel(r"Molenbruch (CH₄ \cdot 10)")
+        ax.set_ylabel(r"Molenbruch (CH₄ $\cdot$ 10)")
         ax.set_ylim(bottom=0)
     ax.grid(axis="y", linestyle="dotted")
     ax.set_axisbelow(True)
