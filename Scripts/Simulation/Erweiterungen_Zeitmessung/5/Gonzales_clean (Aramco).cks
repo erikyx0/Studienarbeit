@@ -1,0 +1,31 @@
+#
+#Sun Jul 13 19:02:58 CEST 2025
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__OUT_CHEM_ASC=W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean\\Gonzales_clean (Aramco)_gas.asc
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__OUT_SURF_ASC=
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__OUT_XML_PARAMETERS=W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean\\Gonzales_clean (Aramco).xml
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__OUT_SURF_SPECIES=
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__OUT_CHEM_OUTPUT=W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean\\Gonzales_clean (Aramco)_gas.out
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__OUT_TRAN_OUTPUT=W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean\\Gonzales_clean (Aramco)_gtran.out
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__OUT_SURF_OUTPUT=
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__Run_Result=PREPROCESS_OK_42
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__OUT_CHEM_ASC=W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2\\Gonzales_clean (Aramco)_gas.asc
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__OUT_CHEM_OUTPUT=W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2\\Gonzales_clean (Aramco)_gas.out
+IN_TRANS_DB=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\Aramco3.0\\trans_aramco.dat
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__OUT_TRAN_OUTPUT=W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2\\Gonzales_clean (Aramco)_gtran.out
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__OUT_SURF_ASC=
+IN_CHEM_INPUT=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\Aramco3.0\\aramco3.inp
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__Run_Result=PREPROCESS_BAD
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__OUT_CHEM_SPECIES=W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean\\Gonzales_clean (Aramco)_gas.asu
+Chemistry\ Set\ Description=
+FIT_TRANSPORT_PROPERTIES=1
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__OUT_TRAN_ASC=W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2\\Gonzales_clean (Aramco)_gtran.asc
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__OUT_XML_PARAMETERS=W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2\\Gonzales_clean (Aramco).xml
+IN_SURF_INPUT=
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__OUT_SURF_SPECIES=
+Chemistry\ Set\ Name=Gonzales_clean (Aramco)
+IN_THERM_DB=W\:\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\Aramco3.0\\thermo_aramco.dat
+IN_LIQUID_DB=
+SYSTEM_FLAG=FALSE
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__OUT_SURF_OUTPUT=
+W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean__OUT_TRAN_ASC=W\:\\studienarbeit\\Simulation\\ROM_Gonzales_clean\\Gonzales_clean (Aramco)_gtran.asc
+W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2__OUT_CHEM_SPECIES=W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_CO2\\CO2\\Gonzales_clean (Aramco)_gas.asu

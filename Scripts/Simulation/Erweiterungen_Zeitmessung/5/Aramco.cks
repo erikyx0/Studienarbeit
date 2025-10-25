@@ -1,0 +1,11 @@
+#
+#Sun Jul 13 19:02:28 CEST 2025
+FIT_TRANSPORT_PROPERTIES=1
+SYSTEM_FLAG=FALSE
+IN_TRANS_DB=W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\Aramco3.0\\trans_aramco.dat
+IN_SURF_INPUT=
+IN_CHEM_INPUT=W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\Aramco3.0\\aramco3.inp
+Chemistry\ Set\ Name=Aramco
+Chemistry\ Set\ Description=
+IN_THERM_DB=W\:\\Sem6\\studienarbeit\\Simulation\\Vergleich_chemistryset\\Reaktionsmechanismen_clean\\Aramco3.0\\thermo_aramco.dat
+IN_LIQUID_DB=

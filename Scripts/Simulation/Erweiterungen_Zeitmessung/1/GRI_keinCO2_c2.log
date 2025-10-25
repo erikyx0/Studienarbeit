@@ -27,21 +27,21 @@ C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Erweiterungen_Zeitmessun
 
 E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "tokens=*" %a in ('ReadRelinfoExt.BAT') do set extvers_file=%a 
 
-E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set extvers_file=C:\Users\erikd\AppData\Local\Temp\rd_68081132_ext.tmp 
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set extvers_file=C:\Users\erikd\AppData\Local\Temp\rd_13530894_ext.tmp 
 
 E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "tokens=*" %a in ('ReadRelinfoInt.BAT') do set intvers_file=%a 
 
-E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set intvers_file=C:\Users\erikd\AppData\Local\Temp\rd_76103264_int.tmp 
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set intvers_file=C:\Users\erikd\AppData\Local\Temp\rd_15507294_int.tmp 
 
-E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "usebackq delims==" %g IN (`type "C:\Users\erikd\AppData\Local\Temp\rd_76103264_int.tmp"`) DO set CHEMKIN_INT_VERS=%g 
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "usebackq delims==" %g IN (`type "C:\Users\erikd\AppData\Local\Temp\rd_15507294_int.tmp"`) DO set CHEMKIN_INT_VERS=%g 
 
 E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set CHEMKIN_INT_VERS=252 
 
-E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "usebackq delims==" %g IN (`type "C:\Users\erikd\AppData\Local\Temp\rd_68081132_ext.tmp"`) DO set CHEMKIN_VERS=%g 
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>FOR /F "usebackq delims==" %g IN (`type "C:\Users\erikd\AppData\Local\Temp\rd_13530894_ext.tmp"`) DO set CHEMKIN_VERS=%g 
 
 E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>set CHEMKIN_VERS=2025 R2 
 
-E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>DEL /Q C:\Users\erikd\AppData\Local\Temp\rd_76103264_int.tmp C:\Users\erikd\AppData\Local\Temp\rd_68081132_ext.tmp 
+E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>DEL /Q C:\Users\erikd\AppData\Local\Temp\rd_15507294_int.tmp C:\Users\erikd\AppData\Local\Temp\rd_13530894_ext.tmp 
 
 E:\Ansys\ANSYS Inc\ANSYS Student\v252\reaction\chemkin.win64\bin>POPD
 

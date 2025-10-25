@@ -1,0 +1,74 @@
+!
+! problem type definition
+!
+ENRG   ! Solve Gas Energy Equation
+STST   ! Steady State Solver
+!
+! physical property
+!
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 0.0   ! Heat Loss (cal/sec)
+VOL 1.0   ! Volume (cm3)
+!
+! output control and other misc. property
+!
+GFAC 0.0   ! Gas Reaction Rate Multiplier
+GFAC 0.0   ! Gas Reaction Rate Multiplier
+!flow!XMLS C3__PFR_to_C7__Gas_Mixer 1.0 C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Erweiterungen_Zeitmessung\3\XMLdata_Aramco-Rev7-Simplified_PFRC3.zip
+TINL C3__PFR_to_C7__Gas_Mixer 1.73842384e+03
+FLRT C3__PFR_to_C7__Gas_Mixer 2.504122E3
+REAC C3__PFR_to_C7__Gas_Mixer H2 4.551288E-1
+REAC C3__PFR_to_C7__Gas_Mixer H 2.070377E-5
+REAC C3__PFR_to_C7__Gas_Mixer O 1.903706E-11
+REAC C3__PFR_to_C7__Gas_Mixer O2 1.901828E-10
+REAC C3__PFR_to_C7__Gas_Mixer OH 5.370706E-7
+REAC C3__PFR_to_C7__Gas_Mixer H2O 2.073519E-1
+REAC C3__PFR_to_C7__Gas_Mixer HO2 2.196373E-13
+REAC C3__PFR_to_C7__Gas_Mixer H2O2 1.976556E-12
+REAC C3__PFR_to_C7__Gas_Mixer C 3.00328E-15
+REAC C3__PFR_to_C7__Gas_Mixer CH 2.298342E-13
+REAC C3__PFR_to_C7__Gas_Mixer CH2 1.332764E-9
+REAC C3__PFR_to_C7__Gas_Mixer CH2(S) 4.33064E-11
+REAC C3__PFR_to_C7__Gas_Mixer CH3 2.75755E-5
+REAC C3__PFR_to_C7__Gas_Mixer CH4 2.996262E-2
+REAC C3__PFR_to_C7__Gas_Mixer CO 2.683727E-1
+REAC C3__PFR_to_C7__Gas_Mixer CO2 3.460327E-2
+REAC C3__PFR_to_C7__Gas_Mixer HCO 1.845095E-7
+REAC C3__PFR_to_C7__Gas_Mixer CH2O 2.794759E-6
+REAC C3__PFR_to_C7__Gas_Mixer CH2OH 1.141664E-9
+REAC C3__PFR_to_C7__Gas_Mixer CH3O 1.901329E-11
+REAC C3__PFR_to_C7__Gas_Mixer CH3OH 5.159607E-7
+REAC C3__PFR_to_C7__Gas_Mixer C2H 1.457814E-10
+REAC C3__PFR_to_C7__Gas_Mixer C2H2 4.801521E-4
+REAC C3__PFR_to_C7__Gas_Mixer C2H3 1.05692E-7
+REAC C3__PFR_to_C7__Gas_Mixer C2H4 3.733092E-4
+REAC C3__PFR_to_C7__Gas_Mixer C2H5 1.186405E-7
+REAC C3__PFR_to_C7__Gas_Mixer C2H6 1.467042E-5
+REAC C3__PFR_to_C7__Gas_Mixer HCCO 5.934473E-10
+REAC C3__PFR_to_C7__Gas_Mixer CH2CO 1.849553E-6
+REAC C3__PFR_to_C7__Gas_Mixer HCCOH 5.623361E-8
+REAC C3__PFR_to_C7__Gas_Mixer N 3.060549E-16
+REAC C3__PFR_to_C7__Gas_Mixer NH 1.845282E-14
+REAC C3__PFR_to_C7__Gas_Mixer NH2 7.383848E-12
+REAC C3__PFR_to_C7__Gas_Mixer NH3 6.342535E-8
+REAC C3__PFR_to_C7__Gas_Mixer NNH 6.92979E-12
+REAC C3__PFR_to_C7__Gas_Mixer NO 1.947435E-12
+REAC C3__PFR_to_C7__Gas_Mixer NO2 1.531036E-19
+REAC C3__PFR_to_C7__Gas_Mixer N2O 2.475387E-14
+REAC C3__PFR_to_C7__Gas_Mixer HNO 2.353715E-15
+REAC C3__PFR_to_C7__Gas_Mixer CN 2.774007E-15
+REAC C3__PFR_to_C7__Gas_Mixer HCN 6.239794E-9
+REAC C3__PFR_to_C7__Gas_Mixer H2CN 2.448867E-14
+REAC C3__PFR_to_C7__Gas_Mixer HCNN 1.509912E-16
+REAC C3__PFR_to_C7__Gas_Mixer HCNO 1.128956E-16
+REAC C3__PFR_to_C7__Gas_Mixer HOCN 6.291361E-13
+REAC C3__PFR_to_C7__Gas_Mixer HNCO 9.713013E-10
+REAC C3__PFR_to_C7__Gas_Mixer NCO 1.093387E-14
+REAC C3__PFR_to_C7__Gas_Mixer N2 3.658001E-3
+REAC C3__PFR_to_C7__Gas_Mixer C3H7 1.494872E-10
+REAC C3__PFR_to_C7__Gas_Mixer C3H8 1.771524E-8
+REAC C3__PFR_to_C7__Gas_Mixer CH2CHO 2.046042E-10
+REAC C3__PFR_to_C7__Gas_Mixer CH3CHO 2.767811E-8
+! Initialization of Inlet Stream From Solution File
+INLET C3__PFR_to_C7__Gas_Mixer 1   ! Inlet Stream
+END

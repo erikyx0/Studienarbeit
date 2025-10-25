@@ -287,9 +287,9 @@ df_exp_data_CO2 = pd.DataFrame(exp_data, index = ["H2", "CO", "CH4", "CO2"])
 # -------------------------------------------------
 # Vorbereitung
 # -------------------------------------------------
-legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
+legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 5"]
 col_map_in  = ["Exp", "1 CO2", "2 CO2", "3 CO2", "4 CO2", "6 CO2"]
-col_map_out = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
+col_map_out = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 5"]
 
 # robuste Spaltenselektion in fixer Reihenfolge
 def select_cols(df):
@@ -418,7 +418,7 @@ print(df_exp_data_no_CO2)
 print(df_exp_data_CO2)
 
 temp_rows = ["Temperatur Ausgang", "Temperatur 15", "Temperatur 11"]
-legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 6"]
+legend_labels = ["Experiment", "Simulation 1", "Simulation 2", "Simulation 3", "Simulation 4", "Simulation 5"]
 
 # Spaltenauswahl
 def select_temp_cols(df):
@@ -432,7 +432,7 @@ have_co2    = 'df_exp_data_CO2'    in globals() and all(r in df_exp_data_CO2.ind
 rename_map = {"Exp": "Experiment",
               "1 CO2": "Simulation 1", "2 CO2": "Simulation 2",
               "3 CO2": "Simulation 3", "4 CO2": "Simulation 4",
-              "6 CO2": "Simulation 6"}
+              "6 CO2": "Simulation 5"}
 
 vis_temp_no_co2 = None
 vis_temp_co2 = None
@@ -504,6 +504,7 @@ for i, (df_temp, title) in enumerate(plots):
     ax.set_axisbelow(True)
     ax.tick_params(axis='x', which='major', labelsize=12)
     ax.tick_params(axis='y', which='major', labelsize=12)
+    ax.set_ylim(1200)
 
 # Legende nur im rechten Plot
 """

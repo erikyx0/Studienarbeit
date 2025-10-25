@@ -1,0 +1,61 @@
+
+
+     *****************************************************************
+     *                     ANSYS Chemkin 2025 R2                     *
+     *                      AURORA Application                       *
+     *         PERFECTLY STIRRED OR PLUG FLOW REACTOR MODEL          *
+     *                 Copyright(c) 2025 ANSYS, Inc.                 *                
+     *Run Date and Time: Oct 25, 2025   16:44:26     120 min from UTC*
+     *****************************************************************
+
+
+
+Running Chemkin
+Running Multi-threaded mode
+
+                WORKING SPACE REQUIREMENTS
+                 PROVIDED        REQUIRED 
+ LOGICAL              146            146
+ INTEGER            43512          43512
+ REAL               38758          38758
+ CHARACTER            123            123
+
+This problem requires      0.296MB of memory for the REAL array.
+
+Initializing Chemkin Gas-phase Library a component of ANSYS Chemkin 2025 R2, Build date: May 18, 2025
+This and All Other Chemkin(R) Libraries are Copyright (c) 2025 Ansys, Inc.  Unauthorized use, distribution, or duplication is prohibited.  This product is subject to U.S. laws governing export and re-export.  For full Legal Notice, see documentation.
+
+
+LICENSE INFORMATION: 
+ 
+
+LicNum: 0.  License for DESKTOP-V3VNKI6-erikd-7692-000158 is obtained from the ANSYS license service running on DESKTOP-V3VNKI6.
+                                                                                                                                                                                                                                                                                                                                                                                               
+          INLET STREAM FOUND FOR REACTOR     1: C1__PSR_to_C3__Gas_Mixer                                                                                                                                                                                                                                           
+
+           KEYWORD INPUT 
+
+          GFAC 0.0   ! Gas Reaction Rate Multiplier
+          XMLS C1__PSR_to_C3__Gas_Mixer 1.0 C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein*CO2\XMLdata_2_PSRC1.zip
+          ! Initialization of Inlet Stream From Solution File
+          INLET C1__PSR_to_C3__Gas_Mixer 1   ! Inlet Stream
+          END
+ Initializing inlet C1__PSR_to_C3__Gas_Mixer from solution file 
+ C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_
+ neu\GRI\kein CO2\XMLdata_2_PSRC1.zip
+  ERROR...TWO OF (VOLUME,RESIDENCE TIME, FLOW RATE) MUST BE SPECIFIED FOR PSR #1
+ ERROR...A PROBLEM TYPE MUST BE PROVIDED 
+ERROR...(INITIAL) PRESSURE NOT GIVEN FOR PSR #   1
+  WARNING..."TINL" SPECIFIED FOR "TGIV" PROBLEM
+  PSR FATAL ERROR: ERROR IN INPUT FILE  - STOPPING
+
+ ERROR: INPUT OR PROBLEM SETUP ERRORS MUST BE CORRECTED BEFORE PROCEEDING
+
+***NOTE:  There are WARNING messages in the printout above***
+
+***NOTE:  There are ERROR messages in the printout above***
+
+ERROR condition returned from AURORA
+
+
+ Total CPUtime: 0.830 (seconds)

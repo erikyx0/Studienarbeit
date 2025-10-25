@@ -1,0 +1,667 @@
+
+
+     *****************************************************************
+     *                     ANSYS Chemkin 2025 R2                     *
+     *                      AURORA Application                       *
+     *         PERFECTLY STIRRED OR PLUG FLOW REACTOR MODEL          *
+     *                 Copyright(c) 2025 ANSYS, Inc.                 *                
+     *Run Date and Time: Oct 25, 2025   17:00:00     120 min from UTC*
+     *****************************************************************
+
+
+
+Running Chemkin
+Running Multi-threaded mode
+
+                WORKING SPACE REQUIREMENTS
+                 PROVIDED        REQUIRED 
+ LOGICAL              146            146
+ INTEGER            43512          43512
+ REAL               38758          38758
+ CHARACTER            123            123
+
+This problem requires      0.296MB of memory for the REAL array.
+
+Initializing Chemkin Gas-phase Library a component of ANSYS Chemkin 2025 R2, Build date: May 18, 2025
+This and All Other Chemkin(R) Libraries are Copyright (c) 2025 Ansys, Inc.  Unauthorized use, distribution, or duplication is prohibited.  This product is subject to U.S. laws governing export and re-export.  For full Legal Notice, see documentation.
+
+
+LICENSE INFORMATION: 
+ 
+
+LicNum: 0.  License for DESKTOP-V3VNKI6-erikd-7692-003657 is obtained from the ANSYS license service running on DESKTOP-V3VNKI6.
+                                                                                                                                                                                                                                                                                                                                                                                               
+          INLET STREAM FOUND FOR REACTOR     1: C4__Gas_Splitter_to_C7_R2_PSR                                                                                                                                                                                                                                      
+
+           KEYWORD INPUT 
+
+          !
+          ! problem type definition
+          !
+          ENRG   ! Solve Gas Energy Equation
+          STST   ! Steady State Solver
+          !
+          ! physical property
+          !
+          !Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+          !Use_Ideal_Gas_Law   ! Use Ideal Gas Law
+          PRES 46.3853935356526   ! Pressure (atm)
+          QLOS 4916.276290630975   ! Heat Loss (cal/sec)
+          TEMP 1600.0   ! Temperature (K)
+          VOL 9.467E4   ! Volume (cm3)
+          !
+          ! solver control
+          !
+          ATIM 1.0E-9   ! Absolute Tolerance for Pseudo Timestepping
+          ATOL 1.0E-9   ! Absolute Tolerance
+          DTMN 1.0E-10   ! Minimum Pseudo Time Step (sec)
+          DTMX 0.01   ! Maximum Pseudo Time Step (sec)
+          IRET 25   ! Number Time Steps Before Increasing
+          ISTP 0   ! Number of Initial Pseudo Time Steps
+          MAXTIME 100   ! Maximum Number of Pseudo Time Stepping Operations Allowed
+          NJAC 20   ! Number of Iterations before Updating Jacobian
+          RTIM 0.0001   ! Relative Tolerance for Pseudo Timestepping
+          RTOL 0.0001   ! Relative Tolerance
+          SFLR -0.0001   ! Minimum Bounds on Species Fractions
+          SSMAXITER 100   ! Maximum Number of Iterations per Steady State Search
+          TIM1 100.0 1.0E-6   ! Pseudo Time Steps (Fixed Temperature) (none, sec)
+          TIM2 100.0 1.0E-6   ! Pseudo Time Steps (Energy Equation) (none, sec)
+          TJAC 20   ! Number of Transient Iterations before Updating Jacobian
+          TRMAXITER 25   ! Maximum Number of Iterations per Pseudo Time Step
+          !
+          ! output control and other misc. property
+          !
+          DFAC 2.0   ! Time Step Decrement Factor
+          GFAC 1.0   ! Gas Reaction Rate Multiplier
+          IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+          UFAC 2.0   ! Time Step Increment Factor
+          !flow!XMLS C4__Gas_Splitter_to_C7_R2_PSR 0.95 C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Erweiterungen_Zeitmessung\3\XMLdata_Aramco-Rev7-Simplified_PFRC7.zip
+          TINL C4__Gas_Splitter_to_C7_R2_PSR 1.73179048e+03
+          FLRT C4__Gas_Splitter_to_C7_R2_PSR 2.378916E3
+          REAC C4__Gas_Splitter_to_C7_R2_PSR H2 4.573562E-1
+          REAC C4__Gas_Splitter_to_C7_R2_PSR H 1.956302E-5
+          REAC C4__Gas_Splitter_to_C7_R2_PSR O 1.649181E-11
+          REAC C4__Gas_Splitter_to_C7_R2_PSR O2 3.305667E-12
+          REAC C4__Gas_Splitter_to_C7_R2_PSR OH 4.929131E-7
+          REAC C4__Gas_Splitter_to_C7_R2_PSR H2O 2.058407E-1
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HO2 2.41003E-14
+          REAC C4__Gas_Splitter_to_C7_R2_PSR H2O2 1.722823E-12
+          REAC C4__Gas_Splitter_to_C7_R2_PSR C 2.312086E-15
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH 1.831494E-13
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH2 1.12161E-9
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH2(S) 3.621478E-11
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH3 2.493095E-5
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH4 2.879813E-2
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CO 2.693517E-1
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CO2 3.420083E-2
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HCO 1.784944E-7
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH2O 2.777776E-6
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH2OH 1.004441E-9
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH3O 1.640163E-11
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH3OH 4.690554E-7
+          REAC C4__Gas_Splitter_to_C7_R2_PSR C2H 1.127023E-10
+          REAC C4__Gas_Splitter_to_C7_R2_PSR C2H2 4.069576E-4
+          REAC C4__Gas_Splitter_to_C7_R2_PSR C2H3 8.801E-8
+          REAC C4__Gas_Splitter_to_C7_R2_PSR C2H4 3.325679E-4
+          REAC C4__Gas_Splitter_to_C7_R2_PSR C2H5 1.03642E-7
+          REAC C4__Gas_Splitter_to_C7_R2_PSR C2H6 1.34318E-5
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HCCO 5.091752E-10
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH2CO 1.688229E-6
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HCCOH 4.569898E-8
+          REAC C4__Gas_Splitter_to_C7_R2_PSR N 2.59681E-16
+          REAC C4__Gas_Splitter_to_C7_R2_PSR NH 1.650085E-14
+          REAC C4__Gas_Splitter_to_C7_R2_PSR NH2 6.905974E-12
+          REAC C4__Gas_Splitter_to_C7_R2_PSR NH3 6.33685E-8
+          REAC C4__Gas_Splitter_to_C7_R2_PSR NNH 6.493811E-12
+          REAC C4__Gas_Splitter_to_C7_R2_PSR NO 1.880774E-12
+          REAC C4__Gas_Splitter_to_C7_R2_PSR NO2 1.497811E-19
+          REAC C4__Gas_Splitter_to_C7_R2_PSR N2O 2.232795E-14
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HNO 2.08804E-15
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CN 2.528393E-15
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HCN 6.179441E-9
+          REAC C4__Gas_Splitter_to_C7_R2_PSR H2CN 2.361414E-14
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HCNN 1.242183E-16
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HCNO 9.934744E-17
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HOCN 6.008689E-13
+          REAC C4__Gas_Splitter_to_C7_R2_PSR HNCO 9.560596E-10
+          REAC C4__Gas_Splitter_to_C7_R2_PSR NCO 1.004629E-14
+          REAC C4__Gas_Splitter_to_C7_R2_PSR N2 3.649024E-3
+          REAC C4__Gas_Splitter_to_C7_R2_PSR C3H7 1.233544E-10
+          REAC C4__Gas_Splitter_to_C7_R2_PSR C3H8 1.543321E-8
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH2CHO 1.839479E-10
+          REAC C4__Gas_Splitter_to_C7_R2_PSR CH3CHO 2.62886E-8
+          ! Initialization of Inlet Stream From Solution File
+          INLET C4__Gas_Splitter_to_C7_R2_PSR 1   ! Inlet Stream
+          END
+
+ FIRST SOLUTION ESTIMATE FOR PSR #  1 IS EQUILIBRIUM 
+
+
+========================================================================================================================
+     KINETICS MECHANISM:
+        Total number of gas phase species     =   53
+        Total number of gas phase reactions   =  325
+========================================================================================================================
+
+
+========================================================================================================================
+     REACTOR #    1 CONDITIONS FOR INLET NAMED: C4__Gas_Splitter_to_C7_R2_PSR
+          Inlet mass flow rate =   2.379E+03 gm/sec
+               (which, based on an estimated reactor density =   4.764E-03 gm/cm^3 
+                       and  on a reactor volume  =   9.467E+04 cm^3, 
+                      produces an estimated residence time) =   0.190     sec
+
+
+          Inlet temperature =   1731.8     Kelvin
+          Inlet pressure (assumed equal to reactor pressure) =    46.4     atm
+          Inlet density =  4.65639E-03 gm/cm^3 
+          Inlet mean molecular weight =   14.265     gm/mole
+          Inlet molar flow rate      =   166.76     moles/sec
+          Inlet volumetric flow rate =  5.10893E+05 cm^3/sec 
+               (based on reactor pressure and inlet temperature)
+                                     =  2.44795E+08 SCCM
+                                     =  2.44795E+05 SLPM
+
+     INLET CONDITIONS FOR GAS PHASE MOLECULAR SPECIES IN C4__Gas_Splitter_to_C7_R2_PSR
+
+   Species        mole_frac     moles/sec       gm/sec       cm^3/sec        SCCM            SLPM
+------------------------------------------------------------------------------------------------------
+    H2          0.45736        76.270        153.76       2.33660E+005  1.11958E+008  1.11958E+005
+    H           1.95630E-005  3.26237E-003  3.28838E-003   9.9946        4788.9        4.7889     
+    O           1.64918E-011  2.75021E-009  4.40018E-008  8.42555E-006  4.03711E-003  4.03711E-006
+    O2          3.30567E-012  5.51261E-010  1.76397E-008  1.68884E-006  8.09210E-004  8.09210E-007
+    OH          4.92913E-007  8.21993E-005  1.39799E-003  0.25183        120.66       0.12066     
+    H2O         0.20584        34.326        618.40       1.05163E+005  5.03887E+007   50389.     
+    HO2         2.41003E-014  4.01902E-012  1.32655E-010  1.23127E-008  5.89963E-006  5.89963E-009
+    H2O2        1.72282E-012  2.87302E-010  9.77250E-009  8.80179E-007  4.21738E-004  4.21738E-007
+    C           2.31209E-015  3.85569E-013  4.63113E-012  1.18123E-009  5.65987E-007  5.65987E-010
+    CH          1.83149E-013  3.05424E-011  3.97635E-010  9.35698E-008  4.48340E-005  4.48340E-008
+    CH2         1.12161E-009  1.87042E-007  2.62366E-006  5.73023E-004  0.27456       2.74564E-004
+    CH2(S)      3.62148E-011  6.03926E-009  8.47133E-008  1.85019E-005  8.86519E-003  8.86519E-006
+    CH3         2.49310E-005  4.15754E-003  6.25089E-002   12.737        6103.0        6.1030     
+    CH4         2.87981E-002   4.8024        77.046        14713.       7.04963E+006   7049.6     
+    CO          0.26935        44.918        1258.2       1.37610E+005  6.59359E+007   65936.     
+    CO2         3.42008E-002   5.7034        251.01        17473.       8.37218E+006   8372.2     
+    HCO         1.78494E-007  2.97661E-005  8.63769E-004  9.11916E-002   43.694       4.36945E-002
+    CH2O        2.77778E-006  4.63228E-004  1.39091E-002   1.4191        679.98       0.67998     
+    CH2OH       1.00444E-009  1.67503E-007  5.19836E-006  5.13162E-004  0.24588       2.45882E-004
+    CH3O        1.64016E-011  2.73517E-009  8.48846E-008  8.37948E-006  4.01503E-003  4.01503E-006
+    CH3OH       4.69055E-007  7.82208E-005  2.50638E-003  0.23964        114.82       0.11482     
+    C2H         1.12702E-010  1.87945E-008  4.70431E-007  5.75788E-005  2.75889E-002  2.75889E-005
+    C2H2        4.06958E-004  6.78652E-002   1.7671        207.91        99621.        99.621     
+    C2H3        8.80100E-008  1.46768E-005  3.96951E-004  4.49637E-002   21.544       2.15444E-002
+    C2H4        3.32568E-004  5.54598E-002   1.5559        169.91        81411.        81.411     
+    C2H5        1.03642E-007  1.72836E-005  5.02298E-004  5.29500E-002   25.371       2.53710E-002
+    C2H6        1.34318E-005  2.23992E-003  6.73546E-002   6.8622        3288.0        3.2880     
+    HCCO        5.09175E-010  8.49112E-008  3.48388E-006  2.60134E-004  0.12464       1.24643E-004
+    CH2CO       1.68823E-006  2.81533E-004  1.18350E-002  0.86250        413.27       0.41327     
+    HCCOH       4.56990E-008  7.62087E-006  3.20363E-004  2.33473E-002   11.187       1.11869E-002
+    N           2.59681E-016  4.33050E-014  6.06560E-013  1.32669E-010  6.35685E-008  6.35685E-011
+    NH          1.65009E-014  2.75172E-012  4.13162E-011  8.43017E-009  4.03932E-006  4.03932E-009
+    NH2         6.90597E-012  1.15166E-009  1.84526E-008  3.52822E-006  1.69055E-003  1.69055E-006
+    NH3         6.33685E-008  1.05675E-005  1.79971E-004  3.23745E-002   15.512       1.55123E-002
+    NNH         6.49381E-012  1.08292E-009  3.14279E-008  3.31764E-006  1.58965E-003  1.58965E-006
+    NO          1.88077E-012  3.13642E-010  9.41118E-009  9.60875E-007  4.60404E-004  4.60404E-007
+    NO2         1.49781E-019  2.49778E-017  1.14912E-015  7.65221E-014  3.66656E-011  3.66656E-014
+    N2O         2.23280E-014  3.72346E-012  1.63880E-010  1.14072E-008  5.46576E-006  5.46576E-009
+    HNO         2.08804E-015  3.48206E-013  1.07993E-011  1.06677E-009  5.11141E-007  5.11141E-010
+    CN          2.52839E-015  4.21641E-013  1.09702E-011  1.29174E-009  6.18937E-007  6.18937E-010
+    HCN         6.17944E-009  1.03050E-006  2.78501E-005  3.15703E-003   1.5127       1.51269E-003
+    H2CN        2.36141E-014  3.93795E-012  1.10396E-010  1.20643E-008  5.78062E-006  5.78062E-009
+    HCNN        1.24218E-016  2.07149E-014  8.49986E-013  6.34623E-011  3.04080E-008  3.04080E-011
+    HCNO        9.93474E-017  1.65674E-014  7.12816E-013  5.07559E-011  2.43197E-008  2.43197E-011
+    HOCN        6.00869E-013  1.00202E-010  4.31123E-009  3.06980E-007  1.47090E-004  1.47090E-007
+    HNCO        9.56060E-010  1.59435E-007  6.85971E-006  4.88444E-004  0.23404       2.34038E-004
+    NCO         1.00463E-014  1.67534E-012  7.03933E-011  5.13258E-009  2.45928E-006  2.45928E-009
+    N2          3.64902E-003  0.60852        17.047        1864.3       8.93262E+005   893.26     
+    AR           0.0000        0.0000        0.0000        0.0000        0.0000        0.0000     
+    C3H7        1.23354E-010  2.05709E-008  8.86383E-007  6.30209E-005  3.01965E-002  3.01965E-005
+    C3H8        1.54332E-008  2.57368E-006  1.13492E-004  7.88472E-003   3.7780       3.77797E-003
+    CH2CHO      1.83948E-010  3.06756E-008  1.32045E-006  9.39777E-005  4.50295E-002  4.50295E-005
+    CH3CHO      2.62886E-008  4.38395E-006  1.93129E-004  1.34307E-002   6.4353       6.43531E-003
+
+========================================================================================================================
+
+
+
+ TWOPNT:  DOUBLE PRECISION (TWO POINT BOUNDARY VALUE PROBLEM) SOLVER,
+          VERSION 3.30 OF APRIL 1998 BY DR. JOSEPH F. GRCAR.
+
+ TWOPNT:  INITIAL GUESS:
+
+
+========================================================================================================================
+                              PSPRNT: Printing of current solution from TWOPNT:
+========================================================================================================================
+
+
+               RESIDENCE TIME                  1.8958E-01  SEC
+               MASS FLOW RATE                  2.3789E+03  GM/SEC
+               PRESSURE                        46.39      ATM
+               MASS DENSITY                   4.7638E-03  GM/CM^3
+               VOLUME                         9.4670E+04  CM^3
+               TOTAL MASS                      451.0      G
+               TOTAL SURFACE AREA              0.000      CM^2
+               TOTAL SURFACE TO VOLUME RATIO   0.000      CM-1
+               GAS CHEM HEAT PRODUCTION        1.2070E-04  CAL/S/CM^3
+               TEMPERATURE (FIXED)             1600.0000  K
+               SURF TEMP, MATERIAL1            1600.0000  K  (same as gas temp)
+
+
+   INLET  GAS PHASE MOLE FRACTIONS 
+
+    H2              =  4.5736E-001       H               =  1.9563E-005       O               =  1.6492E-011
+    O2              =  3.3057E-012       OH              =  4.9291E-007       H2O             =  2.0584E-001
+    HO2             =  2.4100E-014       H2O2            =  1.7228E-012       C               =  2.3121E-015
+    CH              =  1.8315E-013       CH2             =  1.1216E-009       CH2(S)          =  3.6215E-011
+    CH3             =  2.4931E-005       CH4             =  2.8798E-002       CO              =  2.6935E-001
+    CO2             =  3.4201E-002       HCO             =  1.7849E-007       CH2O            =  2.7778E-006
+    CH2OH           =  1.0044E-009       CH3O            =  1.6402E-011       CH3OH           =  4.6906E-007
+    C2H             =  1.1270E-010       C2H2            =  4.0696E-004       C2H3            =  8.8010E-008
+    C2H4            =  3.3257E-004       C2H5            =  1.0364E-007       C2H6            =  1.3432E-005
+    HCCO            =  5.0918E-010       CH2CO           =  1.6882E-006       HCCOH           =  4.5699E-008
+    N               =  2.5968E-016       NH              =  1.6501E-014       NH2             =  6.9060E-012
+    NH3             =  6.3369E-008       NNH             =  6.4938E-012       NO              =  1.8808E-012
+    NO2             =  1.4978E-019       N2O             =  2.2328E-014       HNO             =  2.0880E-015
+    CN              =  2.5284E-015       HCN             =  6.1794E-009       H2CN            =  2.3614E-014
+    HCNN            =  1.2422E-016       HCNO            =  9.9347E-017       HOCN            =  6.0087E-013
+    HNCO            =  9.5606E-010       NCO             =  1.0046E-014       N2              =  3.6490E-003
+    AR              =  0.0000E+000       C3H7            =  1.2335E-010       C3H8            =  1.5433E-008
+    CH2CHO          =  1.8395E-010       CH3CHO          =  2.6289E-008
+
+
+   EXIT    GAS PHASE MOLE FRACTIONS 
+
+    H2              =  5.1295E-001       H               =  5.7195E-006       O               =  6.7899E-013
+    O2              =  1.0174E-013       OH              =  7.3293E-008       H2O             =  1.6797E-001
+    HO2             =  7.4666E-016       H2O2            =  1.3155E-013       C               =  4.7708E-019
+    CH              =  8.1267E-017       CH2             =  1.6560E-012       CH2(S)          =  4.6174E-014
+    CH3             =  1.5925E-007       CH4             =  7.0353E-004       CO              =  2.8393E-001
+    CO2             =  3.0958E-002       HCO             =  8.4531E-008       CH2O            =  2.9397E-006
+    CH2OH           =  1.0084E-010       CH3O            =  8.6276E-013       CH3OH           =  4.0913E-008
+    C2H             =  6.5318E-016       C2H2            =  1.7451E-008       C2H3            =  2.7723E-012
+    C2H4            =  4.6453E-008       C2H5            =  1.0705E-011       C2H6            =  4.7354E-009
+    HCCO            =  1.2087E-012       CH2CO           =  1.5515E-008       HCCOH           =  9.3644E-013
+    N               =  5.7742E-015       NH              =  1.0385E-012       NH2             =  1.2165E-009
+    NH3             =  4.7222E-005       NNH             =  1.5683E-012       NO              =  8.9209E-011
+    NO2             =  1.7091E-018       N2O             =  2.4059E-015       HNO             =  9.6966E-014
+    CN              =  2.7785E-013       HCN             =  4.1497E-006       H2CN            =  8.8539E-012
+    HCNN            =  1.0876E-019       HCNO            =  2.7627E-016       HOCN            =  1.6858E-010
+    HNCO            =  4.9852E-007       NCO             =  1.1653E-012       N2              =  3.4232E-003
+    AR              =  0.0000E+000       C3H7            =  1.8813E-016       C3H8            =  8.1392E-014
+    CH2CHO          =  1.2547E-012       CH3CHO          =  1.2016E-009
+ 
+   Volatile Organic Compounds (ppm):   711.6    
+   Unburned Hydrocarbons      (ppm):   703.8    
+ 
+   CO                       (ppmvd): 3.4125E+05
+   NO                       (ppmvd): 1.0722E-04
+   NOx                      (ppmvd): 1.0722E-04
+   CO                (ppmvd 15% O2): 9.7500E+04
+   NO                (ppmvd 15% O2): 3.0634E-05
+   NOx               (ppmvd 15% O2): 3.0635E-05
+
+========================================================================================================================
+
+
+
+ TWOPNT:  SOLVE THE PROBLEM.
+
+                      LOG10   LOG10          
+              TASK   NORM F  COND J   REMARK 
+
+             START    -0.49            
+            SEARCH    -7.51    0.00   7 SEARCH STEPS
+
+ TWOPNT:  FINAL SOLUTION:
+
+
+========================================================================================================================
+                              PSPRNT: Printing of current solution from TWOPNT:
+========================================================================================================================
+
+
+               RESIDENCE TIME                  2.0027E-01  SEC
+               MASS FLOW RATE                  2.3789E+03  GM/SEC
+               PRESSURE                        46.39      ATM
+               MASS DENSITY                   5.0325E-03  GM/CM^3
+               VOLUME                         9.4670E+04  CM^3
+               TOTAL MASS                      476.4      G
+               TOTAL SURFACE AREA              0.000      CM^2
+               TOTAL SURFACE TO VOLUME RATIO   0.000      CM-1
+               GAS CHEM HEAT PRODUCTION        1.9398E-02  CAL/S/CM^3
+               TEMPERATURE (FIXED)             1600.0000  K
+               SURF TEMP, MATERIAL1            1600.0000  K  (same as gas temp)
+
+
+   EXIT    GAS PHASE MOLE FRACTIONS 
+
+    H2              =  4.6278E-001       H               =  5.4257E-006       O               =  8.9288E-013
+    O2              =  1.7686E-013       OH              =  9.1882E-008       H2O             =  2.0033E-001
+    HO2             =  1.2226E-015       H2O2            =  2.0675E-013       C               =  2.1646E-017
+    CH              =  3.5054E-015       CH2             =  7.0873E-011       CH2(S)          =  1.8971E-012
+    CH3             =  6.8431E-006       CH4             =  2.8751E-002       CO              =  2.6620E-001
+    CO2             =  3.8132E-002       HCO             =  7.5191E-008       CH2O            =  2.5873E-006
+    CH2OH           =  1.8886E-010       CH3O            =  2.1016E-012       CH3OH           =  1.8273E-007
+    C2H             =  1.6565E-012       C2H2            =  4.2092E-005       C2H3            =  6.2386E-009
+    C2H4            =  9.9237E-005       C2H5            =  2.1520E-008       C2H6            =  8.9566E-006
+    HCCO            =  5.1965E-011       CH2CO           =  6.3445E-007       HCCOH           =  2.4020E-009
+    N               =  1.0267E-017       NH              =  1.5569E-015       NH2             =  1.7317E-012
+    NH3             =  6.3929E-008       NNH             =  1.5835E-012       NO              =  1.8755E-013
+    NO2             =  4.7615E-021       N2O             =  3.2196E-015       HNO             =  1.9210E-016
+    CN              =  4.0710E-016       HCN             =  5.7826E-009       H2CN            =  1.1704E-014
+    HCNN            =  4.9933E-018       HCNO            =  3.5931E-018       HOCN            =  2.6526E-013
+    HNCO            =  7.0241E-010       NCO             =  1.7259E-015       N2              =  3.6436E-003
+    AR              =  0.0000E+000       C3H7            =  1.7258E-011       C3H8            =  7.0665E-009
+    CH2CHO          =  4.6948E-011       CH3CHO          =  2.0615E-008
+ 
+   Volatile Organic Compounds (ppm):  2.9063E+04
+   Unburned Hydrocarbons      (ppm):  2.9059E+04
+ 
+   CO                       (ppmvd): 3.3289E+05
+   NO                       (ppmvd): 2.3453E-07
+   NOx                      (ppmvd): 2.3856E-07
+   CO                (ppmvd 15% O2): 9.5111E+04
+   NO                (ppmvd 15% O2): 6.7009E-08
+   NOx               (ppmvd 15% O2): 6.8160E-08
+
+========================================================================================================================
+
+
+
+ TWOPNT:  SUCCESS.  PROBLEM SOLVED.
+
+   PSRTWO: FINISHED FIXED TEMPERATURE, ADDING ENERGY EQUATION
+
+
+ TWOPNT:  DOUBLE PRECISION (TWO POINT BOUNDARY VALUE PROBLEM) SOLVER,
+          VERSION 3.30 OF APRIL 1998 BY DR. JOSEPH F. GRCAR.
+
+ TWOPNT:  INITIAL GUESS:
+
+
+========================================================================================================================
+                              PSPRNT: Printing of current solution from TWOPNT:
+========================================================================================================================
+
+
+               RESIDENCE TIME                  2.0027E-01  SEC
+               MASS FLOW RATE                  2.3789E+03  GM/SEC
+               PRESSURE                        46.39      ATM
+               MASS DENSITY                   5.0325E-03  GM/CM^3
+               VOLUME                         9.4670E+04  CM^3
+               TOTAL MASS                      476.4      G
+               TOTAL SURFACE AREA              0.000      CM^2
+               TOTAL SURFACE TO VOLUME RATIO   0.000      CM-1
+               GAS CHEM HEAT PRODUCTION        1.9398E-02  CAL/S/CM^3
+               TEMPERATURE (INLET)             1731.7905  K
+               TEMPERATURE                     1600.0000  K
+               SURF TEMP, MATERIAL1            1600.0000  K  (same as gas temp)
+               HEAT LOSS, MATERIAL1            0.000      CAL/SEC
+
+
+   EXIT    GAS PHASE MOLE FRACTIONS 
+
+    H2              =  4.6278E-001       H               =  5.4257E-006       O               =  8.9288E-013
+    O2              =  1.7686E-013       OH              =  9.1882E-008       H2O             =  2.0033E-001
+    HO2             =  1.2226E-015       H2O2            =  2.0675E-013       C               =  2.1646E-017
+    CH              =  3.5054E-015       CH2             =  7.0873E-011       CH2(S)          =  1.8971E-012
+    CH3             =  6.8431E-006       CH4             =  2.8751E-002       CO              =  2.6620E-001
+    CO2             =  3.8132E-002       HCO             =  7.5191E-008       CH2O            =  2.5873E-006
+    CH2OH           =  1.8886E-010       CH3O            =  2.1016E-012       CH3OH           =  1.8273E-007
+    C2H             =  1.6565E-012       C2H2            =  4.2092E-005       C2H3            =  6.2386E-009
+    C2H4            =  9.9237E-005       C2H5            =  2.1520E-008       C2H6            =  8.9566E-006
+    HCCO            =  5.1965E-011       CH2CO           =  6.3445E-007       HCCOH           =  2.4020E-009
+    N               =  1.0267E-017       NH              =  1.5569E-015       NH2             =  1.7317E-012
+    NH3             =  6.3929E-008       NNH             =  1.5835E-012       NO              =  1.8755E-013
+    NO2             =  4.7615E-021       N2O             =  3.2196E-015       HNO             =  1.9210E-016
+    CN              =  4.0710E-016       HCN             =  5.7826E-009       H2CN            =  1.1704E-014
+    HCNN            =  4.9933E-018       HCNO            =  3.5931E-018       HOCN            =  2.6526E-013
+    HNCO            =  7.0241E-010       NCO             =  1.7259E-015       N2              =  3.6436E-003
+    AR              =  0.0000E+000       C3H7            =  1.7258E-011       C3H8            =  7.0665E-009
+    CH2CHO          =  4.6948E-011       CH3CHO          =  2.0615E-008
+ 
+   Volatile Organic Compounds (ppm):  2.9063E+04
+   Unburned Hydrocarbons      (ppm):  2.9059E+04
+ 
+   CO                       (ppmvd): 3.3289E+05
+   NO                       (ppmvd): 2.3453E-07
+   NOx                      (ppmvd): 2.3856E-07
+   CO                (ppmvd 15% O2): 9.5111E+04
+   NO                (ppmvd 15% O2): 6.7009E-08
+   NOx               (ppmvd 15% O2): 6.8160E-08
+
+========================================================================================================================
+
+
+
+ TWOPNT:  SOLVE THE PROBLEM.
+
+                      LOG10   LOG10          
+              TASK   NORM F  COND J   REMARK 
+
+             START     2.82            
+            SEARCH    -2.24    0.00   20 SEARCH STEPS
+
+ TWOPNT:  FINAL SOLUTION:
+
+
+========================================================================================================================
+                              PSPRNT: Printing of current solution from TWOPNT:
+========================================================================================================================
+
+
+               RESIDENCE TIME                  1.8693E-01  SEC
+               MASS FLOW RATE                  2.3789E+03  GM/SEC
+               PRESSURE                        46.39      ATM
+               MASS DENSITY                   4.6973E-03  GM/CM^3
+               VOLUME                         9.4670E+04  CM^3
+               TOTAL MASS                      444.7      G
+               TOTAL SURFACE AREA              0.000      CM^2
+               TOTAL SURFACE TO VOLUME RATIO   0.000      CM-1
+               GAS CHEM HEAT PRODUCTION       -5.4704E-01  CAL/S/CM^3
+               TEMPERATURE (INLET)             1731.7905  K
+               TEMPERATURE                     1695.8118  K
+               SURF TEMP, MATERIAL1            1695.8118  K  (same as gas temp)
+               HEAT LOSS, MATERIAL1            4916.      CAL/SEC
+
+
+   EXIT    GAS PHASE MOLE FRACTIONS 
+
+    H2              =  4.6983E-001       H               =  1.4222E-005       O               =  7.3544E-012
+    O2              =  1.3825E-012       OH              =  3.0455E-007       H2O             =  1.9702E-001
+    HO2             =  1.0061E-014       H2O2            =  9.0477E-013       C               =  5.2324E-016
+    CH              =  5.0438E-014       CH2             =  4.2423E-010       CH2(S)          =  1.3203E-011
+    CH3             =  1.4066E-005       CH4             =  2.2921E-002       CO              =  2.7266E-001
+    CO2             =  3.3645E-002       HCO             =  1.4674E-007       CH2O            =  2.7284E-006
+    CH2OH           =  5.0597E-010       CH3O            =  7.3205E-012       CH3OH           =  2.7610E-007
+    C2H             =  2.1925E-011       C2H2            =  1.3243E-004       C2H3            =  2.6394E-008
+    C2H4            =  1.4619E-004       C2H5            =  4.2046E-008       C2H6            =  7.4593E-006
+    HCCO            =  2.1377E-010       CH2CO           =  1.0035E-006       HCCOH           =  1.1763E-008
+    N               =  1.0194E-016       NH              =  8.7030E-015       NH2             =  4.7436E-012
+    NH3             =  6.3048E-008       NNH             =  4.5142E-012       NO              =  9.3603E-013
+    NO2             =  5.2250E-020       N2O             =  1.2601E-014       HNO             =  1.0295E-015
+    CN              =  1.5070E-015       HCN             =  5.8640E-009       H2CN            =  1.9250E-014
+    HCNN            =  4.0909E-017       HCNO            =  2.8529E-017       HOCN            =  4.6332E-013
+    HNCO            =  8.6838E-010       NCO             =  6.2014E-015       N2              =  3.6046E-003
+    AR              =  0.0000E+000       C3H7            =  3.5102E-011       C3H8            =  6.0340E-009
+    CH2CHO          =  1.0010E-010       CH3CHO          =  1.9462E-008
+ 
+   Volatile Organic Compounds (ppm):  2.3513E+04
+   Unburned Hydrocarbons      (ppm):  2.3508E+04
+ 
+   CO                       (ppmvd): 3.3957E+05
+   NO                       (ppmvd): 1.1657E-06
+   NOx                      (ppmvd): 1.1814E-06
+   CO                (ppmvd 15% O2): 9.7019E+04
+   NO                (ppmvd 15% O2): 3.3306E-07
+   NOx               (ppmvd 15% O2): 3.3754E-07
+
+========================================================================================================================
+
+
+
+ TWOPNT:  SUCCESS.  PROBLEM SOLVED.
+
+========================================================================================================================
+     OUTLET CONDITIONS:
+          Specified inlet mass flow rate =   2.379E+03 gm/sec
+          Rate of Mass Loss to the walls =    0.00     gm/sec
+          Outlet mass flow rate          =   2.379E+03 gm/sec
+               (which, based on an reactor density =   4.697E-03 gm/cm^3 
+                   and  on a reactor volume =   9.467E+04 cm^3, 
+                   produces a residence time) =   0.187     sec
+
+
+          Outlet and reactor temperature =   1695.8     Kelvin
+          Outlet and reactor pressure    =    46.4     atm
+          Outlet and reactor density     =  4.69727E-03 gm/cm^3 
+          Outlet and reactor mean molecular weight =   14.092     gm/mole
+          Outlet molar flow rate         =   168.82     moles/sec
+          Outlet volumetric flow rate    =  5.06446E+05 cm^3/sec 
+               (based on reactor pressure and temperature)
+                                         =  2.47812E+08 SCCM
+                                         =  2.47812E+05 SLPM
+
+     OUTLET CONDITIONS FOR GAS PHASE MOLECULAR SPECIES:
+
+   Species        mole_frac     #/cm^3       moles/sec       gm/sec       cm^3/sec        SCCM
+------------------------------------------------------------------------------------------------------
+    H2           0.46983       9.43132E+19    79.315        159.89       2.37941E+05   1.16429E+08
+    H            1.42224E-05   2.85502E+15   2.40100E-03   2.42014E-03    7.2029        3524.5    
+    O            7.35438E-12   1.47633E+09   1.24155E-09   1.98641E-08   3.72460E-06   1.82251E-03
+    O2           1.38250E-12   2.77524E+08   2.33390E-10   7.46821E-09   7.00160E-07   3.42600E-04
+    OH           3.04548E-07   6.11354E+13   5.14133E-05   8.74405E-04   0.15424        75.471    
+    H2O          0.19702       3.95500E+19    33.261        599.20        99780.       4.88240E+07
+    HO2          1.00610E-14   2.01965E+06   1.69848E-12   5.60612E-11   5.09535E-09   2.49324E-06
+    H2O2         9.04774E-13   1.81625E+08   1.52742E-10   5.19549E-09   4.58219E-07   2.24214E-04
+    C            5.23237E-16   1.05035E+05   8.83318E-14   1.06097E-12   2.64991E-10   1.29665E-07
+    CH           5.04379E-14   1.01250E+07   8.51483E-12   1.10856E-10   2.55441E-08   1.24991E-05
+    CH2          4.24225E-10   8.51595E+10   7.16169E-08   1.00458E-06   2.14847E-04   0.10513    
+    CH2(S)       1.32034E-11   2.65046E+09   2.22897E-09   3.12659E-08   6.68679E-06   3.27196E-03
+    CH3          1.40664E-05   2.82370E+15   2.37466E-03   3.57031E-02    7.1239        3485.8    
+    CH4          2.29211E-02   4.60121E+18    3.8695        62.079        11608.       5.68014E+06
+    CO           0.27266       5.47351E+19    46.031        1289.3       1.38090E+05   6.75697E+07
+    CO2          3.36454E-02   6.75402E+18    5.6800        249.97        17040.       8.33776E+06
+    HCO          1.46740E-07   2.94569E+13   2.47724E-05   7.18860E-04   7.43162E-02    36.364    
+    CH2O         2.72842E-06   5.47706E+14   4.60607E-04   1.38304E-02    1.3818        676.14    
+    CH2OH        5.05973E-10   1.01570E+11   8.54174E-08   2.65088E-06   2.56248E-04   0.12539    
+    CH3O         7.32046E-12   1.46952E+09   1.23583E-09   3.83532E-08   3.70742E-06   1.81410E-03
+    CH3OH        2.76099E-07   5.54245E+13   4.66105E-05   1.49352E-03   0.13983        68.421    
+    C2H          2.19251E-11   4.40127E+09   3.70135E-09   9.26458E-08   1.11039E-05   5.43331E-03
+    C2H2         1.32433E-04   2.65848E+16   2.23571E-02   0.58214        67.070        32819.    
+    C2H3         2.63944E-08   5.29845E+12   4.45586E-06   1.20514E-04   1.33674E-02    6.5409    
+    C2H4         1.46195E-04   2.93473E+16   2.46803E-02   0.69239        74.040        36229.    
+    C2H5         4.20459E-08   8.44035E+12   7.09811E-06   2.06286E-04   2.12940E-02    10.420    
+    C2H6         7.45928E-06   1.49738E+15   1.25926E-03   3.78661E-02    3.7777        1848.5    
+    HCCO         2.13773E-10   4.29131E+10   3.60888E-08   1.48071E-06   1.08265E-04   5.29757E-02
+    CH2CO        1.00346E-06   2.01437E+14   1.69403E-04   7.12130E-03   0.50820        248.67    
+    HCCOH        1.17627E-08   2.36125E+12   1.98575E-06   8.34763E-05   5.95716E-03    2.9149    
+    N            1.01944E-16    20464.       1.72100E-14   2.41056E-13   5.16293E-11   2.52631E-08
+    NH           8.70304E-15   1.74706E+06   1.46923E-12   2.20600E-11   4.40763E-09   2.15672E-06
+    NH2          4.74358E-12   9.52233E+08   8.00803E-10   1.28310E-08   2.40237E-06   1.17552E-03
+    NH3          6.30477E-08   1.26563E+13   1.06436E-05   1.81267E-04   3.19303E-02    15.624    
+    NNH          4.51416E-12   9.06178E+08   7.62072E-10   2.21164E-08   2.28618E-06   1.11866E-03
+    NO           9.36033E-13   1.87900E+08   1.58019E-10   4.74154E-09   4.74051E-07   2.31961E-04
+    NO2          5.22503E-20    10.489       8.82079E-18   4.05805E-16   2.64620E-14   1.29483E-11
+    N2O          1.26013E-14   2.52959E+06   2.12732E-12   9.36294E-11   6.38187E-09   3.12275E-06
+    HNO          1.02948E-15   2.06660E+05   1.73796E-13   5.39011E-12   5.21379E-10   2.55119E-07
+    CN           1.50701E-15   3.02519E+05   2.54411E-13   6.61923E-12   7.63221E-10   3.73456E-07
+    HCN          5.86404E-09   1.17715E+12   9.89956E-07   2.67544E-05   2.96982E-03    1.4532    
+    H2CN         1.92505E-14   3.86437E+06   3.24983E-12   9.11051E-11   9.74934E-09   4.77051E-06
+    HCNN         4.09089E-17    8212.1       6.90617E-15   2.83377E-13   2.07182E-11   1.01377E-08
+    HCNO         2.85290E-17    5726.9       4.81621E-15   2.07219E-13   1.44484E-11   7.06984E-09
+    HOCN         4.63317E-13   9.30069E+07   7.82164E-11   3.36528E-09   2.34645E-07   1.14816E-04
+    HNCO         8.68379E-10   1.74319E+11   1.46598E-07   6.30741E-06   4.39787E-04   0.21520    
+    NCO          6.20137E-15   1.24487E+06   1.04690E-12   4.39880E-11   3.14066E-09   1.53678E-06
+    N2           3.60459E-03   7.23589E+17   0.60852        17.047        1825.5       8.93262E+05
+    AR            0.0000        0.0000        0.0000        0.0000        0.0000        0.0000    
+    C3H7         3.51024E-11   7.04651E+09   5.92593E-09   2.55344E-07   1.77775E-05   8.69882E-03
+    C3H8         6.03404E-09   1.21128E+12   1.01866E-06   4.49199E-05   3.05592E-03    1.4953    
+    CH2CHO       1.00102E-10   2.00946E+10   1.68991E-08   7.27431E-07   5.06964E-05   2.48066E-02
+    CH3CHO       1.94618E-08   3.90679E+12   3.28551E-06   1.44738E-04   9.85637E-03    4.8229    
+
+========================================================================================================================
+
+
+
+========================================================================================================================
+
+                         DETAILED SPECIES BALANCE
+                                   (all rates are in moles per sec)
+
+   SPECIES           INLET_FR    OUTLET_FR  GAS_PROD_RATE  GAS_DEST_RATE   SURF_NET_PROD    TOTAL_NET
+----------------------------------------------------------------------------------------------------------------------------------
+ H2                    76.3          79.3         2.447E+04     2.447E+04      0.00         6.966E-02
+ H                    3.262E-03     2.401E-03     2.838E+04     2.838E+04      0.00        -7.841E-02
+ O                    2.750E-09     1.242E-09     0.129         0.129          0.00        -1.647E-06
+ O2                   5.513E-10     2.334E-10     1.105E-06     1.106E-06      0.00        -1.042E-12
+ OH                   8.220E-05     5.141E-05     9.647E+03     9.647E+03      0.00        -2.259E-02
+ H2O                   34.3          33.3         1.274E+04     1.274E+04      0.00         2.177E-02
+ HO2                  4.019E-12     1.698E-12     6.827E-06     6.827E-06      0.00        -6.737E-11
+ H2O2                 2.873E-10     1.527E-10     7.153E-04     7.153E-04      0.00         1.858E-09
+ C                    3.856E-13     8.833E-14     1.249E-06     1.249E-06      0.00        -1.225E-11
+ CH                   3.054E-11     8.515E-12     1.427E-02     1.427E-02      0.00        -2.565E-07
+ CH2                  1.870E-07     7.162E-08      2.83          2.83          0.00        -1.578E-05
+ CH2(S)               6.039E-09     2.229E-09      7.20          7.20          0.00        -7.808E-05
+ CH3                  4.158E-03     2.375E-03     1.608E+04     1.608E+04      0.00         9.191E-02
+ CH4                   4.80          3.87         1.604E+04     1.604E+04      0.00        -9.171E-02
+ CO                    44.9          46.0         3.722E+03     3.721E+03      0.00        -1.030E-02
+ CO2                   5.70          5.68          376.          376.          0.00         8.211E-04
+ HCO                  2.977E-05     2.477E-05     3.357E+03     3.357E+03      0.00         9.489E-03
+ CH2O                 4.632E-04     4.606E-04      15.2          15.2          0.00        -2.978E-05
+ CH2OH                1.675E-07     8.542E-08      1.38          1.38          0.00        -9.778E-07
+ CH3O                 2.735E-09     1.236E-09     0.291         0.291          0.00        -1.208E-06
+ CH3OH                7.822E-05     4.661E-05      1.36          1.36          0.00         8.598E-06
+ C2H                  1.879E-08     3.701E-09      3.39          3.39          0.00        -7.506E-05
+ C2H2                 6.787E-02     2.236E-02      24.3          24.4          0.00         9.921E-05
+ C2H3                 1.468E-05     4.456E-06      133.          133.          0.00        -3.168E-04
+ C2H4                 5.546E-02     2.468E-02      155.          155.          0.00         1.652E-04
+ C2H5                 1.728E-05     7.098E-06      54.7          54.7          0.00         2.957E-04
+ C2H6                 2.240E-03     1.259E-03      31.3          31.3          0.00        -2.258E-04
+ HCCO                 8.491E-08     3.609E-08     0.716         0.716          0.00        -2.908E-06
+ CH2CO                2.815E-04     1.694E-04      3.03          3.03          0.00         1.261E-05
+ HCCOH                7.621E-06     1.986E-06     0.104         0.104          0.00        -3.116E-07
+ N                    4.331E-14     1.721E-14     5.774E-08     5.774E-08      0.00        -3.981E-13
+ NH                   2.752E-12     1.469E-12     1.962E-05     1.962E-05      0.00        -1.224E-10
+ NH2                  1.152E-09     8.008E-10     1.655E-02     1.655E-02      0.00         1.564E-09
+ NH3                  1.057E-05     1.064E-05     1.624E-02     1.624E-02      0.00        -1.500E-09
+ NNH                  1.083E-09     7.621E-10      1.69          1.69          0.00        -1.364E-06
+ NO                   3.136E-10     1.580E-10     2.728E-07     2.730E-07      0.00        -5.737E-13
+ NO2                  2.498E-17     8.821E-18     1.119E-12     1.119E-12      0.00        -9.890E-18
+ N2O                  3.723E-12     2.127E-12     4.634E-09     4.636E-09      0.00         1.895E-14
+ HNO                  3.482E-13     1.738E-13     6.623E-06     6.623E-06      0.00         1.017E-11
+ CN                   4.216E-13     2.544E-13     9.504E-05     9.504E-05      0.00        -4.734E-10
+ HCN                  1.030E-06     9.900E-07     7.287E-04     7.287E-04      0.00        -1.958E-09
+ H2CN                 3.938E-12     3.250E-12     6.320E-04     6.320E-04      0.00         2.426E-09
+ HCNN                 2.071E-14     6.906E-15     5.951E-07     5.951E-07      0.00         7.266E-12
+ HCNO                 1.657E-14     4.816E-15     2.995E-11     2.997E-11      0.00        -1.543E-17
+ HOCN                 1.002E-10     7.822E-11     3.566E-06     3.566E-06      0.00         4.954E-14
+ HNCO                 1.594E-07     1.466E-07     3.319E-04     3.319E-04      0.00         1.563E-10
+ NCO                  1.675E-12     1.047E-12     3.347E-05     3.347E-05      0.00        -1.022E-10
+ N2                   0.609         0.609          1.71          1.71          0.00         1.364E-06
+ AR                    0.00          0.00          0.00          0.00          0.00          0.00    
+ C3H7                 2.057E-08     5.926E-09     0.168         0.168          0.00         5.463E-07
+ C3H8                 2.574E-06     1.019E-06     5.636E-02     5.636E-02      0.00        -5.413E-07
+ CH2CHO               3.068E-08     1.690E-08     0.609         0.609          0.00         1.802E-06
+ CH3CHO               4.384E-06     3.286E-06     3.375E-02     3.375E-02      0.00        -1.207E-07
+
+
+========================================================================================================================
+
+                         DETAILED ELEMENT BALANCES
+                                   (all rates are in moles per sec)
+
+ ELEMENT          INLET_FR      OUTLET_FR    TOTAL_NET                                                                  
+------------------------------------------------------------------------------------------------------------------------
+ O                   90.7          90.7         4.590E-12
+ H                   241.          241.        -3.109E-11
+ C                   55.7          55.7        -3.389E-12
+ N                   1.22          1.22        -1.559E-13
+ AR                  0.00          0.00          0.00    
+
+========================================================================================================================
+
+
+
+ Total CPUtime: 0.481 (seconds)

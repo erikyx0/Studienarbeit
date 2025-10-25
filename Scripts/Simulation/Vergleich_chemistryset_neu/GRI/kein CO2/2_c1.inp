@@ -1,0 +1,30 @@
+! 
+! problem type definition
+! 
+ENRG   ! Solve Gas Energy Equation
+STST   ! Steady State Solver
+! 
+! physical property
+! 
+!Surface_Temperature   ! Surface Temperature Same as Gas Temperature
+!Use_Ideal_Gas_Law   ! Use Ideal Gas Law
+FLRT 25.35   ! Mass Flow Rate (g/sec)
+PRES 46.3853935356526   ! Pressure (atm)
+QLOS 0.0   ! Heat Loss (cal/sec)
+TEMP 1600.0   ! Temperature (K)
+TINL 339.75   ! Inlet Temperature (K)
+VOL 6850.0   ! Volume (cm3)
+! 
+! species property
+! 
+REAC C2H6 0.0543298483375   ! Reactant Fraction (mole fraction)
+REAC C3H8 0.0022754382975   ! Reactant Fraction (mole fraction)
+REAC CH4 0.9197081023647   ! Reactant Fraction (mole fraction)
+REAC CO2 0.0122392518118   ! Reactant Fraction (mole fraction)
+REAC N2 0.0114473591885   ! Reactant Fraction (mole fraction)
+! 
+! output control and other misc. property
+! 
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+IEEE_CHECK_USUAL 0   ! Disable Over/Underflow Check
+END

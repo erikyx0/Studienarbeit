@@ -731,6 +731,7 @@ for i, (df_temp, title) in enumerate(datasets):
 
     ax.tick_params(axis='x', which='major', labelsize=12)
     ax.tick_params(axis='y', which='major', labelsize=12)
+    ax.set_ylim(1200)
 
 # Legende nur im rechten Plot
 """

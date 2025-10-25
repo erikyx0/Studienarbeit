@@ -1,0 +1,5 @@
+GFAC 0.0   ! Gas Reaction Rate Multiplier
+XMLS C1__PSR_to_C3__Gas_Mixer 1.0 C:\Users\erikd\Desktop\Studienarbeit\Scripts\Simulation\Vergleich_chemistryset_neu\GRI\kein*CO2\XMLdata_2_PSRC1.zip   
+! Initialization of Inlet Stream From Solution File
+INLET C1__PSR_to_C3__Gas_Mixer 1   ! Inlet Stream
+END
