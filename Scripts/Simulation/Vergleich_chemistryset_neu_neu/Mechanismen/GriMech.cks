@@ -1,5 +1,6 @@
 #
-#Sat Oct 25 16:46:41 CEST 2025
+#Sat Oct 25 17:34:49 CEST 2025
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__OUT_TRAN_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5\\GriMech_gtran.asc
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3__OUT_CHEM_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3\\GriMech_gas.asc
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1__OUT_CHEM_SPECIES=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1\\GriMech_gas.asu
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein\ CO2__OUT_XML_PARAMETERS=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein CO2\\GriMech.xml
@@ -7,9 +8,11 @@ C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemis
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3__OUT_XML_PARAMETERS=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3\\GriMech.xml
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1__OUT_SURF_ASC=
 IN_TRANS_DB=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\Mechanismen\\transport.dat
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__OUT_SURF_SPECIES=
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3__OUT_SURF_OUTPUT=
 IN_CHEM_INPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\Mechanismen\\grimech30.dat
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1__OUT_TRAN_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1\\GriMech_gtran.asc
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__OUT_SURF_ASC=
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\2__OUT_XML_PARAMETERS=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\2\\GriMech.xml
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\GriMech\\keinCO2__Run_Result=PREPROCESS_OK_42
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein\ CO2__OUT_CHEM_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein CO2\\GriMech_gas.out
@@ -31,10 +34,15 @@ C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Ze
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\2__OUT_TRAN_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\2\\GriMech_gtran.asc
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein\ CO2__OUT_SURF_ASC=
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1__OUT_XML_PARAMETERS=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1\\GriMech.xml
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__OUT_SURF_OUTPUT=
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1__OUT_SURF_SPECIES=
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1__Run_Result=PREPROCESS_OK_42
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1__OUT_CHEM_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1\\GriMech_gas.asc
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__OUT_CHEM_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5\\GriMech_gas.out
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__OUT_XML_PARAMETERS=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5\\GriMech.xml
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__OUT_TRAN_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5\\GriMech_gtran.out
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\2__OUT_SURF_SPECIES=
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__Run_Result=PREPROCESS_OK_42
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein\ CO2__OUT_CHEM_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein CO2\\GriMech_gas.asc
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3__OUT_CHEM_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3\\GriMech_gas.out
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3__OUT_TRAN_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3\\GriMech_gtran.out
@@ -47,6 +55,7 @@ Chemistry\ Set\ Description=
 FIT_TRANSPORT_PROPERTIES=1
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\GriMech\\keinCO2__OUT_CHEM_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\GriMech\\keinCO2\\GriMech_gas.asc
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\2__OUT_TRAN_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\2\\GriMech_gtran.out
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__OUT_CHEM_SPECIES=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5\\GriMech_gas.asu
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein\ CO2__OUT_TRAN_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein CO2\\GriMech_gtran.out
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\GriMech\\keinCO2__OUT_CHEM_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\GriMech\\keinCO2\\GriMech_gas.out
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\3__OUT_SURF_SPECIES=
@@ -54,6 +63,7 @@ IN_LIQUID_DB=
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein\ CO2__Run_Result=PREPROCESS_OK_42
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein\ CO2__OUT_CHEM_SPECIES=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu\\GRI\\kein CO2\\GriMech_gas.asu
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\GriMech\\keinCO2__OUT_CHEM_SPECIES=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Vergleich_chemistryset_neu_neu\\GriMech\\keinCO2\\GriMech_gas.asu
+C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5__OUT_CHEM_ASC=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\5\\GriMech_gas.asc
 SYSTEM_FLAG=FALSE
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1__OUT_CHEM_OUTPUT=C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\1\\GriMech_gas.out
 C\:\\Users\\erikd\\Desktop\\Studienarbeit\\Scripts\\Simulation\\Erweiterungen_Zeitmessung\\2__OUT_SURF_ASC=
