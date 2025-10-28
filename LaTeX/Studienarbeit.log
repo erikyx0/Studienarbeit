@@ -1,666 +1,2372 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6.28) (preloaded format=pdflatex 2025.8.31)  31 AUG 2025 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  28 OCT 2025 21:44
 entering extended mode
-**//zfs1.hrz.tu-freiberg.de/ed67qowe/home/fak1pool/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex
-(//zfs1.hrz.tu-freiberg.de/ed67qowe/home/fak1pool/Desktop/Studienarbeit/LaTeX/Studienarbeit.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2021-11-22> (Template//tubaf-thesis.cls
-
-LaTeX Warning: You have requested document class `Template//tubaf-thesis',
-               but the document class provides `tubaf-thesis'.
-
-Document Class: tubaf-thesis 2024-04-18 TUBAF class for writing a thesis, based on tubaf-report
-Template//tubaf-thesis.cls:4: Undefined control sequence.
-l.4 \DeclareKeys
-                [tubaf-thesis]{
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Template//tubaf-thesis.cls:4: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 \DeclareKeys[
-                 tubaf-thesis]{
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 4--8
-[]
- []
-
-Template//tubaf-thesis.cls:9: Undefined control sequence.
-l.9 \SetKeys
-            [tubaf-thesis]{
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Template//tubaf-thesis.cls:9: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 \SetKeys[
-             tubaf-thesis]{
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 9--12
-[]
- []
-
-Template//tubaf-thesis.cls:13: Undefined control sequence.
-l.13 \DeclareUnknownKeyHandler
-                              [tubaf-thesis]{%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Template//tubaf-thesis.cls:13: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \DeclareUnknownKeyHandler[
-                               tubaf-thesis]{%
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ] in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 13--16
-[]
- []
-
-Template//tubaf-thesis.cls:17: Undefined control sequence.
-l.17 \ProcessKeyOptions
-                       [tubaf-thesis]
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Template//tubaf-thesis.cls:17: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 \ProcessKeyOptions[
-                        tubaf-thesis]
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ] in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 17--18
-[] 
- []
-
-(Template//tubaf-report.cls
-
-LaTeX Warning: You have requested document class `Template//tubaf-report',
-               but the document class provides `tubaf-report'.
-
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./Studienarbeit.tex
+(Studienarbeit.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(tubaf-thesis.cls
+Document Class: tubaf-thesis 2024-04-18 TUBAF class for writing a thesis, based
+ on tubaf-report
+(tubaf-report.cls
 Document Class: tubaf-report 2024-04-18 TUBAF class for writing a report
-Template//tubaf-report.cls:4: Undefined control sequence.
-l.4 \DeclareKeys
-                [tubaf-report]{%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrreprt.cl
+s
+Document Class: scrreprt 2024/10/24 v3.43 KOMA-Script document class (report)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
+y
+Package: scrkbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
+Package: scrlfile 2024/10/24 v3.43 KOMA-Script package (file load hooks)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+Package: scrlfile-hook 2024/10/24 v3.43 KOMA-Script package (using LaTeX hooks)
 
 
-Template//tubaf-report.cls:4: LaTeX Error: Missing \begin{document}.
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2024/10/24 v3.43 KOMA-Script package (logo)
+))) (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 370.
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.st
+y
+Package: tocbasic 2024/10/24 v3.43 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip48
+\scr@dte@tocline@numbox=\box51
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 137.
+Class scrreprt Info: File `scrsize11pt.clo' used instead of
+(scrreprt)           file `scrsize11.clo' to setup font sizes on input line 271
+3.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 \DeclareKeys[
-                 tubaf-report]{%
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize11pt
+.clo
+File: scrsize11pt.clo 2024/10/24 v3.43 KOMA-Script font size class option (11pt
+)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.st
+y
+Package: typearea 2024/10/24 v3.43 KOMA-Script package (type area)
+\ta@bcor=\skip49
+\ta@div=\count187
+\ta@hblk=\skip50
+\ta@vblk=\skip51
+\ta@temp=\skip52
+\footheight=\skip53
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1802.
+)
+\c@part=\count188
+\c@chapter=\count189
+\c@section=\count190
+\c@subsection=\count191
+\c@subsubsection=\count192
+\c@paragraph=\count193
+\c@subparagraph=\count194
+\scr@dte@chapter@maxnumwidth=\skip54
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\chapter on input line 6020.
+\scr@dte@section@maxnumwidth=\skip55
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\section on input line 6031.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\section on input line 6031.
+\scr@dte@part@maxnumwidth=\skip56
+Class scrreprt Info: using compatibility default `afterindent=true'
+(scrreprt)           for `\part on input line 6040.
+\scr@dte@subsection@maxnumwidth=\skip57
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subsection on input line 6050.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subsection on input line 6050.
+\scr@dte@subsubsection@maxnumwidth=\skip58
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subsubsection on input line 6060.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subsubsection on input line 6060.
+\scr@dte@paragraph@maxnumwidth=\skip59
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\paragraph on input line 6071.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\paragraph on input line 6071.
+\scr@dte@subparagraph@maxnumwidth=\skip60
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subparagraph on input line 6081.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subparagraph on input line 6081.
+\abovecaptionskip=\skip61
+\belowcaptionskip=\skip62
+\c@pti@nb@sid@b@x=\box52
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 7269.
+\scr@dte@figure@maxnumwidth=\skip63
+\c@figure=\count195
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 7286.
+\scr@dte@table@maxnumwidth=\skip64
+\c@table=\count196
+Class scrreprt Info: Redefining `\numberline' on input line 7457.
+\bibindent=\dimen140
+) (tubaf-logo.sty
+Package: tubaf-logo 2024-04-18 TUBAF logo in TikZ
+ (tubaf-color.sty
+Package: tubaf-color 2024-04-18 TUBAF color definitions
 
-Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 4--12
-[]
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen141
+\pgfutil@tempdimb=\dimen142
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box53
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks21
+))
+\pgf@x=\dimen145
+\pgf@y=\dimen146
+\pgf@xa=\dimen147
+\pgf@ya=\dimen148
+\pgf@xb=\dimen149
+\pgf@yb=\dimen150
+\pgf@xc=\dimen151
+\pgf@yc=\dimen152
+\pgf@xd=\dimen153
+\pgf@yd=\dimen154
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count197
+\c@pgf@countb=\count198
+\c@pgf@countc=\count199
+\c@pgf@countd=\count266
+\t@pgf@toka=\toks22
+\t@pgf@tokb=\toks23
+\t@pgf@tokc=\toks24
+\pgf@sys@id@count=\count267
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count268
+\pgfsyssoftpath@bigbuffer@items=\count269
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen155
+\pgfmath@count=\count270
+\pgfmath@box=\box54
+\pgfmath@toks=\toks25
+\pgfmath@stack@operand=\toks26
+\pgfmath@stack@operation=\toks27
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count271
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen156
+\pgf@picmaxx=\dimen157
+\pgf@picminy=\dimen158
+\pgf@picmaxy=\dimen159
+\pgf@pathminx=\dimen160
+\pgf@pathmaxx=\dimen161
+\pgf@pathminy=\dimen162
+\pgf@pathmaxy=\dimen163
+\pgf@xx=\dimen164
+\pgf@xy=\dimen165
+\pgf@yx=\dimen166
+\pgf@yy=\dimen167
+\pgf@zx=\dimen168
+\pgf@zy=\dimen169
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen170
+\pgf@path@lasty=\dimen171
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen172
+\pgf@shorten@start@additional=\dimen173
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count272
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen174
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen175
+\pgf@pt@y=\dimen176
+\pgf@pt@temp=\dimen177
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen178
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen179
+\pgf@sys@shading@range@num=\count273
+\pgf@shadingcount=\count274
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box58
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box59
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen180
+\pgf@nodesepend=\dimen181
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen182
+\pgffor@skip=\dimen183
+\pgffor@stack=\toks28
+\pgffor@toks=\toks29
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count275
+\pgfplotmarksize=\dimen184
+)
+\tikz@lastx=\dimen185
+\tikz@lasty=\dimen186
+\tikz@lastxsaved=\dimen187
+\tikz@lastysaved=\dimen188
+\tikz@lastmovetox=\dimen189
+\tikz@lastmovetoy=\dimen190
+\tikzleveldistance=\dimen191
+\tikzsiblingdistance=\dimen192
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count276
+\tikznumberofchildren=\count277
+\tikznumberofcurrentchild=\count278
+\tikz@fig@count=\count279
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count280
+\pgfmatrixcurrentcolumn=\count281
+\pgf@matrix@numberofcolumns=\count282
+)
+\tikz@expandcount=\count283
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\logoheadsize=\skip65
+\logoheadmargin=\skip66
+)
+(tubaf-title.sty
+Package: tubaf-title 2024-04-18 TUBAF package for title stuff common to most cl
+asses
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (tubaf-trapezoid.sty
+Package: tubaf-trapezoid 2024-04-18 TUBAF trapezoid in TikZ
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
+)
+\XKV@depth=\count284
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.s
+ty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box64
+)
+\tc@llx=\dimen193
+\tc@lly=\dimen194
+\tc@urx=\dimen195
+\tc@ury=\dimen196
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen197
+\adjbox@Height=\dimen198
+\adjbox@Depth=\dimen199
+\adjbox@Totalheight=\dimen256
+\adjbox@pwidth=\dimen257
+\adjbox@pheight=\dimen258
+\adjbox@pdepth=\dimen259
+\adjbox@ptotalheight=\dimen260
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count285
+) (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box65
+\sift@deathcycles=\count286
+\@vwid@loff=\dimen261
+\@vwid@roff=\dimen262
+))) (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count287
+\calc@Bcount=\count288
+\calc@Adimen=\dimen263
+\calc@Bdimen=\dimen264
+\calc@Askip=\skip67
+\calc@Bskip=\skip68
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count289
+\calc@Cskip=\skip69
+)
+\trapezoidfootsize=\skip70
+\titleskip=\skip71
+\titlepos=\skip72
+))
+(tubaf-marks.sty
+Package: tubaf-marks 2024-04-18 TUBAF package for page marks common to most cla
+sses
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-sc
+rpage.sty
+Package: scrlayer-scrpage 2024/10/24 v3.43 KOMA-Script package (end user interf
+ace for scrlayer)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer.st
+y
+Package: scrlayer 2024/10/24 v3.43 KOMA-Script package (defining layers and pag
+e styles)
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 218
+2.
+)
+Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1106.
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tabularray\tabularray.s
+ty (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count290
+\l__pdf_internal_box=\box66
+))
+Package: tabularray 2024-02-16 v2024A Typeset tabulars and arrays with LaTeX3
+\l__tblr_a_int=\count291
+\l__tblr_c_int=\count292
+\l__tblr_r_int=\count293
+\l__tblr_d_dim=\dimen265
+\l__tblr_h_dim=\dimen266
+\l__tblr_o_dim=\dimen267
+\l__tblr_p_dim=\dimen268
+\l__tblr_q_dim=\dimen269
+\l__tblr_r_dim=\dimen270
+\l__tblr_s_dim=\dimen271
+\l__tblr_t_dim=\dimen272
+\l__tblr_v_dim=\dimen273
+\l__tblr_w_dim=\dimen274
+\l__tblr_a_box=\box67
+\l__tblr_b_box=\box68
+\l__tblr_c_box=\box69
+\l__tblr_d_box=\box70
+\g__tblr_table_count_int=\count294
+\c@rownum=\count295
+\c@colnum=\count296
+\c@rowcount=\count297
+\c@colcount=\count298
+\abovesep=\dimen275
+\belowsep=\dimen276
+\leftsep=\dimen277
+\rightsep=\dimen278
+\g_tblr_level_int=\count299
+\g__tblr_data_row_key_count_int=\count300
+\g__tblr_data_column_key_count_int=\count301
+\g__tblr_data_cell_key_count_int=\count302
+\g__tblr_array_int=\count303
+\l__tblr_key_count_int=\count304
+\l__tblr_key_quotient_int=\count305
+\l__tblr_key_quotient_two_int=\count306
+\l__tblr_key_remainder_int=\count307
+\g__tblr_data_str_value_count_int=\count308
+\rulewidth=\dimen279
+\l__tblr_strut_dp_dim=\dimen280
+\l__tblr_strut_ht_dim=\dimen281
+\g__tblr_cell_wd_dim=\dimen282
+\g__tblr_cell_ht_dim=\dimen283
+\g__tblr_cell_head_dim=\dimen284
+\g__tblr_cell_foot_dim=\dimen285
+\l__column_target_dim=\dimen286
+\l__tblr_caption_box=\box71
+\l__tblr_caption_left_box=\box72
+\l__tblr_row_head_box=\box73
+\l__tblr_row_foot_box=\box74
+\l__tblr_row_head_foot_dim=\dimen287
+\tablewidth=\dimen288
+\l__tblr_table_firsthead_box=\box75
+\l__tblr_table_middlehead_box=\box76
+\l__tblr_table_lasthead_box=\box77
+\l__tblr_table_firstfoot_box=\box78
+\l__tblr_table_middlefoot_box=\box79
+\l__tblr_table_lastfoot_box=\box80
+\l__tblr_remain_height_dim=\dimen289
+\l__tblr_long_from_int=\count309
+\l__tblr_long_to_int=\count310
+\l__tblr_curr_i_int=\count311
+\l__tblr_prev_i_int=\count312
+\l__tblr_table_page_int=\count313
+\l__tblr_table_head_box=\box81
+\l__tblr_table_foot_box=\box82
+\l__tblr_table_head_foot_dim=\dimen290
+\l__tblr_table_head_body_foot_dim=\dimen291
+\l__tblr_table_box=\box83
+\l__tblr_table_hlines_box=\box84
+\l__tblr_hline_box=\box85
+\l__tblr_row_box=\box86
+\l__tblr_col_o_wd_dim=\dimen292
+\l__tblr_col_b_wd_dim=\dimen293
+\l__tblr_hline_leftskip_dim=\dimen294
+\l__tblr_hline_rightskip_dim=\dimen295
+\l__tblr_row_ht_dim=\dimen296
+\l__tblr_row_dp_dim=\dimen297
+\l__tblr_row_abovesep_dim=\dimen298
+\l__tblr_row_belowsep_dim=\dimen299
+\l__tblr_row_vlines_box=\box87
+\l__tblr_vline_box=\box88
+\l__tblr_cell_box=\box89
+\l__row_upper_dim=\dimen300
+\l__row_lower_dim=\dimen301
+\l__row_vpace_dim=\dimen302
+\l__tblr_vline_aboveskip_dim=\dimen303
+\l__tblr_vline_belowskip_dim=\dimen304
+\l__tblr_cell_wd_dim=\dimen305
+\l__tblr_cell_ht_dim=\dimen306
+\l__tblr_diag_box=\box90
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks32
+\inpenc@posthook=\toks33
+)
+(tubaf-fonts.sty
+Package: tubaf-fonts 2024-04-18 font settings that resemble the TUBAF CD for lu
+atex/xetex
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\tgtermes.sty
+Package: tgtermes 2009/09/27 v1.2 TeX Gyre Termes as default roman family
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\tgheros.sty
+Package: tgheros 2009/09/27 v1.2 TeX Gyre Heros as default sans serif family
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\tgcursor.sty
+Package: tgcursor 2009/09/10 v1.2 TeX Gyre Cursor as default typewriter family
+)) (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.st
+y
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen307
+\lightrulewidth=\dimen308
+\cmidrulewidth=\dimen309
+\belowrulesep=\dimen310
+\belowbottomsep=\dimen311
+\aboverulesep=\dimen312
+\abovetopsep=\dimen313
+\cmidrulesep=\dimen314
+\cmidrulekern=\dimen315
+\defaultaddspace=\dimen316
+\@cmidla=\count314
+\@cmidlb=\count315
+\@aboverulesep=\dimen317
+\@belowrulesep=\dimen318
+\@thisruleclass=\count316
+\@lastruleclass=\count317
+\@thisrulewidth=\dimen319
+) (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count318
+\float@exts=\toks34
+\float@box=\box91
+\@float@everytoks=\toks35
+\@floatcapt=\box92
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip73
+\LTright=\skip74
+\LTpre=\skip75
+\LTpost=\skip76
+\LTchunksize=\count319
+\LTcapwidth=\dimen320
+\LT@head=\box93
+\LT@firsthead=\box94
+\LT@foot=\box95
+\LT@lastfoot=\box96
+\LT@gbox=\box97
+\LT@cols=\count320
+\LT@rows=\count321
+\c@LT@tables=\count322
+\c@LT@chunks=\count323
+\LT@p@ftn=\toks36
+)
+Class scrreprt Info: longtable captions redefined on input line 13.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count324
+\U@D=\dimen321
+\l@unhyphenated=\language79
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count325
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman.ld
+f
+Language: ngerman 2024/01/19 v2.14 German support for babel (post-1996 orthogra
+phy)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngermanb.l
+df
+Language: ngermanb 2024/01/19 v2.14 German support for babel (post-1996 orthogr
+aphy)
+Package babel Info: Making " an active character on input line 122.
+)))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/de\babel
+-ngerman.tex
+Package babel Info: Importing font and identification data for ngerman
+(babel)             from babel-de.ini. Reported on input line 11.
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen322
+\pgfarrowlength=\dimen323
+\pgfarrowwidth=\dimen324
+\pgfarrowlinewidth=\dimen325
+LaTeX Font Info:    Trying to load font information for T1+qtm on input line 20
+4.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\t1qtm.fd
+File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/mhchem\mhchem.sty
+Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip77
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks37
+\ex@=\dimen326
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen327
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count326
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count327
+\leftroot@=\count328
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count329
+\DOTSCASE@=\count330
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box98
+\strutbox@=\box99
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen328
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count331
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count332
+\dotsspace@=\muskip16
+\c@parentequation=\count333
+\dspbrk@lvl=\count334
+\tag@help=\toks38
+\row@=\count335
+\column@=\count336
+\maxfields@=\count337
+\andhelp@=\toks39
+\eqnshift@=\dimen329
+\alignsep@=\dimen330
+\tagshift@=\dimen331
+\tagwidth@=\dimen332
+\totwidth@=\dimen333
+\lineht@=\dimen334
+\@envbody=\toks40
+\multlinegap=\skip78
+\multlinetaggap=\skip79
+\mathdisplay@stack=\toks41
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/chemgreek\chemgreek.sty
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use
+ in chemistry (CN)
+\l__chemgreek_tmpa_int=\count338
+\g__chemgreek_tmpa_int=\count339
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count340
+\__mhchem_arrow_extPgfLength_skip=\skip80
+\mhchem@minispace@tmp=\skip81
+\mhchem@minibackspace@tmp=\skip82
+\mhchem@bondwidth=\skip83
+\mhchem@bondheight=\skip84
+\mhchem@smallbondwidth@tmpA=\skip85
+\mhchem@smallbondwidth@tmpB=\skip86
+\mhchem@smallbondwidth=\skip87
+\mhchem@bondtmp@minussidebearingleft=\skip88
+\mhchem@bondtmp@minussidebearingright=\skip89
+\l__mhchem_option_version_int=\count341
+\mhchem@option@minusmathsidebearingleft=\dimen335
+\mhchem@option@minusmathsidebearingright=\dimen336
+\mhchem@option@minustextsidebearingleft=\dimen337
+\mhchem@option@minustextsidebearingright=\dimen338
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/easyreview\easyReview.s
+ty
+Package: easyReview 2014/06/27 Package for Easy Review on LaTeX documents
+Package: easyReview 2013/12/09 Package for Easy Review on LaTeX documents
+ (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
+Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
+\SOUL@word=\toks42
+\SOUL@lasttoken=\toks43
+\SOUL@syllable=\toks44
+\SOUL@cmds=\toks45
+\SOUL@buffer=\toks46
+\SOUL@token=\toks47
+\SOUL@syllgoal=\dimen339
+\SOUL@syllwidth=\dimen340
+\SOUL@charkern=\dimen341
+\SOUL@hyphkern=\dimen342
+\SOUL@dimen=\dimen343
+\SOUL@dimeni=\dimen344
+\SOUL@minus=\count342
+\SOUL@comma=\count343
+\SOUL@apo=\count344
+\SOUL@grave=\count345
+\SOUL@spaceskip=\skip90
+\SOUL@ttwidth=\dimen345
+\SOUL@uldp=\dimen346
+\SOUL@ulht=\dimen347
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.sty
+Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
+Package: todonotes 2024/01/05
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@@todonotes@numberoftodonotes=\count346
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen348
+\captionmargin=\dimen349
+\caption@leftmargin=\dimen350
+\caption@rightmargin=\dimen351
+\caption@width=\dimen352
+\caption@indent=\dimen353
+\caption@parindent=\dimen354
+\caption@hangindent=\dimen355
+Package caption Info: KOMA-Script document class detected.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-koma.st
+o
+File: caption-koma.sto 2023/09/08 v2.0e Adaption of the caption package to the 
+KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count347
+\c@continuedfloat=\count348
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: KOMA-Script scrextend package detected.
+\caption@addmargin@hsize=\dimen356
+\caption@addmargin@linewidth=\dimen357
+) (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/mwe\mwe.sty
+Package: mwe 2018/03/30 v0.5 Package to support minimal working examples (MWE)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count349
+\l__lipsum_a_int=\count350
+\l__lipsum_b_int=\count351
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/blindtext\blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count352
+\c@Blindtext=\count353
+\c@blind@countparstart=\count354
+\blind@countxx=\count355
+\blindtext@numBlindtext=\count356
+\blind@countyy=\count357
+\c@blindlist=\count358
+\c@blindlistlevel=\count359
+\c@blindlist@level=\count360
+\blind@listitem=\count361
+\c@blind@listcount=\count362
+\c@blind@levelcount=\count363
+\blind@mathformula=\count364
+\blind@Mathformula=\count365
+\c@blind@randomcount=\count366
+\c@blind@randommax=\count367
+\c@blind@pangramcount=\count368
+\c@blind@pangrammax=\count369
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count370
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count371
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count372
+\c@listtotal=\count373
+\c@listcount=\count374
+\c@liststart=\count375
+\c@liststop=\count376
+\c@citecount=\count377
+\c@citetotal=\count378
+\c@multicitecount=\count379
+\c@multicitetotal=\count380
+\c@instcount=\count381
+\c@maxnames=\count382
+\c@minnames=\count383
+\c@maxitems=\count384
+\c@minitems=\count385
+\c@citecounter=\count386
+\c@maxcitecounter=\count387
+\c@savedcitecounter=\count388
+\c@uniquelist=\count389
+\c@uniquename=\count390
+\c@refsection=\count391
+\c@refsegment=\count392
+\c@maxextratitle=\count393
+\c@maxextratitleyear=\count394
+\c@maxextraname=\count395
+\c@maxextradate=\count396
+\c@maxextraalpha=\count397
+\c@abbrvpenalty=\count398
+\c@highnamepenalty=\count399
+\c@lownamepenalty=\count400
+\c@maxparens=\count401
+\c@parenlevel=\count402
+\blx@tempcnta=\count403
+\blx@tempcntb=\count404
+\blx@tempcntc=\count405
+\c@blx@maxsection=\count406
+\blx@maxsegment@0=\count407
+\blx@notetype=\count408
+\blx@parenlevel@text=\count409
+\blx@parenlevel@foot=\count410
+\blx@sectionciteorder@0=\count411
+\blx@sectionciteorderinternal@0=\count412
+\blx@entrysetcounter=\count413
+\blx@biblioinstance=\count414
+\labelnumberwidth=\skip91
+\labelalphawidth=\skip92
+\biblabelsep=\skip93
+\bibitemsep=\skip94
+\bibnamesep=\skip95
+\bibinitsep=\skip96
+\bibparsep=\skip97
+\bibhang=\skip98
+\blx@bcfin=\read4
+\blx@bcfout=\write4
+\blx@langwohyphens=\language80
+\c@mincomprange=\count415
+\c@maxcomprange=\count416
+\c@mincompwidth=\count417
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count418
+\c@savedafterword=\count419
+\c@annotator=\count420
+\c@savedannotator=\count421
+\c@author=\count422
+\c@savedauthor=\count423
+\c@bookauthor=\count424
+\c@savedbookauthor=\count425
+\c@commentator=\count426
+\c@savedcommentator=\count427
+\c@editor=\count428
+\c@savededitor=\count429
+\c@editora=\count430
+\c@savededitora=\count431
+\c@editorb=\count432
+\c@savededitorb=\count433
+\c@editorc=\count434
+\c@savededitorc=\count435
+\c@foreword=\count436
+\c@savedforeword=\count437
+\c@holder=\count438
+\c@savedholder=\count439
+\c@introduction=\count440
+\c@savedintroduction=\count441
+\c@namea=\count442
+\c@savednamea=\count443
+\c@nameb=\count444
+\c@savednameb=\count445
+\c@namec=\count446
+\c@savednamec=\count447
+\c@translator=\count448
+\c@savedtranslator=\count449
+\c@shortauthor=\count450
+\c@savedshortauthor=\count451
+\c@shorteditor=\count452
+\c@savedshorteditor=\count453
+\c@labelname=\count454
+\c@savedlabelname=\count455
+\c@institution=\count456
+\c@savedinstitution=\count457
+\c@lista=\count458
+\c@savedlista=\count459
+\c@listb=\count460
+\c@savedlistb=\count461
+\c@listc=\count462
+\c@savedlistc=\count463
+\c@listd=\count464
+\c@savedlistd=\count465
+\c@liste=\count466
+\c@savedliste=\count467
+\c@listf=\count468
+\c@savedlistf=\count469
+\c@location=\count470
+\c@savedlocation=\count471
+\c@organization=\count472
+\c@savedorganization=\count473
+\c@origlocation=\count474
+\c@savedoriglocation=\count475
+\c@origpublisher=\count476
+\c@savedorigpublisher=\count477
+\c@publisher=\count478
+\c@savedpublisher=\count479
+\c@language=\count480
+\c@savedlanguage=\count481
+\c@origlanguage=\count482
+\c@savedoriglanguage=\count483
+\c@pageref=\count484
+\c@savedpageref=\count485
+\shorthandwidth=\skip99
+\shortjournalwidth=\skip100
+\shortserieswidth=\skip101
+\shorttitlewidth=\skip102
+\shortauthorwidth=\skip103
+\shorteditorwidth=\skip104
+\locallabelnumberwidth=\skip105
+\locallabelalphawidth=\skip106
+\localshorthandwidth=\skip107
+\localshortjournalwidth=\skip108
+\localshortserieswidth=\skip109
+\localshorttitlewidth=\skip110
+\localshortauthorwidth=\skip111
+\localshorteditorwidth=\skip112
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-bibtex.def
+File: blx-bibtex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+
+Package biblatex Warning: Using fall-back bibtex backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count486
+\c@textcitetotal=\count487
+\c@textcitemaxnames=\count488
+\c@biburlbigbreakpenalty=\count489
+\c@biburlbreakpenalty=\count490
+\c@biburlnumpenalty=\count491
+\c@biburlucpenalty=\count492
+\c@biburllcpenalty=\count493
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count494
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bb
+x
+File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
+bx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count495
+\c@bbx:relatedtotal=\count496
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cb
+x
+File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2024-01-04 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3
+.sty
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+))
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count497
+)
+\@linkdim=\dimen358
+\Hy@linkcounter=\count498
+\Hy@pagecounter=\count499
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count500
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing OFF on input line 4201.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4448.
+\c@Hy@tempcnt=\count501
+LaTeX Info: Redefining \url on input line 4786.
+\XeTeXLinkMargin=\dimen359
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count502
+\Field@Width=\dimen360
+\Fld@charsize=\dimen361
+Package hyperref Info: Hyper figures OFF on input line 6065.
+Package hyperref Info: Link nesting OFF on input line 6070.
+Package hyperref Info: Hyper index ON on input line 6073.
+Package hyperref Info: backreferencing OFF on input line 6080.
+Package hyperref Info: Link coloring OFF on input line 6085.
+Package hyperref Info: Link coloring with OCG OFF on input line 6090.
+Package hyperref Info: PDF/A mode OFF on input line 6095.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count503
+\c@Item=\count504
+\c@Hfootnote=\count505
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count506
+\c@bookmark@seq@number=\count507
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip113
+)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count508
+\@quotereset=\count509
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 61
+.
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\t1qhv.fd
+File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
+)
+(Studienarbeit.aux (LaTeX/Aufgabenstellung.aux) (LaTeX/Symbole.aux)
+(LaTeX/einleitung.aux) (LaTeX/theoretische_grundlagen.aux
+
+LaTeX Warning: Label `eq:dampfreformierung' multiply defined.
+
+) (LaTeX/Rahmenbedingungen_neu.aux) (LaTeX/reaktionsmechanismen.aux)
+(LaTeX/parameterstudie_CO2.aux) (LaTeX/ROM.aux) (LaTeX/Diskussion.aux)
+(LaTeX/Fazit.aux))
+\openout1 = `Studienarbeit.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count510
+\scratchdimen=\dimen362
+\scratchbox=\box100
+\nofMPsegments=\count511
+\nofMParguments=\count512
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count513
+\MPscratchDim=\dimen363
+\MPnumerator=\count514
+\makeMPintoPDFobject=\count515
+\everyMPtoPDFconversion=\toks49
+)
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package scrbase Info: activating ngerman \tubaf@logoname on input line 61.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/ninecolors\ninecolors.s
+ty
+Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
+)
+Package scrbase Info: activating ngerman \tubaf@thesis@supervisorname on input 
+line 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@supervisorsname on input
+ line 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@examinersname on input l
+ine 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@reviewersname on input l
+ine 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@coursename on input line
+ 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@submittedby on input lin
+e 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@bornon on input line 61.
+
+Package scrbase Info: activating ngerman \tubaf@thesis@submittedto on input lin
+e 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@approvedby on input line
+ 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@toattain on input line 6
+1.
+Package scrbase Info: activating ngerman \tubaf@thesis@dateofsubmission on inpu
+t line 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@dateofaward on input lin
+e 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@declarationofauthorshipn
+ame on input line 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@declarationofauthorshipt
+ext on input line 61.
+Package scrbase Info: activating ngerman \tubaf@thesis@bestaetigung on input li
+ne 61.
+
+Package chemgreek Info: Activating mapping `default' on line 61.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\ngerman.lb
+x
+File: ngerman.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout4 = `Studienarbeit-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Studienarbeit.bbl' found.
+ (Studienarbeit.bbl)
+Package biblatex Info: Reference section=0 on input line 61.
+Package biblatex Info: Reference segment=0 on input line 61.
+Package hyperref Info: Link coloring OFF on input line 61.
+ (Studienarbeit.out) (Studienarbeit.out)
+\@outlinefile=\write5
+\openout5 = `Studienarbeit.out'.
+
+Class scrreprt Info: loading recommended package `bookmark'.
+(scrreprt)           Using `bookmark' together with `hyperref' is recommended,
+(scrreprt)           because of handling of possible bookmark level gaps.
+(scrreprt)           You can avoid loading `bookmark' with KOMA-Script option
+(scrreprt)           `bookmarkpackage=false' before \begin{document} and
+(scrreprt)           you can avoid this message adding:
+(scrreprt)             \usepackage{bookmark}
+(scrreprt)           before \begin{document} on input line 61.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
+\BKM@id=\count516
+))
+<img/sonstiges/IEC_logo.png, id=6, 210.7875pt x 240.9pt>
+File: img/sonstiges/IEC_logo.png Graphic file (type png)
+<use img/sonstiges/IEC_logo.png>
+Package pdftex.def Info: img/sonstiges/IEC_logo.png  used on input line 64.
+(pdftex.def)             Requested size: 210.78699pt x 240.8994pt.
+
+Missing character: There is no ; in font nullfont!
+LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+
+
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+
+[1
+
+
+
+{C:/Users/erikd/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/erik
+d/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc} <./img/sonst
+iges/IEC_logo.png>]
+\openout2 = `LaTeX/Aufgabenstellung.aux'.
+
+ (LaTeX/Aufgabenstellung.tex
+
+LaTeX Warning: Citation 'Scoore_Enargus' on page 2 undefined on input line 7.
+
+) [2
+
+
+] [3] [4
+
+
+
+] (Studienarbeit.toc [5
+
+
+
+])
+\tf@toc=\write6
+\openout6 = `Studienarbeit.toc'.
+
+ [6] (Studienarbeit.lot
+Overfull \hbox (27.80258pt too wide) in paragraph at lines 7--7
+ \T1/qhv/m/n/10.95 der Tem-pe-ra-tur-mes-sun-gen und Mas-sen-strö-me bei-der Be
+-triebs-wei-sen [[]][] [][]  
  []
 
-Template//tubaf-report.cls:13: Undefined control sequence.
-l.13 \SetKeys
-             [tubaf-report]{
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+)
+\tf@lot=\write7
+\openout7 = `Studienarbeit.lot'.
 
+ [7
 
-Template//tubaf-report.cls:13: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \SetKeys[
-              tubaf-report]{
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 13--18
-[]
- []
-
-Template//tubaf-report.cls:19: Undefined control sequence.
-l.19 \DeclareUnknownKeyHandler
-                              [tubaf-report]{%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Template//tubaf-report.cls:19: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \DeclareUnknownKeyHandler[
-                               tubaf-report]{%
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ] in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 19--22
-[]
- []
-
-Template//tubaf-report.cls:23: Undefined control sequence.
-l.23 \ProcessKeyOptions
-                       [tubaf-report]
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Template//tubaf-report.cls:23: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \ProcessKeyOptions[
-                        tubaf-report]
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ] in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 23--24
-[] 
+] (Studienarbeit.lof
+Overfull \hbox (62.84248pt too wide) in paragraph at lines 4--4
+ \T1/qhv/m/n/10.95 mu-la-tio-nen oh-ne (a) und mit (b) He-li-um aus ei-ner Ver-
+gleichs-stu-die [[]].[] [][]  
  []
 
 
-! LaTeX Error: File `scrreprt.cls' not found.
+Overfull \hbox (14.8588pt too wide) in paragraph at lines 8--8
+ [][] [][]\T1/qhv/m/n/10.95 Reaktorsegmentierung und kom-ple-xes ROM auf Ba-sis
+ ei-ner CFD-Simulation 
+ []
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: cls)
 
-Enter file name: 
- :26: Emergency stop.
-<read *> 
-         
-l.26 
-      
-*** (cannot \read from terminal in nonstop modes)
+Overfull \hbox (0.70241pt too wide) in paragraph at lines 13--13
+ [][] [][]\T1/qhv/m/n/10.95 Schematische Dar-stel-lung des zwei-ten Re-ak-tor-n
+etz-werks, be-ste-hend aus 
+ []
 
- 
+
+Overfull \hbox (1.79642pt too wide) in paragraph at lines 19--19
+ [][] [][]\T1/qhv/m/n/10.95 Temperatur und Me-than-ge-halt im Re-ak-tor zur Un-
+ter-schei-dung der Flamm- 
+ []
+
+)
+\tf@lof=\write8
+\openout8 = `Studienarbeit.lof'.
+
+ [8
+
+] [9]
+\openout2 = `LaTeX/Symbole.aux'.
+
+ (LaTeX/Symbole.tex
+Underfull \hbox (badness 10000) in alignment at lines 11--15
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 15--19
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 19--22
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 22--24
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 24--63
+[] []
+ []
+
+[10
+
+
+]
+Underfull \hbox (badness 10000) in alignment at lines 70--74
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 74--78
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 78--81
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 81--83
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 83--93
+[] []
+ []
+
+[11]
+Underfull \hbox (badness 10000) in alignment at lines 102--106
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 106--110
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 110--112
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 112--129
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 136--140
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 140--144
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 144--146
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 146--160
+[] []
+ []
+
+) [12]
+\openout2 = `LaTeX/einleitung.aux'.
+
+ (LaTeX/einleitung.tex
+chapter 1.
+
+LaTeX Warning: Citation 'eea_chemical_emissions_2023' on page 13 undefined on i
+nput line 12.
+
+
+LaTeX Warning: Citation 'hasanbeigi_springer_2019_steel' on page 13 undefined o
+n input line 14.
+
+
+LaTeX Warning: Citation 'MASSOUMINEJAD2025100251' on page 13 undefined on input
+ line 14.
+
+
+LaTeX Warning: Citation 'DELLAROCCA2025100312' on page 13 undefined on input li
+ne 14.
+
+
+Overfull \hbox (2.63763pt too wide) in paragraph at lines 14--15
+\T1/qhv/m/n/10.95 zess [[], []]. Ob-wohl die
+ []
+
+
+LaTeX Warning: Citation 'CENTI20204' on page 13 undefined on input line 16.
+
+[13
+
+
+
+
+]) [14]
+\openout2 = `LaTeX/theoretische_grundlagen.aux'.
+
+ (LaTeX/theoretische_grundlagen.tex
+chapter 2.
+
+LaTeX Warning: Citation 'en16062916' on page 15 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'Albrecht2004' on page 15 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'en16062916' on page 15 undefined on input line 18.
+
+
+LaTeX Warning: Citation 'POX_Erdgas' on page 15 undefined on input line 25.
+
+[15
+
+
+
+
+]
+
+LaTeX Warning: Citation 'LESACHE2022100970' on page 16 undefined on input line 
+30.
+
+
+Overfull \hbox (0.16235pt too wide) in paragraph at lines 29--31
+\T1/qhv/m/n/10.95 Da die-se Re-ak-ti-on kein Was-ser bein-hal-tet, wird sie auc
+h als "Dry Re-for-ming"bezeichnet.
+ []
+
+
+Overfull \hbox (7.5446pt too wide) in paragraph at lines 29--31
+\T1/qhv/m/n/10.95 um-zu-wan-deln, und so-mit den Aus-stoÿ von CO$[]$ zu re-du-z
+ie-ren [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'GuttelTurek2021' on page 16 undefined on input line 42
+.
+
+[16]
+
+LaTeX Warning: Citation 'GuttelTurek2021' on page 17 undefined on input line 51
+.
+
+[17] [18]
+
+LaTeX Warning: Citation 'VOLOSHCHUK2022117620' on page 19 undefined on input li
+ne 90.
+
+
+Overfull \hbox (9.46214pt too wide) in paragraph at lines 94--95
+\T1/qhv/m/n/10.95 phy-si-ka-li-schen Vor-gän-ge auf we-ni-ge cha-rak-te-ris-ti-
+sche Grö-ÿen, um we-sent-li-che Transport-
+ []
+
+[19]
+
+LaTeX Warning: Citation 'Emig_Klemm_2017' on page 20 undefined on input line 10
+1.
+
+
+Overfull \hbox (1.45044pt too wide) in paragraph at lines 101--102
+[]\T1/qhv/m/n/10.95 Die all-ge-mei-ne Stoff-bi-lanz für ei-ne Kom-po-nen-te $\O
+ML/cmm/m/it/10.95 i$ \T1/qhv/m/n/10.95 im PSR lau-tet [[]]: 
+ []
+
+
+LaTeX Warning: Citation 'Emig_Klemm_2017' on page 20 undefined on input line 12
+9.
+
+[20]
+
+LaTeX Warning: Citation 'Emig_Klemm_2017' on page 21 undefined on input line 15
+9.
+
+
+Overfull \hbox (12.37491pt too wide) in paragraph at lines 159--160
+\T1/qhv/m/n/10.95 nen, in de-nen die Durch-mi-schung in Strö-mungs-rich-tung ge
+-ring ist [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'MILLER2021100886' on page 21 undefined on input line 1
+65.
+
+
+Overfull \hbox (70.93428pt too wide) in paragraph at lines 165--166
+\T1/qhv/m/n/10.95 Me-cha-nis-men je-doch für di-rek-te Ver-bren-nungs-pro-zes-s
+e ent-wi-ckelt und va-li-diert [[]].
+ []
+
+
+Overfull \hbox (1.99329pt too wide) in paragraph at lines 165--166
+\T1/qhv/m/n/10.95 Um-fang-rei-che Va-li-die-rungs-un-ter-su-chun-gen für den Pr
+o-zess der par-ti-el-len Oxi-da-ti-on wur-
+ []
+
+[21]
+
+LaTeX Warning: Citation 'en14102834' on page 22 undefined on input line 167.
+
+
+LaTeX Warning: Citation 'ZHANG2025114499' on page 22 undefined on input line 17
+1.
+
+<img/sonstiges/Mechanismusvergleich_Zhang.png, id=313, 677.53125pt x 591.71063p
+t>
+File: img/sonstiges/Mechanismusvergleich_Zhang.png Graphic file (type png)
+<use img/sonstiges/Mechanismusvergleich_Zhang.png>
+Package pdftex.def Info: img/sonstiges/Mechanismusvergleich_Zhang.png  used on 
+input line 182.
+(pdftex.def)             Requested size: 271.86356pt x 237.42944pt.
+
+LaTeX Warning: Citation 'ZHANG2025114499' on page 22 undefined on input line 18
+3.
+
+
+LaTeX Warning: Citation 'ZHANG2025114499' on page 22 undefined on input line 18
+3.
+
+[22]
+
+LaTeX Warning: Citation 'ZHANG2025114499' on page 23 undefined on input line 18
+9.
+
+
+LaTeX Warning: Citation 'ZHANG2025114499' on page 23 undefined on input line 18
+9.
+
+
+LaTeX Warning: Citation 'ZHANG2025114499' on page 23 undefined on input line 20
+2.
+
+
+LaTeX Warning: Citation 'fuels2020013' on page 23 undefined on input line 204.
+
+[23 <./img/sonstiges/Mechanismusvergleich_Zhang.png>]
+
+LaTeX Warning: Citation 'Niemeyer2016' on page 24 undefined on input line 206.
+
+
+LaTeX Warning: Citation 'CURTIS2017312' on page 24 undefined on input line 206.
+
+
+
+Overfull \hbox (18.57463pt too wide) in paragraph at lines 206--208
+\T1/qhv/m/n/10.95 Re-chen-auf-wand wird meist nur theo-re-tisch be-schrie-ben [
+[], []],
+ []
+
+) [24]
+\openout2 = `LaTeX/Rahmenbedingungen_neu.aux'.
+
+ (LaTeX/Rahmenbedingungen_neu.tex
+chapter 3.
+
+Overfull \hbox (5.42169pt too wide) in paragraph at lines 2--3
+\T1/qhv/m/n/10.95 Forschungsgegenstand ist ein Re-ak-tor, der im Rah-men des Ve
+r-bund-vor-ha-bens $[]$
+ []
+
+
+LaTeX Warning: Citation 'Scoore_Enargus' on page 25 undefined on input line 4.
+
+LaTeX Font Info:    Trying to load font information for TS1+qhv on input line 6
+.
+(C:\Users\erikd\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\ts1qhv.fd
+File: ts1qhv.fd 2009/09/25 v1.2 font definition file for TS1/qhv
+)
+<img/sonstiges/Reaktorgeometrien.png, id=331, 510.40688pt x 417.81094pt>
+File: img/sonstiges/Reaktorgeometrien.png Graphic file (type png)
+<use img/sonstiges/Reaktorgeometrien.png>
+Package pdftex.def Info: img/sonstiges/Reaktorgeometrien.png  used on input lin
+e 9.
+(pdftex.def)             Requested size: 250.95587pt x 205.43044pt.
+
+[25
+
+
+
+
+{C:/Users/erikd/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.en
+c}]
+Overfull \hbox (4.89365pt too wide) in paragraph at lines 14--15
+\T1/qhv/m/n/10.95 ei-ner ge-ziel-ten CO$[]$-Zugabe auf die Re-ak-ti-ons-füh-run
+g der nicht-katalytischen Hochdruck-
+ []
+
+[26 <./img/sonstiges/Reaktorgeometrien.png>]
+
+LaTeX Warning: Citation 'gonzales' on page 27 undefined on input line 26.
+
+
+LaTeX Warning: Citation 'gonzales' on page 27 undefined on input line 26.
+
+
+LaTeX Warning: Citation 'RICHTER2015110' on page 27 undefined on input line 54.
+
+
+<img/Erweiterungen/Messpunkte.png, id=345, 220.57407pt x 568.37344pt>
+File: img/Erweiterungen/Messpunkte.png Graphic file (type png)
+<use img/Erweiterungen/Messpunkte.png>
+Package pdftex.def Info: img/Erweiterungen/Messpunkte.png  used on input line 5
+7.
+(pdftex.def)             Requested size: 83.64983pt x 215.55052pt.
+
+LaTeX Warning: Citation 'gonzales' on page 27 undefined on input line 58.
+
+
+LaTeX Warning: Citation 'gonzales' on page 27 undefined on input line 58.
+
+[27]
+
+LaTeX Warning: Citation 'gonzales' on page 28 undefined on input line 64.
+
+
+LaTeX Warning: Citation 'gonzales' on page 28 undefined on input line 64.
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 64--64
+\T1/qhv/m/n/10.95 der Tem-pe-ra-tur-mes-sun-gen und Mas-sen-strö-me bei-der Be-
+triebs-wei-sen
+ []
+
+
+LaTeX Warning: Citation 'gonzales' on page 28 undefined on input line 87.
+
+
+Overfull \hbox (23.1048pt too wide) in paragraph at lines 87--88
+\T1/qhv/m/n/10.95 Strömungs- und Re-ak-ti-ons-vor-gän-ge in-ner-halb des be-tra
+ch-te-ten POx-Reaktors [[]]. 
+ []
+
+[28 <./img/Erweiterungen/Messpunkte.png>]
+<img/sonstiges/Reactor Segmentation.png, id=356, 961.34157pt x 258.21469pt>
+File: img/sonstiges/Reactor Segmentation.png Graphic file (type png)
+<use img/sonstiges/Reactor Segmentation.png>
+Package pdftex.def Info: img/sonstiges/Reactor Segmentation.png  used on input 
+line 95.
+(pdftex.def)             Requested size: 418.25555pt x 112.34218pt.
+
+
+LaTeX Warning: Citation 'gonzales' on page 29 undefined on input line 96.
+
+
+LaTeX Warning: Citation 'gonzales' on page 29 undefined on input line 96.
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 96--96
+[][][]|\T1/qhv/m/n/10.95 Re-ak-tor-seg-men-tie-rung und kom-ple-xes ROM auf Ba-
+sis ei-ner CFD-
+ []
+
+) [29 <./img/sonstiges/Reactor Segmentation.png>]
+\openout2 = `LaTeX/reaktionsmechanismen.aux'.
+
+
+(LaTeX/reaktionsmechanismen.tex
+chapter 4.
+[30
+
+
+
+
+]
+
+LaTeX Warning: Citation 'Gri-Mech' on page 31 undefined on input line 27.
+
+
+LaTeX Warning: Citation 'Aramco20' on page 31 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'MARTINEZ2021401' on page 31 undefined on input line 39
+.
+
+
+Overfull \hbox (58.09003pt too wide) in paragraph at lines 39--40
+\T1/qhv/m/n/10.95 Me-cha-nis-men für die Ver-bren-nung und Oxi-da-ti-on von Koh
+-len-was-ser-stof-fen [[]]. 
+ []
+
+[31]
+
+LaTeX Warning: Citation 'MARTINEZ2021401' on page 32 undefined on input line 43
+.
+
+
+LaTeX Warning: Citation 'CRECK_DetailedMechanisms' on page 32 undefined on inpu
+t line 47.
+
+
+LaTeX Warning: Citation 'ChemkinTheoryManual' on page 32 undefined on input lin
+e 49.
+
+
+LaTeX Warning: Citation 'Niemeyer2016' on page 32 undefined on input line 49.
+
+[32]
+
+LaTeX Warning: Citation 'CURTIS2017312' on page 33 undefined on input line 51.
+
+) [33]
+\openout2 = `LaTeX/parameterstudie_CO2.aux'.
+
+ (LaTeX/parameterstudie_CO2.tex
+chapter 5.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1.
+
+[34
+
+
+
+
+]
+
+LaTeX Warning: Citation 'NIST_CO2_WebBook_General' on page 35 undefined on inpu
+t line 67.
+
+) [35]
+\openout2 = `LaTeX/ROM.aux'.
+
+ (LaTeX/ROM.tex
+chapter 6.
+<img/Erweiterungen/1.png, id=400, 380.92313pt x 97.86563pt>
+File: img/Erweiterungen/1.png Graphic file (type png)
+<use img/Erweiterungen/1.png>
+Package pdftex.def Info: img/Erweiterungen/1.png  used on input line 61.
+(pdftex.def)             Requested size: 292.7776pt x 75.22235pt.
+[36
+
+
+
+
+]
+<img/Erweiterungen/2.png, id=410, 376.40625pt x 182.18062pt>
+File: img/Erweiterungen/2.png Graphic file (type png)
+<use img/Erweiterungen/2.png>
+Package pdftex.def Info: img/Erweiterungen/2.png  used on input line 72.
+(pdftex.def)             Requested size: 292.7776pt x 141.7139pt.
+ [37 <./img/Erweiterungen/1.png> <./img/Erweiterungen/2.png>]
+<img/Erweiterungen/3.png, id=419, 537.50812pt x 239.39438pt>
+File: img/Erweiterungen/3.png Graphic file (type png)
+<use img/Erweiterungen/3.png>
+Package pdftex.def Info: img/Erweiterungen/3.png  used on input line 82.
+(pdftex.def)             Requested size: 334.60571pt x 149.0257pt.
+<img/Erweiterungen/4.png, id=421, 699.36281pt x 235.63031pt>
+File: img/Erweiterungen/4.png Graphic file (type png)
+<use img/Erweiterungen/4.png>
+Package pdftex.def Info: img/Erweiterungen/4.png  used on input line 91.
+(pdftex.def)             Requested size: 334.60571pt x 112.73811pt.
+ [38 <./img/Erweiterungen/3.png>]
+<img/Erweiterungen/5.png, id=430, 709.90219pt x 237.88875pt>
+File: img/Erweiterungen/5.png Graphic file (type png)
+<use img/Erweiterungen/5.png>
+Package pdftex.def Info: img/Erweiterungen/5.png  used on input line 99.
+(pdftex.def)             Requested size: 334.60571pt x 112.12715pt.
+) [39 <./img/Erweiterungen/4.png> <./img/Erweiterungen/5.png>]
+\openout2 = `LaTeX/Diskussion.aux'.
+
+ (LaTeX/Diskussion.tex
+chapter 7.
+<img/Vergleich_mech/vergleich_Experimentaldaten_scaled_CH4_gap.png, id=440, 939
+.51pt x 361.35pt>
+File: img/Vergleich_mech/vergleich_Experimentaldaten_scaled_CH4_gap.png Graphic
+ file (type png)
+<use img/Vergleich_mech/vergleich_Experimentaldaten_scaled_CH4_gap.png>
+Package pdftex.def Info: img/Vergleich_mech/vergleich_Experimentaldaten_scaled_
+CH4_gap.png  used on input line 10.
+(pdftex.def)             Requested size: 418.25555pt x 160.86365pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[][][]|\T1/qhv/m/n/10.95 Ver-gleich der Mas-sen-an-tei-le der Spe-zi-es CO, CO$
+[]$, H$[]$ und
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+\T1/qhv/m/n/10.95 CH$[]$ im Pro-dukt-gas an-hand der Be-rech-nun-gen ver-schie-
+de-ner
+ []
+
+[40
+
+
+
+
+ <./img/Vergleich_mech/vergleich_Experimentaldaten_scaled_CH4_gap.png>]
+<img/Vergleich_mech/Temp_CH4.png, id=448, 867.24pt x 361.35pt>
+File: img/Vergleich_mech/Temp_CH4.png Graphic file (type png)
+<use img/Vergleich_mech/Temp_CH4.png>
+Package pdftex.def Info: img/Vergleich_mech/Temp_CH4.png  used on input line 42
+.
+(pdftex.def)             Requested size: 418.25555pt x 174.27309pt.
+
+Underfull \hbox (badness 1558) in paragraph at lines 43--43
+[][][]|\T1/qhv/m/n/10.95 Tem-pe-ra-tur und Me-than-ge-halt im Re-ak-tor zur Un-
+ter-schei-dung der
+ []
+
+[41]
+<img/Vergleich_mech/Vergleich_Temperaturen_gap_manual.png, id=458, 867.24pt x 4
+33.62pt>
+File: img/Vergleich_mech/Vergleich_Temperaturen_gap_manual.png Graphic file (ty
+pe png)
+<use img/Vergleich_mech/Vergleich_Temperaturen_gap_manual.png>
+Package pdftex.def Info: img/Vergleich_mech/Vergleich_Temperaturen_gap_manual.p
+ng  used on input line 55.
+(pdftex.def)             Requested size: 418.25555pt x 209.1277pt.
+ [42 <./img/Vergleich_mech/Temp_CH4.png>] [43 <./img/Vergleich_mech/Vergleich_T
+emperaturen_gap_manual.png>]
+<img/Erweiterungen/Vergleich_Erweiterungen.png, id=475, 867.24pt x 433.62pt>
+File: img/Erweiterungen/Vergleich_Erweiterungen.png Graphic file (type png)
+<use img/Erweiterungen/Vergleich_Erweiterungen.png>
+Package pdftex.def Info: img/Erweiterungen/Vergleich_Erweiterungen.png  used on
+ input line 121.
+(pdftex.def)             Requested size: 418.25555pt x 209.1277pt.
+ [44 <./img/Erweiterungen/Vergleich_Erweiterungen.png>] [45]
+<img/Erweiterungen/Vergleich_Temperaturen.png, id=492, 867.24pt x 433.62pt>
+File: img/Erweiterungen/Vergleich_Temperaturen.png Graphic file (type png)
+<use img/Erweiterungen/Vergleich_Temperaturen.png>
+Package pdftex.def Info: img/Erweiterungen/Vergleich_Temperaturen.png  used on 
+input line 164.
+(pdftex.def)             Requested size: 418.25555pt x 209.1277pt.
+ [46] [47 <./img/Erweiterungen/Vergleich_Temperaturen.png>]
+Overfull \hbox (2.50787pt too wide) in paragraph at lines 191--192
+[]\T1/qhv/m/n/10.95 Durch den da-mit ver-bun-de-nen deut-lich hö-he-ren Re-chen
+-auf-wand sind die-se kom-plexeren
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 192.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 192.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 192.
+
+
+LaTeX Warning: Citation 'Scoore_Enargus' on page 48 undefined on input line 193
+.
+
+<img/Parameterstudie_CO2/Parameterstudie_CO2_CH4_Schlupf_colormap_marker.png, i
+d=504, 557.2017pt x 352.4367pt>
+File: img/Parameterstudie_CO2/Parameterstudie_CO2_CH4_Schlupf_colormap_marker.p
+ng Graphic file (type png)
+<use img/Parameterstudie_CO2/Parameterstudie_CO2_CH4_Schlupf_colormap_marker.pn
+g>
+Package pdftex.def Info: img/Parameterstudie_CO2/Parameterstudie_CO2_CH4_Schlup
+f_colormap_marker.png  used on input line 202.
+(pdftex.def)             Requested size: 313.69167pt x 198.41725pt.
+[48] [49 <./img/Parameterstudie_CO2/Parameterstudie_CO2_CH4_Schlupf_colormap_ma
+rker.png>]
+<img/Parameterstudie_CO2/Parameterstudie_CO2_Bilanz.png, id=518, 497.6994pt x 3
+52.4367pt>
+File: img/Parameterstudie_CO2/Parameterstudie_CO2_Bilanz.png Graphic file (type
+ png)
+<use img/Parameterstudie_CO2/Parameterstudie_CO2_Bilanz.png>
+Package pdftex.def Info: img/Parameterstudie_CO2/Parameterstudie_CO2_Bilanz.png
+  used on input line 221.
+(pdftex.def)             Requested size: 313.69167pt x 222.13847pt.
+ [50 <./img/Parameterstudie_CO2/Parameterstudie_CO2_Bilanz.png>]
+
+LaTeX Warning: Citation 'RICHTER2015110' on page 51 undefined on input line 238
+.
+
+) [51] [52]
+\openout2 = `LaTeX/Fazit.aux'.
+
+ (LaTeX/Fazit.tex
+chapter 8.
+) [53
+
+
+
+
+] [54]
+
+LaTeX Warning: Empty bibliography on input line 83.
+
+
+Package caption Warning: Unused \captionsetup[longtable] on input line 24.
+See the caption package documentation for explanation.
+
+(Studienarbeit.aux (LaTeX/Aufgabenstellung.aux) (LaTeX/Symbole.aux)
+(LaTeX/einleitung.aux) (LaTeX/theoretische_grundlagen.aux)
+(LaTeX/Rahmenbedingungen_neu.aux) (LaTeX/reaktionsmechanismen.aux)
+(LaTeX/parameterstudie_CO2.aux) (LaTeX/ROM.aux) (LaTeX/Diskussion.aux)
+(LaTeX/Fazit.aux))
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `Studienarbeit.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                Studienarbeit
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'Studienarbeit.run.xml'.
+\openout1 = `Studienarbeit.run.xml'.
+
+ ) 
 Here is how much of TeX's memory you used:
- 68 strings out of 478683
- 2099 string characters out of 2856434
- 297455 words of memory out of 3000000
- 18262 multiletter control sequences out of 15000+600000
- 403430 words of font info for 27 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 49i,0n,65p,244b,17s stack positions out of 5000i,500n,10000p,200000b,80000s
- :26:  ==> Fatal error occurred, no output PDF file produced!
+ 42302 strings out of 474478
+ 879878 string characters out of 5743570
+ 2270235 words of memory out of 5000000
+ 63697 multiletter control sequences out of 15000+600000
+ 622339 words of font info for 111 fonts, out of 8000000 for 9000
+ 1146 hyphenation exceptions out of 8191
+ 154i,23n,149p,38241b,3141s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/erikd/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/erikd/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx8.pfb><C:/Users/erikd/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Users/erikd/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/erikd/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/erikd/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/erikd/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/erikd/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
+erikd/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Users/erikd/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.
+pfb><C:/Users/erikd/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Users/erikd/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb><C:/Users/erikd/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/symbols/msam10.pfb><C:/Users/erikd/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/erikd/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/erikd/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/tex-gyre/qhvri.pfb>
+Output written on Studienarbeit.pdf (54 pages, 2591275 bytes).
+PDF statistics:
+ 771 PDF objects out of 1000 (max. 8388607)
+ 172 named destinations out of 1000 (max. 500000)
+ 410 words of extra memory for PDF output out of 10000 (max. 10000000)
+

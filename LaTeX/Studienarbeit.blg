@@ -1,8 +1,5 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[1] Config.pm:314> INFO - Logfile is 'Studienarbeit.blg'
-[164] biber-MSWIN64:340> INFO - === 
-[262] Biber.pm:415> INFO - Reading 'Studienarbeit.bcf'
-[397] Utils.pm:411> ERROR - Error: Found biblatex control file version 3.11, expected version 3.7.
-This means that your biber (2.16) and biblatex (3.20) versions are incompatible.
-See compat matrix in biblatex or biber PDF documentation.
-[401] Biber.pm:132> INFO - ERRORS: 1
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Studienarbeit.blg'
+[206] biber-MSWIN64:340> INFO - === 
+[847] Utils.pm:410> ERROR - Cannot find 'Studienarbeit.bcf'!
+[847] Biber.pm:136> INFO - ERRORS: 1

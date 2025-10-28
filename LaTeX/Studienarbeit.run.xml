@@ -41,10 +41,11 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Studienarbeit.bcf</file>
+      <file>Studienarbeit.aux</file>
+      <file>Studienarbeit-blx.bib</file>
     </provides>
     <requires type="dynamic">
       <file>Studienarbeit.bbl</file>
@@ -52,6 +53,7 @@
     <requires type="static">
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
+      <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
       <file>standard.bbx</file>
       <file>numeric.bbx</file>
@@ -61,14 +63,15 @@
       <file>ngerman.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="0">
-    <generic>biber</generic>
+  <external package="biblatex" priority="5" active="1">
+    <generic>bibtex</generic>
     <cmdline>
-      <binary>biber</binary>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
       <infile>Studienarbeit</infile>
     </cmdline>
     <input>
-      <file>Studienarbeit.bcf</file>
+      <file>Studienarbeit.aux</file>
     </input>
     <output>
       <file>Studienarbeit.bbl</file>
@@ -77,10 +80,14 @@
       <file>Studienarbeit.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Studienarbeit.bcf</file>
+      <file>Studienarbeit.aux</file>
+      <file>Studienarbeit-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>refs.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
     </requires>
   </external>
 </requests>

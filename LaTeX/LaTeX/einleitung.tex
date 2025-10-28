@@ -1,0 +1,31 @@
+\chapter{Einleitung}
+    \iffalse 
+    Die Herstellung von Synthesegas, bestehend aus Kohlenstoffmonoxid (CO) und Wasserstoff (H$_2$) zählt zu den wichtigsten Prozessen in der chemischen Industrie mit vielfältigen Anwendungsmöglichkeiten. So wird Synthesegas als Ausgangsstoff für zahlreiche weiterführende Synthesen, darunter Methanol, Ammoniak sowie synthetische Kraftstoffe verwendet \cite{CENTI20204}. Mit Blick auf die Energiewende und auf die Transformation der Rohstoffbasis gewinnt die effiziente und flexible Bereitstellung von Synthesegas zunehmend an Bedeutung. 
+
+    Eine technisch etablierte Möglichkeit zur Herstellung stellt die nichtkatalytische Partialoxidation von Erdgas (POx) dar. Dabei kommt es zu einer unvollständigen Oxidation von Methan unter Zugabe von Sauerstoff. Charakteristisch für diesen Prozess ist das gleichzeitige Vorhandensein von stark exothermen und endothermen Reaktionen, wodurch sich komplexe Temperatur- und Konzentrationsprofile innerhalb des Reaktors ergeben. Eine detaillierte Modellierung solcher Vorgänge erfordert den Einsatz umfangreicher Reaktionsmechanismen mit hunderten Spezies und Elementarreaktionen. In Kombination mit aufwändigen Strömungssimulationen resultiert dadurch ein erheblicher Rechenaufwand, der die Anwendbarkeit für Parameterstudien und Optimierungsaufgaben stark einschränkt. 
+
+    Um dieser Herausforderung zu begegnen, können sogenannte Reduced-Order-Models (ROMs) genutzt werden. Diese Modelle reduzieren die Komplexität der Simulation, indem nur die für die Prozessbeschreibung wesentlichen Vorgänge explizit berücksichtigt werden. Dadurch lassen sich die Temperatur- und Konzentrationsprofile mit deutlich geringerem Rechenaufwand vorhersagen, ohne dass die wesentliche Modellgüte verloren geht. Somit ermöglichen ROMs neue Perspektiven sowohl für die schnelle Bewertung von Reaktoren als auch für komplexe Parameterstudien und Optimierungsaufgaben. 
+
+    Vor diesem Hintergrund befasst sich die vorliegende Arbeit mit der Entwicklung und Bewertung von reduzierten Reaktornetzwerkmodellen. Ziel ist es, verschiedene Reaktionsmechanismen sowie unterschiedliche Modellnetzwerke zu untersuchen und deren Eignung für die Beschreibung der nichtkatalytischen Partialoxidation von Erdgas zu bewerten. 
+    \fi 
+    % ------------- neue Version ----------
+    Der Klimawandel zählt zu den größten Herausforderungen unserer Zeit und erfordert umfangreiche Veränderungen in nahezu allen Bereichen der Industrie. Besonders der chemischen Industrie kommt dabei eine große Verantwortung zu, da sie einerseits einen wesentlichen Beitrag zur globalen Wertschöpfung leistet, andererseits auch erhebliche Mengen an Treibhausgasemissionen verursacht \cite{eea_chemical_emissions_2023}. Eine zentrale Aufgabe besteht darin, emissionsintensive Produkte schrittweise klimafreundlicher zu gestalten, ohne Wettbewerbsfähigkeit und Versorgungssicherheit zu gefährden. 
+
+    Ein Teil der CO$_2$-Emissionen entsteht durch prozessbedingte Quellen, bei denen Kohlenstoffdioxid direkt aus chemischen Reaktionen freigesetzt wird. Beispiele hierfür sind Kalkbrennen in der Zementproduktion oder die Reduktion von Eisen im Hochofenprozess \parencite{hasanbeigi_springer_2019_steel, MASSOUMINEJAD2025100251}. Obwohl die Forschung für alternative Verfahren, darunter die Herstellung von Eisen mit Wasserstoff, vorangetrieben wird, ist eine vollständige Vermeidung von Kohlenstoffdioxidemissionen derzeit technisch nicht vollständig realisierbar \cite{DELLAROCCA2025100312}. Aus diesem Grund ist die Rückführung oder stoffliche Nutzung von prozessbedingtem Kohlenstoff von großem Interesse zur Verbesserung der Umweltbilanz dieser Produkte. 
+
+    Ein vielversprechender Ansatz liegt in der direkten stofflichen Nutzung von prozessbedingtem Kohlenstoffdioxid zur Erzeugung von Synthesegas. Dieses besitzt eine zentrale Rolle in der chemischen Industrie aufgrund der Vielzahl an Anwendungsmöglichkeiten, darunter die Herstellung von Methanol, Ammoniak und die Herstellung synthetischer Kraftstoffe mit der Fischer-Tropsch-Synthese \cite{CENTI20204}. 
+
+    Eine technisch etablierte Möglichkeit zur Herstellung von Synthesegas stellt die nichtkatalytische Partialoxidation (POx) von Erdgas dar. Dabei kommt es zu einer unvollständigen Oxidation von Erdgas (Hauptbestandteil Methan) unter Zugabe einer begrenzten Sauerstoffmenge, wodurch die Bildung von Kohlenstoffmonoxid und Wasserstoff erfolgt (Gl. \ref{eq:pox}).
+    \begin{equation}
+    \label{eq:pox}
+    \mathrm{CH_4 + \frac{1}{2}\ O_2 \longrightarrow CO + 2\ H_2}
+    \end{equation}
+    Wird diesem Prozess zusätzlich Kohlenstoffdioxid aus anderen Quellen hinzugefügt, erfolgt eine Umwandlung dieses Kohlenstoffdioxids zu nutzbarem Synthesegas.
+    \begin{align}
+        &\mathrm{CH_4 + CO_2 \longrightarrow 2\ CO + 2\  H_2} \label{eq:dampfreformierung_einleitung}
+    \end{align}
+    Die Oxidation von Methan ist stark exotherm und zeichnet sich durch das gleichzeitige Auftreten konkurrierender Oxidations- und Reformierungsreaktionen aus, wodurch komplexe Reaktionsbedingungen entstehen. Durch gezielte Prozessführung kann das Verhältnis von Kohlenstoffmonoxid zu Wasserstoff variiert werden, was eine entscheidende Bedeutung für die spätere Verwendung des Synthesegases darstellt. 
+
+    Die detaillierte Modellierung solcher Reaktionen erfordert den Einsatz umfangreicher Reaktionsmechanismen. In Kombination dieser mit umfangreichen Strömungsanalysen (CFD) ergibt sich ein Rechenaufwand dieser Modelle, die Optimierungsprozesse solcher Prozesse kaum zulassen. Um diesen Herausforderungen zu begegnen, werden Reduce-Order-Modelle (ROMs) verwendet, die nur die für die Prozessbeschreibung relevanten Phänomene beschreiben und durch Abstraktion eine deutlich höhere Rechengeschwindigkeit ermöglichen. 
+
+    Ziel der vorliegenden Arbeit ist es, die nichtkatalytische Partialoxidation von Erdgas unter Berücksichtigung verschiedener Feedzusammensetzungen anhand reduzierter Reaktormodelle zu untersuchen. Hierzu werden verschiedene Reaktionsmechanismen und Modellstrukturen bezüglich ihrer Eignung zur Prozessbeschreibung verglichen. Die Ergebnisse sollen eine Basis für weitere Parameterstudien und Prozess\-optimierungen zur effizienteren Umsetzung und stofflichen Nutzung von Kohlenstoffdioxid darstellen.
