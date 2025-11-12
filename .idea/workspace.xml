@@ -5,28 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e319697e-703d-4abc-aa4a-90b6ef824d1c" name="Changes" comment="mse verbessert">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/img_py/H2_CH4_CO_CO2.png" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/img_py/H2_CH4_CO_CO2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/img_py/H2_CH4_CO_CO2_keinCO2.png" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/img_py/H2_CH4_CO_CO2_keinCO2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/img_py/Temp_CH4.png" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/img_py/Temp_CH4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/img_py/Vergleich_Temperaturen_gap_manual.png" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/img_py/Vergleich_Temperaturen_gap_manual.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaTeX/img_py/vergleich_Experimentaldaten_scaled_CH4_gap.png" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/img_py/vergleich_Experimentaldaten_scaled_CH4_gap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Auswertung_Erweiterung.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Auswertung_Erweiterung.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Bilder/Vergleich_Erweiterungen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Bilder/Vergleich_Erweiterungen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Bilder/Vergleich_Temperaturen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Erweiterungen/Bilder/Vergleich_Temperaturen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Bilanz.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Bilanz.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_CH4_Schlupf_colormap_marker.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_CH4_Schlupf_colormap_marker.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Massenstrom_Ende.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Massenstrom_Ende.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Molenbruch_Ende.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Molenbruch_Ende.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Temperaturen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/Parameterstudie_CO2_Temperaturen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/plots_mit_legende.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Parameterstudie CO2/Bilder/plots_mit_legende.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/Auswertung_Mechanismus.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/Auswertung_Mechanismus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/H2_CH4_CO_CO2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/H2_CH4_CO_CO2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/H2_CH4_CO_CO2_keinCO2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/H2_CH4_CO_CO2_keinCO2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/Temp_CH4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/Temp_CH4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/Vergleich_Temperaturen_gap_manual.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/Vergleich_Temperaturen_gap_manual.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/vergleich_Experimentaldaten_scaled_CH4_gap.png" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auswertungen/Vergleich_ChemistrySet/img/vergleich_Experimentaldaten_scaled_CH4_gap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/Aufgabenstellung.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/Aufgabenstellung.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/Diskussion.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/Diskussion.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/Fazit.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/Fazit.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/ROM.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/ROM.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/Rahmenbedingungen_neu.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/Rahmenbedingungen_neu.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/Symbole.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/Symbole.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/einleitung.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/einleitung.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/parameterstudie_CO2.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/parameterstudie_CO2.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/reaktionsmechanismen.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/reaktionsmechanismen.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/LaTeX/theoretische_grundlagen.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/LaTeX/theoretische_grundlagen.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit-blx.bib" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/Studienarbeit-blx.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.aux" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/Studienarbeit.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.blg" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/Studienarbeit.blg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.lof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.lot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/Studienarbeit.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.run.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/LaTeX/Studienarbeit.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaTeX/Studienarbeit.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Verteidigung/Verteidigung_Präsentation.pptx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,30 +93,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.Auswertung_CO2.executor": "Run",
-    "Python.Auswertung_Erweiterung.executor": "Run",
-    "Python.Auswertung_Mechanismus (1).executor": "Run",
-    "Python.Auswertung_neu.executor": "Run",
-    "Python.PFR.executor": "Run",
-    "Python.Test1.executor": "Run",
-    "Python.network.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Auswertung_CO2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Auswertung_Erweiterung.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Auswertung_Mechanismus (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Auswertung_neu.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PFR.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.network.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.Auswertung_Erweiterung">
     <configuration name="Auswertung_CO2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Studienarbeit" />
@@ -271,6 +272,7 @@
       <workItem from="1760789040762" duration="5293000" />
       <workItem from="1761326804530" duration="884000" />
       <workItem from="1761399148702" duration="1378000" />
+      <workItem from="1762975795762" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="Plot Schlupf Methan">
       <option name="closed" value="true" />
